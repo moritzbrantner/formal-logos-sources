@@ -48,3 +48,9 @@ cargo clippy --locked --all-targets -- -D warnings
 - `youtube-corpus`: video collection/transcription; use timestamped references rather than duplicating its database.
 
 Future integrations may add source discovery and indexing, while leaving Formal Logos independently verifiable and usable offline.
+
+The multi-repository capability and trust boundaries are recorded in [ADR 0001](docs/adr/0001-reuse-source-processing-capabilities.md). OCR, NLP, philosophical reconstruction and belief attribution are **planned integrations**, not implemented CLI features yet.
+
+## GitHub integration
+
+The `validate` workflow uses the shared reusable workflow. `main` requires its Rust check and resolved PR conversations before merging. GitHub auto-merge is enabled for explicitly enrolled eligible PRs; it does not automatically enroll every PR. Routine Cargo dependency updates use the [shared Renovate policy](https://github.com/moritzbrantner/coding-agent-conventions/blob/main/default.json), with GitHub-managed auto-merge after required checks and explicit approval for major updates. Renovate must be installed/enabled for this repository for those dependency PRs to appear.
