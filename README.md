@@ -6,11 +6,11 @@ This repository prepares **source artifacts**, not philosophical propositions or
 
 ## First supported workflow: local PDFs
 
-Requires Python 3.11+ and Poppler `pdftotext` (install `poppler-utils`). No Python dependencies.
+Requires Rust and Poppler `pdftotext` (install `poppler-utils`).
 
 ```sh
-python3 -m formal_logos_sources.pdf inspect /path/to/legally-obtained.pdf --pages 2:4 --url https://publisher.example/paper.pdf
-python3 -m unittest discover -s tests -v
+cargo run -- inspect /path/to/legally-obtained.pdf --pages 2:4 --url https://publisher.example/paper.pdf
+cargo test
 ```
 
 `inspect` emits JSON containing `sha256` (original PDF), `text_sha256` (selected normalized page text), physical page range, a short incipit, and character count. These match the `web_snapshot` PDF hashing/extraction convention in `truth-core` as of 2026-11-14. It **does not create a verified Truth Core witness**: the `--url` is descriptive and not fetched, and its remote bytes may differ from the inspected local file. The researcher must verify the actual remote source twice, its license, edition and exact locator, then create/validate the source and passage records using Truth Core's existing tooling. Do not copy the output directly into `corpus/passages/` without this review.
