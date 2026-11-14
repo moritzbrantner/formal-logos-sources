@@ -1,6 +1,9 @@
+mod registry;
+
 use sha2::{Digest, Sha256};
+use std::collections::{HashMap, HashSet};
 use std::io::Write;
-use std::path::Path;
+use std::path::{Path, PathBuf};
 use std::process::{Command, Stdio};
 
 fn hash(input: &[u8]) -> String {
@@ -99,41 +102,202 @@ fn join_soft_hyphens(input: &str) -> String {
     result
 }
 
-fn run() -> Result<(), String> {
-    let mut args = std::env::args().skip(1);
-    if args.next().as_deref() != Some("inspect") {
-        return Err("usage: formal-logos-sources inspect FILE --pages FIRST:LAST [--url URL] [--join-soft-hyphens]".into());
-    }
-    let filename = args.next().ok_or("missing PDF file")?;
-    let mut pages = None;
-    let mut url = None;
-    let mut soft_hyphens = false;
-    while let Some(arg) = args.next() {
-        match arg.as_str() {
-            "--pages" => pages = Some(args.next().ok_or("missing page range")?),
-            "--url" => url = Some(args.next().ok_or("missing URL")?),
-            "--join-soft-hyphens" => soft_hyphens = true,
-            _ => return Err(format!("unknown argument: {arg}")),
+const USAGE: &str = "usage:
+  formal-logos-sources inspect FILE --pages FIRST:LAST [--url URL] [--join-soft-hyphens]
+  formal-logos-sources add FILE --work-id ID --title TITLE --edition-id ID --edition-label LABEL --language LANG --license TERMS [--url URL] [--catalog PATH] [--store DIR]
+  formal-logos-sources list [--catalog PATH]
+  formal-logos-sources verify [--catalog PATH] [--store DIR]
+  formal-logos-sources prepare --edition-id ID --pages FIRST:LAST [--join-soft-hyphens] [--catalog PATH] [--store DIR]";
+
+struct Options {
+    positional: Vec<String>,
+    fields: HashMap<String, String>,
+    switches: HashSet<String>,
+}
+
+impl Options {
+    fn parse(
+        args: impl Iterator<Item = String>,
+        allowed: &[&str],
+        switches: &[&str],
+    ) -> Result<Self, String> {
+        let mut result = Self {
+            positional: Vec::new(),
+            fields: HashMap::new(),
+            switches: HashSet::new(),
+        };
+        let mut args = args.peekable();
+        while let Some(arg) = args.next() {
+            if switches.contains(&arg.as_str()) {
+                if !result.switches.insert(arg.clone()) {
+                    return Err(format!("duplicate flag: {arg}"));
+                }
+            } else if allowed.contains(&arg.as_str()) {
+                let value = args
+                    .next()
+                    .ok_or_else(|| format!("missing value for {arg}"))?;
+                if value.starts_with("--") || result.fields.insert(arg.clone(), value).is_some() {
+                    return Err(format!("missing or repeated value for {arg}"));
+                }
+            } else if arg.starts_with('-') {
+                return Err(format!("unknown option: {arg}"));
+            } else {
+                result.positional.push(arg);
+            }
         }
+        Ok(result)
     }
-    let pages = pages.ok_or("missing --pages FIRST:LAST")?;
-    let (first, last) = pages.split_once(':').ok_or("expected FIRST:LAST")?;
-    let first = first.parse::<u32>().map_err(|_| "invalid first page")?;
-    let last = last.parse::<u32>().map_err(|_| "invalid last page")?;
-    let data = std::fs::read(Path::new(&filename)).map_err(|e| format!("{filename}: {e}"))?;
-    let mut result = inspect(&data, first, last, soft_hyphens)?;
-    if let Some(url) = url {
-        result["source_url"] = url.into();
+
+    fn required(&self, key: &str) -> Result<&str, String> {
+        self.fields
+            .get(key)
+            .map(String::as_str)
+            .ok_or_else(|| format!("missing {key}"))
     }
+
+    fn path(&self, key: &str, default: &str) -> PathBuf {
+        PathBuf::from(self.fields.get(key).map(String::as_str).unwrap_or(default))
+    }
+
+    fn positional_file(&self) -> Result<&str, String> {
+        if self.positional.len() != 1 {
+            return Err("expected exactly one PDF file argument".into());
+        }
+        Ok(&self.positional[0])
+    }
+
+    fn no_positional(&self) -> Result<(), String> {
+        if !self.positional.is_empty() {
+            return Err("unexpected positional argument".into());
+        }
+        Ok(())
+    }
+
+    fn pages(&self) -> Result<(u32, u32), String> {
+        let pages = self.required("--pages")?;
+        let (first, last) = pages.split_once(':').ok_or("expected FIRST:LAST")?;
+        Ok((
+            first.parse::<u32>().map_err(|_| "invalid first page")?,
+            last.parse::<u32>().map_err(|_| "invalid last page")?,
+        ))
+    }
+}
+
+fn show(value: &impl serde::Serialize) -> Result<(), String> {
     println!(
         "{}",
-        serde_json::to_string_pretty(&result).map_err(|e| e.to_string())?
+        serde_json::to_string_pretty(value).map_err(|e| e.to_string())?
     );
     Ok(())
 }
 
+fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
+    let mut args = args;
+    let command = args.next().ok_or(USAGE)?;
+    match command.as_str() {
+        "inspect" => {
+            let opts = Options::parse(args, &["--pages", "--url"], &["--join-soft-hyphens"])?;
+            let filename = opts.positional_file()?;
+            let (first, last) = opts.pages()?;
+            let data =
+                std::fs::read(Path::new(filename)).map_err(|e| format!("{filename}: {e}"))?;
+            let mut result = inspect(
+                &data,
+                first,
+                last,
+                opts.switches.contains("--join-soft-hyphens"),
+            )?;
+            if let Some(url) = opts.fields.get("--url") {
+                result["source_url"] = url.clone().into();
+            }
+            show(&result)
+        }
+        "add" => {
+            let opts = Options::parse(
+                args,
+                &[
+                    "--work-id",
+                    "--title",
+                    "--edition-id",
+                    "--edition-label",
+                    "--language",
+                    "--license",
+                    "--url",
+                    "--catalog",
+                    "--store",
+                ],
+                &[],
+            )?;
+            let filename = opts.positional_file()?;
+            let data = std::fs::read(filename).map_err(|e| format!("{filename}: {e}"))?;
+            let added = registry::add(
+                &opts.path("--catalog", "registry/catalog.json"),
+                &opts.path("--store", "local"),
+                &data,
+                registry::Add {
+                    work_id: opts.required("--work-id")?,
+                    title: opts.required("--title")?,
+                    edition_id: opts.required("--edition-id")?,
+                    label: opts.required("--edition-label")?,
+                    language: opts.required("--language")?,
+                    license: opts.required("--license")?,
+                    source_url: opts.fields.get("--url").map(String::as_str),
+                },
+            )?;
+            show(&added)
+        }
+        "list" => {
+            let opts = Options::parse(args, &["--catalog"], &[])?;
+            opts.no_positional()?;
+            show(&registry::read_catalog(
+                &opts.path("--catalog", "registry/catalog.json"),
+            )?)
+        }
+        "verify" => {
+            let opts = Options::parse(args, &["--catalog", "--store"], &[])?;
+            opts.no_positional()?;
+            let count = registry::verify(
+                &opts.path("--catalog", "registry/catalog.json"),
+                &opts.path("--store", "local"),
+            )?;
+            show(&serde_json::json!({"verified_unique_objects": count}))
+        }
+        "prepare" => {
+            let opts = Options::parse(
+                args,
+                &["--edition-id", "--pages", "--catalog", "--store"],
+                &["--join-soft-hyphens"],
+            )?;
+            opts.no_positional()?;
+            let (first, last) = opts.pages()?;
+            let (edition, bytes) = registry::load_edition(
+                &opts.path("--catalog", "registry/catalog.json"),
+                &opts.path("--store", "local"),
+                opts.required("--edition-id")?,
+            )?;
+            let mut result = inspect(
+                &bytes,
+                first,
+                last,
+                opts.switches.contains("--join-soft-hyphens"),
+            )?;
+            result["edition_id"] = edition.id.into();
+            result["work_id"] = edition.work_id.into();
+            result["language"] = edition.language.into();
+            result["license"] = edition.license.into();
+            result["local_object_verified"] = true.into();
+            result["remote_witness_verified"] = false.into();
+            if let Some(url) = edition.source_url {
+                result["source_url"] = url.into();
+            }
+            show(&result)
+        }
+        _ => Err(USAGE.into()),
+    }
+}
+
 fn main() {
-    if let Err(error) = run() {
+    if let Err(error) = run_command(std::env::args().skip(1)) {
         eprintln!("error: {error}");
         std::process::exit(2);
     }
@@ -200,5 +364,37 @@ mod tests {
         );
         assert_eq!(result["incipit"], "Second synthetic");
         assert!(inspect(&data, 1, 3, false).is_err());
+    }
+
+    #[test]
+    fn registered_pdf_can_be_prepared_from_verified_local_object() {
+        let dir = tempfile::tempdir().unwrap();
+        let catalog = dir.path().join("registry/catalog.json");
+        let store = dir.path().join("local");
+        let pdf = fixture_pdf();
+        let fields = registry::Add {
+            work_id: "fixture",
+            title: "Synthetic Work",
+            edition_id: "fixture-first",
+            label: "First synthetic edition",
+            language: "eng",
+            license: "Synthetic fixture",
+            source_url: None,
+        };
+        registry::add(&catalog, &store, &pdf, fields).unwrap();
+        let (edition, loaded_pdf) =
+            registry::load_edition(&catalog, &store, "fixture-first").unwrap();
+        let witness = inspect(&loaded_pdf, 1, 1, false).unwrap();
+        assert_eq!(witness["sha256"], edition.sha256);
+        assert_eq!(witness["text_sha256"], hash(b"First synthetic page."));
+    }
+
+    #[test]
+    fn cli_rejects_missing_and_unknown_arguments() {
+        assert!(run_command(["add".to_owned()].into_iter()).is_err());
+        assert!(
+            run_command(["verify".to_owned(), "--unrecognized".to_owned()].into_iter()).is_err()
+        );
+        assert!(run_command(["prepare".to_owned(), "extra".to_owned()].into_iter()).is_err());
     }
 }
