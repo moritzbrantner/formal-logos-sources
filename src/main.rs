@@ -5,12 +5,17 @@ mod research;
 
 use sha2::{Digest, Sha256};
 use std::collections::{HashMap, HashSet};
+use std::fmt::Write as _;
 use std::io::Write;
 use std::path::{Path, PathBuf};
 use std::process::{Command, Stdio};
 
 fn hash(input: &[u8]) -> String {
-    format!("{:x}", Sha256::digest(input))
+    let mut encoded = String::with_capacity(64);
+    for byte in Sha256::digest(input) {
+        write!(&mut encoded, "{byte:02x}").expect("writing to String cannot fail");
+    }
+    encoded
 }
 
 fn inspect(
@@ -483,6 +488,18 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn hash_preserves_sha256_lowercase_hex_vectors() {
+        assert_eq!(
+            hash(b""),
+            "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        );
+        assert_eq!(
+            hash(b"abc"),
+            "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+        );
+    }
 
     fn fixture_pdf() -> Vec<u8> {
         let mut objects = vec![
