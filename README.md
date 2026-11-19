@@ -126,8 +126,11 @@ Life status records its evidence and observation date. Historical death years us
 integers for BCE (`-322` means 322 BCE); there is no year zero. Unknown life status remains
 explicit. Bibliography inventories record the provider's scope and publication state,
 separately from our reconciliation progress. The current six inventories are located but
-not yet reconciled into complete work lists. This schema has no completed-reconciliation
-state: recording an index link cannot mark a bibliography finished.
+not yet reconciled into complete work lists. The first Aquinas pass has matched the seven
+registered works to its selected inventory and added retrieval routes for all seven; see
+the [Aquinas source-preparation report](reports/aquinas-first-pass.md) for the exact scope.
+This schema has no completed-reconciliation state: recording an index link cannot mark
+a bibliography finished.
 
 ### Edition access and rights
 

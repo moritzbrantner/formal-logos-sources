@@ -11,7 +11,7 @@ Profiles are ordered by registered passage count, then profile ID. Counts indica
 | Profile | Works | Witnesses | Passages | Retrieval candidates | Works without candidates |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Aristotle | 5 | 10 | 94 | 3 | 3 |
-| Thomas Aquinas | 7 | 50 | 92 | 4 | 5 |
+| Thomas Aquinas | 7 | 50 | 92 | 11 | 0 |
 | Immanuel Kant | 1 | 1 | 4 | 2 | 0 |
 | Gottfried Wilhelm Leibniz | 2 | 3 | 4 | 2 | 0 |
 | Bertrand Russell | 1 | 1 | 2 | 2 | 0 |
@@ -112,7 +112,7 @@ Next step: Select the linked text representation and record its translator attri
 
 ## Thomas Aquinas
 
-**Deceased, 1274**. The imported catalogue contains seven Aquinas works. Reconcile the complete-works provider inventory while retaining its distinctions between Aquinas’s texts, reportationes, continuations, insertions, and other authors. The existing catalogue does not establish complete bibliography or reading coverage.
+**Deceased, 1274**. The first inventory pass matched all seven currently registered Aquinas works to the Corpus Thomisticum Opera omnia index. This denominator is the imported seven-work subset, not Aquinas’s complete bibliography. Retrieval candidates cover specified works or parts; they do not establish acquisition, full reading, edition equivalence, or reuse permission. Reportationes, earlier redactions, continuations, insertions and other authors remain distinct.
 
 Mapped source attributions:
 
@@ -126,13 +126,13 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [Compendium theologiae](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-compendium-theologiae.json) | 1 | 1 | 0 |
+| [Compendium theologiae](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-compendium-theologiae.json) | 1 | 1 | 1 |
 | [De ente et essentia](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-de-ente-et-essentia.json) | 2 | 2 | 1 |
-| [In octo libros Physicorum Aristotelis expositio](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-in-physicorum.json) | 2 | 5 | 0 |
-| [Quaestiones disputatae de potentia](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-de-potentia.json) | 2 | 2 | 0 |
-| [Sententia libri Metaphysicae (In duodecim libros Metaphysicorum Aristotelis expositio)](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-in-metaphysicam.json) | 5 | 6 | 0 |
-| [Summa contra gentiles](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-summa-contra-gentiles.json) | 9 | 11 | 0 |
-| [Summa theologiae](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-summa-theologiae.json) | 29 | 65 | 3 |
+| [In octo libros Physicorum Aristotelis expositio](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-in-physicorum.json) | 2 | 5 | 1 |
+| [Quaestiones disputatae de potentia](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-de-potentia.json) | 2 | 2 | 2 |
+| [Sententia libri Metaphysicae (In duodecim libros Metaphysicorum Aristotelis expositio)](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-in-metaphysicam.json) | 5 | 6 | 1 |
+| [Summa contra gentiles](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-summa-contra-gentiles.json) | 9 | 11 | 1 |
+| [Summa theologiae](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-summa-theologiae.json) | 29 | 65 | 4 |
 
 ### Bibliography inventories
 
@@ -148,18 +148,38 @@ Inventory evidence:
 
 #### [Corpus Thomisticum: Opera omnia](https://www.corpusthomisticum.org/iopera.html)
 
-The project aims to provide an edition of Aquinas’s complete works, using critical texts where possible. The published index also identifies reportationes, continuations, insertions, and material by other authors. Our catalogue has not been reconciled with this inventory.
+The initial pass matches the seven works currently imported from Formal Logos against this provider’s title and part listings. Whole-author reconciliation remains open: unregistered works and variants, reportationes, fragments, disputed attributions, continuations and other authors still require explicit dispositions. The index’s complete-works objective does not establish that the repository has inventoried or read the complete bibliography.
 
-Publication: published. Catalogue reconciliation: not started.
+Publication: published. Catalogue reconciliation: in progress.
 
 Inventory evidence:
 
 - [Thomas de Aquino, Opera omnia](https://www.corpusthomisticum.org/iopera.html) (checked 2026-11-19): The index groups works and parts and labels continuations and related material by other authors.
 - [A Brief Introduction to the Corpus Thomisticum](https://www.corpusthomisticum.org/wintroen.html) (checked 2026-11-19): The project describes its complete-works edition objective and says that improved editions and corrections are welcome.
+- [Thomas de Aquino, Opera omnia — seven registered work matches](https://www.corpusthomisticum.org/iopera.html) (checked 2026-11-19): Located De ente et essentia, Summa contra Gentiles, In libros Physicorum, De potentia, Sententia libri Metaphysicae, Compendium theologiae and Summa Theologiae. The listing separately attributes the Summa supplement to Rainaldus and De potentia q.4 a.2 continuation to Vincentius; those are not silently included as Aquinas-authored additions. Seven matches count only the currently registered subset.
+- [Optimae editiones operum Thomae de Aquino](https://www.corpusthomisticum.org/reoptedi.html) (checked 2026-11-19): The provider’s recommended editions differ from some served HTML texts: De ente, Leonine vol.43 (1976); Compendium, Leonine vol.42 (1979); De potentia, Pession’s 1965 edition; Metaphysics, Cathala/Spiazzi 1971. These bibliographic recommendations do not change the identity of the existing digital witnesses.
 
 ### Retrieval candidates
 
 These entries identify possible editions and access routes. They do not register acquired files or authorize redistribution.
+
+#### [Compendium theologiae — Latin, book I chapters 1–184](https://www.corpusthomisticum.org/ott101.html)
+
+Work: Compendium theologiae. Language: lat. Format: HTML. Access: open online.
+
+Coverage: Latin book I, chapters 1–184, including the registered chapters 12–15. The page identifies the Turin 1954 text, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. Book I chapters 185–246 and book II are separate index resources.
+
+Rights — not established: Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.
+
+Edition/access evidence:
+
+- [Compendium theologiae — Latin, book I chapters 1–184](https://www.corpusthomisticum.org/ott101.html) (checked 2026-11-19): The page identifies book I chapters 1–184 and the Turin 1954 text. A direct GET returned HTTP 200.
+
+Rights evidence:
+
+- [Compendium theologiae — Latin, book I chapters 1–184 — edition notice](https://www.corpusthomisticum.org/ott101.html) (checked 2026-11-19): The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page.
+
+Next step: Resolve the existing I chapters 12–15 manifest before adding any acquisition record. Keep the Turin 1954 digital text distinct from the Leonine vol.42 (1979) edition recommended in the provider’s bibliography.
 
 #### [De ente et essentia — Baur/Koch Latin edition](https://www.corpusthomisticum.org/oee.html)
 
@@ -178,6 +198,96 @@ Rights evidence:
 - [A Brief Introduction to the Corpus Thomisticum](https://www.corpusthomisticum.org/wintroen.html) (checked 2026-11-19): The project introduction describes freely available research tools and carries a site-level all-rights-reserved notice. It does not supply an edition-specific reuse licence for these text pages.
 
 Next step: Map selected chapters using the existing Baur/Koch locator convention; record any alignment to differently numbered translations explicitly and establish edition-specific reuse terms before redistribution.
+
+#### [De potentia — Latin, question 3](https://www.corpusthomisticum.org/qdp3.html)
+
+Work: Quaestiones disputatae de potentia. Language: lat. Format: HTML. Access: open online.
+
+Coverage: Latin question 3, including the existing q.3 a.5 reading. The page identifies the Turin 1953 text, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. It does not cover q.5 a.1 or the full work.
+
+Rights — not established: Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.
+
+Edition/access evidence:
+
+- [De potentia — Latin, question 3](https://www.corpusthomisticum.org/qdp3.html) (checked 2026-11-19): The page identifies question III and the Turin 1953 text. A direct GET returned HTTP 200.
+
+Rights evidence:
+
+- [De potentia — Latin, question 3 — edition notice](https://www.corpusthomisticum.org/qdp3.html) (checked 2026-11-19): The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page.
+
+Next step: Resolve the existing q.3 a.5 manifest and its numbered entries against this resource. Keep question 5 on its separate page, and preserve the provider’s separate attribution of the q.4 a.2 continuation when expanding the work inventory.
+
+#### [De potentia — Latin, questions 5–6](https://www.corpusthomisticum.org/qdp5.html)
+
+Work: Quaestiones disputatae de potentia. Language: lat. Format: HTML. Access: open online.
+
+Coverage: Latin questions 5–6, including the existing q.5 a.1 reading. The page identifies the Turin 1953 text, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. Question 3 is a separate resource.
+
+Rights — not established: Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.
+
+Edition/access evidence:
+
+- [De potentia — Latin, questions 5–6](https://www.corpusthomisticum.org/qdp5.html) (checked 2026-11-19): The page identifies questions V–VI and the Turin 1953 text. A direct GET returned HTTP 200.
+
+Rights evidence:
+
+- [De potentia — Latin, questions 5–6 — edition notice](https://www.corpusthomisticum.org/qdp5.html) (checked 2026-11-19): The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page.
+
+Next step: Resolve the existing q.5 a.1 manifest and numbered entries against this resource. Do not substitute the Pession 1965 edition recommended in the bibliography without recording a distinct edition and locator alignment.
+
+#### [Sententia libri Metaphysicae — Latin, book IX](https://www.corpusthomisticum.org/cmp09.html)
+
+Work: Sententia libri Metaphysicae (In duodecim libros Metaphysicorum Aristotelis expositio). Language: lat. Format: HTML. Access: open online.
+
+Coverage: Latin book IX, including the existing lectures 7–9 reading. The page identifies the Turin 1950 text, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. The imported catalogue route cmp00.html is the prooemium only; other books require separate resources.
+
+Rights — not established: Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.
+
+Edition/access evidence:
+
+- [Sententia libri Metaphysicae — Latin, book IX](https://www.corpusthomisticum.org/cmp09.html) (checked 2026-11-19): The page identifies book IX and the Turin 1950 text. A direct GET returned HTTP 200.
+
+Rights evidence:
+
+- [Sententia libri Metaphysicae — Latin, book IX — edition notice](https://www.corpusthomisticum.org/cmp09.html) (checked 2026-11-19): The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page.
+
+Next step: Resolve the existing book IX lectures 7–9 manifest against this resource. Registered readings in books II, V and XII use their own pages; retain the distinction from the Cathala/Spiazzi 1971 edition recommended in the provider’s bibliography.
+
+#### [In libros Physicorum — Latin, books VII–VIII](https://www.corpusthomisticum.org/cpy07.html)
+
+Work: In octo libros Physicorum Aristotelis expositio. Language: lat. Format: HTML. Access: open online.
+
+Coverage: Latin books VII–VIII. The page identifies the Leonine text as published at Turin in 1954, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. Its scope includes the book/lecture locations represented by the existing English Physics witnesses, but it is a distinct Latin edition.
+
+Rights — not established: Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.
+
+Edition/access evidence:
+
+- [In libros Physicorum — Latin, books VII–VIII](https://www.corpusthomisticum.org/cpy07.html) (checked 2026-11-19): The actual Opera omnia route cpy07.html renders books VII–VIII and identifies the Leonine/Turin 1954 textual basis. A direct GET returned HTTP 200.
+
+Rights evidence:
+
+- [In libros Physicorum — Latin, books VII–VIII — edition notice](https://www.corpusthomisticum.org/cpy07.html) (checked 2026-11-19): The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page.
+
+Next step: Map the Latin numbered entries for VII lectures 1–2 and VIII lectures 7, 9 and 22 to the existing English reading locators; record any translation alignment explicitly. The imported cpy.html catalogue URL returned HTTP 404 during this check and must not be treated as a downloadable whole-work resource.
+
+#### [Summa contra gentiles — Latin, book I chapters 14–28](https://www.corpusthomisticum.org/scg1014.html)
+
+Work: Summa contra gentiles. Language: lat. Format: HTML. Access: open online.
+
+Coverage: Latin book I, chapters 14–28, including the existing I.18 and I.22 readings. The page identifies the Leonine text corrected from the proofs of the Turin 1961 edition, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. It is one part of the four-book work.
+
+Rights — not established: Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.
+
+Edition/access evidence:
+
+- [Summa contra gentiles — Latin, book I chapters 14–28](https://www.corpusthomisticum.org/scg1014.html) (checked 2026-11-19): The page identifies book I chapters 14–28 and the Leonine/Turin 1961 textual basis. A direct GET returned HTTP 200.
+
+Rights evidence:
+
+- [Summa contra gentiles — Latin, book I chapters 14–28 — edition notice](https://www.corpusthomisticum.org/scg1014.html) (checked 2026-11-19): The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page.
+
+Next step: Resolve the existing I.18 and I.22 manifests against this same resource, retaining their numbered-entry locators. Other book I ranges and books II–IV need separate resources; a candidate is not a newly acquired witness.
 
 #### [Summa theologiae — Latin, Prima pars questions 3–14](https://www.corpusthomisticum.org/sth1003.html)
 
@@ -236,6 +346,24 @@ Rights evidence:
 - [Terms of Use \| Project Gutenberg](https://www.gutenberg.org/policy/terms_of_use) (checked 2026-11-19): The provider offers no assurances about copyright status outside the United States and recommends linking to the ebook landing page.
 
 Next step: Resolve the offered plain-text or HTML representation and record its digital revision and frontmatter edition/translator credits before adding a retained witness.
+
+#### [Summa theologiae — SCTA Latin Prima pars question 19](https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e144/cod-cnLxE4_TAca84-d1e144.xml)
+
+Work: Summa theologiae. Language: lat. Format: TEI. Access: open online.
+
+Coverage: Prima pars question 19, with its prologue and all twelve article containers. The selected complete article I q.19 a.1 is xml:id TAca84-d1e144-Dd1e182; only that article was fully read in this pass. The TEI header identifies Rome 1888 volume 4, Thomas Aquinas as author, Jeffrey C. Witt as transcription editor and TEI encoder, SCTA as authority, edition 0.0.0-dev dated 2023-07-31, and draft revision status. Immutable revision f9065dc8ce7bc790b8c972e49ee19d661f028be6; verified Git blob 94bc9e4ecf18163bcb1ba1af99ff610515ab8e49.
+
+Rights — provider licence: The selected SCTA digital TEI witness expressly declares CC BY-NC-SA 4.0 in its publicationStmt/availability. This records the provider licence for that file, not a public-domain conclusion or the rights of another online edition.
+
+Edition/access evidence:
+
+- [SCTA TAca84: pinned Summa theologiae question 19 TEI](https://github.com/scta-texts/TAca84/blob/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e144/cod-cnLxE4_TAca84-d1e144.xml) (checked 2026-11-19): Retrieved exact pinned content through the GitHub file API and independently verified the canonical Git blob. Read header and all of I q.19 a.1; counted prologue and article containers 1–12 without claiming full-question reading. Existing Formal Logos article passage 2dc7a89a-5d81-5bf7-97b3-a429018d7e4a was reused.
+
+Rights evidence:
+
+- [SCTA q.19 TEI: publication and availability header](https://github.com/scta-texts/TAca84/blob/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e144/cod-cnLxE4_TAca84-d1e144.xml#L19-L25) (checked 2026-11-19): The pinned file identifies SCTA as authority and explicitly publishes this digital text under Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+
+Next step: Retain the existing Formal Logos source and edition identities. Use the complete q.19 a.1 section-role map for the first source-preparation pass, preserving objections, cited authorities, author response and replies. Any later witness correction requires the canonical fidelity-review procedure; other q.19 articles remain outside this completed reading pass.
 
 ## Immanuel Kant
 
