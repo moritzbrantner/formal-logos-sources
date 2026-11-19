@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "groups": [
+    {
+      "id": "fl-work-7a774ce9-3220-5aa4-9538-9840f5abf9d8",
+      "title": "Tractatus Logico-Philosophicus",
+      "source_ids": [
+        "7a774ce9-3220-5aa4-9538-9840f5abf9d8",
+        "d47c5b55-a72f-5893-8ad0-a97c9be4e717"
+      ],
+      "reason": "The upstream records explicitly identify the same Tractatus and Gutenberg work; original-language and translated witnesses remain separate. This groups bibliographic identity only."
+    },
+    {
+      "id": "fl-work-ff1532f6-7b09-55d5-88e3-6981df3756dc",
+      "title": "Philosophical Investigations",
+      "source_ids": [
+        "ff1532f6-7b09-55d5-88e3-6981df3756dc",
+        "f37d35cc-4070-54d0-a686-2f6998f9a346"
+      ],
+      "reason": "The upstream records describe Wittgenstein's Philosophical Investigations in English and German. Edition and passage identities remain separate; this is not a semantic equivalence claim."
+    },
+    {
+      "id": "fl-work-d451fc6a-0b0d-5d92-b53a-0e04653431fe",
+      "title": "Language, Truth and Logic",
+      "source_ids": [
+        "d451fc6a-0b0d-5d92-b53a-0e04653431fe",
+        "1bbb77e6-62ac-5ee0-bbb4-0387b016e795"
+      ],
+      "reason": "The upstream records identify Ayer's book and a chapter of its second-edition reprint. The bibliographic work is shared; the exact edition, extract, citation and witness remain in their original source records."
+    }
+  ]
+}
