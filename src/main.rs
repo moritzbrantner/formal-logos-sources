@@ -1,6 +1,7 @@
 mod formal_logos;
 mod import;
 mod registry;
+mod research;
 
 use sha2::{Digest, Sha256};
 use std::collections::{HashMap, HashSet};
@@ -108,8 +109,9 @@ const USAGE: &str = "usage:
   formal-logos-sources inspect FILE --pages FIRST:LAST [--url URL] [--join-soft-hyphens]
   formal-logos-sources add FILE --work-id ID --title TITLE --edition-id ID --edition-label LABEL --language LANG --license TERMS [--url URL] [--catalog PATH] [--store DIR]
   formal-logos-sources list [--catalog PATH]
-  formal-logos-sources check [--catalog PATH]
+  formal-logos-sources check [--catalog PATH] [--research FILE]
   formal-logos-sources authors [--name NAME] [--catalog PATH]
+  formal-logos-sources research [--author ID_OR_NAME] [--deceased] [--format json|markdown] [--research FILE] [--catalog PATH]
   formal-logos-sources import --formal-logos DIR [--revision COMMIT] [--work-groups FILE] [--catalog PATH]
   formal-logos-sources connections --formal-logos DIR --source ID [--locator LOCATOR] [--format json|markdown] [--catalog PATH]
   formal-logos-sources verify [--catalog PATH] [--store DIR]
@@ -260,14 +262,14 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
             )?)
         }
         "check" => {
-            let opts = Options::parse(args, &["--catalog"], &[])?;
+            let opts = Options::parse(args, &["--catalog", "--research"], &[])?;
             opts.no_positional()?;
             let path = opts.path("--catalog", "registry/catalog.json");
             if !path.is_file() {
                 return Err(format!("catalogue does not exist: {}", path.display()));
             }
             let catalog = registry::read_catalog(&path)?;
-            show(&serde_json::json!({
+            let mut result = serde_json::json!({
                 "schema_version": catalog.schema_version,
                 "authors": catalog.authors.len(),
                 "works": catalog.works.len(),
@@ -276,7 +278,51 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
                 "referenced_editions": catalog.editions.iter().filter(|e|e.formal_logos.is_some()).count(),
                 "formal_logos": catalog.formal_logos,
                 "validation": "offline catalogue structure and references; source bytes not checked"
-            }))
+            });
+            if let Some(path) = opts.fields.get("--research") {
+                let research = research::read_research(Path::new(path), &catalog)?;
+                result["research"] = serde_json::json!({
+                    "profiles": research.profiles.len(),
+                    "validation": "offline author, inventory, retrieval and evidence references"
+                });
+            }
+            show(&result)
+        }
+        "research" => {
+            let opts = Options::parse(
+                args,
+                &["--catalog", "--research", "--author", "--format"],
+                &["--deceased"],
+            )?;
+            opts.no_positional()?;
+            let path = opts.path("--catalog", "registry/catalog.json");
+            if !path.is_file() {
+                return Err(format!("catalogue does not exist: {}", path.display()));
+            }
+            let catalog = registry::read_catalog(&path)?;
+            let research = research::read_research(
+                &opts.path("--research", "registry/author-research.json"),
+                &catalog,
+            )?;
+            let report = research::report(
+                &research,
+                &catalog,
+                opts.fields.get("--author").map(String::as_str),
+                opts.switches.contains("--deceased"),
+            )?;
+            match opts
+                .fields
+                .get("--format")
+                .map(String::as_str)
+                .unwrap_or("json")
+            {
+                "json" => show(&report),
+                "markdown" => {
+                    print!("{}", research::render_markdown(&report));
+                    Ok(())
+                }
+                _ => Err("--format must be json or markdown".into()),
+            }
         }
         "authors" => {
             let opts = Options::parse(args, &["--catalog", "--name"], &[])?;
