@@ -1,16 +1,69 @@
 //! Git-trackable bibliographic metadata with local content-addressed original files.
 use crate::hash;
 use serde::{Deserialize, Serialize};
-use std::collections::HashSet;
+use std::collections::{BTreeMap, HashMap, HashSet};
 use std::fs::{self, OpenOptions};
 use std::io::Write;
 use std::path::{Path, PathBuf};
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
+pub struct Author {
+    pub id: String,
+    /// The source's attribution, which may name a person, group, or institution.
+    pub name: String,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct SourceReference {
+    pub id: String,
+    pub path: String,
+    pub title: String,
+    pub kind: String,
+    pub work_urn: String,
+    pub catalog_url: String,
+    pub citation_system: String,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
 pub struct Work {
     pub id: String,
     pub title: String,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub author_ids: Vec<String>,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub formal_logos_sources: Vec<SourceReference>,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct PassageReference {
+    pub id: String,
+    pub label: String,
+    pub locator: String,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub claim_locator_prefixes: Vec<String>,
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub selectors: BTreeMap<String, serde_json::Value>,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct EditionReference {
+    pub manifest_path: String,
+    pub source_id: String,
+    /// Upstream metadata only. This is not an acquired or verified local object.
+    pub snapshot: serde_json::Value,
+    pub passages: Vec<PassageReference>,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct CorpusBinding {
+    pub repository: String,
+    pub revision: String,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
@@ -24,43 +77,127 @@ pub struct Edition {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub source_url: Option<String>,
     pub format: String,
-    pub sha256: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub sha256: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub formal_logos: Option<EditionReference>,
 }
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Catalog {
     pub schema_version: u32,
+    #[serde(default)]
+    pub authors: Vec<Author>,
     pub works: Vec<Work>,
     pub editions: Vec<Edition>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub formal_logos: Option<CorpusBinding>,
 }
 
 impl Default for Catalog {
     fn default() -> Self {
         Self {
-            schema_version: 1,
+            schema_version: 2,
+            authors: Vec::new(),
             works: Vec::new(),
             editions: Vec::new(),
+            formal_logos: None,
         }
     }
 }
 
 impl Catalog {
-    fn validate(&self) -> Result<(), String> {
-        if self.schema_version != 1 {
+    pub(crate) fn sort(&mut self) {
+        self.authors.sort_by(|a, b| a.id.cmp(&b.id));
+        self.works.sort_by(|a, b| a.id.cmp(&b.id));
+        self.editions.sort_by(|a, b| a.id.cmp(&b.id));
+        for work in &mut self.works {
+            work.author_ids.sort();
+            work.formal_logos_sources.sort_by(|a, b| a.id.cmp(&b.id));
+        }
+        for edition in &mut self.editions {
+            if let Some(reference) = &mut edition.formal_logos {
+                reference.passages.sort_by(|a, b| a.id.cmp(&b.id));
+                for passage in &mut reference.passages {
+                    passage.claim_locator_prefixes.sort();
+                }
+            }
+        }
+    }
+
+    pub(crate) fn validate(&self) -> Result<(), String> {
+        if !matches!(self.schema_version, 1 | 2) {
             return Err(format!(
                 "unsupported catalog schema: {}",
                 self.schema_version
             ));
         }
+        if let Some(binding) = &self.formal_logos {
+            if binding.repository.split('/').count() != 2
+                || binding.repository.split('/').any(|component| {
+                    component.is_empty()
+                        || matches!(component, "." | "..")
+                        || !component.bytes().all(|byte| {
+                            byte.is_ascii_alphanumeric() || matches!(byte, b'.' | b'_' | b'-')
+                        })
+                })
+            {
+                return Err("Formal Logos repository must be owner/name".into());
+            }
+            if !valid_hex(&binding.revision, 40) {
+                return Err("Formal Logos revision must be a full lowercase Git SHA".into());
+            }
+        }
+        let mut author_ids = HashSet::new();
+        for author in &self.authors {
+            validate_id(&author.id)?;
+            nonempty("author name", &author.name)?;
+            if !author_ids.insert(&author.id) {
+                return Err(format!("duplicate author id: {}", author.id));
+            }
+        }
         let mut work_ids = HashSet::new();
+        let mut source_works = HashMap::new();
         let mut edition_ids = HashSet::new();
+        let mut passage_ids = HashSet::new();
         for work in &self.works {
             validate_id(&work.id)?;
             nonempty("work title", &work.title)?;
             if !work_ids.insert(&work.id) {
                 return Err(format!("duplicate work id: {}", work.id));
             }
+            let mut seen_authors = HashSet::new();
+            for author_id in &work.author_ids {
+                if !author_ids.contains(author_id) {
+                    return Err(format!(
+                        "work {} references unknown author {author_id}",
+                        work.id
+                    ));
+                }
+                if !seen_authors.insert(author_id) {
+                    return Err(format!("work {} repeats author {author_id}", work.id));
+                }
+            }
+            for source in &work.formal_logos_sources {
+                validate_id(&source.id)?;
+                validate_reference_path(&source.path, "corpus/sources/")?;
+                for (name, value) in [
+                    ("source title", &source.title),
+                    ("source kind", &source.kind),
+                    ("work URN", &source.work_urn),
+                    ("catalog URL", &source.catalog_url),
+                    ("citation system", &source.citation_system),
+                ] {
+                    nonempty(name, value)?;
+                }
+                if source_works.insert(&source.id, &work.id).is_some() {
+                    return Err(format!("duplicate Formal Logos source id: {}", source.id));
+                }
+            }
+        }
+        if !source_works.is_empty() && self.formal_logos.is_none() {
+            return Err("Formal Logos source references require a corpus revision binding".into());
         }
         for edition in &self.editions {
             validate_id(&edition.id)?;
@@ -80,14 +217,82 @@ impl Catalog {
             ] {
                 nonempty(name, value)?;
             }
-            if edition.format != "pdf" {
+            if !matches!(
+                edition.format.as_str(),
+                "pdf" | "tei" | "html" | "text" | "media" | "bibliographic"
+            ) {
                 return Err(format!(
                     "edition {} has unsupported format {}",
                     edition.id, edition.format
                 ));
             }
-            if !valid_sha256(&edition.sha256) {
-                return Err(format!("edition {} has invalid sha256", edition.id));
+            match (&edition.sha256, &edition.formal_logos) {
+                (Some(sha), None) => {
+                    if edition.format != "pdf" || !valid_hex(sha, 64) {
+                        return Err(format!(
+                            "edition {} requires a PDF and valid sha256",
+                            edition.id
+                        ));
+                    }
+                }
+                (None, Some(reference)) => {
+                    if source_works.get(&reference.source_id).copied() != Some(&edition.work_id) {
+                        return Err(format!(
+                            "edition {} references a source outside its work: {}",
+                            edition.id, reference.source_id
+                        ));
+                    }
+                    validate_reference_path(&reference.manifest_path, "corpus/passages/")?;
+                    validate_snapshot(reference, &edition.format)?;
+                    if reference.passages.is_empty() {
+                        return Err(format!("edition {} has no passage references", edition.id));
+                    }
+                    for passage in &reference.passages {
+                        validate_id(&passage.id)?;
+                        nonempty("passage label", &passage.label)?;
+                        nonempty("passage locator", &passage.locator)?;
+                        if !passage_ids.insert(&passage.id) {
+                            return Err(format!("duplicate passage id: {}", passage.id));
+                        }
+                        for prefix in &passage.claim_locator_prefixes {
+                            if prefix.trim().is_empty() {
+                                return Err(format!(
+                                    "passage {} has an empty locator prefix",
+                                    passage.id
+                                ));
+                            }
+                        }
+                        for (key, value) in &passage.selectors {
+                            if !matches!(
+                                key.as_str(),
+                                "cts_path"
+                                    | "tei_xml_id"
+                                    | "html_selector"
+                                    | "pdf_pages"
+                                    | "raw_text"
+                                    | "start_seconds"
+                                    | "end_seconds"
+                                    | "pages"
+                                    | "section"
+                                    | "segment_count"
+                                    | "span_sha256"
+                                    | "text_sha256"
+                            ) || value.is_null()
+                            {
+                                return Err(format!(
+                                    "passage {} has unsupported retrieval metadata: {key}",
+                                    passage.id
+                                ));
+                            }
+                        }
+                    }
+                }
+                _ => {
+                    return Err(format!(
+                        "edition {} must identify either a local PDF or a Formal Logos reference",
+                        edition.id
+                    ));
+                }
             }
             if let Some(url) = &edition.source_url
                 && !(url.starts_with("https://") || url.starts_with("http://"))
@@ -100,6 +305,49 @@ impl Catalog {
         }
         Ok(())
     }
+}
+
+fn validate_reference_path(path: &str, prefix: &str) -> Result<(), String> {
+    if !path.starts_with(prefix)
+        || !path.ends_with(".json")
+        || path.contains('\\')
+        || path.chars().any(char::is_control)
+        || path
+            .split('/')
+            .any(|part| part.is_empty() || matches!(part, "." | ".."))
+    {
+        return Err(format!("invalid repository reference path: {path}"));
+    }
+    Ok(())
+}
+
+fn validate_snapshot(reference: &EditionReference, format: &str) -> Result<(), String> {
+    let snapshot = reference
+        .snapshot
+        .as_object()
+        .ok_or("snapshot must be an object")?;
+    if snapshot
+        .get("source_id")
+        .and_then(serde_json::Value::as_str)
+        != Some(reference.source_id.as_str())
+    {
+        return Err("snapshot source_id does not match its edition reference".into());
+    }
+    if snapshot.contains_key("text") || snapshot.contains_key("transcript") {
+        return Err("source references must not contain source text or transcripts".into());
+    }
+    let kind = snapshot.get("kind").and_then(serde_json::Value::as_str);
+    let correct_format = match kind {
+        None => format == "tei",
+        Some("web_snapshot") => matches!(format, "pdf" | "html" | "text"),
+        Some("media_span") => format == "media",
+        Some("bibliographic_span") => format == "bibliographic",
+        Some(other) => return Err(format!("unsupported Formal Logos witness kind: {other}")),
+    };
+    if !correct_format {
+        return Err("edition format does not match its referenced witness kind".into());
+    }
+    Ok(())
 }
 
 fn nonempty(name: &str, value: &str) -> Result<(), String> {
@@ -127,8 +375,8 @@ fn validate_id(id: &str) -> Result<(), String> {
     Ok(())
 }
 
-fn valid_sha256(sha: &str) -> bool {
-    sha.len() == 64
+fn valid_hex(sha: &str, length: usize) -> bool {
+    sha.len() == length
         && sha
             .bytes()
             .all(|c| c.is_ascii_hexdigit() && !c.is_ascii_uppercase())
@@ -144,6 +392,45 @@ pub fn read_catalog(path: &Path) -> Result<Catalog, String> {
     };
     catalog.validate()?;
     Ok(catalog)
+}
+
+/// Keep the read/modify/write transaction under the same lock as local PDF imports.
+pub fn update_catalog<T>(
+    path: &Path,
+    update: impl FnOnce(&mut Catalog) -> Result<T, String>,
+) -> Result<T, String> {
+    let parent = path.parent().ok_or("catalog has no parent")?;
+    fs::create_dir_all(parent).map_err(|e| e.to_string())?;
+    let lock = OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open(parent.join(".catalog.lock"))
+        .map_err(|e| e.to_string())?;
+    lock.lock().map_err(|e| e.to_string())?;
+    let mut catalog = read_catalog(path)?;
+    catalog.sort();
+    let previous_editions = catalog.editions.clone();
+    let result = update(&mut catalog)?;
+    catalog.schema_version = 2;
+    catalog.sort();
+    catalog.validate()?;
+    for previous in previous_editions {
+        if let Some(current) = catalog
+            .editions
+            .iter()
+            .find(|edition| edition.id == previous.id)
+            && current != &previous
+        {
+            return Err(format!(
+                "edition {} is immutable; use a new edition id",
+                previous.id
+            ));
+        }
+    }
+    let serialized = serde_json::to_vec_pretty(&catalog).map_err(|e| e.to_string())?;
+    atomic_write(path, &[serialized.as_slice(), b"\n"].concat(), false)?;
+    drop(lock);
+    Ok(result)
 }
 
 pub fn object_path(store: &Path, sha: &str) -> PathBuf {
@@ -205,63 +492,48 @@ pub fn add(
         license: fields.license.to_owned(),
         source_url: fields.source_url.map(str::to_owned),
         format: "pdf".into(),
-        sha256: sha.clone(),
+        sha256: Some(sha.clone()),
+        formal_logos: None,
     };
     let work = Work {
         id: fields.work_id.to_owned(),
         title: fields.title.to_owned(),
+        author_ids: Vec::new(),
+        formal_logos_sources: Vec::new(),
     };
-    // Lock only catalog mutations. Readers always see a complete atomic catalog revision.
-    let parent = catalog_path.parent().ok_or("catalog has no parent")?;
-    fs::create_dir_all(parent).map_err(|e| e.to_string())?;
-    let lock_path = parent.join(".catalog.lock");
-    let lock = OpenOptions::new()
-        .create(true)
-        .append(true)
-        .open(lock_path)
-        .map_err(|e| e.to_string())?;
-    lock.lock().map_err(|e| e.to_string())?;
-    let mut catalog = read_catalog(catalog_path)?;
-    if let Some(existing) = catalog.works.iter().find(|item| item.id == work.id) {
-        if existing != &work {
-            return Err(format!("work {} already has different metadata", work.id));
+    update_catalog(catalog_path, |catalog| {
+        if let Some(existing) = catalog.works.iter().find(|item| item.id == work.id) {
+            if existing.title != work.title {
+                return Err(format!("work {} already has different metadata", work.id));
+            }
+        } else {
+            catalog.works.push(work);
         }
-    } else {
-        catalog.works.push(work);
-    }
-    if let Some(existing) = catalog.editions.iter().find(|item| item.id == edition.id) {
-        if existing != &edition {
-            return Err(format!(
-                "edition {} is immutable; use a new edition id",
-                edition.id
-            ));
+        if let Some(existing) = catalog.editions.iter().find(|item| item.id == edition.id) {
+            if existing != &edition {
+                return Err(format!(
+                    "edition {} is immutable; use a new edition id",
+                    edition.id
+                ));
+            }
+        } else {
+            catalog.editions.push(edition.clone());
         }
-    } else {
-        catalog.editions.push(edition.clone());
-    }
-    catalog.works.sort_by(|a, b| a.id.cmp(&b.id));
-    catalog.editions.sort_by(|a, b| a.id.cmp(&b.id));
-    catalog.validate()?;
+        catalog.validate()?;
 
-    let object = object_path(store, &sha);
-    if object.exists() {
-        checked_object(store, &sha)?;
-    } else if let Err(error) = atomic_write(&object, pdf, true) {
-        // Another process may have stored the identical bytes; never overwrite an object.
+        let object = object_path(store, &sha);
         if object.exists() {
             checked_object(store, &sha)?;
-        } else {
-            return Err(error);
+        } else if let Err(error) = atomic_write(&object, pdf, true) {
+            // Another process may have stored the identical bytes; never overwrite an object.
+            if object.exists() {
+                checked_object(store, &sha)?;
+            } else {
+                return Err(error);
+            }
         }
-    }
-    let serialized = serde_json::to_vec_pretty(&catalog).map_err(|e| e.to_string())?;
-    atomic_write(
-        catalog_path,
-        &[serialized.as_slice(), b"\n"].concat(),
-        false,
-    )?;
-    drop(lock);
-    Ok(edition)
+        Ok(edition)
+    })
 }
 
 pub fn load_edition(
@@ -275,7 +547,12 @@ pub fn load_edition(
         .into_iter()
         .find(|e| e.id == id)
         .ok_or_else(|| format!("unknown edition id: {id}"))?;
-    let bytes = checked_object(store, &edition.sha256)?;
+    let sha = edition.sha256.as_deref().ok_or_else(|| {
+        format!(
+            "edition {id} is a metadata-only Formal Logos reference; no local PDF has been acquired"
+        )
+    })?;
+    let bytes = checked_object(store, sha)?;
     Ok((edition, bytes))
 }
 
@@ -283,8 +560,10 @@ pub fn verify(catalog_path: &Path, store: &Path) -> Result<usize, String> {
     let catalog = read_catalog(catalog_path)?;
     let mut verified = HashSet::new();
     for edition in catalog.editions {
-        if verified.insert(edition.sha256.clone()) {
-            checked_object(store, &edition.sha256)?;
+        if let Some(sha) = edition.sha256
+            && verified.insert(sha.clone())
+        {
+            checked_object(store, &sha)?;
         }
     }
     Ok(verified.len())
@@ -304,6 +583,213 @@ mod tests {
             license: "Synthetic fixture",
             source_url: Some("https://example.org/physics.pdf"),
         }
+    }
+
+    fn referenced_catalog() -> Catalog {
+        Catalog {
+            authors: vec![Author {
+                id: "aquinas".into(),
+                name: "Thomas Aquinas".into(),
+            }],
+            works: vec![Work {
+                id: "summa".into(),
+                title: "Summa theologiae".into(),
+                author_ids: vec!["aquinas".into()],
+                formal_logos_sources: vec![SourceReference {
+                    id: "source-summa".into(),
+                    path: "corpus/sources/summa.json".into(),
+                    title: "Summa theologiae".into(),
+                    kind: "primary_work".into(),
+                    work_urn: "urn:example:summa".into(),
+                    catalog_url: "https://example.org/summa".into(),
+                    citation_system: "Part, question, article".into(),
+                }],
+            }],
+            editions: vec![Edition {
+                id: "summa-reference".into(),
+                work_id: "summa".into(),
+                label: "Synthetic Latin witness reference".into(),
+                language: "lat".into(),
+                license: "Synthetic metadata".into(),
+                source_url: Some("https://example.org/summa.xml".into()),
+                format: "tei".into(),
+                sha256: None,
+                formal_logos: Some(EditionReference {
+                    manifest_path: "corpus/passages/summa-q19.json".into(),
+                    source_id: "source-summa".into(),
+                    snapshot: serde_json::json!({
+                        "source_id": "source-summa",
+                        "repository": "example/texts",
+                        "revision": "1111111111111111111111111111111111111111",
+                        "language": "lat"
+                    }),
+                    passages: vec![PassageReference {
+                        id: "passage-q19-a1".into(),
+                        label: "I q.19 a.1".into(),
+                        locator: "I q.19 a.1".into(),
+                        claim_locator_prefixes: vec!["I q.19 a.1 ".into()],
+                        selectors: BTreeMap::from([("tei_xml_id".into(), "q19-a1".into())]),
+                    }],
+                }),
+            }],
+            formal_logos: Some(CorpusBinding {
+                repository: "example/formal-logos".into(),
+                revision: "2222222222222222222222222222222222222222".into(),
+            }),
+            ..Catalog::default()
+        }
+    }
+
+    #[test]
+    fn metadata_only_entries_do_not_claim_local_acquisition() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("registry/catalog.json");
+        let store = dir.path().join("local");
+        let catalog = referenced_catalog();
+        update_catalog(&path, |current| {
+            *current = catalog.clone();
+            Ok(())
+        })
+        .unwrap();
+        assert_eq!(read_catalog(&path).unwrap(), catalog);
+        assert_eq!(verify(&path, &store).unwrap(), 0);
+        assert!(!store.exists());
+        assert!(
+            load_edition(&path, &store, "summa-reference")
+                .unwrap_err()
+                .contains("metadata-only")
+        );
+
+        add(
+            &path,
+            &store,
+            b"%PDF-fixture",
+            Add {
+                work_id: "summa",
+                title: "Summa theologiae",
+                edition_id: "summa-local",
+                ..fields("summa-local")
+            },
+        )
+        .unwrap();
+        assert_eq!(verify(&path, &store).unwrap(), 1);
+        let updated = read_catalog(&path).unwrap();
+        assert_eq!(updated.works, catalog.works);
+        assert_eq!(updated.authors, catalog.authors);
+        assert_eq!(updated.editions.len(), 2);
+    }
+
+    #[test]
+    fn rejects_broken_or_misleading_metadata_references() {
+        let catalog = referenced_catalog();
+        catalog.validate().unwrap();
+        let mut broken = catalog.clone();
+        broken.authors.clear();
+        assert!(broken.validate().unwrap_err().contains("unknown author"));
+        let mut broken = catalog.clone();
+        broken.works[0].formal_logos_sources[0].path = "corpus/sources/../secret.json".into();
+        assert!(broken.validate().unwrap_err().contains("reference path"));
+        let mut broken = catalog.clone();
+        broken.formal_logos = None;
+        assert!(broken.validate().unwrap_err().contains("revision binding"));
+        let mut broken = catalog.clone();
+        broken.editions[0].sha256 = Some("0".repeat(64));
+        assert!(
+            broken
+                .validate()
+                .unwrap_err()
+                .contains("either a local PDF")
+        );
+        let mut broken = catalog.clone();
+        broken.editions[0].formal_logos.as_mut().unwrap().snapshot["kind"] = "new-kind".into();
+        assert!(broken.validate().unwrap_err().contains("witness kind"));
+        let mut broken = catalog.clone();
+        broken.editions[0].formal_logos.as_mut().unwrap().snapshot["text"] = "Copied text".into();
+        assert!(broken.validate().unwrap_err().contains("source text"));
+        let mut broken = catalog.clone();
+        broken.editions[0].formal_logos.as_mut().unwrap().passages[0]
+            .selectors
+            .insert("quotation".into(), "Copied text".into());
+        assert!(
+            broken
+                .validate()
+                .unwrap_err()
+                .contains("retrieval metadata")
+        );
+        let mut broken = catalog;
+        let mut duplicate = broken.editions[0].clone();
+        duplicate.id = "second-edition".into();
+        broken.editions.push(duplicate);
+        assert!(broken.validate().unwrap_err().contains("duplicate passage"));
+    }
+
+    #[test]
+    fn metadata_updates_are_idempotent_and_preserve_immutable_editions() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("registry/catalog.json");
+        update_catalog(&path, |current| {
+            *current = referenced_catalog();
+            Ok(())
+        })
+        .unwrap();
+        let original = fs::read(&path).unwrap();
+        update_catalog(&path, |_| Ok(())).unwrap();
+        assert_eq!(fs::read(&path).unwrap(), original);
+        assert!(
+            update_catalog(&path, |current| {
+                current.editions[0].label = "Different identity".into();
+                Ok(())
+            })
+            .unwrap_err()
+            .contains("immutable")
+        );
+        assert_eq!(fs::read(&path).unwrap(), original);
+    }
+
+    #[test]
+    fn reads_existing_local_catalog_without_rewriting_identity() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("registry/catalog.json");
+        let store = dir.path().join("local");
+        let edition = add(&path, &store, b"%PDF-fixture", fields("original")).unwrap();
+        let mut legacy: serde_json::Value =
+            serde_json::from_slice(&fs::read(&path).unwrap()).unwrap();
+        legacy["schema_version"] = 1.into();
+        legacy.as_object_mut().unwrap().remove("authors");
+        fs::write(&path, serde_json::to_vec(&legacy).unwrap()).unwrap();
+        assert_eq!(read_catalog(&path).unwrap().editions, vec![edition.clone()]);
+        update_catalog(&path, |_| Ok(())).unwrap();
+        let updated = read_catalog(&path).unwrap();
+        assert_eq!(updated.schema_version, 2);
+        assert_eq!(updated.editions, vec![edition]);
+        assert_eq!(verify(&path, &store).unwrap(), 1);
+    }
+
+    #[test]
+    fn simultaneous_updates_retain_both_changes() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("registry/catalog.json");
+        let barrier = std::sync::Barrier::new(2);
+        std::thread::scope(|scope| {
+            for id in ["work-one", "work-two"] {
+                let path = &path;
+                let barrier = &barrier;
+                scope.spawn(move || {
+                    barrier.wait();
+                    update_catalog(path, |catalog| {
+                        catalog.works.push(Work {
+                            id: id.into(),
+                            title: id.into(),
+                            author_ids: Vec::new(),
+                            formal_logos_sources: Vec::new(),
+                        });
+                        Ok(())
+                    })
+                    .unwrap();
+                });
+            }
+        });
+        assert_eq!(read_catalog(&path).unwrap().works.len(), 2);
     }
 
     #[test]
@@ -340,7 +826,7 @@ mod tests {
         let catalog = dir.path().join("registry/catalog.json");
         let store = dir.path().join("local");
         let edition = add(&catalog, &store, b"%PDF-fixture", fields("physics-1")).unwrap();
-        let object = object_path(&store, &edition.sha256);
+        let object = object_path(&store, edition.sha256.as_deref().unwrap());
         fs::write(&object, b"corrupted").unwrap();
         assert!(
             verify(&catalog, &store)
@@ -366,7 +852,7 @@ mod tests {
         fs::create_dir_all(catalog.parent().unwrap()).unwrap();
         fs::write(
             &catalog,
-            br#"{"schema_version":2,"works":[],"editions":[]}"#,
+            br#"{"schema_version":3,"works":[],"editions":[]}"#,
         )
         .unwrap();
         assert!(read_catalog(&catalog).unwrap_err().contains("schema"));

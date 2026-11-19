@@ -1,3 +1,5 @@
+mod formal_logos;
+mod import;
 mod registry;
 
 use sha2::{Digest, Sha256};
@@ -106,6 +108,10 @@ const USAGE: &str = "usage:
   formal-logos-sources inspect FILE --pages FIRST:LAST [--url URL] [--join-soft-hyphens]
   formal-logos-sources add FILE --work-id ID --title TITLE --edition-id ID --edition-label LABEL --language LANG --license TERMS [--url URL] [--catalog PATH] [--store DIR]
   formal-logos-sources list [--catalog PATH]
+  formal-logos-sources check [--catalog PATH]
+  formal-logos-sources authors [--name NAME] [--catalog PATH]
+  formal-logos-sources import --formal-logos DIR [--revision COMMIT] [--work-groups FILE] [--catalog PATH]
+  formal-logos-sources connections --formal-logos DIR --source ID [--locator LOCATOR] [--format json|markdown] [--catalog PATH]
   formal-logos-sources verify [--catalog PATH] [--store DIR]
   formal-logos-sources prepare --edition-id ID --pages FIRST:LAST [--join-soft-hyphens] [--catalog PATH] [--store DIR]";
 
@@ -253,6 +259,131 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
                 &opts.path("--catalog", "registry/catalog.json"),
             )?)
         }
+        "check" => {
+            let opts = Options::parse(args, &["--catalog"], &[])?;
+            opts.no_positional()?;
+            let path = opts.path("--catalog", "registry/catalog.json");
+            if !path.is_file() {
+                return Err(format!("catalogue does not exist: {}", path.display()));
+            }
+            let catalog = registry::read_catalog(&path)?;
+            show(&serde_json::json!({
+                "schema_version": catalog.schema_version,
+                "authors": catalog.authors.len(),
+                "works": catalog.works.len(),
+                "editions": catalog.editions.len(),
+                "local_pdf_editions": catalog.editions.iter().filter(|e|e.formal_logos.is_none()).count(),
+                "referenced_editions": catalog.editions.iter().filter(|e|e.formal_logos.is_some()).count(),
+                "formal_logos": catalog.formal_logos,
+                "validation": "offline catalogue structure and references; source bytes not checked"
+            }))
+        }
+        "authors" => {
+            let opts = Options::parse(args, &["--catalog", "--name"], &[])?;
+            opts.no_positional()?;
+            let catalog = registry::read_catalog(&opts.path("--catalog", "registry/catalog.json"))?;
+            let filter = opts.fields.get("--name").map(|s| s.to_lowercase());
+            let mut authors: Vec<_> = catalog
+                .authors
+                .iter()
+                .filter(|a| {
+                    filter
+                        .as_ref()
+                        .is_none_or(|q| a.name.to_lowercase() == *q || a.id == *q)
+                })
+                .collect();
+            authors.sort_by(|a, b| a.name.cmp(&b.name));
+            if filter.is_some() && authors.is_empty() {
+                return Err("unknown author attribution".into());
+            }
+            let rows: Vec<_> = authors.into_iter().map(|author| {
+                let works: Vec<_> = catalog.works.iter().filter(|w|w.author_ids.contains(&author.id)).collect();
+                let editions: Vec<_> = catalog.editions.iter().filter(|e|works.iter().any(|w|w.id==e.work_id)).collect();
+                serde_json::json!({
+                    "id": author.id, "name": author.name,
+                    "works": works,
+                    "witness_editions": editions.len(),
+                    "registered_passages": editions.iter().filter_map(|e|e.formal_logos.as_ref()).map(|r|r.passages.len()).sum::<usize>()
+                })
+            }).collect();
+            show(
+                &serde_json::json!({"formal_logos":catalog.formal_logos,"author_attributions":rows}),
+            )
+        }
+        "import" => {
+            let opts = Options::parse(
+                args,
+                &["--formal-logos", "--revision", "--work-groups", "--catalog"],
+                &[],
+            )?;
+            opts.no_positional()?;
+            let repository = formal_logos::Repository::open(
+                Path::new(opts.required("--formal-logos")?),
+                opts.fields
+                    .get("--revision")
+                    .map(String::as_str)
+                    .unwrap_or("HEAD"),
+            )?;
+            let groups = import::read_groups(Some(
+                &opts.path("--work-groups", "registry/work-groups.json"),
+            ))?;
+            show(&import::import(
+                &repository,
+                &groups,
+                &opts.path("--catalog", "registry/catalog.json"),
+            )?)
+        }
+        "connections" => {
+            let opts = Options::parse(
+                args,
+                &[
+                    "--formal-logos",
+                    "--source",
+                    "--locator",
+                    "--format",
+                    "--catalog",
+                ],
+                &[],
+            )?;
+            opts.no_positional()?;
+            let catalog = registry::read_catalog(&opts.path("--catalog", "registry/catalog.json"))?;
+            let binding = catalog
+                .formal_logos
+                .as_ref()
+                .ok_or("catalogue has no imported Formal Logos revision")?;
+            if binding.repository != "moritzbrantner/formal-logos" {
+                return Err("unsupported Formal Logos repository binding".into());
+            }
+            let repository = formal_logos::Repository::open(
+                Path::new(opts.required("--formal-logos")?),
+                &binding.revision,
+            )?;
+            let report = formal_logos::connections(
+                &repository,
+                opts.required("--source")?,
+                opts.fields.get("--locator").map(String::as_str),
+            )?;
+            if !catalog.works.iter().any(|w| {
+                w.formal_logos_sources
+                    .iter()
+                    .any(|s| s.id == report.source.id)
+            }) {
+                return Err("source is absent from the imported catalogue".into());
+            }
+            match opts
+                .fields
+                .get("--format")
+                .map(String::as_str)
+                .unwrap_or("json")
+            {
+                "json" => show(&report),
+                "markdown" => {
+                    print!("{}", formal_logos::render_markdown(&report));
+                    Ok(())
+                }
+                _ => Err("--format must be json or markdown".into()),
+            }
+        }
         "verify" => {
             let opts = Options::parse(args, &["--catalog", "--store"], &[])?;
             opts.no_positional()?;
@@ -385,7 +516,7 @@ mod tests {
         let (edition, loaded_pdf) =
             registry::load_edition(&catalog, &store, "fixture-first").unwrap();
         let witness = inspect(&loaded_pdf, 1, 1, false).unwrap();
-        assert_eq!(witness["sha256"], edition.sha256);
+        assert_eq!(witness["sha256"].as_str(), edition.sha256.as_deref());
         assert_eq!(witness["text_sha256"], hash(b"First synthetic page."));
     }
 
