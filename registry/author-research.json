@@ -26,15 +26,15 @@
           }
         ]
       },
-      "scope_note": "The imported catalogue contains seven Aquinas works. Reconcile the complete-works provider inventory while retaining its distinctions between Aquinas’s texts, reportationes, continuations, insertions, and other authors. The existing catalogue does not establish complete bibliography or reading coverage.",
+      "scope_note": "The first inventory pass matched all seven currently registered Aquinas works to the Corpus Thomisticum Opera omnia index. This denominator is the imported seven-work subset, not Aquinas’s complete bibliography. Retrieval candidates cover specified works or parts; they do not establish acquisition, full reading, edition equivalence, or reuse permission. Reportationes, earlier redactions, continuations, insertions and other authors remain distinct.",
       "inventories": [
         {
           "id": "corpus-thomisticum-opera",
           "title": "Corpus Thomisticum: Opera omnia",
           "url": "https://www.corpusthomisticum.org/iopera.html",
-          "scope": "The project aims to provide an edition of Aquinas’s complete works, using critical texts where possible. The published index also identifies reportationes, continuations, insertions, and material by other authors. Our catalogue has not been reconciled with this inventory.",
+          "scope": "The initial pass matches the seven works currently imported from Formal Logos against this provider’s title and part listings. Whole-author reconciliation remains open: unregistered works and variants, reportationes, fragments, disputed attributions, continuations and other authors still require explicit dispositions. The index’s complete-works objective does not establish that the repository has inventoried or read the complete bibliography.",
           "publication_status": "published",
-          "reconciliation_status": "not_started",
+          "reconciliation_status": "in_progress",
           "evidence": [
             {
               "url": "https://www.corpusthomisticum.org/iopera.html",
@@ -47,6 +47,18 @@
               "title": "A Brief Introduction to the Corpus Thomisticum",
               "checked_on": "2026-11-19",
               "note": "The project describes its complete-works edition objective and says that improved editions and corrections are welcome."
+            },
+            {
+              "url": "https://www.corpusthomisticum.org/iopera.html",
+              "title": "Thomas de Aquino, Opera omnia — seven registered work matches",
+              "checked_on": "2026-11-19",
+              "note": "Located De ente et essentia, Summa contra Gentiles, In libros Physicorum, De potentia, Sententia libri Metaphysicae, Compendium theologiae and Summa Theologiae. The listing separately attributes the Summa supplement to Rainaldus and De potentia q.4 a.2 continuation to Vincentius; those are not silently included as Aquinas-authored additions. Seven matches count only the currently registered subset."
+            },
+            {
+              "url": "https://www.corpusthomisticum.org/reoptedi.html",
+              "title": "Optimae editiones operum Thomae de Aquino",
+              "checked_on": "2026-11-19",
+              "note": "The provider’s recommended editions differ from some served HTML texts: De ente, Leonine vol.43 (1976); Compendium, Leonine vol.42 (1979); De potentia, Pession’s 1965 edition; Metaphysics, Cathala/Spiazzi 1971. These bibliographic recommendations do not change the identity of the existing digital witnesses."
             }
           ]
         },
@@ -204,6 +216,223 @@
             }
           ],
           "next_step": "Resolve the offered plain-text or HTML representation and record its digital revision and frontmatter edition/translator credits before adding a retained witness."
+        },
+        {
+          "id": "aquinas-scg-latin-i14-28",
+          "work_id": "fl-work-0292b788-8058-5069-afde-4a19b82b5604",
+          "title": "Summa contra gentiles — Latin, book I chapters 14–28",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/scg1014.html",
+          "coverage": "Latin book I, chapters 14–28, including the existing I.18 and I.22 readings. The page identifies the Leonine text corrected from the proofs of the Turin 1961 edition, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. It is one part of the four-book work.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/scg1014.html",
+                "title": "Summa contra gentiles — Latin, book I chapters 14–28 — edition notice",
+                "checked_on": "2026-11-19",
+                "note": "The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/scg1014.html",
+              "title": "Summa contra gentiles — Latin, book I chapters 14–28",
+              "checked_on": "2026-11-19",
+              "note": "The page identifies book I chapters 14–28 and the Leonine/Turin 1961 textual basis. A direct GET returned HTTP 200."
+            }
+          ],
+          "next_step": "Resolve the existing I.18 and I.22 manifests against this same resource, retaining their numbered-entry locators. Other book I ranges and books II–IV need separate resources; a candidate is not a newly acquired witness."
+        },
+        {
+          "id": "aquinas-compendium-latin-i1-184",
+          "work_id": "fl-work-c642b3c0-41ef-5798-8834-d3b03018f5ab",
+          "title": "Compendium theologiae — Latin, book I chapters 1–184",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/ott101.html",
+          "coverage": "Latin book I, chapters 1–184, including the registered chapters 12–15. The page identifies the Turin 1954 text, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. Book I chapters 185–246 and book II are separate index resources.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/ott101.html",
+                "title": "Compendium theologiae — Latin, book I chapters 1–184 — edition notice",
+                "checked_on": "2026-11-19",
+                "note": "The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/ott101.html",
+              "title": "Compendium theologiae — Latin, book I chapters 1–184",
+              "checked_on": "2026-11-19",
+              "note": "The page identifies book I chapters 1–184 and the Turin 1954 text. A direct GET returned HTTP 200."
+            }
+          ],
+          "next_step": "Resolve the existing I chapters 12–15 manifest before adding any acquisition record. Keep the Turin 1954 digital text distinct from the Leonine vol.42 (1979) edition recommended in the provider’s bibliography."
+        },
+        {
+          "id": "aquinas-physics-latin-vii-viii",
+          "work_id": "fl-work-235966cc-024d-5630-9426-50912ce6af4f",
+          "title": "In libros Physicorum — Latin, books VII–VIII",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/cpy07.html",
+          "coverage": "Latin books VII–VIII. The page identifies the Leonine text as published at Turin in 1954, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. Its scope includes the book/lecture locations represented by the existing English Physics witnesses, but it is a distinct Latin edition.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/cpy07.html",
+                "title": "In libros Physicorum — Latin, books VII–VIII — edition notice",
+                "checked_on": "2026-11-19",
+                "note": "The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/cpy07.html",
+              "title": "In libros Physicorum — Latin, books VII–VIII",
+              "checked_on": "2026-11-19",
+              "note": "The actual Opera omnia route cpy07.html renders books VII–VIII and identifies the Leonine/Turin 1954 textual basis. A direct GET returned HTTP 200."
+            }
+          ],
+          "next_step": "Map the Latin numbered entries for VII lectures 1–2 and VIII lectures 7, 9 and 22 to the existing English reading locators; record any translation alignment explicitly. The imported cpy.html catalogue URL returned HTTP 404 during this check and must not be treated as a downloadable whole-work resource."
+        },
+        {
+          "id": "aquinas-de-potentia-latin-q3",
+          "work_id": "fl-work-256fbf26-eb53-5a27-807e-20756ca6f661",
+          "title": "De potentia — Latin, question 3",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/qdp3.html",
+          "coverage": "Latin question 3, including the existing q.3 a.5 reading. The page identifies the Turin 1953 text, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. It does not cover q.5 a.1 or the full work.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/qdp3.html",
+                "title": "De potentia — Latin, question 3 — edition notice",
+                "checked_on": "2026-11-19",
+                "note": "The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/qdp3.html",
+              "title": "De potentia — Latin, question 3",
+              "checked_on": "2026-11-19",
+              "note": "The page identifies question III and the Turin 1953 text. A direct GET returned HTTP 200."
+            }
+          ],
+          "next_step": "Resolve the existing q.3 a.5 manifest and its numbered entries against this resource. Keep question 5 on its separate page, and preserve the provider’s separate attribution of the q.4 a.2 continuation when expanding the work inventory."
+        },
+        {
+          "id": "aquinas-de-potentia-latin-q5-6",
+          "work_id": "fl-work-256fbf26-eb53-5a27-807e-20756ca6f661",
+          "title": "De potentia — Latin, questions 5–6",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/qdp5.html",
+          "coverage": "Latin questions 5–6, including the existing q.5 a.1 reading. The page identifies the Turin 1953 text, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. Question 3 is a separate resource.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/qdp5.html",
+                "title": "De potentia — Latin, questions 5–6 — edition notice",
+                "checked_on": "2026-11-19",
+                "note": "The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/qdp5.html",
+              "title": "De potentia — Latin, questions 5–6",
+              "checked_on": "2026-11-19",
+              "note": "The page identifies questions V–VI and the Turin 1953 text. A direct GET returned HTTP 200."
+            }
+          ],
+          "next_step": "Resolve the existing q.5 a.1 manifest and numbered entries against this resource. Do not substitute the Pession 1965 edition recommended in the bibliography without recording a distinct edition and locator alignment."
+        },
+        {
+          "id": "aquinas-metaphysics-latin-ix",
+          "work_id": "fl-work-3b5c2cfb-01dd-5ea7-a5e1-4f221e1378af",
+          "title": "Sententia libri Metaphysicae — Latin, book IX",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/cmp09.html",
+          "coverage": "Latin book IX, including the existing lectures 7–9 reading. The page identifies the Turin 1950 text, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. The imported catalogue route cmp00.html is the prooemium only; other books require separate resources.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/cmp09.html",
+                "title": "Sententia libri Metaphysicae — Latin, book IX — edition notice",
+                "checked_on": "2026-11-19",
+                "note": "The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/cmp09.html",
+              "title": "Sententia libri Metaphysicae — Latin, book IX",
+              "checked_on": "2026-11-19",
+              "note": "The page identifies book IX and the Turin 1950 text. A direct GET returned HTTP 200."
+            }
+          ],
+          "next_step": "Resolve the existing book IX lectures 7–9 manifest against this resource. Registered readings in books II, V and XII use their own pages; retain the distinction from the Cathala/Spiazzi 1971 edition recommended in the provider’s bibliography."
+        },
+        {
+          "id": "aquinas-summa-q19-scta-latin",
+          "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+          "title": "Summa theologiae — SCTA Latin Prima pars question 19",
+          "language": "lat",
+          "format": "tei",
+          "url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e144/cod-cnLxE4_TAca84-d1e144.xml",
+          "coverage": "Prima pars question 19, with its prologue and all twelve article containers. The selected complete article I q.19 a.1 is xml:id TAca84-d1e144-Dd1e182; only that article was fully read in this pass. The TEI header identifies Rome 1888 volume 4, Thomas Aquinas as author, Jeffrey C. Witt as transcription editor and TEI encoder, SCTA as authority, edition 0.0.0-dev dated 2023-07-31, and draft revision status. Immutable revision f9065dc8ce7bc790b8c972e49ee19d661f028be6; verified Git blob 94bc9e4ecf18163bcb1ba1af99ff610515ab8e49.",
+          "access": "open_online",
+          "rights": {
+            "status": "provider_license",
+            "scope": "The selected SCTA digital TEI witness expressly declares CC BY-NC-SA 4.0 in its publicationStmt/availability. This records the provider licence for that file, not a public-domain conclusion or the rights of another online edition.",
+            "evidence": [
+              {
+                "url": "https://github.com/scta-texts/TAca84/blob/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e144/cod-cnLxE4_TAca84-d1e144.xml#L19-L25",
+                "title": "SCTA q.19 TEI: publication and availability header",
+                "checked_on": "2026-11-19",
+                "note": "The pinned file identifies SCTA as authority and explicitly publishes this digital text under Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://github.com/scta-texts/TAca84/blob/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e144/cod-cnLxE4_TAca84-d1e144.xml",
+              "title": "SCTA TAca84: pinned Summa theologiae question 19 TEI",
+              "checked_on": "2026-11-19",
+              "note": "Retrieved exact pinned content through the GitHub file API and independently verified the canonical Git blob. Read header and all of I q.19 a.1; counted prologue and article containers 1–12 without claiming full-question reading. Existing Formal Logos article passage 2dc7a89a-5d81-5bf7-97b3-a429018d7e4a was reused."
+            }
+          ],
+          "next_step": "Retain the existing Formal Logos source and edition identities. Use the complete q.19 a.1 section-role map for the first source-preparation pass, preserving objections, cited authorities, author response and replies. Any later witness correction requires the canonical fidelity-review procedure; other q.19 articles remain outside this completed reading pass."
         }
       ]
     },
