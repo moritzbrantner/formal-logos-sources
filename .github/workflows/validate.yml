@@ -17,4 +17,4 @@ jobs:
         cargo fmt --check
         cargo test --locked
         cargo clippy --locked --all-targets -- -D warnings
-        cargo run --locked -- check
+        cargo run --locked -- check --research registry/author-research.json

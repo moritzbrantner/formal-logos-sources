@@ -19,7 +19,8 @@ The committed catalogue starts from Formal Logos revision
 | Sources without registered passages | 19 |
 
 Author entries preserve the original attribution, including joint authors and institutions;
-they do not infer person identity, life dates, or deceased status. A witness edition is the
+they do not infer person identity, life dates, or deceased status. Curated person profiles
+are recorded separately below. A witness edition is the
 precise upstream manifestation or selected document described by one passage manifest. It
 may cover only a chapter or extract, rather than an entire printed edition. These counts
 describe the registered inventory, not complete bibliographies, reading coverage, or proof.
@@ -84,6 +85,80 @@ Full bibliography expansion, automatic source downloads, reading-coverage views 
 OCR/NLP integrations remain subsequent work. Existing citations and rights notices are
 preserved as recorded; this import does not make a new rights determination.
 
+## Author profiles and retrieval planning
+
+[`registry/author-research.json`](registry/author-research.json) adds curated profiles for
+**Aristotle, Thomas Aquinas, Leibniz, Kant, and Bertrand Russell**. The
+[generated author report](reports/author-research.md) joins these profiles to **16 works,
+65 referenced witnesses, and 196 passage references** in the current catalogue. It
+includes **6 bibliography inventories** and **13 retrieval candidates for 8 works**;
+the remaining **8 works** are visible as gaps in retrieval planning. These are counts of
+registered material, not complete bibliographies or reading coverage.
+
+```sh
+# List the curated deceased people, ranked by existing passage count.
+cargo run --locked -- research --deceased
+
+# Inspect one person's inventory, work links, editions and next retrieval actions.
+cargo run --locked -- research --author leibniz --format markdown
+
+# Validate both the imported catalogue and the curated records, without network access.
+cargo run --locked -- check --research registry/author-research.json
+```
+
+`research` emits JSON by default. `--author` matches an exact profile ID, name or declared
+alias, case-insensitively; unknown or ambiguous matches fail. `--deceased` filters only
+the curated profiles with supported deceased status. The report states how many source
+attributions remain unprofiled: currently **122 of 128**. It does not classify those
+attributions as living or deceased. `--research FILE` and `--catalog PATH` select other
+inputs; missing files fail. Ordinary `check` still validates only the catalogue unless
+`--research` is supplied; CI supplies it explicitly.
+
+### Curated identities and bibliography scope
+
+Each profile explicitly maps to the existing attribution IDs. Leibniz maps both to his
+individual attribution and to the separate Leibniz–Clarke attribution as a coauthor.
+Several people may share a joint attribution; a sole-author attribution cannot be assigned
+to several profiles. A jointly attributed work can appear under more than one person, so
+profile totals are not generally additive. Names are never split or merged automatically.
+
+Life status records its evidence and observation date. Historical death years use negative
+integers for BCE (`-322` means 322 BCE); there is no year zero. Unknown life status remains
+explicit. Bibliography inventories record the provider's scope and publication state,
+separately from our reconciliation progress. The current six inventories are located but
+not yet reconciled into complete work lists. This schema has no completed-reconciliation
+state: recording an index link cannot mark a bibliography finished.
+
+### Edition access and rights
+
+Every retrieval candidate names an existing work, a specific edition or document, its
+language and format, its actual coverage, an access route, evidence, and a next action.
+An entry may cover a single paper or a section of a work. Candidates do not create local
+PDF editions or canonical Formal Logos witnesses.
+
+Access and rights are separate fields. Rights states record a provider licence, a
+provider public-domain claim with its jurisdiction, an explicit permission requirement,
+or rights not yet established. The scope and cited notice carry the conditions: the
+`provider_license` state alone does not mean unrestricted reuse. Death year is never used
+to derive edition rights. These commands perform no downloads and make no new permission
+decision.
+
+Curated records are edited in the sidecar; the corpus importer does not rewrite them.
+After a catalogue refresh, run the combined check to identify references needing
+reconciliation. Unknown attribution/work IDs, a candidate assigned to another person's
+work, missing required evidence, and unsupported fields fail validation. All evidence
+links and observations remain metadata; CI does not contact their hosts.
+
+Regenerate the committed report with:
+
+```sh
+cargo run --locked -- research --deceased --format markdown > reports/author-research.md
+```
+
+The Markdown report is an intentionally committed distribution view for GitHub readers;
+the JSON sidecar and imported catalogue remain its inputs. See
+[ADR 0002](docs/adr/0002-curated-author-research.md) for the persistence boundary.
+
 ## Local PDF storage and passage preparation
 
 Requires Rust and Poppler `pdftotext` (install `poppler-utils`).
@@ -130,7 +205,7 @@ PDFs and extracted full text remain local; `.gitignore` excludes `local/` and PD
 cargo fmt --check
 cargo test --locked
 cargo clippy --locked --all-targets -- -D warnings
-cargo run --locked -- check
+cargo run --locked -- check --research registry/author-research.json
 ```
 
 ## Boundary

@@ -1,0 +1,701 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "id": "aquinas",
+      "name": "Thomas Aquinas",
+      "aliases": [
+        "Thomas de Aquino",
+        "Saint Thomas Aquinas"
+      ],
+      "attributions": [
+        {
+          "attribution_id": "fl-author-c6276031dd1481f78e8c33e733b8b41f2df2aa2c7d139a9317931c417a88047b",
+          "relation": "sole_author"
+        }
+      ],
+      "life": {
+        "status": "deceased",
+        "death_year": 1274,
+        "evidence": [
+          {
+            "url": "https://www.vaticanstate.va/en/component/content/article/28-january-st-thomas-aquinas-doctor-of-the-church.html?Itemid=216&catid=51",
+            "title": "28 January: St. Thomas Aquinas, Doctor of the Church",
+            "checked_on": "2026-11-19",
+            "note": "The Vatican City State biography states that Thomas Aquinas died at Fossanova on 7 March 1274."
+          }
+        ]
+      },
+      "scope_note": "The imported catalogue contains seven Aquinas works. Reconcile the complete-works provider inventory while retaining its distinctions between Aquinas’s texts, reportationes, continuations, insertions, and other authors. The existing catalogue does not establish complete bibliography or reading coverage.",
+      "inventories": [
+        {
+          "id": "corpus-thomisticum-opera",
+          "title": "Corpus Thomisticum: Opera omnia",
+          "url": "https://www.corpusthomisticum.org/iopera.html",
+          "scope": "The project aims to provide an edition of Aquinas’s complete works, using critical texts where possible. The published index also identifies reportationes, continuations, insertions, and material by other authors. Our catalogue has not been reconciled with this inventory.",
+          "publication_status": "published",
+          "reconciliation_status": "not_started",
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/iopera.html",
+              "title": "Thomas de Aquino, Opera omnia",
+              "checked_on": "2026-11-19",
+              "note": "The index groups works and parts and labels continuations and related material by other authors."
+            },
+            {
+              "url": "https://www.corpusthomisticum.org/wintroen.html",
+              "title": "A Brief Introduction to the Corpus Thomisticum",
+              "checked_on": "2026-11-19",
+              "note": "The project describes its complete-works edition objective and says that improved editions and corrections are welcome."
+            }
+          ]
+        },
+        {
+          "id": "corpus-thomisticum-authenticity",
+          "title": "Corpus Thomisticum: bibliography on authentic writings",
+          "url": "https://www.corpusthomisticum.org/reopauth.html",
+          "scope": "Selected reference bibliography for authenticity and work identity, including Emery’s work catalogue, Leonine introductions, and studies of disputed works and fragments. This supports reconciliation rather than supplying a completed inventory in this repository.",
+          "publication_status": "selected",
+          "reconciliation_status": "not_started",
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/reopauth.html",
+              "title": "Repertoria de scriptis authenticis Thomae Aquinatis",
+              "checked_on": "2026-11-19",
+              "note": "The page labels its bibliography as selected and distinguishes general catalogues, disputed works, sermons, and fragments."
+            }
+          ]
+        }
+      ],
+      "retrievals": [
+        {
+          "id": "aquinas-summa-latin-knowledge",
+          "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+          "title": "Summa theologiae — Latin, Prima pars questions 3–14",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/sth1003.html",
+          "coverage": "Prima pars, questions 3–14, including the knowledge discussion in I q.14. The page identifies the Leonine text published at Rome in 1888, digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Latin HTML text of Summa theologiae I, questions 3–14. A site-level all-rights-reserved notice is recorded; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/wintroen.html",
+                "title": "A Brief Introduction to the Corpus Thomisticum",
+                "checked_on": "2026-11-19",
+                "note": "The project introduction describes freely available research tools and carries a site-level all-rights-reserved notice. It does not supply an edition-specific reuse licence for these text pages."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/sth1003.html",
+              "title": "Thomas de Aquino, Summa Theologiae, Iª q. 3–14",
+              "checked_on": "2026-11-19",
+              "note": "The page states its question range and identifies the Leonine 1888 text and digital preparation credits."
+            }
+          ],
+          "next_step": "Resolve the retained HTML witness and numbered entries for I q.14 against the existing Formal Logos manifest; establish edition-specific reuse terms before any redistribution."
+        },
+        {
+          "id": "aquinas-summa-latin-will",
+          "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+          "title": "Summa theologiae — Latin, Prima pars questions 15–27",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/sth1015.html",
+          "coverage": "Prima pars, questions 15–27, including the will discussion in I q.19. This is a separate HTML resource from the questions 3–14 page.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Latin HTML text of Summa theologiae I, questions 15–27. A site-level all-rights-reserved notice is recorded; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/wintroen.html",
+                "title": "A Brief Introduction to the Corpus Thomisticum",
+                "checked_on": "2026-11-19",
+                "note": "The project introduction describes freely available research tools and carries a site-level all-rights-reserved notice. It does not supply an edition-specific reuse licence for these text pages."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/sth1015.html",
+              "title": "Thomas de Aquino, Summa Theologiae, Iª q. 15–27",
+              "checked_on": "2026-11-19",
+              "note": "The text page and Opera omnia index identify the range as Prima pars, questions 15–27."
+            }
+          ],
+          "next_step": "Resolve the retained HTML witness and numbered entries for I q.19 against the existing Formal Logos manifest; establish edition-specific reuse terms before any redistribution."
+        },
+        {
+          "id": "aquinas-de-ente-latin",
+          "work_id": "fl-work-004fd39d-a45d-5624-b927-053cb0fd0fc9",
+          "title": "De ente et essentia — Baur/Koch Latin edition",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/oee.html",
+          "coverage": "Latin De ente et essentia: L. Baur, Münster 1933; emended by J. Koch, digitized by Roberto Busa, and reviewed/arranged by Enrique Alarcón. Retain the Baur/Koch chapter numbering already declared by Formal Logos.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Baur/Koch Latin HTML edition of De ente et essentia. A site-level all-rights-reserved notice is recorded; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/wintroen.html",
+                "title": "A Brief Introduction to the Corpus Thomisticum",
+                "checked_on": "2026-11-19",
+                "note": "The project introduction describes freely available research tools and carries a site-level all-rights-reserved notice. It does not supply an edition-specific reuse licence for these text pages."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/oee.html",
+              "title": "Thomas de Aquino, De ente et essentia",
+              "checked_on": "2026-11-19",
+              "note": "The page identifies the Baur 1933 text, Koch emendations and digital preparation credits, and presents numbered chapters and entries."
+            }
+          ],
+          "next_step": "Map selected chapters using the existing Baur/Koch locator convention; record any alignment to differently numbered translations explicitly and establish edition-specific reuse terms before redistribution."
+        },
+        {
+          "id": "aquinas-summa-prima-pars-gutenberg",
+          "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+          "title": "Summa Theologica, Part I — Project Gutenberg ebook 17611",
+          "language": "eng",
+          "format": "html",
+          "url": "https://www.gutenberg.org/ebooks/17611",
+          "coverage": "English Prima Pars only, titled From the Complete American Edition. The catalogue records release on 2006-01-26 and update on 2021-01-03 and offers HTML, plain text, EPUB and other formats; it does not establish a specific print year or translator credit.",
+          "access": "open_online",
+          "rights": {
+            "status": "provider_public_domain",
+            "scope": "Project Gutenberg’s public-domain statement for ebook 17611 is explicitly limited to the USA. No DE/EU rights assessment is asserted.",
+            "jurisdiction": "US",
+            "evidence": [
+              {
+                "url": "https://www.gutenberg.org/ebooks/17611?msg=welcome_stranger",
+                "title": "Summa Theologica, Part I (Prima Pars) by Saint Aquinas Thomas | Project Gutenberg",
+                "checked_on": "2026-11-19",
+                "note": "The ebook metadata identifies English Prima Pars and states public-domain status in the USA."
+              },
+              {
+                "url": "https://www.gutenberg.org/policy/terms_of_use",
+                "title": "Terms of Use | Project Gutenberg",
+                "checked_on": "2026-11-19",
+                "note": "The provider offers no assurances about copyright status outside the United States and recommends linking to the ebook landing page."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.gutenberg.org/ebooks/17611?msg=welcome_stranger",
+              "title": "Summa Theologica, Part I (Prima Pars) by Saint Aquinas Thomas | Project Gutenberg",
+              "checked_on": "2026-11-19",
+              "note": "The catalogue page rendered and listed format links and digital release/update dates. The bare landing and full-text URLs intermittently returned HTTP 503 during this check; downloading was not tested."
+            },
+            {
+              "url": "https://www.gutenberg.org/help/bibliographic_record.html",
+              "title": "Help on Download Options and Bibliographic Record | Project Gutenberg",
+              "checked_on": "2026-11-19",
+              "note": "The provider explains that its electronic publications do not necessarily match a print edition exactly."
+            }
+          ],
+          "next_step": "Resolve the offered plain-text or HTML representation and record its digital revision and frontmatter edition/translator credits before adding a retained witness."
+        }
+      ]
+    },
+    {
+      "id": "aristotle",
+      "name": "Aristotle",
+      "aliases": [],
+      "attributions": [
+        {
+          "attribution_id": "fl-author-a90dfe4fb4d5e4a3c287581bcdfabe9ec20e1339414df11ea62fbec0322be1a6",
+          "relation": "sole_author"
+        }
+      ],
+      "life": {
+        "status": "deceased",
+        "death_year": -322,
+        "evidence": [
+          {
+            "url": "https://blogs.loc.gov/inside_adams/2014/04/animal-locomotion-from-antiquity-to-the-21st-century/",
+            "title": "Animal Locomotion: From Antiquity to the 21st Century",
+            "checked_on": "2026-11-19",
+            "note": "The Library of Congress identifies Aristotle of Stagira with the dates 384–322 B.C.; the negative death year uses historical BCE numbering."
+          }
+        ]
+      },
+      "scope_note": "The imported catalogue contains five works attributed to Aristotle. Reconciliation against the external work inventory has not started; catalogued fragments and attributed texts need their own identity records rather than automatic inclusion as authenticated works.",
+      "inventories": [
+        {
+          "id": "perseus-aristotle",
+          "title": "Perseus Catalogue: Aristotle textgroup tlg0086",
+          "url": "https://catalog.perseus.org/catalog/urn:cts:greekLit:tlg0086",
+          "scope": "The provider lists works currently catalogued under the Aristotle textgroup, with work records leading to editions and translations. This is a catalogue inventory, not an asserted complete bibliography or reading-coverage denominator.",
+          "publication_status": "selected",
+          "reconciliation_status": "not_started",
+          "evidence": [
+            {
+              "url": "https://catalog.perseus.org/catalog/urn:cts:greekLit:tlg0086",
+              "title": "PerseusCatalog: tlg0086",
+              "checked_on": "2026-11-19",
+              "note": "The textgroup is labelled Aristotle. 384-322 and its work list is explicitly described as works currently catalogued."
+            }
+          ]
+        }
+      ],
+      "retrievals": [
+        {
+          "id": "aristotle-metaphysics-perseus-greek",
+          "work_id": "fl-work-a8acbf0a-30ba-5e04-b261-cb62a89cbddb",
+          "title": "Metaphysics — Ross 1924, Perseus Greek digital edition",
+          "language": "grc",
+          "format": "html",
+          "url": "https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-grc2:1/",
+          "coverage": "Book 1 landing page for the named digital edition urn:cts:greekLit:tlg0086.tlg025.perseus-grc2, with navigation and a linked XML representation. The print source is Ross, Aristotle’s Metaphysics, volumes 1–2, Oxford: Clarendon Press, 1924.",
+          "access": "open_online",
+          "rights": {
+            "status": "provider_license",
+            "scope": "Provider-stated CC BY-SA 4.0 for the named Perseus digital edition tlg0086.tlg025.perseus-grc2. Its notice requests Perseus attribution, individual text identification, a source repository link where possible, and submission of corrections. This records the digital provider’s statement without independently determining rights in the underlying print edition.",
+            "evidence": [
+              {
+                "url": "https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-grc2:1/",
+                "title": "Aristotle, Metaphysics, ed. William David Ross, 1",
+                "checked_on": "2026-11-19",
+                "note": "The named digital-edition notice links CC BY-SA 4.0, identifies its CTS text URI, and offers an XML download."
+              },
+              {
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "title": "Attribution-ShareAlike 4.0 International",
+                "checked_on": "2026-11-19",
+                "note": "This is the CC BY-SA 4.0 licence destination linked from the named Perseus edition."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-grc2:1/",
+              "title": "Aristotle, Metaphysics, ed. William David Ross, 1",
+              "checked_on": "2026-11-19",
+              "note": "The page identifies the Greek Ross 1924 edition, CTS version perseus-grc2, book navigation, and an XML representation."
+            }
+          ],
+          "next_step": "Resolve and pin the XML linked by this exact digital edition; retain the CTS version and Bekker locator alignment when registering selected passages."
+        },
+        {
+          "id": "aristotle-metaphysics-perseus-english",
+          "work_id": "fl-work-a8acbf0a-30ba-5e04-b261-cb62a89cbddb",
+          "title": "Metaphysics — Tredennick 1933–1935, Perseus English digital edition",
+          "language": "eng",
+          "format": "html",
+          "url": "https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2:1/",
+          "coverage": "Book 1 landing page for urn:cts:greekLit:tlg0086.tlg025.perseus-eng2, with navigation and a linked XML representation. The page identifies Hugh Tredennick’s translation, volumes 1–2, London: William Heinemann; Cambridge, MA: Harvard University Press, 1933–1935.",
+          "access": "open_online",
+          "rights": {
+            "status": "provider_license",
+            "scope": "Provider-stated CC BY-SA 4.0 for the named Perseus digital translation tlg0086.tlg025.perseus-eng2, with the edition’s attribution, text-identification, repository-link and correction-submission conditions. This records the provider statement and does not infer the translation’s rights from Aristotle’s death date.",
+            "evidence": [
+              {
+                "url": "https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2:1/",
+                "title": "Aristotle, Metaphysics, Hugh Tredennick (Translator), 1",
+                "checked_on": "2026-11-19",
+                "note": "The named digital-edition notice links CC BY-SA, identifies the exact CTS translation, and offers XML."
+              },
+              {
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "title": "Attribution-ShareAlike 4.0 International",
+                "checked_on": "2026-11-19",
+                "note": "The edition’s Creative Commons link resolves to CC BY-SA 4.0."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2:1/",
+              "title": "Aristotle, Metaphysics, Hugh Tredennick (Translator), 1",
+              "checked_on": "2026-11-19",
+              "note": "The page identifies Tredennick, the 1933–1935 print source, and the distinct perseus-eng2 digital edition."
+            }
+          ],
+          "next_step": "Resolve and pin the linked XML translation, preserving its distinct edition identity and mapping its locators to the selected Greek witness."
+        },
+        {
+          "id": "aristotle-physics-hardie-gaye",
+          "work_id": "fl-work-13799e73-292a-512c-a380-17b0dbf24740",
+          "title": "Physics — Hardie and Gaye, Internet Classics Archive",
+          "language": "eng",
+          "format": "html",
+          "url": "https://classics.mit.edu/Aristotle/physics.html",
+          "coverage": "Landing page linking English Books I–VIII and a text-only download; translators are R. P. Hardie and R. K. Gaye.",
+          "access": "open_online",
+          "rights": {
+            "status": "provider_license",
+            "scope": "The Internet Classics Archive permits personal reading and downloading of hosted works and distribution for educational use. Commercial or other non-educational distribution requires prior permission. Its HTML presentation has a separate all-rights-reserved notice; text permissions do not grant unrestricted copying of the site presentation.",
+            "evidence": [
+              {
+                "url": "https://classics.mit.edu/Help/permissions.html",
+                "title": "The Internet Classics Archive | Permissions Help",
+                "checked_on": "2026-11-19",
+                "note": "The provider separates permissions for hosted work texts from its web presentation and states personal/educational permissions and non-educational distribution restrictions."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://classics.mit.edu/Aristotle/physics.html",
+              "title": "The Internet Classics Archive | Physics by Aristotle",
+              "checked_on": "2026-11-19",
+              "note": "The landing page names Hardie and Gaye and links all eight books plus a text-only download."
+            }
+          ],
+          "next_step": "Select the linked text representation and record its translator attribution and the applicable personal or educational use conditions; request permission for distribution outside those stated terms."
+        }
+      ]
+    },
+    {
+      "id": "kant",
+      "name": "Immanuel Kant",
+      "aliases": [
+        "Kant"
+      ],
+      "attributions": [
+        {
+          "attribution_id": "fl-author-7a3d6fdfa4ab91d8449eb92de2577bba981d381871e57f921bc492d0485d8339",
+          "relation": "sole_author"
+        }
+      ],
+      "life": {
+        "status": "deceased",
+        "death_year": 1804,
+        "evidence": [
+          {
+            "url": "https://archiv.bbaw.de/nachlaesse/nachlaesse/kant-immanuel",
+            "title": "Kant, Immanuel — BBAW Archiv und Sammlungen",
+            "checked_on": "2026-11-19",
+            "note": "The archive records Kant's birth on 22 April 1724 and death on 12 February 1804."
+          }
+        ]
+      },
+      "scope_note": "Begin with the registered Critique of Pure Reason. Keep its A and B versions, Academy pagination, and English translations distinct. The Academy inventory is a discovery basis; no complete local bibliography or complete reading coverage is asserted.",
+      "inventories": [
+        {
+          "id": "kant-academy-edition",
+          "title": "Kant's gesammelte Schriften — Akademieausgabe",
+          "url": "https://kant.bbaw.de/de/akademieausgabe",
+          "scope": "The four Academy-edition divisions: works, correspondence, manuscript remains, and lectures. The overview identifies the lecture division as unfinished.",
+          "publication_status": "ongoing",
+          "reconciliation_status": "not_started",
+          "evidence": [
+            {
+              "url": "https://kant.bbaw.de/de/akademieausgabe",
+              "title": "Akademieausgabe — Kant-Edition",
+              "checked_on": "2026-11-19",
+              "note": "BBAW describes the four divisions and marks the lecture division as not yet completed."
+            },
+            {
+              "url": "https://kant.bbaw.de/de/akademieausgabe/werke",
+              "title": "Abteilung I: Werke — Kant-Edition",
+              "checked_on": "2026-11-19",
+              "note": "The works inventory places the 1787 Critique of Pure Reason in AA III and the 1781 version in AA IV."
+            }
+          ]
+        }
+      ],
+      "retrievals": [
+        {
+          "id": "kant-critique-meiklejohn-gutenberg",
+          "work_id": "fl-work-6677e01b-8659-5803-a967-9cbaa66f46ca",
+          "title": "The Critique of Pure Reason — J. M. D. Meiklejohn translation, Gutenberg 4280",
+          "language": "eng",
+          "format": "html",
+          "url": "https://www.gutenberg.org/ebooks/4280",
+          "coverage": "English Meiklejohn translation of the Critique of Pure Reason. The provider's ebook record offers HTML, UTF-8 text, EPUB and other formats; edition pagination must be checked for a selected passage.",
+          "access": "open_online",
+          "rights": {
+            "status": "provider_public_domain",
+            "scope": "Project Gutenberg identifies ebook 4280 as public domain in the USA. This records the provider's claim for this ebook, not a rights conclusion for other jurisdictions or translations.",
+            "jurisdiction": "US",
+            "evidence": [
+              {
+                "url": "https://dev.gutenberg.org/ebooks/4280",
+                "title": "The Critique of Pure Reason by Immanuel Kant — Project Gutenberg",
+                "checked_on": "2026-11-19",
+                "note": "The same-provider record names Meiklejohn as translator and states public-domain status in the USA."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://dev.gutenberg.org/ebooks/4280",
+              "title": "The Critique of Pure Reason by Immanuel Kant — Project Gutenberg",
+              "checked_on": "2026-11-19",
+              "note": "The provider's development-host record was readable and listed English HTML, UTF-8 text and EPUB routes. The canonical www landing page returned a temporary 503 during this check."
+            }
+          ],
+          "next_step": "Recheck the canonical landing page, choose one explicit format, and record applicable local reuse terms and edition identity before acquisition and passage preparation."
+        },
+        {
+          "id": "kant-critique-aa3-bonn",
+          "work_id": "fl-work-6677e01b-8659-5803-a967-9cbaa66f46ca",
+          "title": "Kritik der reinen Vernunft — Akademie-Ausgabe III, Bonner Kant-Korpus",
+          "language": "deu",
+          "format": "html",
+          "url": "https://www.korpora.org/kant/aa03/",
+          "coverage": "German second-edition 1787 text in Academy volume III, presented as page-level HTML. This candidate does not represent the A edition in volume IV.",
+          "access": "open_online",
+          "rights": {
+            "status": "provider_license",
+            "scope": "Korpora.org's custom terms permit attributed scientific noncommercial use, require bibliographic reporting of resulting publications, and prohibit corpus redistribution. These are provider terms for the hosted corpus, not an unrestricted licence.",
+            "evidence": [
+              {
+                "url": "https://korpora.org/Leitseite/index.html",
+                "title": "Korpora.org — Nutzungsbedingungen",
+                "checked_on": "2026-11-19",
+                "note": "The provider restricts use to attributed scientific noncommercial purposes, requests publication metadata as a condition, and disallows corpus redistribution."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.korpora.org/kant/aa03/",
+              "title": "Inhaltsverzeichnis Band 3 — Kritik der reinen Vernunft",
+              "checked_on": "2026-11-19",
+              "note": "The volume contents identify the 1787 second edition and link individual Academy pages."
+            },
+            {
+              "url": "https://korpora.org/kant/main.html",
+              "title": "Das Bonner Kant-Korpus",
+              "checked_on": "2026-11-19",
+              "note": "The project describes the Bonn dataset, Korpora.org's maintenance since 2008, Academy-volume coverage and continuing editorial corrections."
+            }
+          ],
+          "next_step": "Use the page links for comparison with registered A/B citations; review the provider's usage conditions before any local corpus acquisition or derived publication."
+        }
+      ]
+    },
+    {
+      "id": "leibniz",
+      "name": "Gottfried Wilhelm Leibniz",
+      "aliases": [
+        "Leibniz"
+      ],
+      "attributions": [
+        {
+          "attribution_id": "fl-author-ad43c70af99f8fee9da5cca0dfa197355080728a9a3e7fdc66cfcaa8931381a0",
+          "relation": "sole_author"
+        },
+        {
+          "attribution_id": "fl-author-490ffd77c11b350e38b7ece932b23407cbcc7d08d71899c215550eb45590c88a",
+          "relation": "coauthor"
+        }
+      ],
+      "life": {
+        "status": "deceased",
+        "death_year": 1716,
+        "evidence": [
+          {
+            "url": "https://adw-goe.de/forschung/forschungsprojekte-akademienprogramm/leibniz-edition/",
+            "title": "Leibniz-Edition — Niedersächsische Akademie der Wissenschaften zu Göttingen",
+            "checked_on": "2026-11-19",
+            "note": "The edition project's page identifies Gottfried Wilhelm Leibniz as living from 1646 to 1716."
+          }
+        ]
+      },
+      "scope_note": "Begin with the two registered works, Monadology and the Leibniz–Clarke correspondence. The joint attribution remains distinct from Leibniz's individual identity. The external inventory is an ongoing account of known writings, not a reconciled local bibliography or reading-completion claim.",
+      "inventories": [
+        {
+          "id": "leibniz-working-catalogue",
+          "title": "Arbeitskatalog der Leibniz-Edition",
+          "url": "https://leibniz-katalog.bbaw.de/de",
+          "scope": "Currently known writings, letters by and to Leibniz, and related third-party documents, with links to Academy-edition volumes and manuscript repositories. Unedited records can be provisional. The catalogue's CC BY 4.0 statement does not license linked witnesses.",
+          "publication_status": "ongoing",
+          "reconciliation_status": "not_started",
+          "evidence": [
+            {
+              "url": "https://leibniz-katalog.bbaw.de/de",
+              "title": "Arbeitskatalog der Leibniz-Edition",
+              "checked_on": "2026-11-19",
+              "note": "The project describes ongoing updates, broad coverage of known documents, provisional records for unedited material, and a CC BY 4.0 licence for this catalogue."
+            }
+          ]
+        }
+      ],
+      "retrievals": [
+        {
+          "id": "leibniz-monadology-latta-html",
+          "work_id": "fl-work-738fd471-e47c-57a1-96ae-ab295261c7dc",
+          "title": "Monadology — Robert Latta translation",
+          "language": "eng",
+          "format": "html",
+          "url": "https://texts.rbjones.com/rbjpub/philos/classics/leibniz/monad.htm",
+          "coverage": "The numbered Monadology text in English; matches the host recorded by the current Formal Logos source.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Reuse rights for this hosted Robert Latta transcription were not established from the observed work page.",
+            "evidence": [
+              {
+                "url": "https://texts.rbjones.com/rbjpub/philos/classics/leibniz/monad.htm",
+                "title": "The Monadology",
+                "checked_on": "2026-11-19",
+                "note": "The page names Robert Latta as translator and provides the numbered text; no explicit reuse licence was identified on the observed page."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://texts.rbjones.com/rbjpub/philos/classics/leibniz/monad.htm",
+              "title": "The Monadology",
+              "checked_on": "2026-11-19",
+              "note": "The publicly readable HTML names Leibniz and translator Robert Latta, and uses numbered sections."
+            }
+          ],
+          "next_step": "Confirm the underlying Latta edition and its reuse terms; compare the relevant sections with a scholarly original-language witness before preparing any new canonical passage."
+        },
+        {
+          "id": "leibniz-clarke-third-paper-newton-project",
+          "work_id": "fl-work-77710698-4fea-53c2-b6d7-5485434d28a7",
+          "title": "Mr. Leibniz's Third Paper — Newton Project normalized edition",
+          "language": "eng",
+          "format": "html",
+          "url": "https://newtonproject.ox.ac.uk/view/texts/normalized/THEM00230",
+          "coverage": "Leibniz's Third Paper only, from the correspondence edited by Samuel Clarke, London 1717; not the complete correspondence. A diplomatic rendering and TEI XML are linked.",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Item-specific reuse rights for Newton Project document THEM00230 were not established. Public reading and the linked XML do not themselves establish a reuse licence.",
+            "evidence": [
+              {
+                "url": "https://newtonproject.ox.ac.uk/catalogue/record/THEM00230",
+                "title": "Mr. Leibniz's Third Paper — Catalogue Entry THEM00230",
+                "checked_on": "2026-11-19",
+                "note": "The catalogue identifies the 1717 printed source and links normalized and diplomatic text; the observed page does not supply an item-specific reuse licence."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://newtonproject.ox.ac.uk/view/texts/normalized/THEM00230",
+              "title": "Mr. Leibniz's Third Paper — Normalized",
+              "checked_on": "2026-11-19",
+              "note": "The editorial record identifies Samuel Clarke's 1717 collection, describes normalization, and links the diplomatic text and TEI XML."
+            }
+          ],
+          "next_step": "Check this item's rights declaration and select normalized or diplomatic text explicitly; preserve paper and paragraph locators and the limited document coverage."
+        }
+      ]
+    },
+    {
+      "id": "russell",
+      "name": "Bertrand Russell",
+      "aliases": [
+        "Russell"
+      ],
+      "attributions": [
+        {
+          "attribution_id": "fl-author-31685b2b98456454418c95924b1342194d5775f9823c7db7bd0bd844dcfa34cd",
+          "relation": "sole_author"
+        }
+      ],
+      "life": {
+        "status": "deceased",
+        "death_year": 1970,
+        "evidence": [
+          {
+            "url": "https://russell.humanities.mcmaster.ca/about-russell/russells-life/",
+            "title": "Russell's Life — The Bertrand Russell Research Centre",
+            "checked_on": "2026-11-19",
+            "note": "McMaster's research centre identifies Russell's birth year as 1872 and death year as 1970."
+          }
+        ]
+      },
+      "scope_note": "Begin with the registered Philosophy of Logical Atomism lectures. Preserve the Pears and Slater editions as different candidates. The ongoing Collected Papers and its bibliography are inventory sources, not a completed local corpus; deceased status does not establish permission to reproduce these editions.",
+      "inventories": [
+        {
+          "id": "russell-collected-papers-and-bibliography",
+          "title": "The Collected Papers of Bertrand Russell and A Bibliography of Bertrand Russell",
+          "url": "https://russell.humanities.mcmaster.ca/our-work/collected-papers/",
+          "scope": "Critical edition of unpublished books and shorter writings, with published and in-progress volumes, plus the three-volume 1994 bibliography of separate publications, serial publications and indexes. Separately published books require their own inventory reconciliation.",
+          "publication_status": "ongoing",
+          "reconciliation_status": "not_started",
+          "evidence": [
+            {
+              "url": "https://russell.humanities.mcmaster.ca/our-work/collected-papers/",
+              "title": "The Collected Papers of Bertrand Russell — The Bertrand Russell Research Centre",
+              "checked_on": "2026-11-19",
+              "note": "The project lists published and unfinished volumes, including newly discovered papers, and the three-volume bibliography issued in 1994."
+            }
+          ]
+        }
+      ],
+      "retrievals": [
+        {
+          "id": "russell-logical-atomism-pears-2010",
+          "work_id": "fl-work-252edd45-e81b-592a-83aa-4e52c5f0cd1f",
+          "title": "The Philosophy of Logical Atomism — Routledge Classics 2010, Pears introduction",
+          "language": "eng",
+          "format": "pdf",
+          "url": "https://sites.ualberta.ca/~francisp/NewPhil448/RussellPhilLogicalAtomismPears.pdf",
+          "coverage": "The edition referenced by the current Formal Logos source, whose registered focus is lectures V–VI. The edition includes David F. Pears's introduction.",
+          "access": "open_online",
+          "rights": {
+            "status": "permission_required",
+            "scope": "The indexed edition notice reserves rights for the 2010 Bertrand Russell Peace Foundation edition and David F. Pears's 1985 introduction, and requires written publisher permission for reproduction. Public university hosting supplies no additional reuse permission.",
+            "evidence": [
+              {
+                "url": "https://sites.ualberta.ca/~francisp/NewPhil448/RussellPhilLogicalAtomismPears.pdf",
+                "title": "The Philosophy of Logical Atomism — copyright page",
+                "checked_on": "2026-11-19",
+                "note": "The indexed copyright page identifies the Foundation's 2010 copyright, Pears's 1985 introduction copyright, and an explicit restriction on reproduction without publisher permission."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://sites.ualberta.ca/~francisp/NewPhil448/RussellPhilLogicalAtomismPears.pdf",
+              "title": "The Philosophy of Logical Atomism — Routledge Classics edition",
+              "checked_on": "2026-11-19",
+              "note": "The indexed edition page records the Routledge Classics publication in 2010, the earlier Fontana edition, and print ISBN 9780415474610. No source file was downloaded."
+            }
+          ],
+          "next_step": "Keep this as a reference link; obtain an appropriately licensed library or publisher copy and resolve reproduction permission before copying or preparing source bytes."
+        },
+        {
+          "id": "russell-logical-atomism-cpbr8",
+          "work_id": "fl-work-252edd45-e81b-592a-83aa-4e52c5f0cd1f",
+          "title": "Collected Papers volume 8 — The Philosophy of Logical Atomism and Other Essays, 1914–19",
+          "language": "eng",
+          "format": "bibliographic",
+          "url": "https://russell.humanities.mcmaster.ca/our-work/collected-papers/volumes-of-the-collected-papers/",
+          "coverage": "Volume 8, edited by John G. Slater, George Allen & Unwin, 1986, ISBN 9780049200746. Part III, item 17 contains The Philosophy of Logical Atomism [1918]. The linked page supplies bibliographic metadata and contents, not the edition's full text.",
+          "access": "catalogue_only",
+          "rights": {
+            "status": "not_established",
+            "scope": "No open reuse permission for the full text of the Slater 1986 edition was established from McMaster's bibliography and contents page.",
+            "evidence": [
+              {
+                "url": "https://russell.humanities.mcmaster.ca/our-work/collected-papers/volumes-of-the-collected-papers/",
+                "title": "Volumes 2–11 of the Collected Papers — The Bertrand Russell Research Centre",
+                "checked_on": "2026-11-19",
+                "note": "The page identifies the edition and contents but does not offer an open full-text reuse licence."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://russell.humanities.mcmaster.ca/our-work/collected-papers/volumes-of-the-collected-papers/",
+              "title": "Volumes 2–11 of the Collected Papers — The Bertrand Russell Research Centre",
+              "checked_on": "2026-11-19",
+              "note": "The volume 8 entry identifies Slater as editor, the 1986 publication and ISBN, and lists the 1918 lectures as item 17."
+            }
+          ],
+          "next_step": "Locate a library or publisher copy by ISBN, inspect its rights notice, and map the selected lectures to this edition's pagination before proposing a new witness."
+        }
+      ]
+    }
+  ]
+}
