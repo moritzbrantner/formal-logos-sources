@@ -159,6 +159,17 @@ The Markdown report is an intentionally committed distribution view for GitHub r
 the JSON sidecar and imported catalogue remain its inputs. See
 [ADR 0002](docs/adr/0002-curated-author-research.md) for the persistence boundary.
 
+## Author research program
+
+The [author-by-author plan](docs/specs/author-research-program.md) gives a proposed
+51-person historical sequence, a 50-person contemporary sequence, and an exhaustive
+roster of all 128 current attribution records, including joint authors, institutions
+and unresolved providers. Each entry has an opening research packet and a pinned
+canonical source link. The plan defines scoped author passes, connects them to existing
+Formal Logos findings, and identifies concrete reuse of Document Search, OCR, Belief Lab
+and YouTube Corpus. Its capability observations are dated 2026-11-19; it does not mark
+the passes or Sources adapters complete.
+
 ## Local PDF storage and passage preparation
 
 Requires Rust and Poppler `pdftotext` (install `poppler-utils`).
