@@ -1,6 +1,6 @@
 # Aquinas: first source-preparation pass
 
-Observed 2026-11-19. The seven Aquinas works already registered in Sources have been matched to the selected work inventory, and all seven now have a scoped retrieval route. The curated profile has **11 retrieval candidates**, up from four; five works previously had none. This includes the actual SCTA edition used to materialize and read **the complete ST I q.19 a.1 article** and map its eight argumentative sections to existing Formal Logos readings.
+Observed 2026-11-19. **Historical research checkpoint:** the edition and passage counts below describe the explicitly linked Formal Logos revision, not the subsequently refreshed catalogue; current totals are in the [catalogue freshness audit](../docs/catalogue-freshness.md). The seven Aquinas works already registered in Sources have been matched to the selected work inventory, and all seven now have a scoped retrieval route. The curated profile has **11 retrieval candidates**, up from four; five works previously had none. This includes the actual SCTA edition used to materialize and read **the complete ST I q.19 a.1 article** and map its eight argumentative sections to existing Formal Logos readings.
 
 This completes the seven-work inventory subset and the selected article preparation. Whole-author bibliography reconciliation remains in progress. The source packet preserves the current philosophical assessment and adds no canonical claim, proof or premise judgment.
 

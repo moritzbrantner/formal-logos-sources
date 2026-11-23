@@ -6,16 +6,16 @@ This repository prepares **source artifacts**, not philosophical propositions or
 
 ## Catalogue and research connections
 
-The committed catalogue starts from Formal Logos revision
-[`597e4b2eb02e092f1769a2e987437bc78e14893a`](https://github.com/moritzbrantner/formal-logos/tree/597e4b2eb02e092f1769a2e987437bc78e14893a):
+The committed catalogue is synchronized to Formal Logos revision
+[`a2011fb21d648d62046e72a5817517f572c23c92`](https://github.com/moritzbrantner/formal-logos/tree/a2011fb21d648d62046e72a5817517f572c23c92):
 
 | Recorded metadata | Count |
 | --- | ---: |
 | Author attribution strings | 128 |
 | Bibliographic works after three reviewed groupings | 161 |
 | Original Formal Logos source records | 164 |
-| Referenced witness editions | 294 |
-| Registered passages | 516 |
+| Referenced witness editions | 296 |
+| Registered passages | 518 |
 | Sources without registered passages | 19 |
 
 Author entries preserve the original attribution, including joint authors and institutions;
@@ -25,7 +25,8 @@ precise upstream manifestation or selected document described by one passage man
 may cover only a chapter or extract, rather than an entire printed edition. These counts
 describe the registered inventory, not complete bibliographies, reading coverage, or proof.
 
-The two initial generated views expose existing Aquinas research:
+The two initial source-to-claim/argument connection views retain their original
+[`597e4b2eb02e092f1769a2e987437bc78e14893a`](https://github.com/moritzbrantner/formal-logos/tree/597e4b2eb02e092f1769a2e987437bc78e14893a) revision pins, even after the catalogue refresh. These are historical snapshots, not current-`main` evaluations:
 
 - [Knowledge and immateriality, ST I q.14 a.1](reports/aquinas-knowledge.md): includes the existing reading with 52 direct argument consumers.
 - [Will and intellect, ST I q.19 a.1](reports/aquinas-will.md): includes the existing reading with 54 direct argument consumers.
@@ -44,7 +45,10 @@ cargo run --locked -- authors --name 'Thomas Aquinas'
 
 # Import an exact local Formal Logos commit. HEAD is also accepted and resolved once.
 cargo run --locked -- import --formal-logos ../formal-logos \
-  --revision 597e4b2eb02e092f1769a2e987437bc78e14893a
+  --revision a2011fb21d648d62046e72a5817517f572c23c92
+
+# Report differences without changing the catalogue. The default target is local main.
+cargo run --locked -- freshness --formal-logos ../formal-logos --revision main
 
 # Uses the revision recorded in the catalogue, even when the checkout has moved on.
 cargo run --locked -- connections --formal-logos ../formal-logos \
@@ -55,6 +59,17 @@ cargo run --locked -- connections --formal-logos ../formal-logos \
 mapping). The three explicit groupings concern the *Tractatus*, *Philosophical
 Investigations*, and Ayer's *Language, Truth and Logic*. Every source UUID and original
 source title is retained. Shared URLs and similar names never merge works automatically.
+The `freshness` command compares the catalogue with the projection at its recorded
+commit and with the requested local Formal Logos revision. JSON output reports added,
+changed, removed and unchanged records for source metadata (including upstream-only
+notes and edition URNs), passage manifests, immutable witness editions, passage
+locators/selectors, work groupings, source attributions and claim provenance fields.
+`stale` means the target revision differs; `broken_references` instead means the
+catalogue disagrees with its **own pinned** upstream projection. Neither is a claim
+that source bytes are available or have been checked. The command reads Git objects
+with lazy fetching disabled, never downloads witnesses, never writes either repository,
+and errors if a required pinned commit or blob is absent. See the [reconciliation audit](docs/catalogue-freshness.md).
+
 The import is deterministic and repeatable; local works, independent author records and
 acquired PDF editions are preserved. A refresh that would orphan a local edition refuses
 without changing the catalogue. The recorded source commit must be available locally;
@@ -90,7 +105,7 @@ preserved as recorded; this import does not make a new rights determination.
 [`registry/author-research.json`](registry/author-research.json) adds curated profiles for
 **Aristotle, Thomas Aquinas, Leibniz, Kant, and Bertrand Russell**. The
 [generated author report](reports/author-research.md) joins these profiles to **16 works,
-65 referenced witnesses, and 196 passage references** in the current catalogue. It
+67 referenced witnesses, and 198 passage references** in the current catalogue. It
 includes **6 bibliography inventories** and **13 retrieval candidates for 8 works**;
 the remaining **8 works** are visible as gaps in retrieval planning. These are counts of
 registered material, not complete bibliographies or reading coverage.
@@ -206,7 +221,7 @@ preserving their work/edition IDs and hashes.
 `inspect` and `prepare` emit `sha256` (original PDF), `text_sha256` (selected normalized page text), physical `pdf_pages`, short `incipit`, and character count. These match the `web_snapshot` PDF hashing/extraction convention in `truth-core` at commit `2524680bd2b5bcdbface48d60d14a79c3f41375d` (2026-11-14). `prepare` first re-verifies the local blob's hash and includes `local_object_verified: true` and `remote_witness_verified: false`. The `--url`/`source_url` is descriptive and **never fetched or verified**.
 
 **Preparation does not create an accepted Formal Logos witness.** For selected source
-research, follow Formal Logos's [source-evidence contract](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/docs/source-evidence.md),
+research, follow Formal Logos's [source-evidence contract](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/docs/source-evidence.md),
 including its initial pinning procedure, edition/rights/locator checks and reading in
 context. Create canonical passage and claim records there through its existing workflow.
 Routine CI checks metadata offline; it does not repeatedly acquire historical witnesses.
