@@ -494,6 +494,38 @@ mod tests {
     }
 
     #[test]
+    fn newly_imported_aquinas_edition_ids_match_the_immutable_reference_hash() {
+        let catalog: Catalog = serde_json::from_str(include_str!("../registry/catalog.json"))
+            .expect("committed catalogue JSON");
+        let expected = [
+            "corpus/passages/aquinas-summa-theologiae-q13-a7.json",
+            "corpus/passages/aquinas-summa-theologiae-q45.json",
+        ];
+        for path in expected {
+            let edition = catalog
+                .editions
+                .iter()
+                .find(|edition| {
+                    edition
+                        .formal_logos
+                        .as_ref()
+                        .is_some_and(|reference| reference.manifest_path == path)
+                })
+                .expect("newly recorded Aquinas witness");
+            let mut unsigned = edition.clone();
+            unsigned.id.clear();
+            assert_eq!(
+                edition.id,
+                format!(
+                    "fl-edition-{}",
+                    hash(&serde_json::to_vec(&unsigned).unwrap())
+                ),
+                "{path}"
+            );
+        }
+    }
+
+    #[test]
     fn rejects_unknown_group_sources_and_manifest_sources() {
         let groups:WorkGroups=serde_json::from_value(json!({"schema_version":1,"groups":[{"id":"grouped","title":"Work","source_ids":["one","missing"],"reason":"Example"}]})).unwrap();
         assert!(
