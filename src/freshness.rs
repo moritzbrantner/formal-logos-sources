@@ -60,7 +60,11 @@ impl Inventory {
         let sources: BTreeSet<_> = catalog
             .works
             .iter()
-            .flat_map(|work| work.formal_logos_sources.iter().map(|source| source.id.as_str()))
+            .flat_map(|work| {
+                work.formal_logos_sources
+                    .iter()
+                    .map(|source| source.id.as_str())
+            })
             .collect();
         let referenced: BTreeSet<_> = catalog
             .editions
