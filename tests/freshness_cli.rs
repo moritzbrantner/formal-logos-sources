@@ -53,7 +53,9 @@ fn commit(repo: &Path) -> String {
         ],
         repo,
     );
-    success("git", &["rev-parse", "HEAD"], repo).trim().to_owned()
+    success("git", &["rev-parse", "HEAD"], repo)
+        .trim()
+        .to_owned()
 }
 
 fn source(id: &str) -> Value {
@@ -169,7 +171,10 @@ fn freshness_distinguishes_revision_drift_from_broken_pinned_references() {
     assert_eq!(diff["target_revision"], second);
     assert_eq!(diff["stale"], true);
     assert_eq!(diff["broken_references"], false);
-    assert_eq!(diff["upstream_changes"]["source_records"]["changed"], json!(["source-one"]));
+    assert_eq!(
+        diff["upstream_changes"]["source_records"]["changed"],
+        json!(["source-one"])
+    );
     assert_eq!(
         diff["upstream_changes"]["passage_manifests"]["added"],
         json!(["corpus/passages/two.json"])
@@ -182,9 +187,18 @@ fn freshness_distinguishes_revision_drift_from_broken_pinned_references() {
         diff["upstream_changes"]["witness_editions"]["changed"],
         json!(["corpus/passages/one.json"])
     );
-    assert_eq!(diff["upstream_changes"]["passages"]["changed"], json!(["passage-one"]));
-    assert_eq!(diff["upstream_changes"]["passages"]["added"], json!(["passage-two"]));
-    assert_eq!(diff["upstream_changes"]["claim_attributions"]["added"], json!(["claim-one"]));
+    assert_eq!(
+        diff["upstream_changes"]["passages"]["changed"],
+        json!(["passage-one"])
+    );
+    assert_eq!(
+        diff["upstream_changes"]["passages"]["added"],
+        json!(["passage-two"])
+    );
+    assert_eq!(
+        diff["upstream_changes"]["claim_attributions"]["added"],
+        json!(["claim-one"])
+    );
     assert_eq!(diff["pinned_inventory"]["witness_editions"], 1);
     assert_eq!(diff["target_inventory"]["witness_editions"], 2);
     assert_eq!(diff["target_inventory"]["sources_without_passages"], 0);
@@ -195,10 +209,20 @@ fn freshness_distinguishes_revision_drift_from_broken_pinned_references() {
     fs::write(dir.path().join("local.pdf"), b"%PDF-synthetic").unwrap();
     cli(
         &[
-            "add", "local.pdf", "--work-id", "local-work",
-            "--title", "Locally catalogued work", "--edition-id", "local-edition",
-            "--edition-label", "Local copy", "--language", "eng",
-            "--license", "Synthetic fixture",
+            "add",
+            "local.pdf",
+            "--work-id",
+            "local-work",
+            "--title",
+            "Locally catalogued work",
+            "--edition-id",
+            "local-edition",
+            "--edition-label",
+            "Local copy",
+            "--language",
+            "eng",
+            "--license",
+            "Synthetic fixture",
         ],
         dir.path(),
     );
@@ -208,25 +232,53 @@ fn freshness_distinguishes_revision_drift_from_broken_pinned_references() {
     let sidecar_before = fs::read(&sidecar).unwrap();
     cli(
         &[
-            "import", "--formal-logos", "upstream", "--revision", &second,
-            "--work-groups", "groups.json",
+            "import",
+            "--formal-logos",
+            "upstream",
+            "--revision",
+            &second,
+            "--work-groups",
+            "groups.json",
         ],
         dir.path(),
     );
     let refreshed: Value = serde_json::from_slice(&fs::read(&catalog).unwrap()).unwrap();
-    assert!(refreshed["editions"].as_array().unwrap().iter().any(|e| e["id"] == "local-edition"));
-    assert!(!refreshed["editions"].as_array().unwrap().iter().any(|e| e["id"] == edition));
+    assert!(
+        refreshed["editions"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|e| e["id"] == "local-edition")
+    );
+    assert!(
+        !refreshed["editions"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|e| e["id"] == edition)
+    );
     assert_eq!(refreshed["formal_logos"]["revision"], second);
     assert_eq!(fs::read(&sidecar).unwrap(), sidecar_before);
-    assert_eq!(cli(&["check", "--research", "registry/author-research.json"], dir.path())["referenced_editions"], 2);
+    assert_eq!(
+        cli(
+            &["check", "--research", "registry/author-research.json"],
+            dir.path()
+        )["referenced_editions"],
+        2
+    );
     let checked = freshness(dir.path());
     assert_eq!(checked["stale"], false);
     assert_eq!(checked["broken_references"], false);
     let imported_once = fs::read(&catalog).unwrap();
     cli(
         &[
-            "import", "--formal-logos", "upstream", "--revision", &second,
-            "--work-groups", "groups.json",
+            "import",
+            "--formal-logos",
+            "upstream",
+            "--revision",
+            &second,
+            "--work-groups",
+            "groups.json",
         ],
         dir.path(),
     );
@@ -237,8 +289,14 @@ fn freshness_distinguishes_revision_drift_from_broken_pinned_references() {
     fs::remove_file(repo.join("corpus/passages/two.json")).unwrap();
     commit(&repo);
     let removed = freshness(dir.path());
-    assert_eq!(removed["upstream_changes"]["source_records"]["removed"], json!(["source-two"]));
-    assert_eq!(removed["upstream_changes"]["passages"]["removed"], json!(["passage-two"]));
+    assert_eq!(
+        removed["upstream_changes"]["source_records"]["removed"],
+        json!(["source-two"])
+    );
+    assert_eq!(
+        removed["upstream_changes"]["passages"]["removed"],
+        json!(["passage-two"])
+    );
     assert_eq!(removed["broken_references"], false);
 }
 
@@ -269,16 +327,15 @@ fn missing_local_git_blob_fails_offline_without_mutating_catalogue() {
         &repo,
     );
     let blob = listing.split_whitespace().nth(2).unwrap();
-    fs::remove_file(
-        repo.join(".git/objects")
-            .join(&blob[..2])
-            .join(&blob[2..]),
-    )
-    .unwrap();
+    fs::remove_file(repo.join(".git/objects").join(&blob[..2]).join(&blob[2..])).unwrap();
     let output = run(
         env!("CARGO_BIN_EXE_formal-logos-sources"),
         &[
-            "freshness", "--formal-logos", "upstream", "--work-groups", "groups.json",
+            "freshness",
+            "--formal-logos",
+            "upstream",
+            "--work-groups",
+            "groups.json",
         ],
         dir.path(),
     );
@@ -293,18 +350,31 @@ fn connections_keep_historical_revision_links_after_main_moves() {
     // No claims in this fixture, so the connection view contains only the pinned passage.
     let first_report = cli(
         &[
-            "connections", "--formal-logos", "upstream", "--source", "source-one",
+            "connections",
+            "--formal-logos",
+            "upstream",
+            "--source",
+            "source-one",
         ],
         dir.path(),
     );
     assert_eq!(first_report["revision"], first);
-    assert!(first_report["passages"][0]["passage"]["url"].as_str().unwrap().contains(&first));
+    assert!(
+        first_report["passages"][0]["passage"]["url"]
+            .as_str()
+            .unwrap()
+            .contains(&first)
+    );
     let changed = manifest("source-one", "passage-one", 'd');
     write(&repo, "corpus/passages/one.json", &changed);
     commit(&repo);
     let after = cli(
         &[
-            "connections", "--formal-logos", "upstream", "--source", "source-one",
+            "connections",
+            "--formal-logos",
+            "upstream",
+            "--source",
+            "source-one",
         ],
         dir.path(),
     );
