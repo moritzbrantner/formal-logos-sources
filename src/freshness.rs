@@ -195,12 +195,15 @@ fn snapshot(repository: &Repository, groups: &WorkGroups) -> Result<Snapshot, St
     let sources = repository.records("sources")?;
     let manifests = repository.records("passages")?;
     let claims = repository.records("claims")?;
-    let (projected, _) = import::build_records(
+    let (mut projected, _) = import::build_records(
         &repository.revision,
         sources.clone(),
         manifests.clone(),
         groups,
     )?;
+    // The persisted catalogue normalizes passage prefixes and collection order.
+    // Compare that representation, not the raw importer builder's intermediate order.
+    projected.sort();
     let mut source_attributions = BTreeMap::new();
     for source in &sources {
         source_attributions.insert(
