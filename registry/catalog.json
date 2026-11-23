@@ -5393,6 +5393,43 @@
       }
     },
     {
+      "id": "fl-edition-239dc27dd89def902f744ef573d02e8d0daf47dcc82c39a0cff2acf0730fa512",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e278/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e278/cod-cnLxE4_TAca84-d1e278.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q45.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e278/cod-cnLxE4",
+          "git_blob_sha": "8ff72728ef647e8d849e136915420a215f190fbb",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e278/cod-cnLxE4_TAca84-d1e278.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e278/cod-cnLxE4_TAca84-d1e278.xml"
+        },
+        "passages": [
+          {
+            "id": "fb7bd7bb-c007-43fa-9147-a017d0ae1f01",
+            "label": "Thomas Aquinas, Summa theologiae, I q.45 a.3",
+            "locator": "I q.45 a.3",
+            "claim_locator_prefixes": [
+              "I q.45 a.3 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e278-Dd1e651"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-2504838aba66602841d6bf83d0defe6f0c021f6dd24e405f430c2b64cce5cca2",
       "work_id": "fl-work-f0c1adb0-403d-5332-8cea-9f08dae711ac",
       "label": "Michael Gorman: Divine Unity and Simplicity — youtube-unity-gorman",
@@ -8996,6 +9033,43 @@
                 "last": 47
               },
               "text_sha256": "sha256:20a5e4ec278f292cd9d5f83a3616c4690a7ee9411acf8e4146dc6a1283a75121"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-6f494fcd96242d9cc352d47acb5839ac7813ec9eaed87f8ace327d63c256ade2",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e113/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e113/cod-cnLxE4_TAca84-d1e113.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q13-a7.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e113/cod-cnLxE4",
+          "git_blob_sha": "11fb111a93f777750378aefebd8ed202169b7e86",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e113/cod-cnLxE4_TAca84-d1e113.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e113/cod-cnLxE4_TAca84-d1e113.xml"
+        },
+        "passages": [
+          {
+            "id": "12d8ecc5-37c5-4309-870a-f9273a43669e",
+            "label": "Thomas Aquinas, Summa theologiae, I q.13 a.7",
+            "locator": "I q.13 a.7",
+            "claim_locator_prefixes": [
+              "I q.13 a.7 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e113-Dd1e1841"
             }
           }
         ]
@@ -19688,6 +19762,6 @@
   ],
   "formal_logos": {
     "repository": "moritzbrantner/formal-logos",
-    "revision": "597e4b2eb02e092f1769a2e987437bc78e14893a"
+    "revision": "a2011fb21d648d62046e72a5817517f572c23c92"
   }
 }
