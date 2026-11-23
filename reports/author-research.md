@@ -4,111 +4,17 @@ Counts describe registered catalogue references and curated plans, not complete 
 
 Attribution strings: **128 total**, **6 mapped to profiles**, **122 without a profile**. There are **5 curated profiles**, of which **5 are recorded deceased**; this view selects **5**. Unprofiled attributions have no life-status classification here.
 
-Catalogue source: [moritzbrantner/formal-logos at 597e4b2eb02e092f1769a2e987437bc78e14893a](https://github.com/moritzbrantner/formal-logos/tree/597e4b2eb02e092f1769a2e987437bc78e14893a).
+Catalogue source: [moritzbrantner/formal-logos at a2011fb21d648d62046e72a5817517f572c23c92](https://github.com/moritzbrantner/formal-logos/tree/a2011fb21d648d62046e72a5817517f572c23c92).
 
 Profiles are ordered by registered passage count, then profile ID. Counts indicate existing corpus use, not philosophical importance or research completion.
 
 | Profile | Works | Witnesses | Passages | Retrieval candidates | Works without candidates |
 | --- | ---: | ---: | ---: | ---: | ---: |
+| Thomas Aquinas | 7 | 52 | 94 | 11 | 0 |
 | Aristotle | 5 | 10 | 94 | 3 | 3 |
-| Thomas Aquinas | 7 | 50 | 92 | 11 | 0 |
 | Immanuel Kant | 1 | 1 | 4 | 2 | 0 |
 | Gottfried Wilhelm Leibniz | 2 | 3 | 4 | 2 | 0 |
 | Bertrand Russell | 1 | 1 | 2 | 2 | 0 |
-
-## Aristotle
-
-**Deceased, 322 BCE**. The imported catalogue contains five works attributed to Aristotle. Reconciliation against the external work inventory has not started; catalogued fragments and attributed texts need their own identity records rather than automatic inclusion as authenticated works.
-
-Mapped source attributions:
-
-- Aristotle — sole author.
-
-Life-status evidence:
-
-- [Animal Locomotion: From Antiquity to the 21st Century](https://blogs.loc.gov/inside_adams/2014/04/animal-locomotion-from-antiquity-to-the-21st-century/) (checked 2026-11-19): The Library of Congress identifies Aristotle of Stagira with the dates 384–322 B.C.; the negative death year uses historical BCE numbering.
-
-### Catalogued works
-
-| Work and canonical source | Witnesses | Passages | Retrieval candidates |
-| --- | ---: | ---: | ---: |
-| [Categories](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aristotle-categories.json) | 1 | 1 | 0 |
-| [Metaphysics](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aristotle-metaphysics.json) | 5 | 24 | 2 |
-| [Nicomachean Ethics](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aristotle-nicomachean-ethics.json) | 1 | 2 | 0 |
-| [Physics](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aristotle-physics.json) | 2 | 65 | 1 |
-| [Posterior Analytics](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aristotle-posterior-analytics.json) | 1 | 2 | 0 |
-
-### Bibliography inventories
-
-#### [Perseus Catalogue: Aristotle textgroup tlg0086](https://catalog.perseus.org/catalog/urn:cts:greekLit:tlg0086)
-
-The provider lists works currently catalogued under the Aristotle textgroup, with work records leading to editions and translations. This is a catalogue inventory, not an asserted complete bibliography or reading-coverage denominator.
-
-Publication: selected material. Catalogue reconciliation: not started.
-
-Inventory evidence:
-
-- [PerseusCatalog: tlg0086](https://catalog.perseus.org/catalog/urn:cts:greekLit:tlg0086) (checked 2026-11-19): The textgroup is labelled Aristotle. 384-322 and its work list is explicitly described as works currently catalogued.
-
-### Retrieval candidates
-
-These entries identify possible editions and access routes. They do not register acquired files or authorize redistribution.
-
-#### [Metaphysics — Tredennick 1933–1935, Perseus English digital edition](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2:1/)
-
-Work: Metaphysics. Language: eng. Format: HTML. Access: open online.
-
-Coverage: Book 1 landing page for urn:cts:greekLit:tlg0086.tlg025.perseus-eng2, with navigation and a linked XML representation. The page identifies Hugh Tredennick’s translation, volumes 1–2, London: William Heinemann; Cambridge, MA: Harvard University Press, 1933–1935.
-
-Rights — provider licence: Provider-stated CC BY-SA 4.0 for the named Perseus digital translation tlg0086.tlg025.perseus-eng2, with the edition’s attribution, text-identification, repository-link and correction-submission conditions. This records the provider statement and does not infer the translation’s rights from Aristotle’s death date.
-
-Edition/access evidence:
-
-- [Aristotle, Metaphysics, Hugh Tredennick (Translator), 1](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2:1/) (checked 2026-11-19): The page identifies Tredennick, the 1933–1935 print source, and the distinct perseus-eng2 digital edition.
-
-Rights evidence:
-
-- [Aristotle, Metaphysics, Hugh Tredennick (Translator), 1](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2:1/) (checked 2026-11-19): The named digital-edition notice links CC BY-SA, identifies the exact CTS translation, and offers XML.
-- [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (checked 2026-11-19): The edition’s Creative Commons link resolves to CC BY-SA 4.0.
-
-Next step: Resolve and pin the linked XML translation, preserving its distinct edition identity and mapping its locators to the selected Greek witness.
-
-#### [Metaphysics — Ross 1924, Perseus Greek digital edition](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-grc2:1/)
-
-Work: Metaphysics. Language: grc. Format: HTML. Access: open online.
-
-Coverage: Book 1 landing page for the named digital edition urn:cts:greekLit:tlg0086.tlg025.perseus-grc2, with navigation and a linked XML representation. The print source is Ross, Aristotle’s Metaphysics, volumes 1–2, Oxford: Clarendon Press, 1924.
-
-Rights — provider licence: Provider-stated CC BY-SA 4.0 for the named Perseus digital edition tlg0086.tlg025.perseus-grc2. Its notice requests Perseus attribution, individual text identification, a source repository link where possible, and submission of corrections. This records the digital provider’s statement without independently determining rights in the underlying print edition.
-
-Edition/access evidence:
-
-- [Aristotle, Metaphysics, ed. William David Ross, 1](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-grc2:1/) (checked 2026-11-19): The page identifies the Greek Ross 1924 edition, CTS version perseus-grc2, book navigation, and an XML representation.
-
-Rights evidence:
-
-- [Aristotle, Metaphysics, ed. William David Ross, 1](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-grc2:1/) (checked 2026-11-19): The named digital-edition notice links CC BY-SA 4.0, identifies its CTS text URI, and offers an XML download.
-- [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (checked 2026-11-19): This is the CC BY-SA 4.0 licence destination linked from the named Perseus edition.
-
-Next step: Resolve and pin the XML linked by this exact digital edition; retain the CTS version and Bekker locator alignment when registering selected passages.
-
-#### [Physics — Hardie and Gaye, Internet Classics Archive](https://classics.mit.edu/Aristotle/physics.html)
-
-Work: Physics. Language: eng. Format: HTML. Access: open online.
-
-Coverage: Landing page linking English Books I–VIII and a text-only download; translators are R. P. Hardie and R. K. Gaye.
-
-Rights — provider licence: The Internet Classics Archive permits personal reading and downloading of hosted works and distribution for educational use. Commercial or other non-educational distribution requires prior permission. Its HTML presentation has a separate all-rights-reserved notice; text permissions do not grant unrestricted copying of the site presentation.
-
-Edition/access evidence:
-
-- [The Internet Classics Archive \| Physics by Aristotle](https://classics.mit.edu/Aristotle/physics.html) (checked 2026-11-19): The landing page names Hardie and Gaye and links all eight books plus a text-only download.
-
-Rights evidence:
-
-- [The Internet Classics Archive \| Permissions Help](https://classics.mit.edu/Help/permissions.html) (checked 2026-11-19): The provider separates permissions for hosted work texts from its web presentation and states personal/educational permissions and non-educational distribution restrictions.
-
-Next step: Select the linked text representation and record its translator attribution and the applicable personal or educational use conditions; request permission for distribution outside those stated terms.
 
 ## Thomas Aquinas
 
@@ -126,13 +32,13 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [Compendium theologiae](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-compendium-theologiae.json) | 1 | 1 | 1 |
-| [De ente et essentia](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-de-ente-et-essentia.json) | 2 | 2 | 1 |
-| [In octo libros Physicorum Aristotelis expositio](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-in-physicorum.json) | 2 | 5 | 1 |
-| [Quaestiones disputatae de potentia](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-de-potentia.json) | 2 | 2 | 2 |
-| [Sententia libri Metaphysicae (In duodecim libros Metaphysicorum Aristotelis expositio)](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-in-metaphysicam.json) | 5 | 6 | 1 |
-| [Summa contra gentiles](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-summa-contra-gentiles.json) | 9 | 11 | 1 |
-| [Summa theologiae](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/aquinas-summa-theologiae.json) | 29 | 65 | 4 |
+| [Compendium theologiae](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aquinas-compendium-theologiae.json) | 1 | 1 | 1 |
+| [De ente et essentia](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aquinas-de-ente-et-essentia.json) | 2 | 2 | 1 |
+| [In octo libros Physicorum Aristotelis expositio](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aquinas-in-physicorum.json) | 2 | 5 | 1 |
+| [Quaestiones disputatae de potentia](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aquinas-de-potentia.json) | 2 | 2 | 2 |
+| [Sententia libri Metaphysicae (In duodecim libros Metaphysicorum Aristotelis expositio)](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aquinas-in-metaphysicam.json) | 5 | 6 | 1 |
+| [Summa contra gentiles](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aquinas-summa-contra-gentiles.json) | 9 | 11 | 1 |
+| [Summa theologiae](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aquinas-summa-theologiae.json) | 31 | 67 | 4 |
 
 ### Bibliography inventories
 
@@ -365,6 +271,100 @@ Rights evidence:
 
 Next step: Retain the existing Formal Logos source and edition identities. Use the complete q.19 a.1 section-role map for the first source-preparation pass, preserving objections, cited authorities, author response and replies. Any later witness correction requires the canonical fidelity-review procedure; other q.19 articles remain outside this completed reading pass.
 
+## Aristotle
+
+**Deceased, 322 BCE**. The imported catalogue contains five works attributed to Aristotle. Reconciliation against the external work inventory has not started; catalogued fragments and attributed texts need their own identity records rather than automatic inclusion as authenticated works.
+
+Mapped source attributions:
+
+- Aristotle — sole author.
+
+Life-status evidence:
+
+- [Animal Locomotion: From Antiquity to the 21st Century](https://blogs.loc.gov/inside_adams/2014/04/animal-locomotion-from-antiquity-to-the-21st-century/) (checked 2026-11-19): The Library of Congress identifies Aristotle of Stagira with the dates 384–322 B.C.; the negative death year uses historical BCE numbering.
+
+### Catalogued works
+
+| Work and canonical source | Witnesses | Passages | Retrieval candidates |
+| --- | ---: | ---: | ---: |
+| [Categories](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aristotle-categories.json) | 1 | 1 | 0 |
+| [Metaphysics](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aristotle-metaphysics.json) | 5 | 24 | 2 |
+| [Nicomachean Ethics](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aristotle-nicomachean-ethics.json) | 1 | 2 | 0 |
+| [Physics](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aristotle-physics.json) | 2 | 65 | 1 |
+| [Posterior Analytics](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/aristotle-posterior-analytics.json) | 1 | 2 | 0 |
+
+### Bibliography inventories
+
+#### [Perseus Catalogue: Aristotle textgroup tlg0086](https://catalog.perseus.org/catalog/urn:cts:greekLit:tlg0086)
+
+The provider lists works currently catalogued under the Aristotle textgroup, with work records leading to editions and translations. This is a catalogue inventory, not an asserted complete bibliography or reading-coverage denominator.
+
+Publication: selected material. Catalogue reconciliation: not started.
+
+Inventory evidence:
+
+- [PerseusCatalog: tlg0086](https://catalog.perseus.org/catalog/urn:cts:greekLit:tlg0086) (checked 2026-11-19): The textgroup is labelled Aristotle. 384-322 and its work list is explicitly described as works currently catalogued.
+
+### Retrieval candidates
+
+These entries identify possible editions and access routes. They do not register acquired files or authorize redistribution.
+
+#### [Metaphysics — Tredennick 1933–1935, Perseus English digital edition](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2:1/)
+
+Work: Metaphysics. Language: eng. Format: HTML. Access: open online.
+
+Coverage: Book 1 landing page for urn:cts:greekLit:tlg0086.tlg025.perseus-eng2, with navigation and a linked XML representation. The page identifies Hugh Tredennick’s translation, volumes 1–2, London: William Heinemann; Cambridge, MA: Harvard University Press, 1933–1935.
+
+Rights — provider licence: Provider-stated CC BY-SA 4.0 for the named Perseus digital translation tlg0086.tlg025.perseus-eng2, with the edition’s attribution, text-identification, repository-link and correction-submission conditions. This records the provider statement and does not infer the translation’s rights from Aristotle’s death date.
+
+Edition/access evidence:
+
+- [Aristotle, Metaphysics, Hugh Tredennick (Translator), 1](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2:1/) (checked 2026-11-19): The page identifies Tredennick, the 1933–1935 print source, and the distinct perseus-eng2 digital edition.
+
+Rights evidence:
+
+- [Aristotle, Metaphysics, Hugh Tredennick (Translator), 1](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2:1/) (checked 2026-11-19): The named digital-edition notice links CC BY-SA, identifies the exact CTS translation, and offers XML.
+- [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (checked 2026-11-19): The edition’s Creative Commons link resolves to CC BY-SA 4.0.
+
+Next step: Resolve and pin the linked XML translation, preserving its distinct edition identity and mapping its locators to the selected Greek witness.
+
+#### [Metaphysics — Ross 1924, Perseus Greek digital edition](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-grc2:1/)
+
+Work: Metaphysics. Language: grc. Format: HTML. Access: open online.
+
+Coverage: Book 1 landing page for the named digital edition urn:cts:greekLit:tlg0086.tlg025.perseus-grc2, with navigation and a linked XML representation. The print source is Ross, Aristotle’s Metaphysics, volumes 1–2, Oxford: Clarendon Press, 1924.
+
+Rights — provider licence: Provider-stated CC BY-SA 4.0 for the named Perseus digital edition tlg0086.tlg025.perseus-grc2. Its notice requests Perseus attribution, individual text identification, a source repository link where possible, and submission of corrections. This records the digital provider’s statement without independently determining rights in the underlying print edition.
+
+Edition/access evidence:
+
+- [Aristotle, Metaphysics, ed. William David Ross, 1](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-grc2:1/) (checked 2026-11-19): The page identifies the Greek Ross 1924 edition, CTS version perseus-grc2, book navigation, and an XML representation.
+
+Rights evidence:
+
+- [Aristotle, Metaphysics, ed. William David Ross, 1](https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-grc2:1/) (checked 2026-11-19): The named digital-edition notice links CC BY-SA 4.0, identifies its CTS text URI, and offers an XML download.
+- [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (checked 2026-11-19): This is the CC BY-SA 4.0 licence destination linked from the named Perseus edition.
+
+Next step: Resolve and pin the XML linked by this exact digital edition; retain the CTS version and Bekker locator alignment when registering selected passages.
+
+#### [Physics — Hardie and Gaye, Internet Classics Archive](https://classics.mit.edu/Aristotle/physics.html)
+
+Work: Physics. Language: eng. Format: HTML. Access: open online.
+
+Coverage: Landing page linking English Books I–VIII and a text-only download; translators are R. P. Hardie and R. K. Gaye.
+
+Rights — provider licence: The Internet Classics Archive permits personal reading and downloading of hosted works and distribution for educational use. Commercial or other non-educational distribution requires prior permission. Its HTML presentation has a separate all-rights-reserved notice; text permissions do not grant unrestricted copying of the site presentation.
+
+Edition/access evidence:
+
+- [The Internet Classics Archive \| Physics by Aristotle](https://classics.mit.edu/Aristotle/physics.html) (checked 2026-11-19): The landing page names Hardie and Gaye and links all eight books plus a text-only download.
+
+Rights evidence:
+
+- [The Internet Classics Archive \| Permissions Help](https://classics.mit.edu/Help/permissions.html) (checked 2026-11-19): The provider separates permissions for hosted work texts from its web presentation and states personal/educational permissions and non-educational distribution restrictions.
+
+Next step: Select the linked text representation and record its translator attribution and the applicable personal or educational use conditions; request permission for distribution outside those stated terms.
+
 ## Immanuel Kant
 
 **Deceased, 1804**. Begin with the registered Critique of Pure Reason. Keep its A and B versions, Academy pagination, and English translations distinct. The Academy inventory is a discovery basis; no complete local bibliography or complete reading coverage is asserted.
@@ -381,7 +381,7 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [Critique of Pure Reason](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/kant-critique-pure-reason.json) | 1 | 4 | 2 |
+| [Critique of Pure Reason](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/kant-critique-pure-reason.json) | 1 | 4 | 2 |
 
 ### Bibliography inventories
 
@@ -456,8 +456,8 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [A Collection of Papers, Which passed between the late Learned Mr. Leibniz, and Dr. Clarke, In the Years 1715 and 1716](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/leibniz-clarke-correspondence.json) | 2 | 2 | 1 |
-| [Monadology](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/leibniz-monadology.json) | 1 | 2 | 1 |
+| [A Collection of Papers, Which passed between the late Learned Mr. Leibniz, and Dr. Clarke, In the Years 1715 and 1716](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/leibniz-clarke-correspondence.json) | 2 | 2 | 1 |
+| [Monadology](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/leibniz-monadology.json) | 1 | 2 | 1 |
 
 ### Bibliography inventories
 
@@ -527,7 +527,7 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [The Philosophy of Logical Atomism (1918), Lectures V–VI](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/corpus/sources/russell-logical-atomism.json) | 1 | 2 | 2 |
+| [The Philosophy of Logical Atomism (1918), Lectures V–VI](https://github.com/moritzbrantner/formal-logos/blob/a2011fb21d648d62046e72a5817517f572c23c92/corpus/sources/russell-logical-atomism.json) | 1 | 2 | 2 |
 
 ### Bibliography inventories
 
