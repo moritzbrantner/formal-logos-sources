@@ -77,7 +77,7 @@ fn manifest(source_id: &str, id: &str, hash: char) -> Value {
         },
         "passages":[{
             "id":id, "label":"Section one", "locator":"§1",
-            "claim_locator_prefixes":["§1"], "html_selector":{"element_id":"one"},
+            "claim_locator_prefixes":["§1 z", "§1"], "html_selector":{"element_id":"one"},
             "text_sha256":format!("sha256:{}", hash.to_string().repeat(64))
         }]
     })
