@@ -151,7 +151,7 @@ fn build(repository: &Repository, groups: &WorkGroups) -> Result<(Catalog, Impor
     build_records(&repository.revision, sources, manifests, groups)
 }
 
-fn build_records(
+pub(crate) fn build_records(
     revision: &str,
     sources: Vec<Record>,
     manifests: Vec<Record>,
