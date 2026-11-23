@@ -1,4 +1,5 @@
 mod formal_logos;
+mod freshness;
 mod import;
 mod registry;
 mod research;
@@ -118,6 +119,7 @@ const USAGE: &str = "usage:
   formal-logos-sources authors [--name NAME] [--catalog PATH]
   formal-logos-sources research [--author ID_OR_NAME] [--deceased] [--format json|markdown] [--research FILE] [--catalog PATH]
   formal-logos-sources import --formal-logos DIR [--revision COMMIT] [--work-groups FILE] [--catalog PATH]
+  formal-logos-sources freshness --formal-logos DIR [--revision REF] [--work-groups FILE] [--catalog PATH]
   formal-logos-sources connections --formal-logos DIR --source ID [--locator LOCATOR] [--format json|markdown] [--catalog PATH]
   formal-logos-sources verify [--catalog PATH] [--store DIR]
   formal-logos-sources prepare --edition-id ID --pages FIRST:LAST [--join-soft-hyphens] [--catalog PATH] [--store DIR]";
@@ -360,6 +362,39 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
             show(
                 &serde_json::json!({"formal_logos":catalog.formal_logos,"author_attributions":rows}),
             )
+        }
+        "freshness" => {
+            let opts = Options::parse(
+                args,
+                &["--formal-logos", "--revision", "--work-groups", "--catalog"],
+                &[],
+            )?;
+            opts.no_positional()?;
+            let path = opts.path("--catalog", "registry/catalog.json");
+            if !path.is_file() {
+                return Err(format!("catalogue does not exist: {}", path.display()));
+            }
+            let catalog = registry::read_catalog(&path)?;
+            let binding = catalog
+                .formal_logos
+                .as_ref()
+                .ok_or("catalogue has no imported Formal Logos revision")?;
+            if binding.repository != "moritzbrantner/formal-logos" {
+                return Err("unsupported Formal Logos repository binding".into());
+            }
+            let repository_path = Path::new(opts.required("--formal-logos")?);
+            let pinned = formal_logos::Repository::open(repository_path, &binding.revision)?;
+            let target = formal_logos::Repository::open(
+                repository_path,
+                opts.fields
+                    .get("--revision")
+                    .map(String::as_str)
+                    .unwrap_or("main"),
+            )?;
+            let groups = import::read_groups(Some(
+                &opts.path("--work-groups", "registry/work-groups.json"),
+            ))?;
+            show(&freshness::compare(&catalog, &pinned, &target, &groups)?)
         }
         "import" => {
             let opts = Options::parse(
