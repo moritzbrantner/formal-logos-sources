@@ -6,16 +6,16 @@ This repository prepares **source artifacts**, not philosophical propositions or
 
 ## Catalogue and research connections
 
-The committed catalogue starts from Formal Logos revision
-[`597e4b2eb02e092f1769a2e987437bc78e14893a`](https://github.com/moritzbrantner/formal-logos/tree/597e4b2eb02e092f1769a2e987437bc78e14893a):
+The committed catalogue covers Formal Logos revision
+[`9eef0b04b958c1c5a618b8307ef43343495591bf`](https://github.com/moritzbrantner/formal-logos/tree/9eef0b04b958c1c5a618b8307ef43343495591bf):
 
 | Recorded metadata | Count |
 | --- | ---: |
-| Author attribution strings | 128 |
-| Bibliographic works after three reviewed groupings | 161 |
-| Original Formal Logos source records | 164 |
-| Referenced witness editions | 294 |
-| Registered passages | 516 |
+| Author attribution strings | 131 |
+| Bibliographic works after three reviewed groupings | 164 |
+| Original Formal Logos source records | 167 |
+| Referenced witness editions | 301 |
+| Registered passages | 531 |
 | Sources without registered passages | 19 |
 
 Author entries preserve the original attribution, including joint authors and institutions;
@@ -27,8 +27,8 @@ describe the registered inventory, not complete bibliographies, reading coverage
 
 The two initial generated views expose existing Aquinas research:
 
-- [Knowledge and immateriality, ST I q.14 a.1](reports/aquinas-knowledge.md): includes the existing reading with 52 direct argument consumers.
-- [Will and intellect, ST I q.19 a.1](reports/aquinas-will.md): includes the existing reading with 54 direct argument consumers.
+- [Knowledge and immateriality, ST I q.14 a.1](reports/aquinas-knowledge.md): includes the existing reading with 0 direct argument consumers.
+- [Will and intellect, ST I q.19 a.1](reports/aquinas-will.md): includes the existing reading with 57 direct argument consumers.
 
 Each view links the exact source passage, claims, statements, definitions,
 disambiguations, consuming arguments and existing research attempts. Interpretation and
@@ -44,7 +44,7 @@ cargo run --locked -- authors --name 'Thomas Aquinas'
 
 # Import an exact local Formal Logos commit. HEAD is also accepted and resolved once.
 cargo run --locked -- import --formal-logos ../formal-logos \
-  --revision 597e4b2eb02e092f1769a2e987437bc78e14893a
+  --revision 9eef0b04b958c1c5a618b8307ef43343495591bf
 
 # Uses the revision recorded in the catalogue, even when the checkout has moved on.
 cargo run --locked -- connections --formal-logos ../formal-logos \
@@ -81,6 +81,8 @@ only acquired local PDFs. Importing a witness does not mark it acquired, read, f
 verified, or philosophically established. Canonical evidence and source-kind rules remain
 in Formal Logos; this implementation adds no evidence kind or dependency to that project.
 
+The Formal Logos materializer can share the ignored `local/formal-logos-cache/` directory here for downloaded witnesses and extracted passages. Its `TRUTH_SOURCE_CACHE_DIR` setting takes that directory as an absolute path.
+
 Full bibliography expansion, automatic source downloads, reading-coverage views and the
 OCR/NLP integrations remain subsequent work. Existing citations and rights notices are
 preserved as recorded; this import does not make a new rights determination.
@@ -90,7 +92,7 @@ preserved as recorded; this import does not make a new rights determination.
 [`registry/author-research.json`](registry/author-research.json) adds curated profiles for
 **Aristotle, Thomas Aquinas, Leibniz, Kant, and Bertrand Russell**. The
 [generated author report](reports/author-research.md) joins these profiles to **16 works,
-65 referenced witnesses, and 196 passage references** in the current catalogue. It
+65 referenced witnesses, and 196 passage references** in the original author study. It
 includes **6 bibliography inventories** and **13 retrieval candidates for 8 works**;
 the remaining **8 works** are visible as gaps in retrieval planning. These are counts of
 registered material, not complete bibliographies or reading coverage.
@@ -109,7 +111,7 @@ cargo run --locked -- check --research registry/author-research.json
 `research` emits JSON by default. `--author` matches an exact profile ID, name or declared
 alias, case-insensitively; unknown or ambiguous matches fail. `--deceased` filters only
 the curated profiles with supported deceased status. The report states how many source
-attributions remain unprofiled: currently **122 of 128**. It does not classify those
+attributions remain unprofiled: currently **125 of 131**. It does not classify those
 attributions as living or deceased. `--research FILE` and `--catalog PATH` select other
 inputs; missing files fail. Ordinary `check` still validates only the catalogue unless
 `--research` is supplied; CI supplies it explicitly.
@@ -206,7 +208,7 @@ preserving their work/edition IDs and hashes.
 `inspect` and `prepare` emit `sha256` (original PDF), `text_sha256` (selected normalized page text), physical `pdf_pages`, short `incipit`, and character count. These match the `web_snapshot` PDF hashing/extraction convention in `truth-core` at commit `2524680bd2b5bcdbface48d60d14a79c3f41375d` (2026-11-14). `prepare` first re-verifies the local blob's hash and includes `local_object_verified: true` and `remote_witness_verified: false`. The `--url`/`source_url` is descriptive and **never fetched or verified**.
 
 **Preparation does not create an accepted Formal Logos witness.** For selected source
-research, follow Formal Logos's [source-evidence contract](https://github.com/moritzbrantner/formal-logos/blob/597e4b2eb02e092f1769a2e987437bc78e14893a/docs/source-evidence.md),
+research, follow Formal Logos's [source-evidence contract](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/docs/source-evidence.md),
 including its initial pinning procedure, edition/rights/locator checks and reading in
 context. Create canonical passage and claim records there through its existing workflow.
 Routine CI checks metadata offline; it does not repeatedly acquire historical witnesses.
