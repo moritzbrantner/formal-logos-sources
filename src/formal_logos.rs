@@ -86,7 +86,38 @@ impl Repository {
         {
             return Err(format!("invalid corpus record kind: {kind:?}"));
         }
-        let prefix = format!("corpus/{kind}/");
+        self.blobs(
+            &format!("corpus/{kind}/"),
+            |path| path.ends_with(".json"),
+            |path, bytes| {
+                let value = serde_json::from_slice(bytes)
+                    .map_err(|error| format!("{path}: invalid committed JSON: {error}"))?;
+                Ok(Record { path, value })
+            },
+        )
+    }
+
+    pub fn research_documents(&self) -> Result<Vec<(String, String)>, String> {
+        self.blobs(
+            "docs/",
+            |path| {
+                path.ends_with(".md")
+                    && (path.starts_with("docs/notes/") || path.matches('/').count() == 1)
+            },
+            |path, bytes| {
+                let text =
+                    std::str::from_utf8(bytes).map_err(|_| format!("{path}: invalid UTF-8"))?;
+                Ok((path, text.to_owned()))
+            },
+        )
+    }
+
+    fn blobs<T>(
+        &self,
+        prefix: &str,
+        select: impl Fn(&str) -> bool,
+        decode: impl Fn(String, &[u8]) -> Result<T, String>,
+    ) -> Result<Vec<T>, String> {
         let mut command = git(&self.root);
         command.args([
             "ls-tree",
@@ -95,7 +126,7 @@ impl Repository {
             "-z",
             &self.revision,
             "--",
-            &prefix,
+            prefix,
         ]);
         let tree = git_output(command, "list committed corpus records")?;
         let mut entries = Vec::new();
@@ -106,7 +137,7 @@ impl Repository {
             let entry =
                 std::str::from_utf8(entry).map_err(|_| "corpus Git path is not valid UTF-8")?;
             let (metadata, path) = entry.split_once('\t').ok_or("invalid Git tree entry")?;
-            if !path.starts_with(&prefix) || !path.ends_with(".json") {
+            if !path.starts_with(prefix) || !select(path) {
                 continue;
             }
             let fields: Vec<_> = metadata.split_whitespace().collect();
@@ -169,10 +200,8 @@ impl Repository {
             if size >= remaining.len() || remaining[size] != b'\n' {
                 return Err(format!("{path}: truncated Git blob"));
             }
-            let value = serde_json::from_slice(&remaining[..size])
-                .map_err(|error| format!("{path}: invalid committed JSON: {error}"))?;
+            records.push(decode(path, &remaining[..size])?);
             remaining = &remaining[size + 1..];
-            records.push(Record { path, value });
         }
         if !remaining.is_empty() {
             return Err("unexpected trailing Git object response".into());

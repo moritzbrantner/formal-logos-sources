@@ -31,7 +31,7 @@ fn importing_committed_metadata_is_idempotent_and_preserves_local_pdfs() {
     let repo = dir.path().join("upstream");
     fs::create_dir_all(repo.join("corpus/sources")).unwrap();
     fs::create_dir_all(repo.join("corpus/passages")).unwrap();
-    let source = json!({"id":"source-one","label":"Synthetic work","kind":"primary_text","author":"First and Second","work":"Synthetic work","work_urn":"urn:synthetic:work","catalog_url":"https://example.org/catalogue","citation_system":"section"});
+    let source = json!({"id":"source-one","label":"Synthetic work","kind":"primary_text","author":"First and Second","work":"Synthetic work","work_urn":"doi:10.1234/example","catalog_url":"https://example.org/catalogue","citation_system":"section"});
     fs::write(
         repo.join("corpus/sources/one.json"),
         serde_json::to_vec(&source).unwrap(),
@@ -46,8 +46,28 @@ fn importing_committed_metadata_is_idempotent_and_preserves_local_pdfs() {
         serde_json::to_vec(&manifest).unwrap(),
     )
     .unwrap();
+    fs::create_dir_all(repo.join("docs/notes")).unwrap();
+    let notes = r#"# Evidence
+
+[§2](https://doi.org/10.1234/Example#page=3) and [§3](https://dx.doi.org/10.1234/example#page=7).
+[First version](https://arxiv.org/pdf/1710.05834v1.pdf#page=4).
+Second version <https://arxiv.org/abs/1710.05834v2>.
+[The recorded edition](https://example.org/text#one).
+[The registered work](https://example.org/catalogue).
+[Unregistered blog](https://example.org/blog), [issue](https://github.com/example/project/issues/3),
+[server](https://mcp.moenarch.com/healthz), [lookalike](https://doi.org.example.org/10.1234/fake).
+```sh
+curl https://doi.org/10.1234/test
+```
+"#;
+    fs::write(repo.join("docs/notes/proof.md"), notes).unwrap();
+    fs::write(
+        repo.join("docs/physics.md"),
+        "See [the report][ref].\n\n[ref]: https://arxiv.org/abs/1710.05834v2\n",
+    )
+    .unwrap();
     success("git", &["init", "-q"], &repo);
-    success("git", &["add", "corpus"], &repo);
+    success("git", &["add", "corpus", "docs"], &repo);
     success(
         "git",
         &[
@@ -109,9 +129,44 @@ fn importing_committed_metadata_is_idempotent_and_preserves_local_pdfs() {
     ];
     let summary: Value = serde_json::from_str(&cli(&args, dir.path())).unwrap();
     assert_eq!(summary["source_bytes_acquired"], 0);
+    assert_eq!(summary["research_citations"], 4);
+    let cited = |query: &str| -> Value {
+        serde_json::from_str(&cli(&["citations", "--source", query], dir.path())).unwrap()
+    };
+    let paper = cited("https://arxiv.org/abs/1710.05834");
+    assert_eq!(paper["formal_logos"]["revision"], revision.trim());
+    let arxiv = &paper["citations"][0];
+    assert_eq!(arxiv["id"], "arxiv:1710.05834");
+    let urls = arxiv["cited_urls"].as_array().unwrap();
+    assert_eq!(urls.len(), 2);
+    assert_eq!(urls[0]["cited_at"].as_array().unwrap().len(), 2);
+    assert_eq!(
+        urls[1]["url"],
+        "https://arxiv.org/pdf/1710.05834v1.pdf#page=4"
+    );
+    let doi = cited("doi:10.1234/EXAMPLE");
+    let urls = doi["citations"][0]["cited_urls"].as_array().unwrap();
+    assert_eq!(urls.len(), 2);
+    assert_eq!(urls[0]["cited_at"][0]["path"], "docs/notes/proof.md");
+    assert_eq!(urls[0]["cited_at"][0]["line"], 3);
+    assert_eq!(urls[0]["cited_at"][0]["label"], "§2");
+    assert!(urls[0]["work_ids"].is_array());
+    assert!(urls[0].get("edition_ids").is_none());
+    let by_work = cited("source-one");
+    assert_eq!(by_work["citations"].as_array().unwrap().len(), 3);
+    let text = cited("https://example.org/text#one");
+    let edition_id = text["citations"][0]["cited_urls"][0]["edition_ids"][0]
+        .as_str()
+        .unwrap();
+    assert_eq!(cited(edition_id)["citations"].as_array().unwrap().len(), 1);
     let first = fs::read(&catalogue).unwrap();
     // A dirty checkout must never contaminate records labelled with the committed revision.
     fs::write(repo.join("corpus/sources/one.json"), b"not even JSON").unwrap();
+    fs::write(
+        repo.join("docs/notes/proof.md"),
+        "https://doi.org/10.1234/dirty",
+    )
+    .unwrap();
     cli(&args, dir.path());
     assert_eq!(fs::read(&catalogue).unwrap(), first);
     let check: Value = serde_json::from_str(&cli(&["check"], dir.path())).unwrap();

@@ -1,3 +1,4 @@
+mod citations;
 mod formal_logos;
 mod import;
 mod registry;
@@ -115,6 +116,7 @@ const USAGE: &str = "usage:
   formal-logos-sources add FILE --work-id ID --title TITLE --edition-id ID --edition-label LABEL --language LANG --license TERMS [--url URL] [--catalog PATH] [--store DIR]
   formal-logos-sources list [--catalog PATH]
   formal-logos-sources check [--catalog PATH] [--research FILE]
+  formal-logos-sources citations [--source DOI_OR_ARXIV_OR_URL_OR_CATALOG_ID] [--catalog PATH]
   formal-logos-sources authors [--name NAME] [--catalog PATH]
   formal-logos-sources research [--author ID_OR_NAME] [--deceased] [--format json|markdown] [--research FILE] [--catalog PATH]
   formal-logos-sources import --formal-logos DIR [--revision COMMIT] [--work-groups FILE] [--catalog PATH]
@@ -279,6 +281,7 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
                 "authors": catalog.authors.len(),
                 "works": catalog.works.len(),
                 "editions": catalog.editions.len(),
+                "research_citations": catalog.research_citations.len(),
                 "local_pdf_editions": catalog.editions.iter().filter(|e|e.formal_logos.is_none()).count(),
                 "referenced_editions": catalog.editions.iter().filter(|e|e.formal_logos.is_some()).count(),
                 "formal_logos": catalog.formal_logos,
@@ -292,6 +295,16 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
                 });
             }
             show(&result)
+        }
+        "citations" => {
+            let opts = Options::parse(args, &["--catalog", "--source"], &[])?;
+            opts.no_positional()?;
+            let catalog = registry::read_catalog(&opts.path("--catalog", "registry/catalog.json"))?;
+            let matches =
+                citations::lookup(&catalog, opts.fields.get("--source").map(String::as_str));
+            show(
+                &serde_json::json!({"formal_logos": catalog.formal_logos, "evidence": "citations in research documents", "citations": matches}),
+            )
         }
         "research" => {
             let opts = Options::parse(
