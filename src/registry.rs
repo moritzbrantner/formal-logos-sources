@@ -91,6 +91,8 @@ pub struct Catalog {
     pub authors: Vec<Author>,
     pub works: Vec<Work>,
     pub editions: Vec<Edition>,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub research_citations: Vec<crate::citations::Citation>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub formal_logos: Option<CorpusBinding>,
 }
@@ -102,6 +104,7 @@ impl Default for Catalog {
             authors: Vec::new(),
             works: Vec::new(),
             editions: Vec::new(),
+            research_citations: Vec::new(),
             formal_logos: None,
         }
     }
@@ -127,6 +130,7 @@ impl Catalog {
     }
 
     pub(crate) fn validate(&self) -> Result<(), String> {
+        crate::citations::validate(self)?;
         if !matches!(self.schema_version, 1 | 2) {
             return Err(format!(
                 "unsupported catalog schema: {}",

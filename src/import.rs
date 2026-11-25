@@ -75,6 +75,7 @@ pub struct ImportSummary {
     pub passages: usize,
     pub sources_without_passages: usize,
     pub source_bytes_acquired: usize,
+    pub research_citations: usize,
 }
 
 fn text<'a>(value: &'a Value, key: &str, path: &str) -> Result<&'a str, String> {
@@ -334,6 +335,7 @@ fn build_records(
     }
     editions.sort_by(|a, b| a.id.cmp(&b.id));
     let catalog = Catalog {
+        research_citations: Vec::new(),
         schema_version: 2,
         authors: authors.into_values().collect(),
         works: works.into_values().collect(),
@@ -354,6 +356,7 @@ fn build_records(
         passages: passage_ids.len(),
         sources_without_passages: source_ids.difference(&witnessed).count(),
         source_bytes_acquired: 0,
+        research_citations: 0,
     };
     Ok((catalog, summary))
 }
@@ -363,7 +366,8 @@ pub fn import(
     groups: &WorkGroups,
     catalog_path: &Path,
 ) -> Result<ImportSummary, String> {
-    let (mut imported, summary) = build(repository, groups)?;
+    let (mut imported, mut summary) = build(repository, groups)?;
+    let documents = repository.research_documents()?;
     registry::update_catalog(catalog_path, |current| {
         // Only replace this derived projection. Local PDF records remain owned locally.
         for work in &current.works {
@@ -417,6 +421,8 @@ pub fn import(
         imported.authors.sort_by(|a, b| a.id.cmp(&b.id));
         imported.works.sort_by(|a, b| a.id.cmp(&b.id));
         imported.editions.sort_by(|a, b| a.id.cmp(&b.id));
+        imported.research_citations = crate::citations::collect(&imported, &documents);
+        summary.research_citations = imported.research_citations.len();
         *current = imported;
         Ok(())
     })?;
