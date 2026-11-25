@@ -106,6 +106,10 @@
       "name": "Bertrand Russell"
     },
     {
+      "id": "fl-author-3186a270d117f29d90c3867d3fa5f8ab8737c2ec218ee0b702489a54e1c13800",
+      "name": "Francisco Suárez"
+    },
+    {
       "id": "fl-author-324b068656984728d2b0e78fa6b098aaf02c2c5c6029082d605217487c0218e2",
       "name": "Rudolf Carnap"
     },
@@ -328,6 +332,14 @@
     {
       "id": "fl-author-99215cb485b31f26456aa107032866b88a825754eeb0b28c993c0cf8bdeeb9f5",
       "name": "Abu Hamid al-Ghazali"
+    },
+    {
+      "id": "fl-author-9b32a67ce47a64dfc89e0181ce9a188eb96d2436946d1993a7cbd1a845e3147d",
+      "name": "Luis de Molina"
+    },
+    {
+      "id": "fl-author-9bc0165f5189ad665c43fb214c330de37ec6b9d202a310644f3fd894454264ea",
+      "name": "Durandus de Sancto Porciano"
     },
     {
       "id": "fl-author-9cff0c22ef42d3e43b59d7c958e67322d9e2b72329723e932557a81154b0bc10",
@@ -1380,6 +1392,42 @@
       ]
     },
     {
+      "id": "fl-work-3dba6cf4-271a-4cd9-8a18-7ff830520b32",
+      "title": "Disputationes metaphysicae",
+      "author_ids": [
+        "fl-author-3186a270d117f29d90c3867d3fa5f8ab8737c2ec218ee0b702489a54e1c13800"
+      ],
+      "formal_logos_sources": [
+        {
+          "id": "3dba6cf4-271a-4cd9-8a18-7ff830520b32",
+          "path": "corpus/sources/3dba6cf4-271a-4cd9-8a18-7ff830520b32.json",
+          "title": "Disputationes metaphysicae",
+          "kind": "primary_text",
+          "work_urn": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/",
+          "catalog_url": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/",
+          "citation_system": "disputation, section and numbered paragraph"
+        }
+      ]
+    },
+    {
+      "id": "fl-work-4117ffec-4713-40e4-8948-0ceff7ad4d05",
+      "title": "Liberi arbitrii cum gratiae donis, divina praescientia, providentia, praedestinatione et reprobatione concordia",
+      "author_ids": [
+        "fl-author-9b32a67ce47a64dfc89e0181ce9a188eb96d2436946d1993a7cbd1a845e3147d"
+      ],
+      "formal_logos_sources": [
+        {
+          "id": "4117ffec-4713-40e4-8948-0ceff7ad4d05",
+          "path": "corpus/sources/4117ffec-4713-40e4-8948-0ceff7ad4d05.json",
+          "title": "Liberi arbitrii cum gratiae donis, divina praescientia, providentia, praedestinatione et reprobatione concordia",
+          "kind": "primary_text",
+          "work_urn": "https://www.freddoso.com/untrans.html#five",
+          "catalog_url": "https://www.freddoso.com/untrans.html#five",
+          "citation_system": "part, disputation and numbered paragraph"
+        }
+      ]
+    },
+    {
       "id": "fl-work-41f1bdd2-63c4-5a47-b66d-808bca40f751",
       "title": "Identity and Necessity, reprinted in Philosophical Troubles: Collected Papers, Volume 1 (2011), pp. 1–26",
       "author_ids": [
@@ -1790,6 +1838,24 @@
           "work_urn": "https://elifesciences.org/articles/57964",
           "catalog_url": "https://elifesciences.org/articles/57964",
           "citation_system": "Abstract; eLife 10:e57964"
+        }
+      ]
+    },
+    {
+      "id": "fl-work-62a49533-d670-4bb0-a81e-5afdf2bfb4a1",
+      "title": "Commentarius in libros Sententiarum",
+      "author_ids": [
+        "fl-author-9bc0165f5189ad665c43fb214c330de37ec6b9d202a310644f3fd894454264ea"
+      ],
+      "formal_logos_sources": [
+        {
+          "id": "62a49533-d670-4bb0-a81e-5afdf2bfb4a1",
+          "path": "corpus/sources/62a49533-d670-4bb0-a81e-5afdf2bfb4a1.json",
+          "title": "Commentarius in libros Sententiarum",
+          "kind": "primary_text",
+          "work_urn": "http://scta.info/resource/jsnvu6",
+          "catalog_url": "https://reader.lombardpress.org/text/jsnvu6",
+          "citation_system": "redaction, book, distinction, question and paragraph; SCTA witness folio and TEI paragraph ID"
         }
       ]
     },
@@ -4995,50 +5061,6 @@
       }
     },
     {
-      "id": "fl-edition-1bd7ea03ae96b5ac37c7d57341a838e25954bcc9d60ea7cf7fafff8ae5d7f389",
-      "work_id": "fl-work-256fbf26-eb53-5a27-807e-20756ca6f661",
-      "label": "Quaestiones disputatae de potentia — aquinas-de-potentia-q3a5-lat",
-      "language": "lat",
-      "license": "Corpus Thomisticum identifies its text as the Turin 1953 edition digitized by Roberto Busa and reviewed by Enrique Alarcón; ©2019 Fundación Tomás de Aquino quoad hanc editionem, all rights reserved. The medieval work is public domain; no open licence for the digital transcription is asserted. Only metadata, hashes, locators and a short incipit are committed. Two independent exact-downloader GETs matched response and selected-text bytes. No archive fallback or translation is claimed.",
-      "source_url": "https://www.corpusthomisticum.org/qdp3.html",
-      "format": "html",
-      "formal_logos": {
-        "manifest_path": "corpus/passages/aquinas-de-potentia-q3a5-lat.json",
-        "source_id": "256fbf26-eb53-5a27-807e-20756ca6f661",
-        "snapshot": {
-          "encoding": "iso-8859-1",
-          "kind": "web_snapshot",
-          "language": "lat",
-          "license": "Corpus Thomisticum identifies its text as the Turin 1953 edition digitized by Roberto Busa and reviewed by Enrique Alarcón; ©2019 Fundación Tomás de Aquino quoad hanc editionem, all rights reserved. The medieval work is public domain; no open licence for the digital transcription is asserted. Only metadata, hashes, locators and a short incipit are committed. Two independent exact-downloader GETs matched response and selected-text bytes. No archive fallback or translation is claimed.",
-          "retrieved_at": "2026-11-01T13:59:09Z",
-          "sha256": "sha256:c2c1e6e5c0fd48348168080de9374ecc1f945ce81fc6e1abab16ed52c09e1fbb",
-          "source_id": "256fbf26-eb53-5a27-807e-20756ca6f661",
-          "source_url": "https://www.corpusthomisticum.org/qdp3.html"
-        },
-        "passages": [
-          {
-            "id": "ed03e1f1-7ab4-5abe-8b54-52a2842bfe4f",
-            "label": "Thomas Aquinas, Quaestiones disputatae de potentia, Q.3 a.5",
-            "locator": "q.3 a.5 [58674–58683]",
-            "claim_locator_prefixes": [
-              "q.3 a.5 "
-            ],
-            "selectors": {
-              "html_selector": {
-                "from": {
-                  "anchor": "58674"
-                },
-                "to": {
-                  "anchor": "58684"
-                }
-              },
-              "text_sha256": "sha256:a4842f8c57d71806fbe4576c9a0891f4e44d47ed1955c378150ee96ecc9bedb2"
-            }
-          }
-        ]
-      }
-    },
-    {
       "id": "fl-edition-1c33b76306aef5f44609db2cc52cdd91049add6292744872984fa95c0d05f7a2",
       "work_id": "fl-work-2bc55f4c-f7bf-58d5-8092-786c46e2a144",
       "label": "Necessary Being interactive survey (Necessary Concreta Quiz) — necessarybeing-definition",
@@ -5967,6 +5989,57 @@
                 }
               },
               "text_sha256": "sha256:af60369cbe397d85a6434584f0d2032f69b4b38c6d53d7e9b38d845c02b3ae3c"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-2ef78e7ef5631a2947ffbacd174b69f4ab04106b28df3abb284e79b881196e96",
+      "work_id": "fl-work-4117ffec-4713-40e4-8948-0ceff7ad4d05",
+      "label": "Translator's online edition, listed in Unpublished Philosophical Translations",
+      "language": "eng",
+      "license": "The translator's page displays no redistribution license. Only metadata and an incipit are included. The April 2026 archive capture matches the live response bytes and selected text across two fetches.",
+      "source_url": "https://freddoso.com/translat/molina26.htm",
+      "format": "html",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/db477c06-7c60-4a05-be0e-6953fdfbe588.json",
+        "source_id": "4117ffec-4713-40e4-8948-0ceff7ad4d05",
+        "snapshot": {
+          "encoding": "utf-8",
+          "kind": "web_snapshot",
+          "language": "eng",
+          "license": "The translator's page displays no redistribution license. Only metadata and an incipit are included. The April 2026 archive capture matches the live response bytes and selected text across two fetches.",
+          "retrieved_at": "2026-11-24T08:21:40Z",
+          "sha256": "sha256:790f39c3ea87456e6a5b0ab6eee76ade92dc811b7aeb563129b165067353c15c",
+          "source_id": "4117ffec-4713-40e4-8948-0ceff7ad4d05",
+          "source_url": "https://freddoso.com/translat/molina26.htm",
+          "translation": {
+            "edition": "Translator's online edition, listed in Unpublished Philosophical Translations",
+            "translator": "Alfred J. Freddoso",
+            "year": "undated"
+          },
+          "wayback_sha256": "sha256:790f39c3ea87456e6a5b0ab6eee76ade92dc811b7aeb563129b165067353c15c",
+          "wayback_url": "https://web.archive.org/web/20260410123214id_/https://freddoso.com/translat/molina26.htm"
+        },
+        "passages": [
+          {
+            "id": "db477c06-7c60-4a05-be0e-6953fdfbe588",
+            "label": "Molina, Concordia II, disputation 26 on God's general concurrence",
+            "locator": "Concordia II, disp. 26, §§1–16",
+            "claim_locator_prefixes": [
+              "Concordia II, disp. 26, §"
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "text": "DISPUTATION 26"
+                },
+                "to": {
+                  "text": "Translated by"
+                }
+              },
+              "text_sha256": "sha256:53b70c8bf0ef27f8676d594a990e06ab981df5eed3590e3f18af2615ddd24e1f"
             }
           }
         ]
@@ -7995,6 +8068,43 @@
       }
     },
     {
+      "id": "fl-edition-5e6344cc844ad566339504a78143072434c7a229ebb5687c0aa2179b9b72d45e",
+      "work_id": "fl-work-62a49533-d670-4bb0-a81e-5afdf2bfb4a1",
+      "label": "http://scta.info/resource/jsnvu6-d1e2369/cod-du87us",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0 according to the TEI publicationStmt. Medieval text in the public domain. Transcription and TEI encoding credited to Jeffrey C. Witt, draft dated 20 August 2023. The transcribed Lyon text contains occasional spelling and segmentation errors.",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/jsnvu6/44930fe0954eff1148eefd3483d9b34c1a54cd5c/jsnvu6-d1e2369/cod-du87us_jsnvu6-d1e2369.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/39ad946a-1814-4dd7-82ec-9c06ab19fcfb.json",
+        "source_id": "62a49533-d670-4bb0-a81e-5afdf2bfb4a1",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/jsnvu6-d1e2369/cod-du87us",
+          "git_blob_sha": "3b5db33d83f1fe0aef3c44deb302c5d895310917",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0 according to the TEI publicationStmt. Medieval text in the public domain. Transcription and TEI encoding credited to Jeffrey C. Witt, draft dated 20 August 2023. The transcribed Lyon text contains occasional spelling and segmentation errors.",
+          "path": "jsnvu6-d1e2369/cod-du87us_jsnvu6-d1e2369.xml",
+          "repository": "scta-texts/jsnvu6",
+          "revision": "44930fe0954eff1148eefd3483d9b34c1a54cd5c",
+          "source_id": "62a49533-d670-4bb0-a81e-5afdf2bfb4a1",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/jsnvu6/44930fe0954eff1148eefd3483d9b34c1a54cd5c/jsnvu6-d1e2369/cod-du87us_jsnvu6-d1e2369.xml"
+        },
+        "passages": [
+          {
+            "id": "39ad946a-1814-4dd7-82ec-9c06ab19fcfb",
+            "label": "Durand of Saint-Pourçain on immediate divine action in every action of a creature",
+            "locator": "Redaction C, In II Sent. d.1 q.5, complete question, Lyon 1563 fol. 111ra–vb. SCTA jsnvu6-d1e2369, especially §§6, 10–12, 17 (paragraph IDs ending d1e238, d1e419, d1e476, d1e505, d1e664).",
+            "claim_locator_prefixes": [
+              "C.II.1.5."
+            ],
+            "selectors": {
+              "tei_xml_id": "jsnvu6-d1e2369"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-5f3b81488b86cd3561664b2c63918737767914f6dfd3ad633e1d5d48290d6b77",
       "work_id": "fl-work-2bc55f4c-f7bf-58d5-8092-786c46e2a144",
       "label": "Necessary Being interactive survey (Necessary Concreta Quiz) — necessarybeing-a2p2c",
@@ -8804,6 +8914,76 @@
       }
     },
     {
+      "id": "fl-edition-6d232b16aed76af48f9642fc6e05162f612b7dc71b3a85cb93c6ba2f20b9a376",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e278/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e278/cod-cnLxE4_TAca84-d1e278.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q45.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e278/cod-cnLxE4",
+          "git_blob_sha": "8ff72728ef647e8d849e136915420a215f190fbb",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e278/cod-cnLxE4_TAca84-d1e278.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e278/cod-cnLxE4_TAca84-d1e278.xml"
+        },
+        "passages": [
+          {
+            "id": "72710347-6c92-4c77-9189-b9ff7fe95481",
+            "label": "Thomas Aquinas, Summa theologiae, I q.45 a.8",
+            "locator": "I q.45 a.8",
+            "claim_locator_prefixes": [
+              "I q.45 a.8 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e278-Dd1e1966"
+            }
+          },
+          {
+            "id": "bdbca53c-a561-40fa-ba81-028d29ef3892",
+            "label": "Thomas Aquinas, Summa theologiae, I q.45 a.4",
+            "locator": "I q.45 a.4",
+            "claim_locator_prefixes": [
+              "I q.45 a.4 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e278-Dd1e870"
+            }
+          },
+          {
+            "id": "d2a6e443-ad85-4874-b416-cfa26af02d41",
+            "label": "Thomas Aquinas, Summa theologiae, I q.45 a.5",
+            "locator": "I q.45 a.5",
+            "claim_locator_prefixes": [
+              "I q.45 a.5 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e278-Dd1e1039"
+            }
+          },
+          {
+            "id": "fb7bd7bb-c007-43fa-9147-a017d0ae1f01",
+            "label": "Thomas Aquinas, Summa theologiae, I q.45 a.3",
+            "locator": "I q.45 a.3",
+            "claim_locator_prefixes": [
+              "I q.45 a.3 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e278-Dd1e651"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-6d8f2e80140f7f9944a634ab3bb86942368ced0df34f32a14e25637c1a978086",
       "work_id": "fl-work-aaf2ee5f-561b-592f-a880-f0efc98470a8",
       "label": "Antidotes all the way down? Theoria 19(3), no.51 (2004), pp.259–269 — bird-antidotes",
@@ -8996,6 +9176,43 @@
                 "last": 47
               },
               "text_sha256": "sha256:20a5e4ec278f292cd9d5f83a3616c4690a7ee9411acf8e4146dc6a1283a75121"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-6f494fcd96242d9cc352d47acb5839ac7813ec9eaed87f8ace327d63c256ade2",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e113/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e113/cod-cnLxE4_TAca84-d1e113.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q13-a7.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e113/cod-cnLxE4",
+          "git_blob_sha": "11fb111a93f777750378aefebd8ed202169b7e86",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e113/cod-cnLxE4_TAca84-d1e113.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e113/cod-cnLxE4_TAca84-d1e113.xml"
+        },
+        "passages": [
+          {
+            "id": "12d8ecc5-37c5-4309-870a-f9273a43669e",
+            "label": "Thomas Aquinas, Summa theologiae, I q.13 a.7",
+            "locator": "I q.13 a.7",
+            "claim_locator_prefixes": [
+              "I q.13 a.7 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e113-Dd1e1841"
             }
           }
         ]
@@ -9415,6 +9632,53 @@
                 "last": 2
               },
               "text_sha256": "sha256:befd0e9e1c3159538f021fad0bccce8010a6439eaa019c660503f1e7ec6cb2bf"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-799d6c4dc95dc38562e52be5b3dcd604210a6a37661d403672c371038e761f49",
+      "work_id": "fl-work-235966cc-024d-5630-9426-50912ce6af4f",
+      "label": "In octo libros Physicorum Aristotelis expositio — 6cad8064-7503-48a2-b29a-c5f06c4c0a76",
+      "language": "lat",
+      "license": "The medieval Latin is public domain. The Corpus Thomisticum page identifies the Leonine text in its Turin 1954 edition, transcribed by Roberto Busa and reviewed by Enrique Alarcón. Fundación Tomás de Aquino reserves rights in this digital edition. Metadata, hashes, locators and a short incipit are committed. The live page and October 2025 Wayback copy matched byte-for-byte and yielded the same passage on two fetches.",
+      "source_url": "https://www.corpusthomisticum.org/cpy05.html",
+      "format": "html",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/6cad8064-7503-48a2-b29a-c5f06c4c0a76.json",
+        "source_id": "235966cc-024d-5630-9426-50912ce6af4f",
+        "snapshot": {
+          "encoding": "iso-8859-1",
+          "kind": "web_snapshot",
+          "language": "lat",
+          "license": "The medieval Latin is public domain. The Corpus Thomisticum page identifies the Leonine text in its Turin 1954 edition, transcribed by Roberto Busa and reviewed by Enrique Alarcón. Fundación Tomás de Aquino reserves rights in this digital edition. Metadata, hashes, locators and a short incipit are committed. The live page and October 2025 Wayback copy matched byte-for-byte and yielded the same passage on two fetches.",
+          "retrieved_at": "2026-11-24T13:49:59Z",
+          "sha256": "sha256:6167632661b953b477a6ebfd82a618697773ba63cfa304ba7eb69eeb51467689",
+          "source_id": "235966cc-024d-5630-9426-50912ce6af4f",
+          "source_url": "https://www.corpusthomisticum.org/cpy05.html",
+          "wayback_sha256": "sha256:6167632661b953b477a6ebfd82a618697773ba63cfa304ba7eb69eeb51467689",
+          "wayback_url": "https://web.archive.org/web/20251007125521id_/https://www.corpusthomisticum.org/cpy05.html"
+        },
+        "passages": [
+          {
+            "id": "6cad8064-7503-48a2-b29a-c5f06c4c0a76",
+            "label": "Thomas Aquinas on change in a correlate and the foundation of a real relation of equality",
+            "locator": "V, lect. 3 nn. 7–8 [72197–72198], on Physics V.2, 225b12–15",
+            "claim_locator_prefixes": [
+              "V, lect. 3 n. 7 ",
+              "V, lect. 3 n. 8 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "72197"
+                },
+                "to": {
+                  "anchor": "72199"
+                }
+              },
+              "text_sha256": "sha256:891d90c115cf3adbedd2e9a755a272a847b010ff805e391d7ff7c8dac11672f6"
             }
           }
         ]
@@ -14832,6 +15096,50 @@
       }
     },
     {
+      "id": "fl-edition-d053ac1b2a26dc539fc5db8da18c590c7c633e4a31068ac8150f4e0e34ed4b01",
+      "work_id": "fl-work-3dba6cf4-271a-4cd9-8a18-7ff830520b32",
+      "label": "Disputationes metaphysicae — dde24765-6aeb-457d-a4c7-aa9f44fea06d",
+      "language": "lat",
+      "license": "The Latin work is in the public domain. The Castellote–Renemann PDF credits the digital editors. No license for redistribution of their edition is asserted. The live PDF and the September 2025 archive capture match. Only metadata, hashes and a short incipit are committed.",
+      "source_url": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d22.pdf",
+      "format": "pdf",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/dde24765-6aeb-457d-a4c7-aa9f44fea06d.json",
+        "source_id": "3dba6cf4-271a-4cd9-8a18-7ff830520b32",
+        "snapshot": {
+          "encoding": "utf-8",
+          "kind": "web_snapshot",
+          "language": "lat",
+          "license": "The Latin work is in the public domain. The Castellote–Renemann PDF credits the digital editors. No license for redistribution of their edition is asserted. The live PDF and the September 2025 archive capture match. Only metadata, hashes and a short incipit are committed.",
+          "retrieved_at": "2026-11-24T09:44:55Z",
+          "sha256": "sha256:791e591b273bbc46c367f00e5e0b4c8d3706d478c9d66e20b8ec6f40fa9a8e95",
+          "source_id": "3dba6cf4-271a-4cd9-8a18-7ff830520b32",
+          "source_url": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d22.pdf",
+          "wayback_sha256": "sha256:791e591b273bbc46c367f00e5e0b4c8d3706d478c9d66e20b8ec6f40fa9a8e95",
+          "wayback_url": "https://web.archive.org/web/20250917000805id_/https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d22.pdf"
+        },
+        "passages": [
+          {
+            "id": "dde24765-6aeb-457d-a4c7-aa9f44fea06d",
+            "label": "Francisco Suárez, Disputationes metaphysicae XXII.1 on dependence at production and conservation",
+            "locator": "DM XXII.1 §§7–9, printed and physical PDF p. 3 (also contains the end of §6 and §10)",
+            "claim_locator_prefixes": [
+              "DM XXII.1 §7",
+              "DM XXII.1 §8",
+              "DM XXII.1 §9"
+            ],
+            "selectors": {
+              "pdf_pages": {
+                "first": 3,
+                "last": 3
+              },
+              "text_sha256": "sha256:8aed2266cec656d4e353bced38881bd78a30e2aba67e02b821ca0251b98b2984"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-d24a2fc2bcba45bd6f26ad0f3bc6c99670aefa370478e93849262ceb035fcce5",
       "work_id": "fl-work-99106b74-a687-5071-8fa3-ab97db0a4de3",
       "label": "Humean Supervenience Debugged (1994) — lewis-humean-supervenience",
@@ -16952,6 +17260,128 @@
       }
     },
     {
+      "id": "fl-edition-e0205563365868c2591e659360d75b4819e76190294b2de60b3701246b94f5e6",
+      "work_id": "fl-work-0292b788-8058-5069-afde-4a19b82b5604",
+      "label": "Summa contra gentiles — aquinas-scg-iii66-70-lat",
+      "language": "lat",
+      "license": "The medieval text is public domain. Corpus Thomisticum identifies this transcription as the corrected Leonine text from the Turin 1961 proofs. Fundación Tomás de Aquino reserves rights in the digital edition. The selected chapters match the Wayback capture of 2025-05-05. Only locators, hashes and short incipits are committed.",
+      "source_url": "https://www.corpusthomisticum.org/scg3064.html",
+      "format": "html",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-scg-iii66-70-lat.json",
+        "source_id": "0292b788-8058-5069-afde-4a19b82b5604",
+        "snapshot": {
+          "encoding": "iso-8859-1",
+          "kind": "web_snapshot",
+          "language": "lat",
+          "license": "The medieval text is public domain. Corpus Thomisticum identifies this transcription as the corrected Leonine text from the Turin 1961 proofs. Fundación Tomás de Aquino reserves rights in the digital edition. The selected chapters match the Wayback capture of 2025-05-05. Only locators, hashes and short incipits are committed.",
+          "retrieved_at": "2026-11-24T08:18:47Z",
+          "sha256": "sha256:b3be14fbe2b9597f2ca9cb482c009c33a133fcc73ff9190c836011a4cdb8bf1b",
+          "source_id": "0292b788-8058-5069-afde-4a19b82b5604",
+          "source_url": "https://www.corpusthomisticum.org/scg3064.html",
+          "wayback_sha256": "sha256:b3be14fbe2b9597f2ca9cb482c009c33a133fcc73ff9190c836011a4cdb8bf1b",
+          "wayback_url": "https://web.archive.org/web/20250505041702id_/https://www.corpusthomisticum.org/scg3064.html"
+        },
+        "passages": [
+          {
+            "id": "5350d6b8-22a3-469d-a0cf-1b93c831acfd",
+            "label": "Thomas Aquinas, Summa contra gentiles, III.66",
+            "locator": "III.66 [26151–26159]",
+            "claim_locator_prefixes": [
+              "III.66 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "26151"
+                },
+                "to": {
+                  "anchor": "26160"
+                }
+              },
+              "text_sha256": "sha256:43660d791f4ba6b8af3cd12c28965c95e18543e83d05c9f42f2bcbdce6adf856"
+            }
+          },
+          {
+            "id": "773878a7-984d-40b9-a37e-374773c988e7",
+            "label": "Thomas Aquinas, Summa contra gentiles, III.67",
+            "locator": "III.67 [26160–26167]",
+            "claim_locator_prefixes": [
+              "III.67 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "26160"
+                },
+                "to": {
+                  "anchor": "26168"
+                }
+              },
+              "text_sha256": "sha256:820feb0d7237c7aee90f70df49bd2932dbc8728d51ab81bd33cb472c9eded523"
+            }
+          },
+          {
+            "id": "92891c0b-1a45-49d6-b94a-b4e758aa193d",
+            "label": "Thomas Aquinas, Summa contra gentiles, III.70",
+            "locator": "III.70 [26208–26215]",
+            "claim_locator_prefixes": [
+              "III.70 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "26208"
+                },
+                "to": {
+                  "anchor": "26216"
+                }
+              },
+              "text_sha256": "sha256:63a821434c761327544e682f644793622f5e6bf7e0257daecda9856afaa7966e"
+            }
+          },
+          {
+            "id": "b66f6406-3d2d-49e7-a3a1-df4f4c78b419",
+            "label": "Thomas Aquinas, Summa contra gentiles, III.68",
+            "locator": "III.68 [26168–26177]",
+            "claim_locator_prefixes": [
+              "III.68 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "26168"
+                },
+                "to": {
+                  "anchor": "26178"
+                }
+              },
+              "text_sha256": "sha256:e7ba461bdfe14062c6eb358999e30b7bea95efd7bcd4ecffd4273c967cfe1d48"
+            }
+          },
+          {
+            "id": "bae3cc40-d79f-4e57-a618-b9ebe45b839c",
+            "label": "Thomas Aquinas, Summa contra gentiles, III.69",
+            "locator": "III.69 [26178–26207]",
+            "claim_locator_prefixes": [
+              "III.69 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "26178"
+                },
+                "to": {
+                  "anchor": "26208"
+                }
+              },
+              "text_sha256": "sha256:ec47fe96153e2741555887e443d531c73916a697bf796147dd1089b77f8701f1"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-e05de49f25bcc27e6701dffd721e8102ca7c49f1c758736ed09e88c4e3396aa6",
       "work_id": "fl-work-b2f522f6-0dec-5ad8-ad14-12f69c009c2f",
       "label": "http://scta.info/resource/adcmon-c5/cod-Sv1Sv1",
@@ -17383,6 +17813,69 @@
                 }
               },
               "text_sha256": "sha256:07a14e7710888dad3e540c1f54cc1b0c944e7f6f85827f90e87a27ad7ef8b605"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-e535b88866b66e192d0dc3ae99c6032b38fbe8afdd30133bd9e0bb7fdf6eb6e3",
+      "work_id": "fl-work-256fbf26-eb53-5a27-807e-20756ca6f661",
+      "label": "Quaestiones disputatae de potentia — aquinas-de-potentia-q3a5-lat",
+      "language": "lat",
+      "license": "Corpus Thomisticum identifies its text as the Turin 1953 edition digitized by Roberto Busa and reviewed by Enrique Alarcón; ©2019 Fundación Tomás de Aquino quoad hanc editionem, all rights reserved. The medieval work is public domain; no open licence for the digital transcription is asserted. Only metadata, hashes, locators and a short incipit are committed. Two independent exact-downloader GETs matched response and selected-text bytes. No archive fallback or translation is claimed.",
+      "source_url": "https://www.corpusthomisticum.org/qdp3.html",
+      "format": "html",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-de-potentia-q3a5-lat.json",
+        "source_id": "256fbf26-eb53-5a27-807e-20756ca6f661",
+        "snapshot": {
+          "encoding": "iso-8859-1",
+          "kind": "web_snapshot",
+          "language": "lat",
+          "license": "Corpus Thomisticum identifies its text as the Turin 1953 edition digitized by Roberto Busa and reviewed by Enrique Alarcón; ©2019 Fundación Tomás de Aquino quoad hanc editionem, all rights reserved. The medieval work is public domain; no open licence for the digital transcription is asserted. Only metadata, hashes, locators and a short incipit are committed. Two independent exact-downloader GETs matched response and selected-text bytes. No archive fallback or translation is claimed.",
+          "retrieved_at": "2026-11-01T13:59:09Z",
+          "sha256": "sha256:c2c1e6e5c0fd48348168080de9374ecc1f945ce81fc6e1abab16ed52c09e1fbb",
+          "source_id": "256fbf26-eb53-5a27-807e-20756ca6f661",
+          "source_url": "https://www.corpusthomisticum.org/qdp3.html"
+        },
+        "passages": [
+          {
+            "id": "b1558c63-e600-40be-b2b8-1f6fd56c71b3",
+            "label": "Thomas Aquinas, Quaestiones disputatae de potentia, q.3 a.7",
+            "locator": "q.3 a.7 [58742–58781]",
+            "claim_locator_prefixes": [
+              "q.3 a.7 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "58742"
+                },
+                "to": {
+                  "anchor": "58782"
+                }
+              },
+              "text_sha256": "sha256:3994ae5ae24042c18774d24211ac7b21dc8cd2bd04e2571081f39af2aa5d5b7b"
+            }
+          },
+          {
+            "id": "ed03e1f1-7ab4-5abe-8b54-52a2842bfe4f",
+            "label": "Thomas Aquinas, Quaestiones disputatae de potentia, Q.3 a.5",
+            "locator": "q.3 a.5 [58674–58683]",
+            "claim_locator_prefixes": [
+              "q.3 a.5 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "58674"
+                },
+                "to": {
+                  "anchor": "58684"
+                }
+              },
+              "text_sha256": "sha256:a4842f8c57d71806fbe4576c9a0891f4e44d47ed1955c378150ee96ecc9bedb2"
             }
           }
         ]
@@ -19688,6 +20181,6 @@
   ],
   "formal_logos": {
     "repository": "moritzbrantner/formal-logos",
-    "revision": "597e4b2eb02e092f1769a2e987437bc78e14893a"
+    "revision": "9eef0b04b958c1c5a618b8307ef43343495591bf"
   }
 }
