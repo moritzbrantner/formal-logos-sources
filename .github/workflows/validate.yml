@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   rust:
-    uses: moritzbrantner/reusable-workflows/.github/workflows/command-validation.yml@172addaef52d6c2457030eb0b3cfc9f1d35b94d5 # main
+    uses: moritzbrantner/reusable-workflows/.github/workflows/command-validation.yml@f17cd13868ab7d956b9e8a9afae926a84b368d0d # main
     with:
       setup_command: command -v pdftotext >/dev/null || (sudo apt-get update && sudo apt-get install -y poppler-utils)
       command: |
