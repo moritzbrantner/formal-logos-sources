@@ -201,6 +201,73 @@ curl https://doi.org/10.1234/test
         serde_json::from_str(&cli(&["authors", "--name", "First and Second"], dir.path())).unwrap();
     assert_eq!(author["author_attributions"].as_array().unwrap().len(), 1);
     assert_eq!(author["author_attributions"][0]["registered_passages"], 1);
+
+    // A local HTML page with a cited URL resolves after an explicit offline refresh.
+    fs::write(
+        dir.path().join("blog.html"),
+        "<title>Blog</title><h2>Post</h2><p>Synthetic &amp; local.</p>",
+    )
+    .unwrap();
+    cli(
+        &[
+            "add-html",
+            "blog.html",
+            "--work-id",
+            "local-work",
+            "--title",
+            "Local work",
+            "--edition-id",
+            "local-blog",
+            "--edition-label",
+            "Local blog page",
+            "--language",
+            "eng",
+            "--license",
+            "Synthetic fixture",
+            "--encoding",
+            "utf-8",
+            "--locator",
+            "Post",
+            "--url",
+            "https://example.org/blog",
+        ],
+        dir.path(),
+    );
+    assert!(
+        cited("local-blog")["citations"]
+            .as_array()
+            .unwrap()
+            .is_empty()
+    );
+    let refreshed: Value = serde_json::from_str(&cli(
+        &["refresh-citations", "--formal-logos", "upstream"],
+        dir.path(),
+    ))
+    .unwrap();
+    assert_eq!(refreshed["revision"], revision.trim());
+    assert_eq!(refreshed["research_citations"], 5);
+    let blog = cited("local-blog");
+    assert_eq!(
+        blog["citations"][0]["cited_urls"][0]["url"],
+        "https://example.org/blog"
+    );
+    let prepared: Value = serde_json::from_str(&cli(
+        &[
+            "prepare",
+            "--edition-id",
+            "local-blog",
+            "--selector",
+            r#"{"heading":"Post"}"#,
+            "--text",
+        ],
+        dir.path(),
+    ))
+    .unwrap();
+    assert_eq!(prepared["text"], "Post\nSynthetic & local.");
+    assert_eq!(prepared["locator"], "Post");
+    assert_eq!(prepared["remote_witness_verified"], false);
+    let check: Value = serde_json::from_str(&cli(&["check"], dir.path())).unwrap();
+    assert_eq!(check["local_html_editions"], 1);
 }
 
 #[test]

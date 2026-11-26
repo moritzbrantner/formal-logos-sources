@@ -1,6 +1,8 @@
 mod citations;
 mod formal_logos;
+mod html;
 mod import;
+mod mirror;
 mod registry;
 mod research;
 
@@ -113,7 +115,12 @@ fn join_soft_hyphens(input: &str) -> String {
 
 const USAGE: &str = "usage:
   formal-logos-sources inspect FILE --pages FIRST:LAST [--url URL] [--join-soft-hyphens]
+  formal-logos-sources inspect FILE --selector JSON --encoding ENC [--url URL] [--text]
   formal-logos-sources add FILE --work-id ID --title TITLE --edition-id ID --edition-label LABEL --language LANG --license TERMS [--url URL] [--catalog PATH] [--store DIR]
+  formal-logos-sources add-html FILE --work-id ID --title TITLE --edition-id ID --edition-label LABEL --language LANG --license TERMS --encoding ENC [--locator LOCATOR] [--url URL] [--catalog PATH] [--store DIR]
+  formal-logos-sources add-html-mirror DIR --layout newadvent-summa --work-id ID --language LANG --license TERMS [--catalog PATH] [--store DIR]
+  formal-logos-sources compare-witnesses [--catalog PATH] [--store DIR]
+  formal-logos-sources refresh-citations --formal-logos DIR [--catalog PATH]
   formal-logos-sources list [--catalog PATH]
   formal-logos-sources check [--catalog PATH] [--research FILE]
   formal-logos-sources citations [--source DOI_OR_ARXIV_OR_URL_OR_CATALOG_ID] [--catalog PATH]
@@ -122,7 +129,8 @@ const USAGE: &str = "usage:
   formal-logos-sources import --formal-logos DIR [--revision COMMIT] [--work-groups FILE] [--catalog PATH]
   formal-logos-sources connections --formal-logos DIR --source ID [--locator LOCATOR] [--format json|markdown] [--catalog PATH]
   formal-logos-sources verify [--catalog PATH] [--store DIR]
-  formal-logos-sources prepare --edition-id ID --pages FIRST:LAST [--join-soft-hyphens] [--catalog PATH] [--store DIR]";
+  formal-logos-sources prepare --edition-id ID --pages FIRST:LAST [--join-soft-hyphens] [--catalog PATH] [--store DIR]
+  formal-logos-sources prepare --edition-id ID --selector JSON [--text] [--catalog PATH] [--store DIR]";
 
 struct Options {
     positional: Vec<String>,
@@ -176,7 +184,7 @@ impl Options {
 
     fn positional_file(&self) -> Result<&str, String> {
         if self.positional.len() != 1 {
-            return Err("expected exactly one PDF file argument".into());
+            return Err("expected exactly one file argument".into());
         }
         Ok(&self.positional[0])
     }
@@ -184,6 +192,28 @@ impl Options {
     fn no_positional(&self) -> Result<(), String> {
         if !self.positional.is_empty() {
             return Err("unexpected positional argument".into());
+        }
+        Ok(())
+    }
+
+    fn selector(&self) -> Result<serde_json::Value, String> {
+        serde_json::from_str(self.required("--selector")?)
+            .map_err(|e| format!("--selector must be a JSON html_selector: {e}"))
+    }
+
+    fn html_only(&self) -> Result<(), String> {
+        if self.fields.contains_key("--pages") || self.switches.contains("--join-soft-hyphens") {
+            return Err("--pages and --join-soft-hyphens apply only to PDFs".into());
+        }
+        Ok(())
+    }
+
+    fn pdf_only(&self) -> Result<(), String> {
+        if self.fields.contains_key("--selector")
+            || self.fields.contains_key("--encoding")
+            || self.switches.contains("--text")
+        {
+            return Err("--selector, --encoding and --text apply only to HTML".into());
         }
         Ok(())
     }
@@ -211,17 +241,32 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
     let command = args.next().ok_or(USAGE)?;
     match command.as_str() {
         "inspect" => {
-            let opts = Options::parse(args, &["--pages", "--url"], &["--join-soft-hyphens"])?;
+            let opts = Options::parse(
+                args,
+                &["--pages", "--url", "--selector", "--encoding"],
+                &["--join-soft-hyphens", "--text"],
+            )?;
             let filename = opts.positional_file()?;
-            let (first, last) = opts.pages()?;
             let data =
                 std::fs::read(Path::new(filename)).map_err(|e| format!("{filename}: {e}"))?;
-            let mut result = inspect(
-                &data,
-                first,
-                last,
-                opts.switches.contains("--join-soft-hyphens"),
-            )?;
+            let mut result = if opts.fields.contains_key("--selector") {
+                opts.html_only()?;
+                mirror::prepare_html(
+                    &data,
+                    opts.required("--encoding")?,
+                    &opts.selector()?,
+                    opts.switches.contains("--text"),
+                )?
+            } else {
+                opts.pdf_only()?;
+                let (first, last) = opts.pages()?;
+                inspect(
+                    &data,
+                    first,
+                    last,
+                    opts.switches.contains("--join-soft-hyphens"),
+                )?
+            };
             if let Some(url) = opts.fields.get("--url") {
                 result["source_url"] = url.clone().into();
             }
@@ -261,6 +306,124 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
             )?;
             show(&added)
         }
+        "add-html" => {
+            let opts = Options::parse(
+                args,
+                &[
+                    "--work-id",
+                    "--title",
+                    "--edition-id",
+                    "--edition-label",
+                    "--language",
+                    "--license",
+                    "--encoding",
+                    "--locator",
+                    "--url",
+                    "--catalog",
+                    "--store",
+                ],
+                &[],
+            )?;
+            let filename = opts.positional_file()?;
+            let data = std::fs::read(filename).map_err(|e| format!("{filename}: {e}"))?;
+            let encoding = opts.required("--encoding")?;
+            html::decode(&data, encoding)?;
+            let fields = registry::Add {
+                work_id: opts.required("--work-id")?,
+                title: opts.required("--title")?,
+                edition_id: opts.required("--edition-id")?,
+                label: opts.required("--edition-label")?,
+                language: opts.required("--language")?,
+                license: opts.required("--license")?,
+                source_url: opts.fields.get("--url").map(String::as_str),
+            };
+            let edition = registry::local_edition(
+                &fields,
+                "html",
+                Some(encoding),
+                opts.fields.get("--locator").map(String::as_str),
+                &data,
+            );
+            let mut added = registry::add_local(
+                &opts.path("--catalog", "registry/catalog.json"),
+                &opts.path("--store", "local"),
+                vec![registry::LocalEdition {
+                    edition,
+                    work_title: Some(fields.title),
+                    bytes: &data,
+                }],
+            )?;
+            show(&added.remove(0).0)
+        }
+        "add-html-mirror" => {
+            let opts = Options::parse(
+                args,
+                &[
+                    "--layout",
+                    "--work-id",
+                    "--language",
+                    "--license",
+                    "--catalog",
+                    "--store",
+                ],
+                &[],
+            )?;
+            if opts.positional.len() != 1 {
+                return Err("expected exactly one mirror directory argument".into());
+            }
+            if opts.required("--layout")? != "newadvent-summa" {
+                return Err("--layout must be newadvent-summa".into());
+            }
+            show(&mirror::add_newadvent_summa(
+                Path::new(&opts.positional[0]),
+                &opts.path("--catalog", "registry/catalog.json"),
+                &opts.path("--store", "local"),
+                mirror::MirrorOptions {
+                    work_id: opts.required("--work-id")?,
+                    language: opts.required("--language")?,
+                    license: opts.required("--license")?,
+                },
+            )?)
+        }
+        "compare-witnesses" => {
+            let opts = Options::parse(args, &["--catalog", "--store"], &[])?;
+            opts.no_positional()?;
+            let catalog = registry::read_catalog(&opts.path("--catalog", "registry/catalog.json"))?;
+            let comparisons = mirror::compare_witnesses(&catalog, &opts.path("--store", "local"))?;
+            show(&serde_json::json!({
+                "formal_logos": catalog.formal_logos,
+                "passages_compared": comparisons.len(),
+                "matching": comparisons.iter().filter(|c| c.matches).count(),
+                "evidence": "local HTML extraction against imported web_snapshot text_sha256 pins; no source host contacted",
+                "comparisons": comparisons
+            }))
+        }
+        "refresh-citations" => {
+            let opts = Options::parse(args, &["--formal-logos", "--catalog"], &[])?;
+            opts.no_positional()?;
+            let path = opts.path("--catalog", "registry/catalog.json");
+            let revision = registry::read_catalog(&path)?
+                .formal_logos
+                .ok_or("catalogue has no imported Formal Logos revision")?
+                .revision;
+            let repository = formal_logos::Repository::open(
+                Path::new(opts.required("--formal-logos")?),
+                &revision,
+            )?;
+            let documents = repository.research_documents()?;
+            let count = registry::update_catalog(&path, |catalog| {
+                if catalog
+                    .formal_logos
+                    .as_ref()
+                    .is_none_or(|binding| binding.revision != repository.revision)
+                {
+                    return Err("catalogue revision changed during refresh".into());
+                }
+                catalog.research_citations = citations::collect(catalog, &documents);
+                Ok(catalog.research_citations.len())
+            })?;
+            show(&serde_json::json!({"revision": repository.revision, "research_citations": count}))
+        }
         "list" => {
             let opts = Options::parse(args, &["--catalog"], &[])?;
             opts.no_positional()?;
@@ -282,7 +445,8 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
                 "works": catalog.works.len(),
                 "editions": catalog.editions.len(),
                 "research_citations": catalog.research_citations.len(),
-                "local_pdf_editions": catalog.editions.iter().filter(|e|e.formal_logos.is_none()).count(),
+                "local_pdf_editions": catalog.editions.iter().filter(|e|e.formal_logos.is_none() && e.format == "pdf").count(),
+                "local_html_editions": catalog.editions.iter().filter(|e|e.formal_logos.is_none() && e.format == "html").count(),
                 "referenced_editions": catalog.editions.iter().filter(|e|e.formal_logos.is_some()).count(),
                 "formal_logos": catalog.formal_logos,
                 "validation": "offline catalogue structure and references; source bytes not checked"
@@ -460,22 +624,45 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
         "prepare" => {
             let opts = Options::parse(
                 args,
-                &["--edition-id", "--pages", "--catalog", "--store"],
-                &["--join-soft-hyphens"],
+                &[
+                    "--edition-id",
+                    "--pages",
+                    "--selector",
+                    "--catalog",
+                    "--store",
+                ],
+                &["--join-soft-hyphens", "--text"],
             )?;
             opts.no_positional()?;
-            let (first, last) = opts.pages()?;
             let (edition, bytes) = registry::load_edition(
                 &opts.path("--catalog", "registry/catalog.json"),
                 &opts.path("--store", "local"),
                 opts.required("--edition-id")?,
             )?;
-            let mut result = inspect(
-                &bytes,
-                first,
-                last,
-                opts.switches.contains("--join-soft-hyphens"),
-            )?;
+            let mut result = if edition.format == "html" {
+                opts.html_only()?;
+                mirror::prepare_html(
+                    &bytes,
+                    edition
+                        .encoding
+                        .as_deref()
+                        .ok_or("HTML edition has no encoding")?,
+                    &opts.selector()?,
+                    opts.switches.contains("--text"),
+                )?
+            } else {
+                opts.pdf_only()?;
+                let (first, last) = opts.pages()?;
+                inspect(
+                    &bytes,
+                    first,
+                    last,
+                    opts.switches.contains("--join-soft-hyphens"),
+                )?
+            };
+            if let Some(locator) = edition.locator {
+                result["locator"] = locator.into();
+            }
             result["edition_id"] = edition.id.into();
             result["work_id"] = edition.work_id.into();
             result["language"] = edition.language.into();

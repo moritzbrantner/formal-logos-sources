@@ -56,7 +56,7 @@ mapping). The three explicit groupings concern the *Tractatus*, *Philosophical
 Investigations*, and Ayer's *Language, Truth and Logic*. Every source UUID and original
 source title is retained. Shared URLs and similar names never merge works automatically.
 The import is deterministic and repeatable; local works, independent author records and
-acquired PDF editions are preserved. A refresh that would orphan a local edition refuses
+acquired PDF and HTML editions are preserved. A refresh that would orphan a local edition refuses
 without changing the catalogue. The recorded source commit must be available locally;
 partial-clone missing objects fail instead of starting a network fetch.
 
@@ -77,7 +77,7 @@ an imported edition has no local `sha256`. Its immutable ID covers the reference
 Changed reference metadata produces a new referenced edition on refresh.
 
 `check` validates catalogue structure and internal references offline. `verify` checks
-only acquired local PDFs. Importing a witness does not mark it acquired, read, freshly
+only acquired local files (PDF and HTML). Importing a witness does not mark it acquired, read, freshly
 verified, or philosophically established. Canonical evidence and source-kind rules remain
 in Formal Logos; this implementation adds no evidence kind or dependency to that project.
 
@@ -214,6 +214,66 @@ context. Create canonical passage and claim records there through its existing w
 Routine CI checks metadata offline; it does not repeatedly acquire historical witnesses.
 
 PDFs and extracted full text remain local; `.gitignore` excludes `local/` and PDF files. Do not commit copyrighted source bytes or full extracted copyrighted text. Back up `local/` separately if keeping the bytes matters; a Git clone alone restores only metadata. No OCR is attempted; image-only or textless selected pages fail explicitly. Work/edition metadata can be versioned and shared independently of source bytes.
+
+## Local HTML pages and mirrors
+
+Local HTML editions use the same content-addressed store as PDFs. Their catalogue entry
+adds the page `encoding` (only strict UTF-8 is supported; other encodings fail) and may
+record a conventional `locator`. The `source_url` stays descriptive and is never fetched.
+
+```sh
+# One page.
+cargo run -- add-html page.html --work-id example-work --title 'Example Work' \
+  --edition-id example-page-2009 --edition-label 'Example page (2009 copy)' \
+  --language eng --license 'Local research copy' --encoding utf-8 \
+  --locator '§1' --url https://example.org/page.html
+
+# A directory of New Advent Summa question pages (idempotent; a rerun is a no-op).
+cargo run --locked -- add-html-mirror /path/to/newadvent/summa --layout newadvent-summa \
+  --work-id fl-work-c77377cf-501b-56c6-be40-b518e9aad101 --language eng \
+  --license '1920 translation public domain in the US; page footer states online edition copyright © 2009 Kevin Knight (New Advent). Local research copy; no redistribution permission asserted.'
+
+# Extract one passage; --text includes the extracted text in the local output only.
+cargo run --locked -- prepare --edition-id newadvent-summa-2009-1019 \
+  --selector '{"heading": "Article 1. Whether there is will in God?"}' --text
+cargo run --locked -- inspect page.html --encoding utf-8 --selector '{"element_id": "s1"}'
+```
+
+The `newadvent-summa` layout derives each locator from the file number (`1xxx` = `I`,
+`2xxx` = `I-II`, `3xxx` = `II-II`, `4xxx` = `III`, `5xxx` = `Suppl.`, `6xxx` =
+`Suppl. App. I`, `7001` = `Suppl. App. II`; the last three digits give the question) and
+requires the page title to name the same part and question, e.g. `SUMMA THEOLOGICA: The
+will of God (Prima Pars, Q. 19)` for `1019.htm` = `I q.19`. It also requires the 1920
+edition statement and one `Online Edition Copyright © YYYY by Kevin Knight` line, whose year
+enters the immutable edition ID (`newadvent-summa-2009-1019`). A page that disagrees is
+reported under `refused` and not registered: the 2009 mirror's `3645.htm` is a copy of
+`3170.htm` (`II-II q.170`) and is refused. Part and site indexes are listed separately.
+
+`prepare --selector` and `inspect --selector` mirror the `web_snapshot` HTML extraction of
+truth-core `scripts/source_evidence.py` at commit
+`c7368b99086aff67fa4f59f2157260e10b87ac69` (2026-11-26; the extractor last changed in
+`b5327252fd66e0e7d6cd35c5dcdbed0c89e0b7c4`): the same tokenization as Python 3.14's
+`html.parser` with converted character references and skipped
+`script`/`style`/`noscript`/`template`/`title` content, the `element_id`, `heading` and
+`from`/`to` (`anchor` or `text`) selectors with implied end tags, one normalized line per
+HTML block, and `text_sha256` over that text. The output reports the bare hex digest;
+truth-core manifests write the same digest as `sha256:<hex>`. Selector errors (no match, or
+several) fail as they do there. Like the PDF path, `prepare` re-verifies the local object and
+reports `remote_witness_verified: false`.
+
+```sh
+# Offline: compare each imported HTML web_snapshot pin with local editions of the same URL.
+cargo run --locked -- compare-witnesses
+# Recompute research citations from the catalogue's recorded corpus revision.
+cargo run --locked -- refresh-citations --formal-logos ../formal-logos
+```
+
+`compare-witnesses` extracts every imported `html_selector` from each acquired local HTML
+edition whose `source_url` equals the pinned snapshot's, and reports the pinned and local
+`text_sha256` per passage. A match shows that the local copy has the same selected text as
+the pinned witness; a mismatch is reported, not repaired, and says nothing about which text
+is right. `refresh-citations` reads only committed research documents at the recorded
+revision, so locally added editions can resolve cited URLs without a full re-import.
 
 ## Checks
 
