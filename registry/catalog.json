@@ -628,6 +628,13 @@
   ],
   "works": [
     {
+      "id": "augustine-de-trinitate",
+      "title": "De Trinitate (On the Trinity)",
+      "author_ids": [
+        "fl-author-accc1434b6e774ac262831dae8c73cebd75155453176db30382634d82ce2cf01"
+      ]
+    },
+    {
       "id": "boghossian-what-is-inference",
       "title": "What is inference?",
       "author_ids": [
@@ -20367,6 +20374,30 @@
       }
     },
     {
+      "id": "newadvent-fathers-2009-130109",
+      "work_id": "augustine-de-trinitate",
+      "label": "New Advent online edition (2009) of the 1887 Haddan translation (Nicene and Post-Nicene Fathers I.3), Book IX",
+      "locator": "IX",
+      "language": "eng",
+      "license": "1887 translation public domain in the US; page footer states online edition copyright © 2009 Kevin Knight (New Advent). Local research copy; no redistribution permission asserted.",
+      "source_url": "https://www.newadvent.org/fathers/130109.htm",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "f3e5840bf4b416db9e3a0a663bbb5b04d233f7c1427e37d2526e403c557f322e"
+    },
+    {
+      "id": "newadvent-fathers-2009-130115",
+      "work_id": "augustine-de-trinitate",
+      "label": "New Advent online edition (2009) of the 1887 Haddan translation (Nicene and Post-Nicene Fathers I.3), Book XV",
+      "locator": "XV",
+      "language": "eng",
+      "license": "1887 translation public domain in the US; page footer states online edition copyright © 2009 Kevin Knight (New Advent). Local research copy; no redistribution permission asserted.",
+      "source_url": "https://www.newadvent.org/fathers/130115.htm",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "509df2b7c5a65f1ac6ed9ec843612aefe6d594342800369ce000fd542f7766b0"
+    },
+    {
       "id": "newadvent-summa-2009-1001",
       "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
       "label": "New Advent online edition (2009) of the 1920 English Dominican translation, I q.1: The nature and extent of sacred doctrine",
@@ -33726,6 +33757,12 @@
       "cited_urls": [
         {
           "url": "https://www.newadvent.org/fathers/130109.htm",
+          "work_ids": [
+            "augustine-de-trinitate"
+          ],
+          "edition_ids": [
+            "newadvent-fathers-2009-130109"
+          ],
           "cited_at": [
             {
               "path": "docs/notes/de-ente-esse-source-1628.md",
@@ -33741,6 +33778,12 @@
       "cited_urls": [
         {
           "url": "https://www.newadvent.org/fathers/130115.htm",
+          "work_ids": [
+            "augustine-de-trinitate"
+          ],
+          "edition_ids": [
+            "newadvent-fathers-2009-130115"
+          ],
           "cited_at": [
             {
               "path": "docs/notes/de-ente-esse-source-1628.md",

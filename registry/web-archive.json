@@ -1,0 +1,3091 @@
+{
+  "schema_version": 1,
+  "user_agent": "formal-logos-sources-archiver/1",
+  "entries": [
+    {
+      "url": "http://alexanderpruss.com/papers/ActualAndPossible.html",
+      "retrieved_at": "2026-11-26T06:13:08Z",
+      "via": "live",
+      "final_url": "http://alexanderpruss.com/papers/ActualAndPossible.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "cf8dac0bec1501c8bdb32d0b4b37b76d7d2b01891b70e28b7f5760bfb6966b2e",
+      "bytes": 66193
+    },
+    {
+      "url": "http://classics.mit.edu/Aristotle/metaphysics.9.ix.html",
+      "retrieved_at": "2026-11-26T06:13:15Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/metaphysics.9.ix.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "e5404d78e62de9a9444d18d0a3ca1648d7786f193f66d8b2a19199dc6d786ef8",
+      "bytes": 56122
+    },
+    {
+      "url": "http://robkoons.net/old-blog-2021-22/a-further-reconstruction-of-the-fourth-way",
+      "retrieved_at": "2026-11-26T06:29:15Z",
+      "live_status": 404,
+      "error": "no Wayback capture with HTTP 200; redirect target https://robkoons.net/old-blog-2021-22/a-further-reconstruction-of-the-fourth-way: no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "http://scta.info/resource/TAca84-d1e82/cod-cnLxE4",
+      "retrieved_at": "2026-11-26T06:17:00Z",
+      "via": "live",
+      "final_url": "https://scta.info/resource/TAca84-d1e82/cod-cnLxE4",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "cf723461a7d669a6f6c57a61a5a372779531678891e445af180ecd50f7736880",
+      "bytes": 36177
+    },
+    {
+      "url": "https://15926.blog/topics/possible-worlds/Lewis-David-%281986%29-On-the-Plurality-of-Worlds.pdf",
+      "retrieved_at": "2026-11-26T06:12:40Z",
+      "via": "live",
+      "final_url": "https://15926.blog/topics/possible-worlds/Lewis-David-%281986%29-On-the-Plurality-of-Worlds.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "1d1b244a80e4f858b3192696dee2219c655df2b811b631542fa1bc73cf883045",
+      "bytes": 1010302
+    },
+    {
+      "url": "https://academic.oup.com/book/10657",
+      "retrieved_at": "2026-11-26T06:12:47Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20250610225949id_/https://academic.oup.com/book/10657",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "469690c5a1d09569b7491b18b029c210a948ebac4d84d25d97babfedc2fdb4e6",
+      "bytes": 701742,
+      "wayback_timestamp": "20250610225949",
+      "live_status": 403
+    },
+    {
+      "url": "https://academic.oup.com/book/25641",
+      "retrieved_at": "2026-11-26T06:13:07Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20231205092409id_/https://academic.oup.com/book/25641",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "c85cd92bcac99a2463b8c1a0f54298db35e98372c1d2bb1d395a07cd36bd755a",
+      "bytes": 1537,
+      "wayback_timestamp": "20231205092409",
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
+    },
+    {
+      "url": "https://achrafkassioui.com/library/Jonathan-Schaffer-Monism-The-Priority-of-the-Whole.pdf",
+      "retrieved_at": "2026-11-26T06:12:47Z",
+      "via": "live",
+      "final_url": "https://achrafkassioui.com/library/Jonathan-Schaffer-Monism-The-Priority-of-the-Whole.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "098951909af55f7f2fbd2f2a33c9e79d14410b061363a771e2076eba8025e944",
+      "bytes": 223334
+    },
+    {
+      "url": "https://alexanderpruss.blogspot.com/2008/05/three-kinds-of-views-of-modality.html",
+      "retrieved_at": "2026-11-26T06:12:48Z",
+      "via": "live",
+      "final_url": "https://alexanderpruss.blogspot.com/2008/05/three-kinds-of-views-of-modality.html",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "47b030dcdf9b313ef7ec196ee49883458926a7bc20d57ef178ec0f2a046c787f",
+      "bytes": 449999
+    },
+    {
+      "url": "https://alexanderpruss.blogspot.com/2021/09/models-of-libertarian-agency.html",
+      "retrieved_at": "2026-11-26T06:13:07Z",
+      "via": "live",
+      "final_url": "https://alexanderpruss.blogspot.com/2021/09/models-of-libertarian-agency.html",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "8ea215d2d758e13b6f5e5779ba76935d2e6db355a39543fbe9bfa6d238f18059",
+      "bytes": 462915
+    },
+    {
+      "url": "https://andrewmbailey.com/ap/On_Existentialism.pdf",
+      "retrieved_at": "2026-11-26T06:13:10Z",
+      "via": "live",
+      "final_url": "https://andrewmbailey.com/ap/On_Existentialism.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "ec7568b820370e53e788c4bf0343917a9f09cff7d9d2bf522072e7cebf173c34",
+      "bytes": 4948652
+    },
+    {
+      "url": "https://api.pageplace.de/preview/DT0400.9780199708208_A23607980/preview-9780199708208_A23607980.pdf",
+      "retrieved_at": "2026-11-26T06:13:10Z",
+      "via": "live",
+      "final_url": "https://api.pageplace.de/preview/DT0400.9780199708208_A23607980/preview-9780199708208_A23607980.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "51386cd502b89aca684a459b694ae6445a87d67ec3e98ff249ff9d7557c28345",
+      "bytes": 230665
+    },
+    {
+      "url": "https://apollojournals.org/afj/ap13fj/11day3-minimise-power.html",
+      "retrieved_at": "2026-11-26T06:13:10Z",
+      "via": "live",
+      "final_url": "https://apollojournals.org/afj/ap13fj/11day3-minimise-power.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "9c04f28663b598970b3730a43393fb2f16c8dad7027d21d271a75be7c4c13e62",
+      "bytes": 94905
+    },
+    {
+      "url": "https://aquinas101.thomisticinstitute.org/articles/selection-from-st-thomas-aquinas-summa-contra-gentiles-ii-c-24",
+      "retrieved_at": "2026-11-26T06:13:11Z",
+      "via": "live",
+      "final_url": "https://aquinas101.thomisticinstitute.org/articles/selection-from-st-thomas-aquinas-summa-contra-gentiles-ii-c-24",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "7e84cf745e6f56e06dbf7b642b18b637a654e723e2774cccb8d1034ed22f1eba",
+      "bytes": 60537
+    },
+    {
+      "url": "https://arxiv.org/abs/0903.1622",
+      "retrieved_at": "2026-11-26T06:13:11Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/abs/0903.1622",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4a53bd47175c272d4fae54a18be90af9db3b08aa0e181e3729697d9561472a3a",
+      "bytes": 42322
+    },
+    {
+      "url": "https://arxiv.org/abs/1806.09693",
+      "retrieved_at": "2026-11-26T06:21:32Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/abs/1806.09693",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "1d5ddb06d1b353761c34cb556271844d67f6a830d321f192730e6f1bfa41ce3f",
+      "bytes": 47084
+    },
+    {
+      "url": "https://arxiv.org/abs/2508.08747",
+      "retrieved_at": "2026-11-26T06:23:23Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/abs/2508.08747",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "5d4394cea81387a42950425e20ae9e4d9ec0bfa828f40526b102c3d39459d4e2",
+      "bytes": 42956
+    },
+    {
+      "url": "https://arxiv.org/abs/astro-ph/9712344",
+      "retrieved_at": "2026-11-26T06:24:23Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/abs/astro-ph/9712344",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "bce7f774b3898ec4de1def6dd211732cb800e6a2f9ab38fcb01f355ee4ea1780",
+      "bytes": 45794
+    },
+    {
+      "url": "https://arxiv.org/abs/hep-th/0004134",
+      "retrieved_at": "2026-11-26T06:24:39Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/abs/hep-th/0004134",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "8164ff497f0dd9f11b3b1b5253455c458318ecda6a41624ff2746769b3760498",
+      "bytes": 42744
+    },
+    {
+      "url": "https://arxiv.org/abs/hep-th/0702115",
+      "retrieved_at": "2026-11-26T06:24:43Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/abs/hep-th/0702115",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "c360ae2c6d599709c04e0e9f07413254940df63f04a98b36a32e723ed06b4174",
+      "bytes": 43183
+    },
+    {
+      "url": "https://arxiv.org/abs/math/9808093",
+      "retrieved_at": "2026-11-26T06:24:48Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/abs/math/9808093",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "93f655aec2407028616cff856f902ad81d03d2a5fa36adc9a4064605e106aa82",
+      "bytes": 38427
+    },
+    {
+      "url": "https://arxiv.org/abs/quant-ph/9710043",
+      "retrieved_at": "2026-11-26T06:24:52Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/abs/quant-ph/9710043",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "ec0cce44e42f2d9ee7cf765781d2270e8d7edcc51e214f99725303dcb30e6fbd",
+      "bytes": 41965
+    },
+    {
+      "url": "https://arxiv.org/html/quant-ph/0407116",
+      "retrieved_at": "2026-11-26T06:25:01Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/html/quant-ph/0407116",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "7245c84d2172892ce6a53d038dbefe1bbe1c1c2c502ca28f50665e42fc6637ff",
+      "bytes": 1237195
+    },
+    {
+      "url": "https://arxiv.org/pdf/0903.1622",
+      "retrieved_at": "2026-11-26T06:25:06Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/0903.1622",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "aa82efe6f96c169729b88a290dccbc0d927444176ed4afbf2b90fb7e8adf581c",
+      "bytes": 390635
+    },
+    {
+      "url": "https://arxiv.org/pdf/1007.4967",
+      "retrieved_at": "2026-11-26T06:25:09Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/1007.4967",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "ec812d3561e1ddbb31c80ce9848b9ce05a69205605e31b686eef294a92905034",
+      "bytes": 907904
+    },
+    {
+      "url": "https://arxiv.org/pdf/1101.2444",
+      "retrieved_at": "2026-11-26T06:25:12Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/1101.2444",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "b9df4f9a89d1b650a4480623b26c40bd38f9e727b60be9037887192bd8d0acee",
+      "bytes": 137097
+    },
+    {
+      "url": "https://arxiv.org/pdf/1107.3761",
+      "retrieved_at": "2026-11-26T06:25:15Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/1107.3761",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "a5f715d04785d5b1db3e579c734ff254bc2878e9a471c434c1ad301afc066d73",
+      "bytes": 3055860
+    },
+    {
+      "url": "https://arxiv.org/pdf/1206.0453",
+      "retrieved_at": "2026-11-26T06:25:18Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/1206.0453",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "7cf8ba9a16410b7c2231ad9312b97ec0b69489acef06d30330d63712e6e05498",
+      "bytes": 513634
+    },
+    {
+      "url": "https://arxiv.org/pdf/1403.2084",
+      "retrieved_at": "2026-11-26T06:25:22Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/1403.2084",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "05f0c7cc173bd34f597ed56fa7ac00df331b591f7729a0d6c9a7414542a715ae",
+      "bytes": 689665
+    },
+    {
+      "url": "https://arxiv.org/pdf/1710.05832",
+      "retrieved_at": "2026-11-26T06:25:27Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/1710.05832",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "0fcadae9d35e72c6c903ce6466e105e6ea84358397384a88471080acfbd2d024",
+      "bytes": 1599186
+    },
+    {
+      "url": "https://arxiv.org/pdf/1710.05833",
+      "retrieved_at": "2026-11-26T06:25:32Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/1710.05833",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "abade212b3d6763f1c280f2cdc610b4b11d85f42187741575ce5599bab93d53f",
+      "bytes": 3266551
+    },
+    {
+      "url": "https://arxiv.org/pdf/1710.05834",
+      "retrieved_at": "2026-11-26T06:25:38Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/1710.05834",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "bf06bd2ae6a23cf7f7092307677c2b681ce02abab3b5bbe37bbce76a8960140a",
+      "bytes": 2129594
+    },
+    {
+      "url": "https://arxiv.org/pdf/2411.07301",
+      "retrieved_at": "2026-11-26T06:25:44Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/2411.07301",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "96bdf8551fb19dd408ab58bb811c6dc7da7e5d33f353f2a1bb0fea869bc8019b",
+      "bytes": 1565678
+    },
+    {
+      "url": "https://arxiv.org/pdf/hep-th/0702115",
+      "retrieved_at": "2026-11-26T06:25:50Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/hep-th/0702115",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "a22a907efb808662d2b0c062150c8c81d006829f03e63155c0e83c81e571ad3c",
+      "bytes": 563277
+    },
+    {
+      "url": "https://arxiv.org/pdf/hep-th/0702115v3",
+      "retrieved_at": "2026-11-26T06:25:57Z",
+      "via": "live",
+      "final_url": "https://arxiv.org/pdf/hep-th/0702115v3",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "a22a907efb808662d2b0c062150c8c81d006829f03e63155c0e83c81e571ad3c",
+      "bytes": 563277
+    },
+    {
+      "url": "https://assets.zyrosite.com/Aq2ZN1NGQMILGL8l/cosmopsychism_and_micropsychism-YNqX3kzb2Eulj9gD.pdf",
+      "retrieved_at": "2026-11-26T06:13:11Z",
+      "via": "live",
+      "final_url": "https://assets.zyrosite.com/Aq2ZN1NGQMILGL8l/cosmopsychism_and_micropsychism-YNqX3kzb2Eulj9gD.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "fd4db805b139a7a94af6a7da3721f1bf357ea92fc1060f47223ca6545a299ab9",
+      "bytes": 616627
+    },
+    {
+      "url": "https://catholiclibrary.org/library/view?chunk.id=00000069&docId=/Medieval-EN/XCT.024.html",
+      "retrieved_at": "2026-11-26T06:13:11Z",
+      "via": "live",
+      "final_url": "https://catholiclibrary.org/library/view?chunk.id=00000069&docId=/Medieval-EN/XCT.024.html",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "3036b379a51d7485d71cbdb7d7a41a3a149cb3d9790584445af35ecfe8a2dd9d",
+      "bytes": 100259
+    },
+    {
+      "url": "https://catholiclibrary.org/library/view?chunk.id=00000073&docId=/Medieval-EN/XCT.024.html",
+      "retrieved_at": "2026-11-26T06:21:33Z",
+      "via": "live",
+      "final_url": "https://catholiclibrary.org/library/view?chunk.id=00000073&docId=/Medieval-EN/XCT.024.html",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "434cd76b58175347082eec30aa7e9876491e25c9fc10bdf7b449cfaca9130146",
+      "bytes": 95394
+    },
+    {
+      "url": "https://citeseerx.ist.psu.edu/document?doi=6978b27f0d09e07550d88d9ef0bb3204603de588&repid=rep1&type=pdf",
+      "retrieved_at": "2026-11-26T06:35:15Z",
+      "live_status": 404,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/categories.3.3.html",
+      "retrieved_at": "2026-11-26T06:21:33Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/categories.3.3.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "6a945268708c24e2e98ada0797ef962429371928c7ddbbc203abd1b5f88b8074",
+      "bytes": 40461
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/metaphysics.4.iv.html",
+      "retrieved_at": "2026-11-26T06:23:24Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/metaphysics.4.iv.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "9a3a8658a690f42ad99589baeead484b5d5ab8065016d65cb5c3aa1b711531d6",
+      "bytes": 76367
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/metaphysics.5.v.html",
+      "retrieved_at": "2026-11-26T06:24:23Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/metaphysics.5.v.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "abd1c8dcccdd43e39727f6c03b20922810126998175b0679dbfbea1c54c2fd43",
+      "bytes": 98945
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/metaphysics.9.ix.html",
+      "retrieved_at": "2026-11-26T06:24:39Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/metaphysics.9.ix.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "e5404d78e62de9a9444d18d0a3ca1648d7786f193f66d8b2a19199dc6d786ef8",
+      "bytes": 56122
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/nicomachaen.6.vi.html",
+      "retrieved_at": "2026-11-26T06:24:44Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/nicomachaen.6.vi.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "cade08f009b99c3af090acc33f5b41591a32e566a34b13fb1194002ec27865b0",
+      "bytes": 56125
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/physics.1.i.html",
+      "retrieved_at": "2026-11-26T06:24:49Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/physics.1.i.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "a16d31e50367ee52da72471c3b7dc1533fd36867bdccb8de99f20d832d0767e3",
+      "bytes": 67162
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/physics.2.ii.html",
+      "retrieved_at": "2026-11-26T06:24:53Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/physics.2.ii.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "215dfbbccf4158b5399082e6ef30a6497b3a0443862fc17c7743275bdc5614a7",
+      "bytes": 65716
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/physics.3.iii.html",
+      "retrieved_at": "2026-11-26T06:25:02Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/physics.3.iii.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "30f3d9443453fae22cd335aaf91c18b192710722efc1c304c7ce24ca870a7c4d",
+      "bytes": 64328
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/soul.3.iii.html",
+      "retrieved_at": "2026-11-26T06:25:06Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/soul.3.iii.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "a28a1451352b164de3efd1b41a122b92a2feed0c2b8f00b4fc6cb36e11ca6680",
+      "bytes": 81924
+    },
+    {
+      "url": "https://closertotruth.com/news/an-interview-with-john-leslie/",
+      "retrieved_at": "2026-11-26T06:13:16Z",
+      "via": "live",
+      "final_url": "https://closertotruth.com/news/an-interview-with-john-leslie/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "0ef5200e42e0e1b9e9b883b6fbd5a5683e8d825d33675b034d7a168669a22bc0",
+      "bytes": 146246
+    },
+    {
+      "url": "https://consc.net/papers/combination.pdf",
+      "retrieved_at": "2026-11-26T06:13:16Z",
+      "via": "live",
+      "final_url": "https://consc.net/papers/combination.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "e7948184f9db70613d5dd8048436d640cd0ab1059018e979bd0d55772e40f8ee",
+      "bytes": 135911
+    },
+    {
+      "url": "https://consc.net/papers/conceivability.html",
+      "retrieved_at": "2026-11-26T06:21:34Z",
+      "via": "live",
+      "final_url": "https://consc.net/papers/conceivability.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "33a97851c302016b4dcb70f8f29a488332d97cb77e10ad68faaf2c9b8e9a0335",
+      "bytes": 167296
+    },
+    {
+      "url": "https://consc.net/papers/idealism.pdf",
+      "retrieved_at": "2026-11-26T06:23:24Z",
+      "via": "live",
+      "final_url": "https://consc.net/papers/idealism.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "4739ebb92b6f77fedc45626437716b433cade07b15c4018690ba5cc218139951",
+      "bytes": 127575
+    },
+    {
+      "url": "https://corpuscoranicum.de/en/intertexts/47",
+      "retrieved_at": "2026-11-26T06:13:16Z",
+      "via": "live",
+      "final_url": "https://corpuscoranicum.de/en/intertexts/47",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "cdce8dfb829282fc7e63d7e0098152f7195abf2ec747b7933b960fb62cc32bb3",
+      "bytes": 3199
+    },
+    {
+      "url": "https://cpb-us-w2.wpmucdn.com/u.osu.edu/dist/5/25851/files/2017/09/kant-first-critique-cambridge-1m89prv.pdf",
+      "retrieved_at": "2026-11-26T06:13:17Z",
+      "via": "live",
+      "final_url": "https://cpb-us-w2.wpmucdn.com/u.osu.edu/dist/5/25851/files/2017/09/kant-first-critique-cambridge-1m89prv.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "b3e68737703626efe9b65de352a736b6cae52be405ecc955d7757b8fa256ab3b",
+      "bytes": 10347820
+    },
+    {
+      "url": "https://d-nb.info/1130785459/34",
+      "retrieved_at": "2026-11-26T06:13:17Z",
+      "via": "live",
+      "final_url": "https://d-nb.info/1130785459/34",
+      "status": 200,
+      "content_type": "application/pdf;charset=base64",
+      "sha256": "5b74542ef8d6a49c31406a9bc7bd61ddd29ac64ee29f93e848b3db676c3a4ff2",
+      "bytes": 519880
+    },
+    {
+      "url": "https://danielwharris.com/teaching/364online/weeks/13/Ayer.pdf",
+      "retrieved_at": "2026-11-26T06:13:27Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20250810081713id_/https://danielwharris.com/teaching/364online/weeks/13/Ayer.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "cdf30cf64897464a6217a0ce4519b3b0bf90f788cc75068ed28f41981d0eca0a",
+      "bytes": 1395621,
+      "wayback_timestamp": "20250810081713",
+      "live_status": 404
+    },
+    {
+      "url": "https://darwin-online.org.uk/converted/manuscripts/Darwin_C_R_CUL-DAR139.9.1.html",
+      "retrieved_at": "2026-11-26T06:13:27Z",
+      "via": "live",
+      "final_url": "https://darwin-online.org.uk/converted/manuscripts/Darwin_C_R_CUL-DAR139.9.1.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "50bff81ba4e6de943246492782c231e9f8fb812c24238caf95a2a4b2879bc151",
+      "bytes": 175150
+    },
+    {
+      "url": "https://davidhume.org/texts/d/5",
+      "retrieved_at": "2026-11-26T06:13:28Z",
+      "via": "live",
+      "final_url": "https://davidhume.org/texts/d/5",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "58e1e9e54c0ed4ed29f55ef193aed72e0fad7b9fc4d6c9301843a90742a3ce4e",
+      "bytes": 15054
+    },
+    {
+      "url": "https://davidhume.org/texts/d/9",
+      "retrieved_at": "2026-11-26T06:21:34Z",
+      "via": "live",
+      "final_url": "https://davidhume.org/texts/d/9",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "115aa3cad30016b089ce725e656e44cf7434587c678736a3425c8679931ff311",
+      "bytes": 14102
+    },
+    {
+      "url": "https://davidhume.org/texts/t/1/4/5",
+      "retrieved_at": "2026-11-26T06:23:24Z",
+      "via": "live",
+      "final_url": "https://davidhume.org/texts/t/1/4/5",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "8032292455e70f161b88459ed8dc48a31c0a9c45e4d05489e50c1224481a07dc",
+      "bytes": 49061
+    },
+    {
+      "url": "https://dcc-llo.ligo.org/LIGO-P1700264/public",
+      "retrieved_at": "2026-11-26T06:13:29Z",
+      "via": "live",
+      "final_url": "https://dcc-llo.ligo.org/LIGO-P1700264/public",
+      "status": 200,
+      "content_type": "text/html; charset=ISO-8859-1",
+      "sha256": "45a28b870b506a0338c2d437283343333b69ad69b55c711df91c28b8ebf85669",
+      "bytes": 8090
+    },
+    {
+      "url": "https://deepblue.lib.umich.edu/handle/2027.42/73386",
+      "retrieved_at": "2026-11-26T06:27:46Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10141382/",
+      "retrieved_at": "2026-11-26T06:13:33Z",
+      "via": "live",
+      "final_url": "https://discovery.ucl.ac.uk/id/eprint/10141382/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "e9c127b1e787814b6f65a5f9e14a83e95a8f73d00aec14b9ba54e34a5ca28eaf",
+      "bytes": 43326
+    },
+    {
+      "url": "https://ditext.com/broad/mpn2.html",
+      "retrieved_at": "2026-11-26T06:13:34Z",
+      "via": "live",
+      "final_url": "https://ditext.com/broad/mpn2.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "8e51a607f71ebfc996cbab63874ccdb5355f96076bc07b329bf0b44a4cbbf086",
+      "bytes": 109176
+    },
+    {
+      "url": "https://doi.org/10.1007/s10670-026-01084-1",
+      "retrieved_at": "2026-11-26T06:13:36Z",
+      "via": "live",
+      "final_url": "https://link.springer.com/article/10.1007/s10670-026-01084-1?error=cookies_not_supported&code=74708dea-fdf8-4137-8377-23528d58aef3",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "cdef9c482825182c645c5402a8fb08da00d5c3dea4660b108fe22e150d6f432f",
+      "bytes": 442324
+    },
+    {
+      "url": "https://doi.org/10.1007/s11225-008-9132-7",
+      "retrieved_at": "2026-11-26T06:21:35Z",
+      "via": "live",
+      "final_url": "https://link.springer.com/article/10.1007/s11225-008-9132-7?error=cookies_not_supported&code=a6dde606-1101-458e-83eb-09ad6d32b4db",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "11f9b539a4e38466996103a18a592713b1cdad8c536f0b067c5570da64aed4f8",
+      "bytes": 256568
+    },
+    {
+      "url": "https://doi.org/10.1016/0370-2693(82)90866-8",
+      "retrieved_at": "2026-11-26T06:23:25Z",
+      "via": "live",
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/0370269382908668",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "14bc3d43dd4b60ea20b1526ac8872d8c9ae0fd85e7613c77309550d0d28f7be3",
+      "bytes": 2644,
+      "not_content": "Elsevier linkinghub redirect page, not the cited article"
+    },
+    {
+      "url": "https://doi.org/10.1016/j.quascirev.2020.106548",
+      "retrieved_at": "2026-11-26T06:24:24Z",
+      "via": "live",
+      "final_url": "https://linkinghub.elsevier.com/retrieve/pii/S0277379120305102",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "28fff59014f00e21c189e955018ae8d97887e951c2392b81197e39adf022698e",
+      "bytes": 2756,
+      "not_content": "Elsevier linkinghub redirect page, not the cited article"
+    },
+    {
+      "url": "https://doi.org/10.1017/CBO9781139149136.002",
+      "retrieved_at": "2026-11-26T06:24:40Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/books/abs/metaphysical-grounding/guide-to-ground/3C2135AA04D01F8821602F4667F56C1C",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "df740ef7ff31e0970b3adcd0981e697426a2f25ef9d8f3e4c26f592c708207e0",
+      "bytes": 873808
+    },
+    {
+      "url": "https://doi.org/10.1017/S0007114500002464",
+      "retrieved_at": "2026-11-26T06:24:45Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/erythrocyte-incorporation-of-iron-by-infants-iron-bioavailability-from-a-lowiron-infant-formula-and-an-evaluation-of-the-usefulness-of-correcting-erythrocyte-incorporation-values-using-a-reference-dose-or-plasma-ferritin-concentrations/3422F773361EDC85DF697199E58D5C34",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "9cde87e7e885878fd90e8be5b6dd312453b3a2de89a7c6eb015ff5f30c33c0e9",
+      "bytes": 1162498
+    },
+    {
+      "url": "https://doi.org/10.1017/S0031819108000855",
+      "retrieved_at": "2026-11-26T06:24:50Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/journals/philosophy/article/abs/primitive-modality-and-possible-worlds/4D4CE547028AA55AA4737E7FB980578A",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "a708ecc697397252dff44f7c5d576450a71040ce03fcbf97932fb2222901ede0",
+      "bytes": 1048195
+    },
+    {
+      "url": "https://doi.org/10.1017/S0034412506008262",
+      "retrieved_at": "2026-11-26T06:24:58Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/journals/religious-studies/article/abs/persistence-and-divine-conservation/CE1B6AB5DAD7943C3E312656703AA6B4",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "53c91790acd619cf84ede0df3749616c5d90a3c68388f75de16c4d2176981544",
+      "bytes": 941065
+    },
+    {
+      "url": "https://doi.org/10.1017/S0034412521000482",
+      "retrieved_at": "2026-11-26T06:25:03Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/journals/religious-studies/article/how-many-and-why-a-question-for-graham-oppy-that-classical-theism-can-answer/6A02C937BB5E7CF12C70B5DC3D532CA9",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "2a7930c1a6f958dc6e8e233d8da825912688fb5a836c4c2c6b8348c651804462",
+      "bytes": 1212499
+    },
+    {
+      "url": "https://doi.org/10.1017/S0034412522000051",
+      "retrieved_at": "2026-11-26T06:25:07Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/journals/religious-studies/article/naturalism-classical-theism-and-first-causes/C8B373E5EA8C6AC0D386DD247AB92803",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "2ef60eb9ee77052a47c712ade02026c3118db7ed0b9d14e3ed899aa3d695d63f",
+      "bytes": 1331019
+    },
+    {
+      "url": "https://doi.org/10.1017/S0034412522000713",
+      "retrieved_at": "2026-11-26T06:25:09Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/journals/religious-studies/article/there-can-be-only-one-a-response-to-joseph-c-schmid/F05CFC25EB594A750B15C61BF6DE3281",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "f97f24311f0c67a5b0885fedb4a875e49454db5f4879aabead41bf7154376ff5",
+      "bytes": 1280451
+    },
+    {
+      "url": "https://doi.org/10.1017/S0034412525000204",
+      "retrieved_at": "2026-11-26T06:25:14Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/journals/religious-studies/article/abs/an-interview-with-john-leslie/E85FBD617A960D22DA2185C704B1359F",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "f5899a2d5e331a446d10d574767a28aec3febe8855bede829d38d4369e0c83af",
+      "bytes": 946533
+    },
+    {
+      "url": "https://doi.org/10.1017/apa.2024.17",
+      "retrieved_at": "2026-11-26T06:25:16Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/journals/journal-of-the-american-philosophical-association/article/metaphysical-rationalism-requires-grounding-indeterminism/8DF300A3BD3E5F891F457108BDEFA47E",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "d744f3082576753099affa1f0e65ef1fa54fa8953f63f0ea81323f5e5364ea44",
+      "bytes": 1570855
+    },
+    {
+      "url": "https://doi.org/10.1080/0020174X.2021.1938902",
+      "retrieved_at": "2026-11-26T06:28:09Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20240102135311id_/https://www.tandfonline.com/doi/full/10.1080/0020174X.2021.1938902",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "43eca62a5df5db7502400af6dc1a491a0524fd653bcab9cc64d7b5d2928b4ba3",
+      "bytes": 167279,
+      "wayback_timestamp": "20240102135311",
+      "live_status": 403
+    },
+    {
+      "url": "https://doi.org/10.1093/0198244142.003.0009",
+      "retrieved_at": "2026-11-26T06:30:18Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20221031014349id_/https://academic.oup.com/book/12442/chapter/274958562",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "a1c39476d18cc18bf09f79414ec98ad9c9c62515f1307d0364d4688f5dc77b4a",
+      "bytes": 1474,
+      "wayback_timestamp": "20221031014349",
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
+    },
+    {
+      "url": "https://doi.org/10.1093/brain/awx359",
+      "retrieved_at": "2026-11-26T06:31:44Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20241204135634id_/https://academic.oup.com/brain/article/141/3/e15/4812597",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "bd92767ffd104bde03d4c4f57e63239ccec31cbf2ebef71b040bd0954d5f4d4c",
+      "bytes": 1593,
+      "wayback_timestamp": "20241204135634",
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
+    },
+    {
+      "url": "https://doi.org/10.1093/oso/9780192862976.003.0007",
+      "retrieved_at": "2026-11-26T06:32:34Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20240624055318id_/https://academic.oup.com/book/41391/chapter/352682678",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "73f4aacf569605343f7103050c34460c3f4e666e38015e99bbdf54ec72cd6045",
+      "bytes": 1483,
+      "wayback_timestamp": "20240624055318",
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
+    },
+    {
+      "url": "https://doi.org/10.1093/oso/9780192898852.003.0009",
+      "retrieved_at": "2026-11-26T06:32:34Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200; redirect target https://academic.oup.com/book/43031/chapter/361432556: no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://doi.org/10.1093/oso/9780198249856.003.0005",
+      "retrieved_at": "2026-11-26T06:32:50Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200; redirect target https://academic.oup.com/book/50177/chapter/422656040: no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://doi.org/10.1093/oso/9780198755630.003.0009",
+      "retrieved_at": "2026-11-26T06:33:22Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20240604132332id_/https://academic.oup.com/book/5000/chapter/147493228",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "c70f65d4d4b521506676ef651059524046941a256889f8db70e237abde600461",
+      "bytes": 1421,
+      "wayback_timestamp": "20240604132332",
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
+    },
+    {
+      "url": "https://doi.org/10.1103/PhysRevD.108.023506",
+      "retrieved_at": "2026-11-26T06:33:23Z",
+      "via": "live",
+      "final_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.108.023506",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "2cce7c4fbe1742867b5b7d53795645c9c645d8cdae525518adf28c552c9ea684",
+      "bytes": 124036
+    },
+    {
+      "url": "https://doi.org/10.1103/PhysRevD.28.2960",
+      "retrieved_at": "2026-11-26T06:33:26Z",
+      "via": "live",
+      "final_url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.28.2960",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "7388bcd2723b59db39207f799cc13372dadead9237d7cde8ab7651d55ca0ebfc",
+      "bytes": 82122
+    },
+    {
+      "url": "https://doi.org/10.1103/PhysRevE.109.064702",
+      "retrieved_at": "2026-11-26T06:33:28Z",
+      "via": "live",
+      "final_url": "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.109.064702",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "daaec53ecb5866736de66fc63eb961113dbbde2ec01ddb9d7fe41eb7c95ada26",
+      "bytes": 187636
+    },
+    {
+      "url": "https://doi.org/10.1103/PhysRevLett.99.157801",
+      "retrieved_at": "2026-11-26T06:33:30Z",
+      "via": "live",
+      "final_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.99.157801",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "a804298f6d6e17e02aa7d9fd2d4a5e5bb0312c4c0c81294c2d17e0feec90d878",
+      "bytes": 86223
+    },
+    {
+      "url": "https://doi.org/10.1111/j.1747-9991.2011.00465.x",
+      "retrieved_at": "2026-11-26T06:33:30Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200; redirect target https://compass.onlinelibrary.wiley.com/doi/10.1111/j.1747-9991.2011.00465.x: no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://doi.org/10.1128/JB.00259-13",
+      "retrieved_at": "2026-11-26T06:33:39Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200; redirect target https://journals.asm.org/doi/10.1128/JB.00259-13: no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://doi.org/10.1140/epjc/s10052-017-4890-x",
+      "retrieved_at": "2026-11-26T06:33:58Z",
+      "via": "live",
+      "final_url": "https://link.springer.com/article/10.1140/epjc/s10052-017-4890-x?error=cookies_not_supported&code=6721d003-3630-41e2-9076-5b4fc09ad7df",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "bef2453f42517665f5535c72f3195071ae148673f03f3bc33781aab6834264ed",
+      "bytes": 3045097
+    },
+    {
+      "url": "https://doi.org/10.1215/00318108-2009-025",
+      "retrieved_at": "2026-11-26T06:34:15Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20240711004849id_/https://read.dukeupress.edu/the-philosophical-review/article/119/1/31/2871/Monism-The-Priority-of-the-Whole",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "208b8345399f9562a23a8aad0105d55a668ce67bc8627e644ecfa8609dc9408b",
+      "bytes": 1466,
+      "wayback_timestamp": "20240711004849",
+      "live_status": 403
+    },
+    {
+      "url": "https://doi.org/10.2307/2214160",
+      "retrieved_at": "2026-11-26T06:34:15Z",
+      "via": "live",
+      "final_url": "https://www.jstor.org/stable/2214160?origin=crossref",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+      "bytes": 3038
+    },
+    {
+      "url": "https://doi.org/10.3389/fnhum.2023.1278025",
+      "retrieved_at": "2026-11-26T06:34:17Z",
+      "via": "live",
+      "final_url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2023.1278025/full",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "965a571ba708e419c0e1a92df4e3554d74b6483558ff2bb55111a6cb0ad16be8",
+      "bytes": 660451
+    },
+    {
+      "url": "https://doi.org/10.5840/pc201012227",
+      "retrieved_at": "2026-11-26T06:34:17Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200; redirect target https://www.pdcnet.org/collection-anonymous/search?q=+%2Bimuse_id%3Apc_2010_0012_0002_0281_0287: no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://doi.org/10.5840/philtopics2003311/215",
+      "retrieved_at": "2026-11-26T06:34:27Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200; redirect target https://www.pdcnet.org/collection-anonymous/search?q=+%2Bimuse_id%3Aphiltopics_2003_0031_0001_0075_0094: no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://dornsife.usc.edu/james-van-cleve/wp-content/uploads/sites/272/2025/09/No-Necessary-Connections-Btw-Distinct-Existences-for-website-7.17.25.pdf",
+      "retrieved_at": "2026-11-26T06:13:36Z",
+      "via": "live",
+      "final_url": "https://dornsife.usc.edu/james-van-cleve/wp-content/uploads/sites/272/2025/09/No-Necessary-Connections-Btw-Distinct-Existences-for-website-7.17.25.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "1a558bb0d39e6b4bb8ccf42d76375fdea5c5054773cd1aaf2c8b93ad5b8e0b17",
+      "bytes": 863624
+    },
+    {
+      "url": "https://durandus.uni-koeln.de/chunks/II_1_5_12",
+      "retrieved_at": "2026-11-26T06:13:38Z",
+      "via": "live",
+      "final_url": "https://durandus.uni-koeln.de/chunks/II_1_5_12",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "40d9f6bc150da9322e37a4756ba08657860378129f7fd0ff7c5a4a5ce162c654",
+      "bytes": 39129
+    },
+    {
+      "url": "https://en.wikisource.org/w/index.php?title=The_Philosophical_Works_of_Decartes/Volume_1/Meditations_on_First_Philosophy/Meditation_6&oldid=15763302",
+      "retrieved_at": "2026-11-26T06:13:38Z",
+      "via": "live",
+      "final_url": "https://en.wikisource.org/w/index.php?title=The_Philosophical_Works_of_Decartes/Volume_1/Meditations_on_First_Philosophy/Meditation_6&oldid=15763302",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "565a57008720ec3c87e0003faaeee69ae596a8edb0458d0c11a152380423c4ca",
+      "bytes": 122877
+    },
+    {
+      "url": "https://en.wikisource.org/wiki/Ethics_(Spinoza)/Part_1",
+      "retrieved_at": "2026-11-26T06:21:35Z",
+      "via": "live",
+      "final_url": "https://en.wikisource.org/wiki/Ethics_(Spinoza)/Part_1",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "539f6d49699f3797738b26afaa230aa70f9e639ccf61abc137cb73c335ca11df",
+      "bytes": 179654
+    },
+    {
+      "url": "https://en.wikisource.org/wiki/Monadology/Latta_translation",
+      "retrieved_at": "2026-11-26T06:23:25Z",
+      "via": "live",
+      "final_url": "https://en.wikisource.org/wiki/Monadology/Latta_translation",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "bb2dca95e9a568b6cb5eea9ea19f45f80fd47f243e3d6db6ddd18befd1045320",
+      "bytes": 127842
+    },
+    {
+      "url": "https://en.wikisource.org/wiki/Monadology_(Leibniz,_tr._Latta)",
+      "retrieved_at": "2026-11-26T06:24:24Z",
+      "via": "live",
+      "final_url": "https://en.wikisource.org/wiki/Monadology_(Leibniz,_tr._Latta)",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "bd784520a7593a27b2c10c1afc748e8da31aff7ee7370ffa2c65cbbe913249be",
+      "bytes": 127468
+    },
+    {
+      "url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.5",
+      "retrieved_at": "2026-11-26T06:24:40Z",
+      "via": "live",
+      "final_url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.5",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ca12de6ff063e50d8165eeb443151e76c39550626098de7949ffa0c2bcd98627",
+      "bytes": 115891
+    },
+    {
+      "url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.7",
+      "retrieved_at": "2026-11-26T06:24:46Z",
+      "via": "live",
+      "final_url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.7",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "03d87a2d7da80dd128381734784012c7a6d4202fbd2faec6cfc4a8120f81ef7a",
+      "bytes": 68735
+    },
+    {
+      "url": "https://englishphilosophy.org/locke/ehu/2/1",
+      "retrieved_at": "2026-11-26T06:28:09Z",
+      "live_status": 503,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://englishphilosophy.org/locke/ehu/4/10",
+      "retrieved_at": "2026-11-26T06:30:18Z",
+      "live_status": 503,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://englishphilosophy.org/locke/ehu/4/3",
+      "retrieved_at": "2026-11-26T06:31:44Z",
+      "live_status": 503,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://eprints.soton.ac.uk/402250/",
+      "retrieved_at": "2026-11-26T06:14:10Z",
+      "via": "live",
+      "final_url": "https://eprints.soton.ac.uk/id/eprint/402250/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "64bb8aaadf3548a0da7c23473b2ef550f9c715b6388b8b1e94d11c5fcced93fb",
+      "bytes": 36441
+    },
+    {
+      "url": "https://eprints.whiterose.ac.uk/id/eprint/102901/1/Efird_Stoneham_Postprint.pdf",
+      "retrieved_at": "2026-11-26T06:14:21Z",
+      "via": "live",
+      "final_url": "https://eprints.whiterose.ac.uk/id/eprint/102901/1/Efird_Stoneham_Postprint.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "8a8d37649e349fc460008f77815bd3213ddebb5410d7d22e862b9afc9f394f8a",
+      "bytes": 392138
+    },
+    {
+      "url": "https://escholarship.org/content/qt64p736bn/qt64p736bn_noSplash_e278f99b5301228f09e0b95f0fba857d.pdf",
+      "retrieved_at": "2026-11-26T06:14:29Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20260105162905id_/https://escholarship.org/content/qt64p736bn/qt64p736bn_noSplash_e278f99b5301228f09e0b95f0fba857d.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "ebe741a48a2ca49dd1df62db78f38ad22e753c1aa6f8a8947056f0bbb07d3f51",
+      "bytes": 184206,
+      "wayback_timestamp": "20260105162905",
+      "live_status": 403
+    },
+    {
+      "url": "https://etc.usf.edu/lit2go/98/physics/1663/book-2/",
+      "retrieved_at": "2026-11-26T06:14:31Z",
+      "via": "live",
+      "final_url": "https://etc.usf.edu/lit2go/98/physics/1663/book-2/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "74e8682e64f6d9db14ee5debd3a8eb72370a0dd3bdbf71c16d82bd1613570c6e",
+      "bytes": 56839
+    },
+    {
+      "url": "https://fitelson.org/269/Hall_TCOC.pdf",
+      "retrieved_at": "2026-11-26T06:14:32Z",
+      "via": "live",
+      "final_url": "https://fitelson.org/269/Hall_TCOC.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "cf4a407b2586e314f4e4c0e42111858a1e9a2825dcf1d267104cc480aa6eda6e",
+      "bytes": 192165
+    },
+    {
+      "url": "https://fr.wikisource.org/w/index.php?title=La_Th%C3%A9orie_physique/SECONDE_PARTIE/Chapitre_VI&oldid=11940991",
+      "retrieved_at": "2026-11-26T06:14:32Z",
+      "via": "live",
+      "final_url": "https://fr.wikisource.org/w/index.php?title=La_Th%C3%A9orie_physique/SECONDE_PARTIE/Chapitre_VI&oldid=11940991",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "07e5f1cd3a21e5d26e20588aeb60323c1867869e485bfc601d6fb49b973cddd6",
+      "bytes": 195737
+    },
+    {
+      "url": "https://freddoso.com/papers/conserv.htm",
+      "retrieved_at": "2026-11-26T06:14:33Z",
+      "via": "live",
+      "final_url": "https://freddoso.com/papers/conserv.htm",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "60ae78c6aea719b41dc87e38c12cc65f0c6b637fe6503ca189e8388a82d95b05",
+      "bytes": 91150
+    },
+    {
+      "url": "https://gcn.nasa.gov/circulars/21505",
+      "retrieved_at": "2026-11-26T06:14:33Z",
+      "via": "live",
+      "final_url": "https://gcn.nasa.gov/circulars/21505",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "38035c1c20c3f6903eea74f080b0c8d788139086623a85bac4f3b4e2ab70944b",
+      "bytes": 29317
+    },
+    {
+      "url": "https://gutenberg.pglaf.org/cache/epub/4280/pg4280.txt",
+      "retrieved_at": "2026-11-26T06:14:59Z",
+      "via": "live",
+      "final_url": "https://gutenberg.pglaf.org/cache/epub/4280/pg4280.txt",
+      "status": 200,
+      "content_type": "text/plain",
+      "sha256": "9e44b1bc6042da4aeb669d4f3f585037a5488a2908e7ec225f9431c43f6720fc",
+      "bytes": 1315283
+    },
+    {
+      "url": "https://gutenberg.pglaf.org/cache/epub/4583/pg4583.txt",
+      "retrieved_at": "2026-11-26T06:22:14Z",
+      "via": "live",
+      "final_url": "https://gutenberg.pglaf.org/cache/epub/4583/pg4583.txt",
+      "status": 200,
+      "content_type": "text/plain",
+      "sha256": "a6e4592ad61467f6e2722207bb07450aca8e81835e67d07401ac47026f36af42",
+      "bytes": 236874
+    },
+    {
+      "url": "https://hdl.handle.net/11250/4022949",
+      "retrieved_at": "2026-11-26T06:15:00Z",
+      "via": "live",
+      "final_url": "https://nva.sikt.no/registration/0198cc954833-c58a575c-ab88-4b59-a53e-9704637fdfdd",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "4fc6ad90cb8fe7695f8f7d2836032d48b903b95639849cb148257549958b46d6",
+      "bytes": 3145
+    },
+    {
+      "url": "https://hdl.handle.net/2027.42/73386",
+      "retrieved_at": "2026-11-26T06:28:40Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200; redirect target https://deepblue.lib.umich.edu/items/766b2a82-bc81-49fa-86e3-b511aefe97a5: no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://home.csulb.edu/~cwallis/382/readings/690/Cummins/cummins.functional.analysis.pdf",
+      "retrieved_at": "2026-11-26T06:15:02Z",
+      "via": "live",
+      "final_url": "https://home.csulb.edu/~cwallis/382/readings/690/Cummins/cummins.functional.analysis.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "9a200a548bb322cfb76347cc8473ee5aa1f8588738923589da41c18b54d61967",
+      "bytes": 967038
+    },
+    {
+      "url": "https://home.csulb.edu/~cwallis/382/readings/690/recieved/hempel.studies.logic.explanation.1948.pdf",
+      "retrieved_at": "2026-11-26T06:22:16Z",
+      "via": "live",
+      "final_url": "https://home.csulb.edu/~cwallis/382/readings/690/recieved/hempel.studies.logic.explanation.1948.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "bc4c1fdb24a9e1ac075f602becdebced3f04135bd804d7322072f7ef21ff96b7",
+      "bytes": 1528629
+    },
+    {
+      "url": "https://home.sandiego.edu/~baber/metaphysics/readings/Parfit.PersonalIdentity.pdf",
+      "retrieved_at": "2026-11-26T06:15:14Z",
+      "via": "live",
+      "final_url": "https://home.sandiego.edu/~baber/metaphysics/readings/Parfit.PersonalIdentity.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "18bf867231f0c08af715e00b4f176dcbc6f2a5a4de8b1a769f33010baccf0d7b",
+      "bytes": 5505794
+    },
+    {
+      "url": "https://hrcak.srce.hr/en/101525",
+      "retrieved_at": "2026-11-26T06:15:14Z",
+      "via": "live",
+      "final_url": "https://hrcak.srce.hr/en/101525",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "85b6e6503d0f631aab06a59dce4731115fb2262fa699ed6455fefa35c3cfdae3",
+      "bytes": 23103
+    },
+    {
+      "url": "https://iep.utm.edu/inf-epis/",
+      "retrieved_at": "2026-11-26T06:15:15Z",
+      "via": "live",
+      "final_url": "https://iep.utm.edu/inf-epis/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "04ed16dc041f1ddde9ad4ca6ce84db8c99520e0aa5c67464bb9f76e9db0b3063",
+      "bytes": 82727
+    },
+    {
+      "url": "https://isidore.co/aquinas/QDdePotentia3.htm",
+      "retrieved_at": "2026-11-26T06:15:16Z",
+      "via": "live",
+      "final_url": "https://isidore.co/aquinas/QDdePotentia3.htm",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "df91a7c8d23a3d3c828d7c6581db49e5df4a2d0d46b994ffb093710f9dd05d07",
+      "bytes": 749281
+    },
+    {
+      "url": "https://isidore.co/aquinas/QDdePotentia7.htm",
+      "retrieved_at": "2026-11-26T06:22:17Z",
+      "via": "live",
+      "final_url": "https://isidore.co/aquinas/QDdePotentia7.htm",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "7583c4ab34128646ec301d208a65d277243d2dd5662db86a244e2f0e3a5f1d0f",
+      "bytes": 289798
+    },
+    {
+      "url": "https://isidore.co/aquinas/english/ContraGentiles2.htm",
+      "retrieved_at": "2026-11-26T06:23:57Z",
+      "via": "live",
+      "final_url": "https://isidore.co/aquinas/english/ContraGentiles2.htm",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4d1e0331ee6f4e0582e45ea26322a4f73c9352d241f15e155c8bdf13d300c2d4",
+      "bytes": 725473
+    },
+    {
+      "url": "https://isidore.co/aquinas/english/Physics2.htm",
+      "retrieved_at": "2026-11-26T06:24:25Z",
+      "via": "live",
+      "final_url": "https://isidore.co/aquinas/english/Physics2.htm",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "2d73aa713c03ec65a07e4aa75ba372b6304a74c69305d57b46b22649e7b05782",
+      "bytes": 167075
+    },
+    {
+      "url": "https://isidore.co/aquinas/english/QDdeVer21.htm",
+      "retrieved_at": "2026-11-26T06:24:41Z",
+      "via": "live",
+      "final_url": "https://isidore.co/aquinas/english/QDdeVer21.htm",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "a34ed0c31d75f12cac04aa10c7eed0bad48b33a17011da6b1b2d26bb7991280c",
+      "bytes": 88275
+    },
+    {
+      "url": "https://isidore.co/aquinas/english/QDdeVer23.htm",
+      "retrieved_at": "2026-11-26T06:24:47Z",
+      "via": "live",
+      "final_url": "https://isidore.co/aquinas/english/QDdeVer23.htm",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "1bb5c752fb6882324d701c5373bb7d78f588ac59474da2b1d4714f7cb52f0122",
+      "bytes": 120596
+    },
+    {
+      "url": "https://isidore.co/aquinas/english/QDdeVer5.htm",
+      "retrieved_at": "2026-11-26T06:24:51Z",
+      "via": "live",
+      "final_url": "https://isidore.co/aquinas/english/QDdeVer5.htm",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "c0db7eef15d71c834533a58c007030dee819a5aa6bd596e74ab99db9f35fe030",
+      "bytes": 154557
+    },
+    {
+      "url": "https://isidore.co/misc/Res%20pro%20Deo/Aquinas/Bilingual/DePrincNaturae.htm",
+      "retrieved_at": "2026-11-26T06:24:58Z",
+      "via": "live",
+      "final_url": "https://isidore.co/misc/Res%20pro%20Deo/Aquinas/Bilingual/DePrincNaturae.htm",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "8c8bc951d0e69c246eb18a798883e1c641d9f22c2563cfae9f03bf425d04a3d8",
+      "bytes": 68020
+    },
+    {
+      "url": "https://isidore.co/misc/Res%20pro%20Deo/Aquinas/Bilingual/english/QDdePotentia.htm",
+      "retrieved_at": "2026-11-26T06:25:04Z",
+      "via": "live",
+      "final_url": "https://isidore.co/misc/Res%20pro%20Deo/Aquinas/Bilingual/english/QDdePotentia.htm",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "18a5d68a552b86bc702b69c5c4cd559c4a8c885ad18789dfc0e0169f8e8c4dae",
+      "bytes": 1710884
+    },
+    {
+      "url": "https://joelvelasco.net/teaching/3330/Ayer-elimmetaphysics.pdf",
+      "retrieved_at": "2026-11-26T06:15:17Z",
+      "via": "live",
+      "final_url": "https://joelvelasco.net/teaching/3330/Ayer-elimmetaphysics.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "e8f75892ead36a8197cdb90459640e174f8ed06dcb769796a6a57d3167ccbebb",
+      "bytes": 287511
+    },
+    {
+      "url": "https://joelvelasco.net/teaching/3334/millikan89-in_defense_proper_functions.pdf",
+      "retrieved_at": "2026-11-26T06:22:19Z",
+      "via": "live",
+      "final_url": "https://joelvelasco.net/teaching/3334/millikan89-in_defense_proper_functions.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "66420cb5431245199b1fb2612ec7b006aa501451cd7f087abd736727b54dbcaa",
+      "bytes": 4085693
+    },
+    {
+      "url": "https://jonhaines.com/thomas/english/Compendium.htm",
+      "retrieved_at": "2026-11-26T06:15:18Z",
+      "via": "live",
+      "final_url": "https://jonhaines.com/thomas/english/Compendium.htm",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "3e41ecc4ea18c392998e093332957cea2f7f13c41fcbc6bc4e521e29267deb0b",
+      "bytes": 738847
+    },
+    {
+      "url": "https://jonhaines.com/thomas/english/ContraGentiles4.htm",
+      "retrieved_at": "2026-11-26T06:22:20Z",
+      "via": "live",
+      "final_url": "https://jonhaines.com/thomas/english/ContraGentiles4.htm",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "c0eedc19cf71cd8c2d8d193994591e1ed8f200254ff7b74ba0b3cc99527c68e6",
+      "bytes": 765965
+    },
+    {
+      "url": "https://josephschmid.com/feser-on-schmid-on-existential-inertia-a-comprehensive-response/",
+      "retrieved_at": "2026-11-26T06:28:52Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://josephschmid.com/response-to-hsiao-and-sanders-on-existential-inertia-and-the-thomistic-contingency-argument/",
+      "retrieved_at": "2026-11-26T06:30:49Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1009725",
+      "retrieved_at": "2026-11-26T06:15:21Z",
+      "via": "live",
+      "final_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1009725",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "7264717c57c5ad5ef3302b0250f6a8b9d08617ee10a087dd650909f01e1b65b5",
+      "bytes": 287995
+    },
+    {
+      "url": "https://katalogue.anoma.li/documents/Philosophy_of_Death.pdf",
+      "retrieved_at": "2026-11-26T06:15:21Z",
+      "via": "live",
+      "final_url": "https://katalogue.anoma.li/documents/Philosophy_of_Death.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "9ff67d329f0c299a81cf572bbc6f539bc2530ddeda0c0bb06b410a8e42833a82",
+      "bytes": 2912644
+    },
+    {
+      "url": "https://kclpure.kcl.ac.uk/ws/files/95701041/Fundamental_Powers_Evolved_Powers_BIRD_Accepted8February2018_GREEN_AAM.pdf",
+      "retrieved_at": "2026-11-26T06:15:22Z",
+      "via": "live",
+      "final_url": "https://kclpure.kcl.ac.uk/ws/files/95701041/Fundamental_Powers_Evolved_Powers_BIRD_Accepted8February2018_GREEN_AAM.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "ba042b9e9c042403e2d466f3dbc33961f6c64e55f89bf9ecf8c7bd3d1bcde5d0",
+      "bytes": 204737
+    },
+    {
+      "url": "https://kevinjpatton.com/teaching/phil_3050/readings/Bernard%20Williams%20-%20Moral%20Luck.pdf",
+      "retrieved_at": "2026-11-26T06:15:22Z",
+      "via": "live",
+      "final_url": "https://kevinjpatton.com/teaching/phil_3050/readings/Bernard%20Williams%20-%20Moral%20Luck.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "cca810b44ec78bce52267c5085e8df3461e475a792fd4144fc49eb4e94df71be",
+      "bytes": 2793496
+    },
+    {
+      "url": "https://la.wikisource.org/w/index.php?title=Summa_contra_Gentiles/Liber_I/Caput_XXII&oldid=132346",
+      "retrieved_at": "2026-11-26T06:15:22Z",
+      "via": "live",
+      "final_url": "https://la.wikisource.org/w/index.php?title=Summa_contra_Gentiles/Liber_I/Caput_XXII&oldid=132346",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "c7eaff0c6b39b2bdd7aabeb94677de61aa7c019c92a495352010de6d7c930c1f",
+      "bytes": 58547
+    },
+    {
+      "url": "https://la.wikisource.org/wiki/Summa_contra_Gentiles/Liber_I/Caput_XXVIII",
+      "retrieved_at": "2026-11-26T06:22:23Z",
+      "via": "live",
+      "final_url": "https://la.wikisource.org/wiki/Summa_contra_Gentiles/Liber_I/Caput_XXVIII",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6574a8b6f7f5fe4315a0ca4c239c93453eefe2f25df1cfa9d7bf5be88d57ebb6",
+      "bytes": 55670
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s10670-011-9271-5",
+      "retrieved_at": "2026-11-26T06:15:23Z",
+      "via": "live",
+      "final_url": "https://link.springer.com/article/10.1007/s10670-011-9271-5?error=cookies_not_supported&code=0ec705a5-a0b4-4714-9415-7562c6abbc09",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "2d706ca8edc7ad3c514f5647e35c1eceda7d7bfcb1d725a0005331308185387c",
+      "bytes": 318370
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s10670-024-00846-z",
+      "retrieved_at": "2026-11-26T06:22:23Z",
+      "via": "live",
+      "final_url": "https://link.springer.com/article/10.1007/s10670-024-00846-z?error=cookies_not_supported&code=64e680d9-c945-4a0d-928f-cecfe3378832",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "30079997cf5838cc13e2b049e22181823427bc4473f08d5ea23b3414345ef2ba",
+      "bytes": 455223
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s11098-016-0657-8",
+      "retrieved_at": "2026-11-26T06:23:58Z",
+      "via": "live",
+      "final_url": "https://link.springer.com/article/10.1007/s11098-016-0657-8?error=cookies_not_supported&code=d8c626c0-32b4-42b6-b38a-e02d10537278",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "57924e4c23f9c3bb050f206089fd0cf250472e1df70454f8f266e7e9041873bf",
+      "bytes": 454013
+    },
+    {
+      "url": "https://math.dartmouth.edu/~matc/Readers/HowManyAngels/Disputation/Disputation.html",
+      "retrieved_at": "2026-11-26T06:16:02Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20260719080523id_/https://math.dartmouth.edu/~matc/Readers/HowManyAngels/Disputation/Disputation.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "dd39cbeef0730aa675a105cf917d309b4def112fffebb34f2163e0431ae98f74",
+      "bytes": 28851,
+      "wayback_timestamp": "20260719080523",
+      "live_error": "Connection timed out after 30002 milliseconds"
+    },
+    {
+      "url": "https://mechanism.ucsd.edu/bill/teaching/w10/wright.functions.%201973.pdf",
+      "retrieved_at": "2026-11-26T06:16:04Z",
+      "via": "live",
+      "final_url": "https://mechanism.ucsd.edu/bill/teaching/w10/wright.functions.%201973.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "6bf421a062ce479806782ebd6442ce33e6f90a0e7c96e14eadcc033d14efb01d",
+      "bytes": 590943
+    },
+    {
+      "url": "https://moodle2.units.it/pluginfile.php/745149/mod_resource/content/0/Trouche%2C%20Sanders%20%20Mercier%202014.pdf",
+      "retrieved_at": "2026-11-26T06:16:04Z",
+      "via": "live",
+      "final_url": "https://moodle2.units.it/pluginfile.php/745149/mod_resource/content/0/Trouche%2C%20Sanders%20%20Mercier%202014.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "153a4a76e1db6d98613cf42b898ea99c9485b609a4767dd3bd9353f116fb3e4e",
+      "bytes": 286380
+    },
+    {
+      "url": "https://necessarybeing.com/",
+      "retrieved_at": "2026-11-26T06:16:05Z",
+      "via": "live",
+      "final_url": "https://necessarybeing.com/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "60b0e33b51b3cc59236edaf34c575e0e6732f55e15362daf6f485200844dc5ac",
+      "bytes": 1161
+    },
+    {
+      "url": "https://necessarybeing.com/definenecessarybeing.html",
+      "retrieved_at": "2026-11-26T06:22:24Z",
+      "via": "live",
+      "final_url": "https://necessarybeing.com/definenecessarybeing.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "521d00b26d1b3859b3041278901d9c321a068de687283d3e7c9ae2ea2fb3c220",
+      "bytes": 3038
+    },
+    {
+      "url": "https://necessarybeing.com/instructions.html",
+      "retrieved_at": "2026-11-26T06:23:58Z",
+      "via": "live",
+      "final_url": "https://necessarybeing.com/instructions.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "4c888e5f617ea1b81dd723e3122410966eb2e68f15d417d7e9729667924464d5",
+      "bytes": 1657
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/phis.12074",
+      "retrieved_at": "2026-11-26T06:16:14Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20230806025903id_/https://onlinelibrary.wiley.com/doi/10.1111/phis.12074",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "69d58ffbac9ad50ae5e0608017d70831956701e1cd86c684996f419d94b26eed",
+      "bytes": 166023,
+      "wayback_timestamp": "20230806025903",
+      "live_status": 403
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/rati.12166",
+      "retrieved_at": "2026-11-26T06:22:34Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20250731111933id_/https://onlinelibrary.wiley.com/doi/10.1111/rati.12166",
+      "status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "sha256": "57dc07758ef4c6c97a5e25a8c60da3b3c7330a99fb8e70a8724ca6747c94cf94",
+      "bytes": 154137,
+      "wayback_timestamp": "20250731111933",
+      "live_status": 403
+    },
+    {
+      "url": "https://openscriptorium.com/read/aristotle/074-metaphysics-book-ix",
+      "retrieved_at": "2026-11-26T06:16:15Z",
+      "via": "live",
+      "final_url": "https://openscriptorium.com/read/aristotle/074-metaphysics-book-ix",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "c82bae979e12e0e4cbf93b1373ae742658c58ffbd577be4037157d4d5aca07f3",
+      "bytes": 48017
+    },
+    {
+      "url": "https://paperzz.com/doc/6797968/actualism-and-thisness",
+      "retrieved_at": "2026-11-26T06:29:04Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://paperzz.com/doc/7085045/the-only-possible-argument-in-support-of-a",
+      "retrieved_at": "2026-11-26T06:30:55Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://paulboghossian.com/pb/files/WhatIsInference.pdf",
+      "retrieved_at": "2026-11-26T06:16:22Z",
+      "via": "live",
+      "final_url": "https://paulboghossian.com/pb/files/WhatIsInference.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "e924c2c908c4f745412a54ece04902201cf650a5fd77d76dceb9363a5affa716",
+      "bytes": 180708
+    },
+    {
+      "url": "https://pdf.stafforini.com/lowe-1996-why-there-anything.pdf",
+      "retrieved_at": "2026-11-26T06:16:22Z",
+      "via": "live",
+      "final_url": "https://pdf.stafforini.com/lowe-1996-why-there-anything.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "55f1dcb0b4dc64a63c5661dec5e0b8ee3e209c4b8d7237cc79aaab7c8baeee04",
+      "bytes": 1039650
+    },
+    {
+      "url": "https://people.csail.mit.edu/carroll/probSem/Documents/Tarski.pdf",
+      "retrieved_at": "2026-11-26T06:16:26Z",
+      "via": "live",
+      "final_url": "https://people.csail.mit.edu/carroll/probSem/Documents/Tarski.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "4b3f8d3a018b51c2809955a0cc57f60b8ebe13e0e577fd837424d1cb217ec4fc",
+      "bytes": 1524036
+    },
+    {
+      "url": "https://people.uncw.edu/puente/sperry/sperrypapers/60s/135-1968.pdf",
+      "retrieved_at": "2026-11-26T06:16:27Z",
+      "via": "live",
+      "final_url": "https://people.uncw.edu/puente/sperry/sperrypapers/60s/135-1968.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "e6dab072ef214647aebd5e40c59500c18b90488c550b12de344d1d5298f6beda",
+      "bytes": 1852245
+    },
+    {
+      "url": "https://personal.lse.ac.uk/robert49/teaching/ph103/pdf/Thomson1954a.pdf",
+      "retrieved_at": "2026-11-26T06:16:27Z",
+      "via": "live",
+      "final_url": "https://personal.lse.ac.uk/robert49/teaching/ph103/pdf/Thomson1954a.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "3b586ca1829317f0c128101981e519284f9c8f9eb1bffd38df0457f6a3ee9da9",
+      "bytes": 1672043
+    },
+    {
+      "url": "https://philarchive.org/archive/BOHIDG",
+      "retrieved_at": "2026-11-26T06:16:40Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20210323234520id_/https://philarchive.org/archive/BOHIDG",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "12f5df8bec59cfd5a704c902892f6791910491e6ace9f483f4e389e26f1d42b3",
+      "bytes": 215381,
+      "wayback_timestamp": "20210323234520",
+      "live_status": 403
+    },
+    {
+      "url": "https://philarchive.org/archive/GRAAIA-4",
+      "retrieved_at": "2026-11-26T06:29:09Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://philarchive.org/archive/HUNDSA-4",
+      "retrieved_at": "2026-11-26T06:31:01Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://philarchive.org/archive/OPPUNC",
+      "retrieved_at": "2026-11-26T06:24:36Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20260420034724id_/https://philarchive.org/archive/OPPUNC",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "75250242127c269cc1f86a96f3421d620a388cb80a8880b0bc0539315897cb89",
+      "bytes": 62984,
+      "wayback_timestamp": "20260420034724",
+      "live_error": "not requested: philarchive.org refused 2 earlier requests with 403"
+    },
+    {
+      "url": "https://philosophyandlaw.org/Class%20Readings/Hart/Are%20There%20Any%20Natural%20Rights_Hart.pdf",
+      "retrieved_at": "2026-11-26T06:16:41Z",
+      "via": "live",
+      "final_url": "https://philosophyandlaw.org/Class%20Readings/Hart/Are%20There%20Any%20Natural%20Rights_Hart.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "ba9e4e4f17c767790583baea945d17eb3bf39c4efd394bc98db17cf1a4316b5f",
+      "bytes": 1587083
+    },
+    {
+      "url": "https://philpapers.org/archive/OPPOCA-2.pdf",
+      "retrieved_at": "2026-11-26T06:16:52Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20241117185049id_/https://philpapers.org/archive/oppoca-2.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "eecd7bb82f02587e5e5a47f9b0409fa8d952ec5e923527670967dcb2df48abde",
+      "bytes": 290884,
+      "wayback_timestamp": "20241117185049",
+      "live_status": 403
+    },
+    {
+      "url": "https://philpapers.org/archive/WIEIDO.pdf",
+      "retrieved_at": "2026-11-26T06:23:00Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20250823174355id_/https://philpapers.org/archive/WIEIDO.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "92a8fc208f4e9d8f91a09b59dac873b832e4e9cb82c803c6c1be3c21ab0ece89",
+      "bytes": 316270,
+      "wayback_timestamp": "20250823174355",
+      "live_status": 403
+    },
+    {
+      "url": "https://philpapers.org/rec/ROCARM",
+      "retrieved_at": "2026-11-26T06:24:14Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20140923024213id_/http://philpapers.org/rec/ROCARM",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e53150f7a0090a220ebd9da764b4084121bc26ff6c2c32fc1d940a9816c4ab06",
+      "bytes": 43405,
+      "wayback_timestamp": "20140923024213",
+      "live_error": "not requested: philpapers.org refused 2 earlier requests with 403"
+    },
+    {
+      "url": "https://place.asburyseminary.edu/faithandphilosophy/vol27/iss1/4/",
+      "retrieved_at": "2026-11-26T06:16:53Z",
+      "via": "live",
+      "final_url": "https://place.asburyseminary.edu/faithandphilosophy/vol27/iss1/4/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "fa8476e821af5918d1929f1fbc77e95763105ce452d18c9f11d51ca75020c7e3",
+      "bytes": 53007
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/action/",
+      "retrieved_at": "2026-11-26T06:16:54Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/action/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "81716c8b58e514fc0eb5597aafb6cde6523474a221695c22d79f64fe5b532189",
+      "bytes": 201320
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/closure-epistemic/",
+      "retrieved_at": "2026-11-26T06:23:01Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/closure-epistemic/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "ba74358a2a48eae73e2cf35532053ff6b9eb43bd22dd7e80f7930bc314ff6e47",
+      "bytes": 132828
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/consciousness-higher/",
+      "retrieved_at": "2026-11-26T06:24:15Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/consciousness-higher/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "6e6d29dec11fc2f12d4ea31faa4a492697bf3955f0763292dd4524b943e7fd8f",
+      "bytes": 154102
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/convention/",
+      "retrieved_at": "2026-11-26T06:24:37Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/convention/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "79c55caa41d536327c6ff00082af1b576a11f964dbce231f2fdb20da255c7298",
+      "bytes": 150722
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/disagreement/",
+      "retrieved_at": "2026-11-26T06:24:42Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/disagreement/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "2f93f0e7578331a8ab9a0b024bbfe91a3c56ef16253df5a1f01d161ba0ab6548",
+      "bytes": 161557
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/divine-freedom/",
+      "retrieved_at": "2026-11-26T06:24:47Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/divine-freedom/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "a2f632a4a37f372266c1419c309734677c96d8b5420d152a31df19a0e8539ed1",
+      "bytes": 119833
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/epistemic-paradoxes/",
+      "retrieved_at": "2026-11-26T06:24:52Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/epistemic-paradoxes/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "2af6ea8b2d0fcef8fecbadad6efee93d9c17458ceeee2c443b14f63f0c37755f",
+      "bytes": 111329
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/essential-accidental/",
+      "retrieved_at": "2026-11-26T06:24:59Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/essential-accidental/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "6c4f00b27009b81a614c292fe654ab499a13a735f1fdca06878ad1761e2962f2",
+      "bytes": 148783
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/existence/",
+      "retrieved_at": "2026-11-26T06:25:05Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/existence/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "2a79a9c083b99e4dd6a0287382c2d0788fb71eb4c8db504eaf35a99a46f33929",
+      "bytes": 101079
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/fitch-paradox/",
+      "retrieved_at": "2026-11-26T06:25:08Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/fitch-paradox/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "2e9314a04d5550c1e5278d85025e4894abed4395be4a13edfd60c6eb8b3f12f8",
+      "bytes": 91197
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/formal-belief/",
+      "retrieved_at": "2026-11-26T06:25:10Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/formal-belief/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "dd80702bfa5f30e6aa4827d6d4a300d8b78ebb7078796dbd7919597ee5d91323",
+      "bytes": 251619
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/grounding/",
+      "retrieved_at": "2026-11-26T06:25:14Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/grounding/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "24f9258128cb068128d40199f69aab7118f594025738e12ca891eaa1ffc47d73",
+      "bytes": 121135
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/intention/",
+      "retrieved_at": "2026-11-26T06:25:17Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/intention/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "f2fc61985bb0d2ec5381aa3df92ebd98ca3ec2677819ae61716a67fb48daa48a",
+      "bytes": 105422
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/logic-manyvalued/index.html",
+      "retrieved_at": "2026-11-26T06:25:21Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/logic-manyvalued/index.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "5a549597b7c78fe2d5d3252f0bc4bcf0e1e48afeff6314e1f05a9dd505773169",
+      "bytes": 290718
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/logic-modal/",
+      "retrieved_at": "2026-11-26T06:25:27Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/logic-modal/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "d9b30691bba65e9b5422e4ede0fb200fd779bb15fabe9dedc10a393b5b1ec43e",
+      "bytes": 117982
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/logic-normative/bridge-principles.html",
+      "retrieved_at": "2026-11-26T06:25:32Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/logic-normative/bridge-principles.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "8464553aed55d1c9c0757909c5dd72072652b91fa2fab5d68da70a82ed178a8f",
+      "bytes": 27854
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/logical-pluralism/",
+      "retrieved_at": "2026-11-26T06:25:38Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/logical-pluralism/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "156e2ff4f504909983f0e69667a7252ce88c6cfe7cf278f68b805927c4fed7b6",
+      "bytes": 135703
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/memory-episprob/",
+      "retrieved_at": "2026-11-26T06:25:44Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/memory-episprob/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "1bf2d94346aea601741e1bc57857ddbd7ff79bf0f433a7ccc8511479e5ce64f9",
+      "bytes": 118280
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/mental-causation/",
+      "retrieved_at": "2026-11-26T06:25:49Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/mental-causation/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "f1b11f7336462c6087c2aae121fc8580aa241ba06d6f0e4cc018efd7a62cad38",
+      "bytes": 150765
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/mereology/",
+      "retrieved_at": "2026-11-26T06:25:57Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/mereology/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "6dad88dfaa07c2ae0bde3f290cdf917f3c1bb210a5391c3cf8b48f3391ceca53",
+      "bytes": 331478
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/modality-epistemology/",
+      "retrieved_at": "2026-11-26T06:26:06Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/modality-epistemology/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "ffb4b6dd07cb14871f6fdfdc5bdfdb655934ee3cd723880abfb4cbff4a050bf6",
+      "bytes": 174569
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/nothingness/",
+      "retrieved_at": "2026-11-26T06:26:12Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/nothingness/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "9ce3783063abc988be8ac13f5a7ab7650117d532fe7160c399963bfad5f72b05",
+      "bytes": 116017
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/possibilism-actualism/",
+      "retrieved_at": "2026-11-26T06:26:17Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/possibilism-actualism/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "d9ae18c62d79dfca7a467444bf9884e7d790c799474c6e4da71a276bd2b2ddad",
+      "bytes": 246314
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/properties-emergent/",
+      "retrieved_at": "2026-11-26T06:26:23Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/properties-emergent/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "32c15ab88c558260979420cdd9afa8ba87adde879d2c1a61e7104a4de9b561d4",
+      "bytes": 141551
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/psychologism/",
+      "retrieved_at": "2026-11-26T06:26:28Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/psychologism/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "6655f8aa45de3c10ef0bb45f4f0d4b24a8f59025f867c59489a28159fe055695",
+      "bytes": 113988
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/quine/",
+      "retrieved_at": "2026-11-26T06:26:35Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/quine/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "af660cba260d11beb1d4eb46de7bf6da5b051fcd79d90ee5098c2348e33c839b",
+      "bytes": 129280
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/relativism/",
+      "retrieved_at": "2026-11-26T06:26:40Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/relativism/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "0a507898ae4c7a393aaad7d9f11b79eb861652062ccdd30600f66b0a1d2be359",
+      "bytes": 207369
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/scientific-underdetermination/",
+      "retrieved_at": "2026-11-26T06:26:46Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/scientific-underdetermination/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "5405aedf69f356a70e6bd5c221a631e4e2e22174c27b691a052b342e770e3a4f",
+      "bytes": 97299
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/self-consciousness-phenomenological/",
+      "retrieved_at": "2026-11-26T06:26:55Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/self-consciousness-phenomenological/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "56382c17fe5af76a6126bc54756249ab6557d1872a9685b6da172071cdf71da6",
+      "bytes": 100917
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/skepticism/",
+      "retrieved_at": "2026-11-26T06:27:01Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/skepticism/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "13be9d9704bf263509b07f844b8f944623a6713378f9c2cbe11065d3eb0fea8c",
+      "bytes": 120484
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/truth-pragmatic/",
+      "retrieved_at": "2026-11-26T06:27:08Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/truth-pragmatic/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "136b67e403702c8abd3fb8525209378e0e2133cbc08e723f64b474421c9c9f1c",
+      "bytes": 113282
+    },
+    {
+      "url": "https://plato.stanford.edu/entries/truthmakers/",
+      "retrieved_at": "2026-11-26T06:27:14Z",
+      "via": "live",
+      "final_url": "https://plato.stanford.edu/entries/truthmakers/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "555cb3c490d9055605b0ff32c5548b161541e184da364224fef4146df091a542",
+      "bytes": 151856
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11189337/",
+      "retrieved_at": "2026-11-26T06:16:54Z",
+      "via": "live",
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11189337/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "d2fad6d3d9824e253729b2d9f0c5bcdefc0e6d699f1ced41796a29cf033f8b49",
+      "bytes": 195854
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3676066/",
+      "retrieved_at": "2026-11-26T06:23:02Z",
+      "via": "live",
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3676066/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "14d377df0324f15b0fd308f78e296e2519159cc30ab50044c08812c1e5495c6f",
+      "bytes": 242428
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC58978/",
+      "retrieved_at": "2026-11-26T06:24:15Z",
+      "via": "live",
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC58978/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "7e53fba15a091c79457af86d46c7ad0588baf191ed28985aab727bd957ba3865",
+      "bytes": 179709
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7844031/",
+      "retrieved_at": "2026-11-26T06:24:37Z",
+      "via": "live",
+      "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7844031/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "306c7d539dc9bd868ca94e6ef2e4a90f25c47cc9ac4bd63225b7565c69cda046",
+      "bytes": 217669
+    },
+    {
+      "url": "https://psychclassics.yorku.ca/Aristotle/De-anima/de-anima2.htm",
+      "retrieved_at": "2026-11-26T06:16:55Z",
+      "via": "live",
+      "final_url": "https://psychclassics.yorku.ca/Aristotle/De-anima/de-anima2.htm",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "71de5689df20c25a6783c9507e025462e28827e8df85210d653b157acab6f45f",
+      "bytes": 72609
+    },
+    {
+      "url": "https://publications.barandiaran.net/html/2026-organizational-accounts-of-malfunction-the-dual.html",
+      "retrieved_at": "2026-11-26T06:16:56Z",
+      "via": "live",
+      "final_url": "https://publications.barandiaran.net/html/2026-organizational-accounts-of-malfunction-the-dual.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "cd0ef1eeba873f4f405681efd68fb42d2c7f68229500f004220d433aa4e65057",
+      "bytes": 116325
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7683111/",
+      "retrieved_at": "2026-11-26T06:16:56Z",
+      "via": "live",
+      "final_url": "https://pubmed.ncbi.nlm.nih.gov/7683111/",
+      "status": 203,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "033e7d28c70cf3d1bef2ed2777e260666f241c51338023dcb6dad5cfb1d7bd7e",
+      "bytes": 5590
+    },
+    {
+      "url": "https://pure.uva.nl/ws/files/21255810/Split_brain.pdf",
+      "retrieved_at": "2026-11-26T06:16:57Z",
+      "via": "live",
+      "final_url": "https://pure.uva.nl/ws/files/21255810/Split_brain.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "92eade2dc016fd1601ca696e5ef86ad4f142630dd7baa6f0c3c940ab7f4ffdd3",
+      "bytes": 610178
+    },
+    {
+      "url": "https://robkoons.net/old-blog-2021-22/a-further-reconstruction-of-the-fourth-way",
+      "retrieved_at": "2026-11-26T06:23:03Z",
+      "via": "live",
+      "final_url": "https://robkoons.net/old-blog-2021-22/a-further-reconstruction-of-the-fourth-way",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "817187f10a4149647f1682fc897ca2ddabd58741a394e2f82fcd0e1856575ccc",
+      "bytes": 41718
+    },
+    {
+      "url": "https://scholarship.law.columbia.edu/faculty_scholarship/1488/",
+      "retrieved_at": "2026-11-26T06:17:00Z",
+      "via": "live",
+      "final_url": "https://scholarship.law.columbia.edu/faculty_scholarship/1488/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5060724c99ee9de07cfd18f38c05fcffada9bb5ebd45144ae58a459e7053987b",
+      "bytes": 33289
+    },
+    {
+      "url": "https://scholarship.law.columbia.edu/faculty_scholarship/1521/",
+      "retrieved_at": "2026-11-26T06:23:04Z",
+      "via": "live",
+      "final_url": "https://scholarship.law.columbia.edu/faculty_scholarship/1521/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e504f3d1f9c76ace625497997d81096ae71c0f563dce4e629f333b597a56889b",
+      "bytes": 31559
+    },
+    {
+      "url": "https://science.nasa.gov/mars/facts/",
+      "retrieved_at": "2026-11-26T06:17:00Z",
+      "via": "live",
+      "final_url": "https://science.nasa.gov/mars/facts/",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "99dbc2b273392b4ecfe8e556af1ce774553edd8336064c09a8d04d03f216b826",
+      "bytes": 302434
+    },
+    {
+      "url": "https://sites.pitt.edu/~mthompso/readings/street.pdf",
+      "retrieved_at": "2026-11-26T06:17:50Z",
+      "via": "live",
+      "final_url": "https://sites.pitt.edu/~mthompso/readings/street.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "e7edd6b8083b92fec9a7b2798abf50a2ffcd395d9a00cb91e9031ac5e1d45123",
+      "bytes": 17043293
+    },
+    {
+      "url": "https://sourcebooks.fordham.edu/basis/aquinas-esse.asp",
+      "retrieved_at": "2026-11-26T06:17:51Z",
+      "via": "live",
+      "final_url": "https://sourcebooks.fordham.edu/basis/aquinas-esse.asp",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "8d7de942009112760c8221b2d0c809b28c9c44dbfc556810e1832e6f9dce4c93",
+      "bytes": 82023
+    },
+    {
+      "url": "https://studylib.net/doc/18288842/mind-and-cosmos---ch.-4",
+      "retrieved_at": "2026-11-26T06:29:27Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://tannerlectures.org/wp-content/uploads/sites/105/2024/06/Gibbard_2007.pdf",
+      "retrieved_at": "2026-11-26T06:29:33Z",
+      "live_status": 404,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://thomashurka.com/wp-content/uploads/2014/02/value-theory.pdf",
+      "retrieved_at": "2026-11-26T06:17:59Z",
+      "via": "live",
+      "final_url": "https://thomashurka.com/wp-content/uploads/2014/02/value-theory.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "8ff802c92ed721e083320d298fc358012556ad39c28b96f3d7fefdc54e8dd1e0",
+      "bytes": 132017
+    },
+    {
+      "url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_IsGodsNecessity10.pdf",
+      "retrieved_at": "2026-11-26T06:18:00Z",
+      "via": "live",
+      "final_url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_IsGodsNecessity10.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "46d84443c3029f0ee7a85ff7148f92843a9381c60cb41037ed087c1f9ea24067",
+      "bytes": 797790
+    },
+    {
+      "url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_WhyOneNotRemain21.pdf",
+      "retrieved_at": "2026-11-26T06:23:04Z",
+      "via": "live",
+      "final_url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_WhyOneNotRemain21.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "bb2428f4ecb20ed9ea7d57fc0b32cf3df9745578dfce7e3db1ed9d19e39ac7c0",
+      "bytes": 182519
+    },
+    {
+      "url": "https://usccb.org/sites/default/files/flipbooks/catechism/262/",
+      "retrieved_at": "2026-11-26T06:18:01Z",
+      "via": "live",
+      "final_url": "https://usccb.org/sites/default/files/flipbooks/catechism/262/",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "2d62ed3b34a0fdf0ce3de0c50e1a5d8667a01cfcfec9a48930faf06ec6c2a472",
+      "bytes": 6229
+    },
+    {
+      "url": "https://users.ox.ac.uk/~orie0087/pdf_files/Papers%20from%20Philosophical%20Journals/Swinburne_2011-explanation.pdf",
+      "retrieved_at": "2026-11-26T06:18:01Z",
+      "via": "live",
+      "final_url": "https://users.ox.ac.uk/~orie0087/pdf_files/Papers%20from%20Philosophical%20Journals/Swinburne_2011-explanation.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "b6f5dbd608ff5b59a9d3d0f396613469d4033cacb4dac1a7d54ea0c757a03520",
+      "bytes": 184970
+    },
+    {
+      "url": "https://web.ics.purdue.edu/~drkelly/StrawsonRealisticPhysicalism2006.pdf",
+      "retrieved_at": "2026-11-26T06:18:03Z",
+      "via": "live",
+      "final_url": "https://web.ics.purdue.edu/~drkelly/StrawsonRealisticPhysicalism2006.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "f4205567e1d71f83e938d1d92333fac613505163217ebd5c0b15e04ddd4f1d28",
+      "bytes": 501322
+    },
+    {
+      "url": "https://wmit-pages-prod.s3.amazonaws.com/wp-content/uploads/sites/283/2022/06/12145806/avicenna1.pdf",
+      "retrieved_at": "2026-11-26T06:18:03Z",
+      "via": "live",
+      "final_url": "https://wmit-pages-prod.s3.amazonaws.com/wp-content/uploads/sites/283/2022/06/12145806/avicenna1.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "ba1c7120bca866cdfa84919b0403366a6349dd3a50e8080721c50f874e16c059",
+      "bytes": 240113
+    },
+    {
+      "url": "https://wstarr.org/teaching/speech_acts/Grice-1957-Meaning.pdf",
+      "retrieved_at": "2026-11-26T06:18:05Z",
+      "via": "live",
+      "final_url": "https://wstarr.org/teaching/speech_acts/Grice-1957-Meaning.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "25effc437b798695026a9828eb84ddf194469f6317b0521c94f58c5626a6e461",
+      "bytes": 1095611
+    },
+    {
+      "url": "https://www.academia.edu/3607094/A_Rationalist_Manifesto_Spinoza_and_the_Principle_of_Suffiicent_Reason",
+      "retrieved_at": "2026-11-26T06:29:38Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://www.academia.edu/8908669/essence_and_modality",
+      "retrieved_at": "2026-11-26T06:23:13Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20240512022112id_/https://www.academia.edu/8908669/essence_and_modality",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "c4ae5959565d792fa999021ddc6b87d050b22ecb773c7eed93b8c87e21650bc8",
+      "bytes": 117841,
+      "wayback_timestamp": "20240512022112",
+      "live_status": 403
+    },
+    {
+      "url": "https://www.academia.edu/8908730/the_pure_logic_of_ground",
+      "retrieved_at": "2026-11-26T06:31:08Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://www.alexanderpruss.com/classes/theism/causal-finitism-class.pdf",
+      "retrieved_at": "2026-11-26T06:18:21Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20250809113103id_/http://alexanderpruss.com/classes/theism/causal-finitism-class.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "0329df93842b735bbeda875744e3bbda5dba4e293a43a176a7d3149b730cd89a",
+      "bytes": 691272,
+      "wayback_timestamp": "20250809113103",
+      "live_error": "SSL: no alternative certificate subject name matches target hostname 'www.alexanderpruss.com'"
+    },
+    {
+      "url": "https://www.amherstlecture.org/chalmers2013/chalmers2013_ALP.pdf",
+      "retrieved_at": "2026-11-26T06:18:22Z",
+      "via": "live",
+      "final_url": "https://www.amherstlecture.org/chalmers2013/chalmers2013_ALP.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "ebd14a0fa8a8f0ae66086861a3deabcef46bffd846629c7d40e39b4c69ecc2e3",
+      "bytes": 186821
+    },
+    {
+      "url": "https://www.andrew.cmu.edu/user/kk3n/epistclass/bonjour.pdf",
+      "retrieved_at": "2026-11-26T06:18:32Z",
+      "via": "live",
+      "final_url": "https://www.andrew.cmu.edu/user/kk3n/epistclass/bonjour.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "cb94bf09e617910c748c868c051cbd74e27d42e0aeb9b3f18894f91275c49ee0",
+      "bytes": 2291099
+    },
+    {
+      "url": "https://www.andrewmbailey.com/dkl/Survival_and_Identity.pdf",
+      "retrieved_at": "2026-11-26T06:18:34Z",
+      "via": "live",
+      "final_url": "https://www.andrewmbailey.com/dkl/Survival_and_Identity.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "55f28a88ff094e5074410279ef1449b4e44ae738e4bb297efd551488b9f18ce4",
+      "bytes": 4777102
+    },
+    {
+      "url": "https://www.andrewmbailey.com/pvi/Possibility_of_Resurrection.pdf",
+      "retrieved_at": "2026-11-26T06:23:14Z",
+      "via": "live",
+      "final_url": "https://www.andrewmbailey.com/pvi/Possibility_of_Resurrection.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "d789c41c841c56e3e5943a96d07e914799106f3d29261955d504f0f3429ad5b7",
+      "bytes": 1031221
+    },
+    {
+      "url": "https://www.apollojournals.org/alsj/a13/A13_MissionOpReport.pdf",
+      "retrieved_at": "2026-11-26T06:18:34Z",
+      "via": "live",
+      "final_url": "https://www.apollojournals.org/alsj/a13/A13_MissionOpReport.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "292190dd888748f944262a381a7f21734deed19a4ea8d8e95469ddf5aeb92c97",
+      "bytes": 9761664
+    },
+    {
+      "url": "https://www.cambridge-platonism.divinity.cam.ac.uk/view/texts/normalised/Cudworth1731-excerpt001",
+      "retrieved_at": "2026-11-26T06:18:36Z",
+      "via": "live",
+      "final_url": "https://www.cambridge-platonism.divinity.cam.ac.uk/view/texts/normalised/Cudworth1731-excerpt001",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "6527aa1c3cca81334da352e0d38691d7b30b8a59a5b16654feaf1d795ec371a4",
+      "bytes": 100220
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/abs/combinatorial-theory-of-possibility/expanding-and-contracting-the-world/D5924C0FB5DDC8C0CBE9196F18778D8F",
+      "retrieved_at": "2026-11-26T06:18:36Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/books/abs/combinatorial-theory-of-possibility/expanding-and-contracting-the-world/D5924C0FB5DDC8C0CBE9196F18778D8F",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "79a74a8b41b8959428bf53fe570823507e17bf873fe2c04a280cce819835b9e3",
+      "bytes": 857176
+    },
+    {
+      "url": "https://www.cambridge.org/core/books/abs/making-sense-of-humanity/internal-reasons-and-the-obscurity-of-blame/963978B639E1BD60FB5C1F3D1D38BF7F",
+      "retrieved_at": "2026-11-26T06:23:14Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/books/abs/making-sense-of-humanity/internal-reasons-and-the-obscurity-of-blame/963978B639E1BD60FB5C1F3D1D38BF7F",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "664c77b4725938a43f7dc053371e642d7698e94ec21f526ea6d2bdcdfdb5223e",
+      "bytes": 862196
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-american-philosophical-association/article/causal-loops-and-direct-selfcausation/5B4DE9F9DEA48B8B58D923665700EA14",
+      "retrieved_at": "2026-11-26T06:24:21Z",
+      "via": "live",
+      "final_url": "https://www.cambridge.org/core/journals/journal-of-the-american-philosophical-association/article/causal-loops-and-direct-selfcausation/5B4DE9F9DEA48B8B58D923665700EA14",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "b23d49d26be2f942c27ffe7a199f19c46f75b994dcd8fb58a4deab04c2684c14",
+      "bytes": 1329206
+    },
+    {
+      "url": "https://www.carneades.org/challenge-page/ontological-argument",
+      "retrieved_at": "2026-11-26T06:18:38Z",
+      "via": "live",
+      "final_url": "https://www.carneades.org/challenge-page/ontological-argument",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "9a84d1ce9a6187f7aaeccd657bef6319d1c01b0eaaced4164b3e841e810b02ff",
+      "bytes": 970136
+    },
+    {
+      "url": "https://www.carneades.org/challenge-page/philosophy-of-religion",
+      "retrieved_at": "2026-11-26T06:23:16Z",
+      "via": "live",
+      "final_url": "https://www.carneades.org/challenge-page/philosophy-of-religion",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "08c6229e3c9ddd43330a114f372a549558d1cfe69f72d5486458c4af30f3b8ac",
+      "bytes": 970129
+    },
+    {
+      "url": "https://www.carneades.org/post/one-quarter-of-americans-are-philosophical-skeptics",
+      "retrieved_at": "2026-11-26T06:24:21Z",
+      "via": "live",
+      "final_url": "https://www.carneades.org/post/one-quarter-of-americans-are-philosophical-skeptics",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e27ab82ac665f5c32a880699f8898b2c0698ffec373131da8394dfba1b3f6400",
+      "bytes": 937821
+    },
+    {
+      "url": "https://www.carneades.org/post/over-two-thirds-of-americans-are-libertarians-about-free-will",
+      "retrieved_at": "2026-11-26T06:24:37Z",
+      "via": "live",
+      "final_url": "https://www.carneades.org/post/over-two-thirds-of-americans-are-libertarians-about-free-will",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "1ce2c7f2b524146873fda76c667846f88f993a1d0305f57c25ac89323e5f0750",
+      "bytes": 940206
+    },
+    {
+      "url": "https://www.ccel.org/ccel/aquinas/gentiles.iv.xx.html",
+      "retrieved_at": "2026-11-26T06:18:39Z",
+      "via": "live",
+      "final_url": "https://www.ccel.org/ccel/aquinas/gentiles.iv.xx.html",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "9f5ec81159fefbd36c6a12b5e7e6b1f81d5047372cadfdb8a83d2bcf79781a23",
+      "bytes": 33964
+    },
+    {
+      "url": "https://www.ccel.org/ccel/aquinas/summa/summa.FP_Q104_A1.html",
+      "retrieved_at": "2026-11-26T06:23:17Z",
+      "via": "live",
+      "final_url": "https://www.ccel.org/ccel/aquinas/summa/summa.FP_Q104_A1.html",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "26c8d553ad7a7ea5b749a08136a079ff1b2a154a9bb2d9fe399dda208eb44301",
+      "bytes": 34793
+    },
+    {
+      "url": "https://www.corpusthomisticum.org/opn.html",
+      "retrieved_at": "2026-11-26T06:18:39Z",
+      "via": "live",
+      "final_url": "https://www.corpusthomisticum.org/opn.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "e1054ac7521c07e695d485f3551c0e081abfc6afa0658051797ae4335a7c334f",
+      "bytes": 33208
+    },
+    {
+      "url": "https://www.corpusthomisticum.org/qdp7.html",
+      "retrieved_at": "2026-11-26T06:23:17Z",
+      "via": "live",
+      "final_url": "https://www.corpusthomisticum.org/qdp7.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "ba9337c1cabb8cc7cd0d03828d307a2948e41d865e861ee4f546c1f9b8cf059c",
+      "bytes": 183719
+    },
+    {
+      "url": "https://www.corpusthomisticum.org/qdv05.html",
+      "retrieved_at": "2026-11-26T06:24:22Z",
+      "via": "live",
+      "final_url": "https://www.corpusthomisticum.org/qdv05.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "093055146dc3e1fb679ea40e1e97700c89d6401e32092706833c23847cee6df7",
+      "bytes": 346273
+    },
+    {
+      "url": "https://www.corpusthomisticum.org/qdv23.html",
+      "retrieved_at": "2026-11-26T06:24:38Z",
+      "via": "live",
+      "final_url": "https://www.corpusthomisticum.org/qdv23.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "4943e617837f2269a22e7c74abfb0342c405aa07d4515ac1d54f2adf41d7c72d",
+      "bytes": 132179
+    },
+    {
+      "url": "https://www.corpusthomisticum.org/scg1044.html",
+      "retrieved_at": "2026-11-26T06:24:43Z",
+      "via": "live",
+      "final_url": "https://www.corpusthomisticum.org/scg1044.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "14f84e152595770a1b9fc156cfaae978d6bae40d9032d9b8017e3724a1ad0353",
+      "bytes": 169194
+    },
+    {
+      "url": "https://www.corpusthomisticum.org/scg1072.html",
+      "retrieved_at": "2026-11-26T06:24:48Z",
+      "via": "live",
+      "final_url": "https://www.corpusthomisticum.org/scg1072.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "94f8ae667e98b4cd81b10645f840aae7b6bcd634d1cfb618fe4270a3edbf4993",
+      "bytes": 130915
+    },
+    {
+      "url": "https://www.corpusthomisticum.org/scg1097.html",
+      "retrieved_at": "2026-11-26T06:24:52Z",
+      "via": "live",
+      "final_url": "https://www.corpusthomisticum.org/scg1097.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "cd5933fb60b689f4b77bde239d93671bedbd4b5ee0731457b90a413036f54bf5",
+      "bytes": 28781
+    },
+    {
+      "url": "https://www.corpusthomisticum.org/scg3001.html",
+      "retrieved_at": "2026-11-26T06:25:00Z",
+      "via": "live",
+      "final_url": "https://www.corpusthomisticum.org/scg3001.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "a8fcacda5c529dbce32e24c25f7d56c5b0036ea06474cb8093c5d98f292a1648",
+      "bytes": 416338
+    },
+    {
+      "url": "https://www.corpusthomisticum.org/sth1003.html",
+      "retrieved_at": "2026-11-26T06:25:05Z",
+      "via": "live",
+      "final_url": "https://www.corpusthomisticum.org/sth1003.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "093ea58da9759010a2c8834edb15bef5a6274bbbf65e7bc511064fb37088f923",
+      "bytes": 463729
+    },
+    {
+      "url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3242A",
+      "retrieved_at": "2026-11-26T06:18:39Z",
+      "via": "live",
+      "final_url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3242A",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "f5141b4f9cb0c1353201076204b8b6dd0d5d5d1c9039170afc4089aabe183e2b",
+      "bytes": 131427
+    },
+    {
+      "url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3246",
+      "retrieved_at": "2026-11-26T06:23:17Z",
+      "via": "live",
+      "final_url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3246",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "861b748cb0c40212bdc8c8abce851efac03a19568d94a06370f780b4981787ce",
+      "bytes": 110827
+    },
+    {
+      "url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3247",
+      "retrieved_at": "2026-11-26T06:24:22Z",
+      "via": "live",
+      "final_url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3247",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "85a1b3153a7935588195233acff434a6bda26f297dee4aa1803b0c10540c1697",
+      "bytes": 115538
+    },
+    {
+      "url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3254",
+      "retrieved_at": "2026-11-26T06:24:38Z",
+      "via": "live",
+      "final_url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3254",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "70db17307b29d4f2ef3fcc088e3b7261d2dff3ec93e927d5dec33c67d1e6e60a",
+      "bytes": 119377
+    },
+    {
+      "url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3291",
+      "retrieved_at": "2026-11-26T06:24:43Z",
+      "via": "live",
+      "final_url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3291",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "869870fe6c6b3ae44e532cbff6bfd19b68c5fa3fec6ca6b9d705f6d73b129552",
+      "bytes": 112885
+    },
+    {
+      "url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3761",
+      "retrieved_at": "2026-11-26T06:24:48Z",
+      "via": "live",
+      "final_url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-3761",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "f7f70f0dabc6420767653aaf0f5160b411f1f006aa27851900db2b7ba806e7cc",
+      "bytes": 141258
+    },
+    {
+      "url": "https://www.davidpapineau.co.uk/uploads/1/8/5/5/18551740/how_biology_shapes_philosophy_new_foundations_for_..._----__5_teleosemantics_.pdf",
+      "retrieved_at": "2026-11-26T06:18:40Z",
+      "via": "live",
+      "final_url": "https://www.davidpapineau.co.uk/uploads/1/8/5/5/18551740/how_biology_shapes_philosophy_new_foundations_for_..._----__5_teleosemantics_.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "651d425c8fb315421a2f298b0575d5dc31af225ecbeee8a598b372bf8bdcfe76",
+      "bytes": 135688
+    },
+    {
+      "url": "https://www.diva-portal.org/smash/get/diva2%3A1278041/FULLTEXT01.pdf",
+      "retrieved_at": "2026-11-26T06:18:51Z",
+      "via": "live",
+      "final_url": "https://www.diva-portal.org/smash/get/diva2%3A1278041/FULLTEXT01.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "fd9bb7f8ae2083ddacab4ea4ddfe469711bb25828a15fc67ba5457031d578934",
+      "bytes": 197145
+    },
+    {
+      "url": "https://www.earlymoderntexts.com/assets/pdfs/leibniz1684.pdf",
+      "retrieved_at": "2026-11-26T06:18:51Z",
+      "via": "live",
+      "final_url": "https://www.earlymoderntexts.com/assets/pdfs/leibniz1684.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "fb335c4fdf589cb475e1950425aca7466a55d91400027b3ecb8b13f3c87513e3",
+      "bytes": 57479
+    },
+    {
+      "url": "https://www.earlymoderntexts.com/assets/pdfs/leibniz1697b.pdf",
+      "retrieved_at": "2026-11-26T06:23:18Z",
+      "via": "live",
+      "final_url": "https://www.earlymoderntexts.com/assets/pdfs/leibniz1697b.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "8b2904f44f8ebf1bf6d0c2267f366cd0cb69ca808d78d30a83bbd5543d80c48d",
+      "bytes": 54741
+    },
+    {
+      "url": "https://www.earlymoderntexts.com/assets/pdfs/leibniz1705book2.pdf",
+      "retrieved_at": "2026-11-26T06:24:22Z",
+      "via": "live",
+      "final_url": "https://www.earlymoderntexts.com/assets/pdfs/leibniz1705book2.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "a418047d79a3b65e0d50c0f780ee3908e4c1a1ba300a1a3741283bd4dbd9457f",
+      "bytes": 548064
+    },
+    {
+      "url": "https://www.earlymoderntexts.com/assets/pdfs/leibniz1705book4.pdf",
+      "retrieved_at": "2026-11-26T06:24:38Z",
+      "via": "live",
+      "final_url": "https://www.earlymoderntexts.com/assets/pdfs/leibniz1705book4.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "9b1e5377e9b1810d7ed0356bb738db92f1123da600564e20203196ade9652f7b",
+      "bytes": 418651
+    },
+    {
+      "url": "https://www.earlymoderntexts.com/assets/pdfs/reid1764.pdf",
+      "retrieved_at": "2026-11-26T06:24:43Z",
+      "via": "live",
+      "final_url": "https://www.earlymoderntexts.com/assets/pdfs/reid1764.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "4ef8caec51c15b3e421cdd35f660530d012c2e80d3283236329a24c19d22e6a2",
+      "bytes": 637136
+    },
+    {
+      "url": "https://www.fhs.unizg.hr/_download/repository/Curd%2C_A_Presocratics_Reader.pdf",
+      "retrieved_at": "2026-11-26T06:18:52Z",
+      "via": "live",
+      "final_url": "https://www.fhs.unizg.hr/_download/repository/Curd%2C_A_Presocratics_Reader.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "e72e58e185cd55cecf316052bee5a5cae0274466dbb6af2181230aded1e9f215",
+      "bytes": 1083366
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/70091/pg70091-images.html",
+      "retrieved_at": "2026-11-26T06:20:59Z",
+      "via": "wayback",
+      "final_url": "https://web.archive.org/web/20260812000347id_/https://gutenberg.org/cache/epub/70091/pg70091-images.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "0db4193e435def4e56b812a2de47490e77dee2e36705bca8819dd50810ab5d82",
+      "bytes": 270299,
+      "wayback_timestamp": "20260812000347",
+      "live_status": 503
+    },
+    {
+      "url": "https://www.ias-research.net/wp-content/uploads/2019/02/Mossio_25592036.pdf",
+      "retrieved_at": "2026-11-26T06:21:00Z",
+      "via": "live",
+      "final_url": "https://www.ias-research.net/wp-content/uploads/2019/02/Mossio_25592036.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "d297a3c9970cac73c77c67b4f9985a73ff289bf95e98ee0c541bf04946a1a029",
+      "bytes": 3444130
+    },
+    {
+      "url": "https://www.ias-research.net/wp-content/uploads/2019/02/Saborido_41241903.pdf",
+      "retrieved_at": "2026-11-26T06:23:18Z",
+      "via": "live",
+      "final_url": "https://www.ias-research.net/wp-content/uploads/2019/02/Saborido_41241903.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "398ce78628a94c05788e4d9be31bd395f3e5aa978ef849b4d0b9334dafe41bf9",
+      "bytes": 2090928
+    },
+    {
+      "url": "https://www.jesp.org/paper/36346f73-90e0-8140-a3a3-fbb6c3e65eee",
+      "retrieved_at": "2026-11-26T06:21:00Z",
+      "via": "live",
+      "final_url": "https://www.jesp.org/paper/36346f73-90e0-8140-a3a3-fbb6c3e65eee",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "a9498c91bcff246f6dd98d3a13450fa31db9e8218ecc8a07ce1994f992628b81",
+      "bytes": 621972
+    },
+    {
+      "url": "https://www.jesp.org/paper/36346f73-90e0-815c-84b9-e23e5cf29446",
+      "retrieved_at": "2026-11-26T06:23:18Z",
+      "via": "live",
+      "final_url": "https://www.jesp.org/paper/36346f73-90e0-815c-84b9-e23e5cf29446",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "ccc31c577e21e8e568b3a2a4d3284e57dd4fdbfeeec7a8b9d544b656ab5e65da",
+      "bytes": 628997
+    },
+    {
+      "url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/292770",
+      "retrieved_at": "2026-11-26T06:29:48Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/292968",
+      "retrieved_at": "2026-11-26T06:31:19Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://www.leibniz-translations.com/perfectbeing",
+      "retrieved_at": "2026-11-26T06:21:06Z",
+      "via": "live",
+      "final_url": "https://www.leibniz-translations.com/perfectbeing",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "a9419a15c1c87711147d40e5f70670526127bde23f578ff8c2124e71772740bc",
+      "bytes": 579
+    },
+    {
+      "url": "https://www.literaturepage.com/read.php?abspage=114&changefont=1&titleid=russell-analysis-of-mind",
+      "retrieved_at": "2026-11-26T06:21:07Z",
+      "via": "live",
+      "final_url": "https://www.literaturepage.com/read.php?abspage=114&changefont=1&titleid=russell-analysis-of-mind",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6b381c6222a0dcdc37982a428305439f44d6fb99d2da32109fa1570c0eebfff7",
+      "bytes": 9572
+    },
+    {
+      "url": "https://www.logicmuseum.com/wiki/Authors/Thomas_Aquinas/metaphysics/liber5/lect13",
+      "retrieved_at": "2026-11-26T06:21:08Z",
+      "via": "live",
+      "final_url": "https://www.logicmuseum.com/wiki/Authors/Thomas_Aquinas/metaphysics/liber5/lect13",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "2afdf69a049647cbef2dc51c09e5d099ec17770f77f508a0487e6002ea0a4834",
+      "bytes": 47843
+    },
+    {
+      "url": "https://www.metaphysics-of-entanglement.ox.ac.uk/__data/assets/pdf_file/0004/39523/Vetter_Ch7.pdf",
+      "retrieved_at": "2026-11-26T06:21:08Z",
+      "via": "live",
+      "final_url": "https://www.metaphysics-of-entanglement.ox.ac.uk/__data/assets/pdf_file/0004/39523/Vetter_Ch7.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "4e84b82ef6f2b563ac57e4a1615866933f6972c481863b41715c4c2d6698950e",
+      "bytes": 192688
+    },
+    {
+      "url": "https://www.necessarybeing.com/a1p0.html",
+      "retrieved_at": "2026-11-26T06:21:09Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a1p0.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "17278ac10d24095239b7ce7ca2ec4bb26273d94bac40e604ab332ff7a1631db6",
+      "bytes": 1203
+    },
+    {
+      "url": "https://www.necessarybeing.com/a1p1.html",
+      "retrieved_at": "2026-11-26T06:23:20Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a1p1.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "38b3efea5168847f5f8233093c7b4b4b3b11b4886fd491ed92a6820bc7c5404e",
+      "bytes": 1499
+    },
+    {
+      "url": "https://www.necessarybeing.com/a1p2.html",
+      "retrieved_at": "2026-11-26T06:24:23Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a1p2.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "17c31fe9580999c7e8057998671c80ca386a5dcfd79be25657dee80d5c13e6b7",
+      "bytes": 1377
+    },
+    {
+      "url": "https://www.necessarybeing.com/a1p3.html",
+      "retrieved_at": "2026-11-26T06:24:38Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a1p3.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "9f59cb98af499c8abb9e310de755af3338b2e02d0e3f30bad2573d968af91f93",
+      "bytes": 1205
+    },
+    {
+      "url": "https://www.necessarybeing.com/a1p3b.html",
+      "retrieved_at": "2026-11-26T06:24:43Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a1p3b.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "460eaba9677f61cc900af769c5fd4e3ecdf990190c938c8d7ec31e93afec08d9",
+      "bytes": 1357
+    },
+    {
+      "url": "https://www.necessarybeing.com/a1p4.html",
+      "retrieved_at": "2026-11-26T06:24:48Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a1p4.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "7d80592df9efdc314ee340e7896bf9df9850d958eb555e2283387afd0fac408c",
+      "bytes": 1628
+    },
+    {
+      "url": "https://www.necessarybeing.com/a6c.html",
+      "retrieved_at": "2026-11-26T06:24:52Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a6c.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "a655131640fb7971cdbf48f5fa32e8bd80ebbd2a9f920ffed1f6b7d2db399c49",
+      "bytes": 14200
+    },
+    {
+      "url": "https://www.necessarybeing.com/a6p1.html",
+      "retrieved_at": "2026-11-26T06:25:00Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a6p1.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "618c03168686e666eaf452632e0eeee0067278dc9e862e36ba8bdc60c04bdf3b",
+      "bytes": 1551
+    },
+    {
+      "url": "https://www.necessarybeing.com/a6p1b.html",
+      "retrieved_at": "2026-11-26T06:25:06Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a6p1b.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "70488a94ede167f0a43fb8df62e772cf75606bcc3ee2249c86b065822940e374",
+      "bytes": 1773
+    },
+    {
+      "url": "https://www.necessarybeing.com/a6p2.html",
+      "retrieved_at": "2026-11-26T06:25:08Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a6p2.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "bbef7d2c65bb89cbf742a44811249bc39da8fcce9d46409399c04b5dff0612c0",
+      "bytes": 2144
+    },
+    {
+      "url": "https://www.necessarybeing.com/a7p1.html",
+      "retrieved_at": "2026-11-26T06:25:11Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a7p1.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "5a97ba1230980283333f49cb64461b37f06eaedc6ea055658cea5ef94d22690f",
+      "bytes": 2617
+    },
+    {
+      "url": "https://www.necessarybeing.com/a7p2.html",
+      "retrieved_at": "2026-11-26T06:25:15Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a7p2.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "a5b1913ecf6b370aef7a15295a4d212a873f2b204a5d70f6e82795d167f0ee65",
+      "bytes": 1297
+    },
+    {
+      "url": "https://www.necessarybeing.com/a7p3.html",
+      "retrieved_at": "2026-11-26T06:25:17Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a7p3.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "4f21ae8de33aad6ef08d8aeb0fb2a975a084b0730f44a6c3a18939e98b988a3b",
+      "bytes": 2032
+    },
+    {
+      "url": "https://www.necessarybeing.com/a7p4.html",
+      "retrieved_at": "2026-11-26T06:25:22Z",
+      "via": "live",
+      "final_url": "https://www.necessarybeing.com/a7p4.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "9d57a47f58a8d778dc9696612977ef646b4f23946307e01e1b11f788d571b650",
+      "bytes": 2150
+    },
+    {
+      "url": "https://www.newtonproject.ox.ac.uk/view/texts/normalized/THEM00235",
+      "retrieved_at": "2026-11-26T06:21:10Z",
+      "via": "live",
+      "final_url": "https://www.newtonproject.ox.ac.uk/view/texts/normalized/THEM00235",
+      "status": 200,
+      "content_type": "text/html;charset=utf-8",
+      "sha256": "3f2ae230e7b494616aa2aef69548ed898235e30f974c4fc2bdaa23f26d70f40c",
+      "bytes": 111292
+    },
+    {
+      "url": "https://www.nhm.ac.uk/discover/diplodocus-this-is-your-life.html",
+      "retrieved_at": "2026-11-26T06:21:12Z",
+      "via": "live",
+      "final_url": "https://www.nhm.ac.uk/discover/diplodocus-this-is-your-life.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "74075075c336486c514ac754d25f61136b291bb2791ad22ee5b35b61f95cfd89",
+      "bytes": 234580
+    },
+    {
+      "url": "https://www.nhm.ac.uk/discover/the-making-of-fern-the-diplodocus-engineering-meets-natural-history.html",
+      "retrieved_at": "2026-11-26T06:23:23Z",
+      "via": "live",
+      "final_url": "https://www.nhm.ac.uk/discover/the-making-of-fern-the-diplodocus-engineering-meets-natural-history.html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "99e290148697bf1dd1469c2c1afd6733747c30e3ae8ab470b248ac0a8fadae0d",
+      "bytes": 289262
+    },
+    {
+      "url": "https://www.philosophy-of-religion.eu/menuscript/index.php/ejpr/article/download/159/119/248",
+      "retrieved_at": "2026-11-26T06:21:13Z",
+      "via": "live",
+      "final_url": "https://www.philosophy-of-religion.eu/menuscript/index.php/ejpr/article/download/159/119/248",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "f70df7ba50081a069a310bbff209c160635c2f2f4fe01e6f9deee3a9bb055680",
+      "bytes": 97205
+    },
+    {
+      "url": "https://www.plantingavideos.com/_files/ugd/821d91_eee03a5ff71e47998cd0047687886233.pdf",
+      "retrieved_at": "2026-11-26T06:21:13Z",
+      "via": "live",
+      "final_url": "https://www.plantingavideos.com/_files/ugd/821d91_eee03a5ff71e47998cd0047687886233.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "f8a5b1c7ced80fbde34c0416aa492501023f555bc0bcdf65bc7c3d8ef17709f5",
+      "bytes": 189472
+    },
+    {
+      "url": "https://www.pure.ed.ac.uk/ws/files/8457781/PRITCHARD_2009_Knowledge_understanding_and_epistemic_value.pdf",
+      "retrieved_at": "2026-11-26T06:21:13Z",
+      "via": "live",
+      "final_url": "https://www.pure.ed.ac.uk/ws/files/8457781/PRITCHARD_2009_Knowledge_understanding_and_epistemic_value.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "ff77d20cf3a6ac1453a981ef3873bb2b083595357d55b30acaae71af3f90dec0",
+      "bytes": 661339
+    },
+    {
+      "url": "https://www.rbjones.com/rbjpub/philos/classics/locke/ctb4c11.htm",
+      "retrieved_at": "2026-11-26T06:21:14Z",
+      "via": "live",
+      "final_url": "https://www.rbjones.com/rbjpub/philos/classics/locke/ctb4c11.htm",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "05a1a4680dcf58ea8fb6d2d088da8f3472bff440d33393eff48a81466aaed973",
+      "bytes": 22229
+    },
+    {
+      "url": "https://www.researchgate.net/publication/290915137_A_Rationalist_Manifesto",
+      "retrieved_at": "2026-11-26T06:29:54Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://www.stat.uchicago.edu/~lekheng/meetings/mathofranking/ref/arrow.pdf",
+      "retrieved_at": "2026-11-26T06:21:17Z",
+      "via": "live",
+      "final_url": "https://www.stat.uchicago.edu/~lekheng/meetings/mathofranking/ref/arrow.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "fc671288425e9720d5195b49be1b5c19225beb58e1e57a4c801f7913ac8190f3",
+      "bytes": 757068
+    },
+    {
+      "url": "https://www.tau.ac.il/~yakir/yahp/yh64",
+      "retrieved_at": "2026-11-26T06:21:18Z",
+      "via": "live",
+      "final_url": "https://www.tau.ac.il/~yakir/yahp/yh64",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "9c63b0f0acfb521487933f6c0706583ee38723e5d3f4351064520d08be0809c7",
+      "bytes": 752709
+    },
+    {
+      "url": "https://www.unicog.org/publications/DehaeneCohen_CulturalRecyclingCorticalMaps_Neuron2007.pdf",
+      "retrieved_at": "2026-11-26T06:21:18Z",
+      "via": "live",
+      "final_url": "https://www.unicog.org/publications/DehaeneCohen_CulturalRecyclingCorticalMaps_Neuron2007.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "43e7eb57602831a40f0b1225c345737c25d59b6193aad83f7b0c3c4fb7455c86",
+      "bytes": 858986
+    },
+    {
+      "url": "https://www.vatican.va/archive/ENG0015/__P1B.HTM",
+      "retrieved_at": "2026-11-26T06:21:19Z",
+      "via": "live",
+      "final_url": "https://www.vatican.va/archive/ENG0015/__P1B.HTM",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "6a5aa2f8030a0e1b4f12e9394fe9842c22d4b8b2359ab46b773cae83bab3669c",
+      "bytes": 24793
+    },
+    {
+      "url": "https://www.vatican.va/archive/ENG0015/__P2G.HTM",
+      "retrieved_at": "2026-11-26T06:23:23Z",
+      "via": "live",
+      "final_url": "https://www.vatican.va/archive/ENG0015/__P2G.HTM",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "14688c9e9e5941d86fee12e9dcee5fd4268f0dd800a00c4073a105861d4fc7ab",
+      "bytes": 6360
+    },
+    {
+      "url": "https://www.vatican.va/archive/ENG0015/__P2H.HTM",
+      "retrieved_at": "2026-11-26T06:24:23Z",
+      "via": "live",
+      "final_url": "https://www.vatican.va/archive/ENG0015/__P2H.HTM",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "13e037bf0c471f25319374776fef33808fb69e05420971d654935446426bd02e",
+      "bytes": 15350
+    },
+    {
+      "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_6_man.html",
+      "retrieved_at": "2026-11-26T06:24:39Z",
+      "via": "live",
+      "final_url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_6_man.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "3b840a7f69dfec8311182030537e977e3fd9381a349831342b5b87899e49964a",
+      "bytes": 123374
+    },
+    {
+      "url": "https://www.wehd.com/373/911.html",
+      "retrieved_at": "2026-11-26T06:21:19Z",
+      "via": "live",
+      "final_url": "https://www.wehd.com/373/911.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "80889b6c1de885e280704c58dc1db4ace6a6c90a526b618f40fb440e45857522",
+      "bytes": 24679
+    },
+    {
+      "url": "https://www.wiley.com/en-us/on-the-plurality-of-worlds-p-9780631224969",
+      "retrieved_at": "2026-11-26T06:21:20Z",
+      "via": "live",
+      "final_url": "https://www.wiley.com/en-us/on-the-plurality-of-worlds-p-9780631224969",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "7389188fbb03102750e37cacb3ba34820a52442fe6a3c327a7615ee3f4baa7a6",
+      "bytes": 259487
+    },
+    {
+      "url": "https://zoo.cs.yale.edu/classes/cs471/13s/13s-papers/millikan-biosemantics.pdf",
+      "retrieved_at": "2026-11-26T06:21:32Z",
+      "via": "live",
+      "final_url": "https://zoo.cs.yale.edu/classes/cs471/13s/13s-papers/millikan-biosemantics.pdf",
+      "status": 200,
+      "content_type": "application/pdf",
+      "sha256": "0d35952afc88acd080222681c6713e305b0463851628b6a3c13980df26543496",
+      "bytes": 2156305
+    }
+  ]
+}
