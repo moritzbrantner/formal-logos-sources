@@ -24,9 +24,13 @@
     },
     {
       "url": "http://robkoons.net/old-blog-2021-22/a-further-reconstruction-of-the-fourth-way",
-      "retrieved_at": "2026-11-26T06:29:15Z",
-      "live_status": 404,
-      "error": "no Wayback capture with HTTP 200; redirect target https://robkoons.net/old-blog-2021-22/a-further-reconstruction-of-the-fourth-way: no Wayback capture with HTTP 200"
+      "retrieved_at": "2026-11-26T15:23:42Z",
+      "via": "live",
+      "final_url": "https://robkoons.net/old-blog-2021-22/a-further-reconstruction-of-the-fourth-way",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "65225c4d77a8eed2a154f165ec18b0381eab186e4a73a9a84eb9805fe98b7d5b",
+      "bytes": 41718
     },
     {
       "url": "http://scta.info/resource/TAca84-d1e82/cod-cnLxE4",
@@ -385,7 +389,7 @@
     },
     {
       "url": "https://citeseerx.ist.psu.edu/document?doi=6978b27f0d09e07550d88d9ef0bb3204603de588&repid=rep1&type=pdf",
-      "retrieved_at": "2026-11-26T06:35:15Z",
+      "retrieved_at": "2026-11-26T15:22:12Z",
       "live_status": 404,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -398,6 +402,16 @@
       "content_type": "text/html",
       "sha256": "6a945268708c24e2e98ada0797ef962429371928c7ddbbc203abd1b5f88b8074",
       "bytes": 40461
+    },
+    {
+      "url": "https://classics.mit.edu/Aristotle/metaphysics.12.xii.html",
+      "retrieved_at": "2026-11-26T15:32:41Z",
+      "via": "live",
+      "final_url": "https://classics.mit.edu/Aristotle/metaphysics.12.xii.html",
+      "status": 200,
+      "content_type": "text/html",
+      "sha256": "c1902c3f3c37160e057cb8dffb9c565c28724361d695d1ea67d20afc5659882c",
+      "bytes": 62565
     },
     {
       "url": "https://classics.mit.edu/Aristotle/metaphysics.4.iv.html",
@@ -613,7 +627,7 @@
     },
     {
       "url": "https://deepblue.lib.umich.edu/handle/2027.42/73386",
-      "retrieved_at": "2026-11-26T06:27:46Z",
+      "retrieved_at": "2026-11-26T15:22:15Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -646,6 +660,16 @@
       "content_type": "text/html; charset=utf-8",
       "sha256": "cdef9c482825182c645c5402a8fb08da00d5c3dea4660b108fe22e150d6f432f",
       "bytes": 442324
+    },
+    {
+      "url": "https://doi.org/10.1007/s11153-007-9113-1",
+      "retrieved_at": "2026-11-26T15:32:43Z",
+      "via": "live",
+      "final_url": "https://link.springer.com/article/10.1007/s11153-007-9113-1?error=cookies_not_supported&code=777f87db-c260-4361-a669-5bb42be17899",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "db7280b6a6cd621f4edc24464030772c63a92973cc90eed1bc7b113822791636",
+      "bytes": 251451
     },
     {
       "url": "https://doi.org/10.1007/s11225-008-9132-7",
@@ -822,13 +846,13 @@
     },
     {
       "url": "https://doi.org/10.1093/oso/9780192898852.003.0009",
-      "retrieved_at": "2026-11-26T06:32:34Z",
+      "retrieved_at": "2026-11-26T15:22:21Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200; redirect target https://academic.oup.com/book/43031/chapter/361432556: no Wayback capture with HTTP 200"
     },
     {
       "url": "https://doi.org/10.1093/oso/9780198249856.003.0005",
-      "retrieved_at": "2026-11-26T06:32:50Z",
+      "retrieved_at": "2026-11-26T15:24:10Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200; redirect target https://academic.oup.com/book/50177/chapter/422656040: no Wayback capture with HTTP 200"
     },
@@ -887,13 +911,13 @@
     },
     {
       "url": "https://doi.org/10.1111/j.1747-9991.2011.00465.x",
-      "retrieved_at": "2026-11-26T06:33:30Z",
+      "retrieved_at": "2026-11-26T15:25:22Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200; redirect target https://compass.onlinelibrary.wiley.com/doi/10.1111/j.1747-9991.2011.00465.x: no Wayback capture with HTTP 200"
     },
     {
       "url": "https://doi.org/10.1128/JB.00259-13",
-      "retrieved_at": "2026-11-26T06:33:39Z",
+      "retrieved_at": "2026-11-26T15:26:05Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200; redirect target https://journals.asm.org/doi/10.1128/JB.00259-13: no Wayback capture with HTTP 200"
     },
@@ -941,13 +965,13 @@
     },
     {
       "url": "https://doi.org/10.5840/pc201012227",
-      "retrieved_at": "2026-11-26T06:34:17Z",
+      "retrieved_at": "2026-11-26T15:26:16Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200; redirect target https://www.pdcnet.org/collection-anonymous/search?q=+%2Bimuse_id%3Apc_2010_0012_0002_0281_0287: no Wayback capture with HTTP 200"
     },
     {
       "url": "https://doi.org/10.5840/philtopics2003311/215",
-      "retrieved_at": "2026-11-26T06:34:27Z",
+      "retrieved_at": "2026-11-26T15:26:28Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200; redirect target https://www.pdcnet.org/collection-anonymous/search?q=+%2Bimuse_id%3Aphiltopics_2003_0031_0001_0075_0094: no Wayback capture with HTTP 200"
     },
@@ -1012,6 +1036,26 @@
       "bytes": 127468
     },
     {
+      "url": "https://en.wikisource.org/wiki/Page:Dialogues_Concerning_Natural_Religion_-_Hume_(1779).djvu/173",
+      "retrieved_at": "2026-11-26T15:32:45Z",
+      "via": "live",
+      "final_url": "https://en.wikisource.org/wiki/Page:Dialogues_Concerning_Natural_Religion_-_Hume_(1779).djvu/173",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "22c11af723891b9be88a15d8cd1ee2783702064e578f6d46db2356eef5532642",
+      "bytes": 53795
+    },
+    {
+      "url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.4",
+      "retrieved_at": "2026-11-26T15:32:48Z",
+      "via": "live",
+      "final_url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.4",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "04bcc0ff52abc420fc7591fcc58a08c888e640d0454a57b7e3b1401a5a02fb36",
+      "bytes": 70226
+    },
+    {
       "url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.5",
       "retrieved_at": "2026-11-26T06:24:40Z",
       "via": "live",
@@ -1032,20 +1076,30 @@
       "bytes": 68735
     },
     {
+      "url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_5/Ennead_6.8",
+      "retrieved_at": "2026-11-26T15:32:50Z",
+      "via": "live",
+      "final_url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_5/Ennead_6.8",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "2ec4318eda9e3967ad1836406fed49985c547f80d6a94695be9d2e191ec86305",
+      "bytes": 144613
+    },
+    {
       "url": "https://englishphilosophy.org/locke/ehu/2/1",
-      "retrieved_at": "2026-11-26T06:28:09Z",
+      "retrieved_at": "2026-11-26T15:22:36Z",
       "live_status": 503,
       "error": "no Wayback capture with HTTP 200"
     },
     {
       "url": "https://englishphilosophy.org/locke/ehu/4/10",
-      "retrieved_at": "2026-11-26T06:30:18Z",
+      "retrieved_at": "2026-11-26T15:24:23Z",
       "live_status": 503,
       "error": "no Wayback capture with HTTP 200"
     },
     {
       "url": "https://englishphilosophy.org/locke/ehu/4/3",
-      "retrieved_at": "2026-11-26T06:31:44Z",
+      "retrieved_at": "2026-11-26T15:25:34Z",
       "live_status": 503,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -1163,7 +1217,7 @@
     },
     {
       "url": "https://hdl.handle.net/2027.42/73386",
-      "retrieved_at": "2026-11-26T06:28:40Z",
+      "retrieved_at": "2026-11-26T15:23:07Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200; redirect target https://deepblue.lib.umich.edu/items/766b2a82-bc81-49fa-86e3-b511aefe97a5: no Wayback capture with HTTP 200"
     },
@@ -1349,13 +1403,13 @@
     },
     {
       "url": "https://josephschmid.com/feser-on-schmid-on-existential-inertia-a-comprehensive-response/",
-      "retrieved_at": "2026-11-26T06:28:52Z",
+      "retrieved_at": "2026-11-26T15:23:21Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
     {
       "url": "https://josephschmid.com/response-to-hsiao-and-sanders-on-existential-inertia-and-the-thomistic-contingency-argument/",
-      "retrieved_at": "2026-11-26T06:30:49Z",
+      "retrieved_at": "2026-11-26T15:24:54Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -1547,13 +1601,13 @@
     },
     {
       "url": "https://paperzz.com/doc/6797968/actualism-and-thisness",
-      "retrieved_at": "2026-11-26T06:29:04Z",
+      "retrieved_at": "2026-11-26T15:23:27Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
     {
       "url": "https://paperzz.com/doc/7085045/the-only-possible-argument-in-support-of-a",
-      "retrieved_at": "2026-11-26T06:30:55Z",
+      "retrieved_at": "2026-11-26T15:24:59Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -1621,13 +1675,19 @@
     },
     {
       "url": "https://philarchive.org/archive/GRAAIA-4",
-      "retrieved_at": "2026-11-26T06:29:09Z",
+      "retrieved_at": "2026-11-26T15:23:33Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
     {
       "url": "https://philarchive.org/archive/HUNDSA-4",
-      "retrieved_at": "2026-11-26T06:31:01Z",
+      "retrieved_at": "2026-11-26T15:25:05Z",
+      "live_status": 403,
+      "error": "no Wayback capture with HTTP 200"
+    },
+    {
+      "url": "https://philarchive.org/archive/OPPKCAv1",
+      "retrieved_at": "2026-11-26T15:32:46Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -2161,13 +2221,13 @@
     },
     {
       "url": "https://studylib.net/doc/18288842/mind-and-cosmos---ch.-4",
-      "retrieved_at": "2026-11-26T06:29:27Z",
+      "retrieved_at": "2026-11-26T15:23:42Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
     {
       "url": "https://tannerlectures.org/wp-content/uploads/sites/105/2024/06/Gibbard_2007.pdf",
-      "retrieved_at": "2026-11-26T06:29:33Z",
+      "retrieved_at": "2026-11-26T15:23:46Z",
       "live_status": 404,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -2253,7 +2313,7 @@
     },
     {
       "url": "https://www.academia.edu/3607094/A_Rationalist_Manifesto_Spinoza_and_the_Principle_of_Suffiicent_Reason",
-      "retrieved_at": "2026-11-26T06:29:38Z",
+      "retrieved_at": "2026-11-26T15:23:52Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -2271,7 +2331,7 @@
     },
     {
       "url": "https://www.academia.edu/8908730/the_pure_logic_of_ground",
-      "retrieved_at": "2026-11-26T06:31:08Z",
+      "retrieved_at": "2026-11-26T15:25:11Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -2721,13 +2781,13 @@
     },
     {
       "url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/292770",
-      "retrieved_at": "2026-11-26T06:29:48Z",
+      "retrieved_at": "2026-11-26T15:23:58Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
     {
       "url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/292968",
-      "retrieved_at": "2026-11-26T06:31:19Z",
+      "retrieved_at": "2026-11-26T15:25:16Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },
@@ -2983,7 +3043,7 @@
     },
     {
       "url": "https://www.researchgate.net/publication/290915137_A_Rationalist_Manifesto",
-      "retrieved_at": "2026-11-26T06:29:54Z",
+      "retrieved_at": "2026-11-26T15:24:04Z",
       "live_status": 403,
       "error": "no Wayback capture with HTTP 200"
     },

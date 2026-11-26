@@ -7,16 +7,16 @@ This repository prepares **source artifacts**, not philosophical propositions or
 ## Catalogue and research connections
 
 The committed catalogue covers Formal Logos revision
-[`9eef0b04b958c1c5a618b8307ef43343495591bf`](https://github.com/moritzbrantner/formal-logos/tree/9eef0b04b958c1c5a618b8307ef43343495591bf):
+[`190a6bd0c7a9db35851c73a0df8d4c09adb882ed`](https://github.com/moritzbrantner/formal-logos/tree/190a6bd0c7a9db35851c73a0df8d4c09adb882ed):
 
 | Recorded metadata | Count |
 | --- | ---: |
-| Author attribution strings | 131 |
-| Bibliographic works after three reviewed groupings | 164 |
-| Original Formal Logos source records | 167 |
-| Referenced witness editions | 301 |
-| Registered passages | 531 |
-| Sources without registered passages | 19 |
+| Author attribution strings | 132 |
+| Bibliographic works after three reviewed groupings | 167 |
+| Original Formal Logos source records | 170 |
+| Referenced witness editions | 316 |
+| Registered passages | 554 |
+| Sources without registered passages | 22 |
 
 Author entries preserve the original attribution, including joint authors and institutions;
 they do not infer person identity, life dates, or deceased status. Curated person profiles
@@ -44,7 +44,7 @@ cargo run --locked -- authors --name 'Thomas Aquinas'
 
 # Import an exact local Formal Logos commit. HEAD is also accepted and resolved once.
 cargo run --locked -- import --formal-logos ../formal-logos \
-  --revision 9eef0b04b958c1c5a618b8307ef43343495591bf
+  --revision 190a6bd0c7a9db35851c73a0df8d4c09adb882ed
 
 # Uses the revision recorded in the catalogue, even when the checkout has moved on.
 cargo run --locked -- connections --formal-logos ../formal-logos \
@@ -112,7 +112,7 @@ cargo run --locked -- check --research registry/author-research.json
 `research` emits JSON by default. `--author` matches an exact profile ID, name or declared
 alias, case-insensitively; unknown or ambiguous matches fail. `--deceased` filters only
 the curated profiles with supported deceased status. The report states how many source
-attributions remain unprofiled: currently **125 of 131**. It does not classify those
+attributions remain unprofiled: currently **151 of 157**. It does not classify those
 attributions as living or deceased. `--research FILE` and `--catalog PATH` select other
 inputs; missing files fail. Ordinary `check` still validates only the catalogue unless
 `--research` is supplied; CI supplies it explicitly.
@@ -219,7 +219,8 @@ PDFs and extracted full text remain local; `.gitignore` excludes `local/` and PD
 ## Local HTML pages and mirrors
 
 Local HTML editions use the same content-addressed store as PDFs. Their catalogue entry
-adds the page `encoding` (only strict UTF-8 is supported; other encodings fail) and may
+adds the page `encoding` (strict UTF-8, or ISO-8859-1 read byte for byte as Python's
+`latin-1` codec does, which Corpus Thomisticum pages need; other encodings fail) and may
 record a conventional `locator`. The `source_url` stays descriptive and is never fetched.
 
 ```sh

@@ -1031,15 +1031,20 @@ pub fn extract(bytes: &[u8], encoding: &str, selector: &Selector) -> Result<Stri
     Ok(text)
 }
 
-/// Only strict UTF-8 is supported; other page encodings fail instead of guessing.
+/// Strict UTF-8 and ISO-8859-1 are supported; other page encodings fail instead of guessing.
+/// ISO-8859-1 maps each byte to the code point of the same value, as Python's `latin-1`
+/// codec does (not the WHATWG `windows-1252` reading), so it never fails. Corpus
+/// Thomisticum pages pinned by truth-core use it.
 pub fn decode(bytes: &[u8], encoding: &str) -> Result<String, String> {
-    if !matches!(
-        encoding.to_ascii_lowercase().replace('_', "-").as_str(),
-        "utf-8" | "utf8"
-    ) {
-        return Err(format!("unsupported page encoding: {encoding}"));
+    match encoding.to_ascii_lowercase().replace('_', "-").as_str() {
+        "utf-8" | "utf8" => {
+            String::from_utf8(bytes.to_vec()).map_err(|e| format!("page is not valid utf-8: {e}"))
+        }
+        "iso-8859-1" | "iso8859-1" | "latin-1" | "latin1" | "l1" => {
+            Ok(bytes.iter().map(|&b| char::from(b)).collect())
+        }
+        _ => Err(format!("unsupported page encoding: {encoding}")),
     }
-    String::from_utf8(bytes.to_vec()).map_err(|e| format!("page is not valid utf-8: {e}"))
 }
 
 #[cfg(test)]
@@ -1160,6 +1165,20 @@ mod tests {
     }
 
     #[test]
+    fn iso_8859_1_maps_bytes_to_code_points() {
+        let selector = Selector::from_json(&json!({"element_id": "x"})).unwrap();
+        // 0xE6 is æ; 0x96 is a C1 control in ISO-8859-1 (an en dash only in windows-1252).
+        let page = b"<p id=x>pr\xe6dicta\x96 &ordf;</p>";
+        for name in ["ISO-8859-1", "iso_8859_1", "latin-1", "Latin1"] {
+            assert_eq!(
+                extract(page, name, &selector).unwrap(),
+                "pr\u{e6}dicta\u{96} \u{aa}"
+            );
+        }
+        assert!(extract(b"<p id=x>pr\xe6</p>", "utf-8", &selector).is_err());
+    }
+
+    #[test]
     fn rejects_invalid_selectors_and_encodings() {
         for bad in [
             json!({}),
@@ -1171,7 +1190,7 @@ mod tests {
             assert!(Selector::from_json(&bad).is_err(), "{bad}");
         }
         let selector = Selector::from_json(&json!({"element_id": "x"})).unwrap();
-        assert!(extract(b"<p id=x>a</p>", "latin-1", &selector).is_err());
+        assert!(extract(b"<p id=x>a</p>", "windows-1252", &selector).is_err());
         assert!(extract(b"\xff", "utf-8", &selector).is_err());
         assert!(
             extract(b"<p id=x> </p>", "utf-8", &selector)
