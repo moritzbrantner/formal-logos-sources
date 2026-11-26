@@ -280,6 +280,37 @@
           "next_step": "Resolve the existing I chapters 12–15 manifest before adding any acquisition record. Keep the Turin 1954 digital text distinct from the Leonine vol.42 (1979) edition recommended in the provider’s bibliography."
         },
         {
+          "id": "aquinas-de-hebdomadibus-latin",
+          "work_id": "fl-work-92f270ed-d812-4f0e-bb9d-e8c9af009833",
+          "title": "Expositio libri Boetii De ebdomadibus — Latin, lectiones 1–5",
+          "language": "lat",
+          "format": "html",
+          "url": "https://www.corpusthomisticum.org/cbh.html",
+          "coverage": "The whole commentary on one page, lectiones 1–5. The page identifies the Turin 1954 text (“Textum Taurini 1954 editum”), digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. Lectio 2, including the account of participare, is the single paragraph at anchor 84829, before the Lectio 3 heading and anchor 84830. Acquired locally as edition corpusthomisticum-cbh-2026-11-26 (ISO-8859-1).",
+          "access": "open_online",
+          "rights": {
+            "status": "not_established",
+            "scope": "Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.",
+            "evidence": [
+              {
+                "url": "https://www.corpusthomisticum.org/cbh.html",
+                "title": "Expositio libri Boetii De ebdomadibus — edition notice",
+                "checked_on": "2026-11-26",
+                "note": "The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page."
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "url": "https://www.corpusthomisticum.org/cbh.html",
+              "title": "Expositio libri Boetii De ebdomadibus",
+              "checked_on": "2026-11-26",
+              "note": "The page identifies lectiones 1–5 and the Turin 1954 text. A direct GET returned HTTP 200 with charset ISO-8859-1."
+            }
+          ],
+          "next_step": "Formal Logos candidate 3f8c1f3f-fa29-49c1-a431-dcaf84db70f5 can pin lectio 2 as a web_snapshot (encoding iso-8859-1, html_selector from anchor 84829 to anchor 84830). Keep the Turin 1954 text distinct from the Leonine vol. 50 (1992) edition."
+        },
+        {
           "id": "aquinas-physics-latin-vii-viii",
           "work_id": "fl-work-235966cc-024d-5630-9426-50912ce6af4f",
           "title": "In libros Physicorum — Latin, books VII–VIII",

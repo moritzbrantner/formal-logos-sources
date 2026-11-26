@@ -590,6 +590,10 @@
       "name": "Thomas Uebel"
     },
     {
+      "id": "fl-author-efc742b049c1c3153d333c6ccf9b78232f8c4792e0e79f9ecb48f6788f515946",
+      "name": "René Descartes"
+    },
+    {
       "id": "fl-author-efd1c8478572d15485d222e7c12d7888b51090af11e0ae668e63d2264e4f212f",
       "name": "First Vatican Council (1870)"
     },
@@ -897,6 +901,24 @@
           "work_urn": "urn:cts:greekLit:tlg0086.tlg031",
           "catalog_url": "https://catalog.perseus.tufts.edu/catalog/urn:cts:greekLit:tlg0086.tlg031",
           "citation_system": "Bekker"
+        }
+      ]
+    },
+    {
+      "id": "fl-work-14f373d9-8abe-42b8-8180-25e8299cf3f9",
+      "title": "Principia philosophiae",
+      "author_ids": [
+        "fl-author-efc742b049c1c3153d333c6ccf9b78232f8c4792e0e79f9ecb48f6788f515946"
+      ],
+      "formal_logos_sources": [
+        {
+          "id": "14f373d9-8abe-42b8-8180-25e8299cf3f9",
+          "path": "corpus/sources/descartes-principles.json",
+          "title": "Principia philosophiae",
+          "kind": "primary_text",
+          "work_urn": "urn:truth-core:work:descartes-principles",
+          "catalog_url": "https://fr.wikisource.org/wiki/Principes_de_la_philosophie",
+          "citation_system": "part and article number"
         }
       ]
     },
@@ -2440,6 +2462,24 @@
       ]
     },
     {
+      "id": "fl-work-8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+      "title": "Meditationes de prima philosophia",
+      "author_ids": [
+        "fl-author-efc742b049c1c3153d333c6ccf9b78232f8c4792e0e79f9ecb48f6788f515946"
+      ],
+      "formal_logos_sources": [
+        {
+          "id": "8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+          "path": "corpus/sources/descartes-meditations.json",
+          "title": "Meditationes de prima philosophia",
+          "kind": "primary_text",
+          "work_urn": "urn:truth-core:work:descartes-meditations",
+          "catalog_url": "https://la.wikisource.org/wiki/Meditationes_de_prima_philosophia_(Adam_et_Tannery)",
+          "citation_system": "meditation and Adam–Tannery volume VII page"
+        }
+      ]
+    },
+    {
       "id": "fl-work-8c059d71-9769-5f06-af7a-3de8a7064b43",
       "title": "History of Dogma (Lehrbuch der Dogmengeschichte), vol. I",
       "author_ids": [
@@ -2472,6 +2512,24 @@
           "work_urn": "doi:10.1111/j.1933-1592.2011.00509.x",
           "catalog_url": "https://www.trentonmerricks.com/public/publications/PPR-TO-summary.pdf",
           "citation_system": "physical PDF page and paragraph topic"
+        }
+      ]
+    },
+    {
+      "id": "fl-work-92f270ed-d812-4f0e-bb9d-e8c9af009833",
+      "title": "Expositio libri Boetii De ebdomadibus",
+      "author_ids": [
+        "fl-author-c6276031dd1481f78e8c33e733b8b41f2df2aa2c7d139a9317931c417a88047b"
+      ],
+      "formal_logos_sources": [
+        {
+          "id": "92f270ed-d812-4f0e-bb9d-e8c9af009833",
+          "path": "corpus/sources/aquinas-in-de-hebdomadibus.json",
+          "title": "Expositio libri Boetii De ebdomadibus",
+          "kind": "primary_text",
+          "work_urn": "urn:truth-core:work:aquinas-in-de-hebdomadibus",
+          "catalog_url": "https://www.corpusthomisticum.org/cbh.html",
+          "citation_system": "lectio and Corpus Thomisticum anchor"
         }
       ]
     },
@@ -3628,6 +3686,14 @@
       ]
     },
     {
+      "id": "huneeus-divine-simplicity-theory-of-action",
+      "title": "Divine Simplicity and the Theory of Action: Extrinsic Willing and Knowing Against the Modal Collapse Argument"
+    },
+    {
+      "id": "locke-essay-concerning-human-understanding",
+      "title": "An Essay Concerning Human Understanding"
+    },
+    {
       "id": "oppy-leftow-god-necessity",
       "title": "Leftow on God and Necessity",
       "author_ids": [
@@ -3684,6 +3750,26 @@
   ],
   "editions": [
     {
+      "id": "adam-tannery-vii-1904-ia-oeuvresdedescar07desc",
+      "work_id": "fl-work-8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+      "label": "Adam–Tannery, Œuvres de Descartes VII (Paris: Léopold Cerf, 1904): Meditationes with Objectiones et Responsiones; Internet Archive scan oeuvresdedescar07desc (University of Ottawa, 2009), PDF of 2023-07-27; AT VII page = PDF page − 30 (Med. II AT 28–29 = PDF 58–59; Med. III AT 40–47 = PDF 70–77; Second Replies geometrical exposition AT 160–166 = PDF 190–196)",
+      "language": "lat",
+      "license": "Published 1904; public domain in the US. The Internet Archive item records no access restriction. Image scan with OCR text layer (long s often read as f).",
+      "source_url": "https://archive.org/download/oeuvresdedescar07desc/oeuvresdedescar07desc.pdf",
+      "format": "pdf",
+      "sha256": "3b56324cff1ef95cb2b9ea6b45bf78d7683efb831dfd8d579e64176260ebf400"
+    },
+    {
+      "id": "adam-tannery-viii-1-1905-ia-oeuvresdedesca08desc",
+      "work_id": "fl-work-14f373d9-8abe-42b8-8180-25e8299cf3f9",
+      "label": "Adam–Tannery, Œuvres de Descartes VIII-1 (Paris: Léopold Cerf, 1905): Principia philosophiae; Internet Archive scan oeuvresdedesca08desc (PIMS, University of Toronto); Principia I §§51–54 at AT VIII-1 24–25 = PDF pp. 50–51",
+      "language": "lat",
+      "license": "Published 1905; public domain in the US. The Internet Archive item records no access restriction. Image scan with OCR text layer (long s often read as f).",
+      "source_url": "https://archive.org/download/oeuvresdedesca08desc/oeuvresdedesca08desc.pdf",
+      "format": "pdf",
+      "sha256": "f626a3f9f6ab9b2d58c0209122d872f8e198032dbbab22a0a83299729e50af0c"
+    },
+    {
       "id": "boghossian-inference-philstud-169-2014",
       "work_id": "boghossian-what-is-inference",
       "label": "Boghossian, Philosophical Studies 169 (2014), 1–18, doi:10.1007/s11098-012-9903-x, author-hosted publisher PDF; pp. 3–5, 11–18 on the same PDF pages",
@@ -3702,6 +3788,90 @@
       "source_url": "https://consc.net/papers/idealism.pdf",
       "format": "pdf",
       "sha256": "4739ebb92b6f77fedc45626437716b433cade07b15c4018690ba5cc218139951"
+    },
+    {
+      "id": "corpusthomisticum-cbh-2026-11-26",
+      "work_id": "fl-work-92f270ed-d812-4f0e-bb9d-e8c9af009833",
+      "label": "Corpus Thomisticum cbh.html, whole work (Textum Taurini 1954 editum, i.e. Marietti, Turin 1954), fetched 2026-11-26; lectio 2 = anchors 84829 to 84830",
+      "locator": "Lectiones 1–5",
+      "language": "lat",
+      "license": "Underlying print text Marietti (Turin, 1954); rights in it not established. Electronic edition © 2019 Fundación Tomás de Aquino (Corpus Thomisticum, ed. Enrique Alarcón), all rights reserved for this electronic edition. Local research copy; no redistribution permission asserted.",
+      "source_url": "https://www.corpusthomisticum.org/cbh.html",
+      "format": "html",
+      "encoding": "iso-8859-1",
+      "sha256": "5d06363e9ec887ca18ae29135d0c21b1853c9152bb0f48899d9a45915e4c7b2d"
+    },
+    {
+      "id": "corpusthomisticum-sth1103-2026-11-26",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "Corpus Thomisticum sth1103.html, Prima pars q.103–119 (Textum Leoninum Romae 1889 editum), fetched 2026-11-26; I q.104 a.3 = anchors 32775–32782",
+      "locator": "I q.103–119",
+      "language": "lat",
+      "license": "Leonine text (Rome, 1889) public domain. Electronic edition © 2019 Fundación Tomás de Aquino (Corpus Thomisticum, ed. Enrique Alarcón), all rights reserved for this electronic edition. Local research copy; no redistribution permission asserted.",
+      "source_url": "https://www.corpusthomisticum.org/sth1103.html",
+      "format": "html",
+      "encoding": "iso-8859-1",
+      "sha256": "5736abad11534d6a5ebb3fa0c76ff5df228d6558cbb69163f5f437523f2c2ed1"
+    },
+    {
+      "id": "en-wikisource-haldane-ross-meditation-2-oldid-15762296",
+      "work_id": "fl-work-8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+      "label": "English Wikisource transcription of Haldane–Ross (1911) vol. I, Meditation II, revision 15762296 (2026-03-03), HR page numbers inline",
+      "locator": "Meditation II",
+      "language": "eng",
+      "license": "Translation published 1911; public domain in the US. Wikisource page text under CC BY-SA 4.0. Local research copy.",
+      "source_url": "https://en.wikisource.org/w/index.php?title=The_Philosophical_Works_of_Decartes/Volume_1/Meditations_on_First_Philosophy/Meditation_2&oldid=15762296",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "9b2e86679e846e9321f2332d14dd58c1372c95f858b8fa1ae0c704946d442035"
+    },
+    {
+      "id": "en-wikisource-haldane-ross-meditation-3-oldid-15762447",
+      "work_id": "fl-work-8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+      "label": "English Wikisource transcription of Haldane–Ross (1911) vol. I, Meditation III, revision 15762447 (2026-03-03), HR page numbers inline",
+      "locator": "Meditation III",
+      "language": "eng",
+      "license": "Translation published 1911; public domain in the US. Wikisource page text under CC BY-SA 4.0. Local research copy.",
+      "source_url": "https://en.wikisource.org/w/index.php?title=The_Philosophical_Works_of_Decartes/Volume_1/Meditations_on_First_Philosophy/Meditation_3&oldid=15762447",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "479e8d24f4fbc68c20c147cbfa0e4470d8d2a456ef94ff9320b3f7fbf313754e"
+    },
+    {
+      "id": "en-wikisource-locke-essay-1853-ii-1-oldid-15660662",
+      "work_id": "locke-essay-concerning-human-understanding",
+      "label": "English Wikisource transcription of the Troutman & Hayes (Philadelphia, 1853) edition, Book II chapter I, revision 15660662 (2026-01-23); alternative to the unavailable englishphilosophy.org/locke/ehu/2/1",
+      "locator": "II.i",
+      "language": "eng",
+      "license": "Text public domain (Troutman & Hayes, Philadelphia, 1853); Wikisource page text under CC BY-SA 4.0. Local research copy.",
+      "source_url": "https://en.wikisource.org/w/index.php?title=An_Essay_Concerning_Human_Understanding_(Troutman_%26_Hayes_1853)/Book_2/Chapter_I&oldid=15660662",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "379e29b3c099fde53906fb415cdf8523033d8668c9c10b156ddc4ce54c0e578c"
+    },
+    {
+      "id": "en-wikisource-locke-essay-1853-iv-10-oldid-16236198",
+      "work_id": "locke-essay-concerning-human-understanding",
+      "label": "English Wikisource transcription of the Troutman & Hayes (Philadelphia, 1853) edition, Book IV chapter X, revision 16236198 (2026-08-17); alternative to the unavailable englishphilosophy.org/locke/ehu/4/10",
+      "locator": "IV.x",
+      "language": "eng",
+      "license": "Text public domain (Troutman & Hayes, Philadelphia, 1853); Wikisource page text under CC BY-SA 4.0. Local research copy.",
+      "source_url": "https://en.wikisource.org/w/index.php?title=An_Essay_Concerning_Human_Understanding_(Troutman_%26_Hayes_1853)/Book_4/Chapter_X&oldid=16236198",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "db8b1fb702928762ce59d0352e68978316d81d7f0c56c41f8d1a42490a12b8c6"
+    },
+    {
+      "id": "en-wikisource-locke-essay-1853-iv-3-oldid-16236183",
+      "work_id": "locke-essay-concerning-human-understanding",
+      "label": "English Wikisource transcription of the Troutman & Hayes (Philadelphia, 1853) edition, Book IV chapter III, revision 16236183 (2026-08-17); alternative to the unavailable englishphilosophy.org/locke/ehu/4/3",
+      "locator": "IV.iii",
+      "language": "eng",
+      "license": "Text public domain (Troutman & Hayes, Philadelphia, 1853); Wikisource page text under CC BY-SA 4.0. Local research copy.",
+      "source_url": "https://en.wikisource.org/w/index.php?title=An_Essay_Concerning_Human_Understanding_(Troutman_%26_Hayes_1853)/Book_4/Chapter_III&oldid=16236183",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "3cd6e7326296bc78bbf1f95806acbcc3f9fc922b8ef097095a9928e21037daa8"
     },
     {
       "id": "fl-edition-00f6acb3d13d1ae80b402060ad1931f8c2bda6deff9450b33e5a71408bb440d2",
@@ -4285,6 +4455,71 @@
       }
     },
     {
+      "id": "fl-edition-09af36e3f091826c02d856d3f65083d9d929c6c8c2762a5f3a069ee77bec225c",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "Summa theologiae — aquinas-summa-theologiae-q77-a6-q82-a1-lat",
+      "language": "lat",
+      "license": "Latin text: Leonine edition, Rome 1889, electronically transcribed by Roberto Busa and reviewed by Enrique Alarcón. The page claims ©2019 Fundación Tomás de Aquino, all rights reserved for this edition. Only hashes, locators, metadata and a short incipit are committed. A fixed 2026-04-17 Wayback capture is byte-pinned as a fallback (2026-10-26, issue #393): two fetches gave the same bytes, and the selected text hash and incipit match the originally consulted witness; the live hash and retrieval date are unchanged.",
+      "source_url": "https://www.corpusthomisticum.org/sth1077.html",
+      "format": "html",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q77-a6-q82-a1-lat.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "encoding": "iso-8859-1",
+          "kind": "web_snapshot",
+          "language": "lat",
+          "license": "Latin text: Leonine edition, Rome 1889, electronically transcribed by Roberto Busa and reviewed by Enrique Alarcón. The page claims ©2019 Fundación Tomás de Aquino, all rights reserved for this edition. Only hashes, locators, metadata and a short incipit are committed. A fixed 2026-04-17 Wayback capture is byte-pinned as a fallback (2026-10-26, issue #393): two fetches gave the same bytes, and the selected text hash and incipit match the originally consulted witness; the live hash and retrieval date are unchanged.",
+          "retrieved_at": "2026-10-25T20:05:46Z",
+          "sha256": "sha256:d94d71351d8ec6edb379f1e0cae8859364a78e2aca5b915806b1f4b54fba5bdd",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://www.corpusthomisticum.org/sth1077.html",
+          "wayback_sha256": "sha256:d94d71351d8ec6edb379f1e0cae8859364a78e2aca5b915806b1f4b54fba5bdd",
+          "wayback_url": "https://web.archive.org/web/20260417180138id_/https://www.corpusthomisticum.org/sth1077.html"
+        },
+        "passages": [
+          {
+            "id": "361bbe29-385b-4733-a9a1-f5eaa09ab565",
+            "label": "Thomas Aquinas, Summa theologiae, I q.77 a.6",
+            "locator": "I q.77 a.6",
+            "claim_locator_prefixes": [
+              "I q.77 a.6 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "31641"
+                },
+                "to": {
+                  "anchor": "31649"
+                }
+              },
+              "text_sha256": "sha256:1666d524e93940a41cc0d6794dc4164477dbc8851d826b21bee4b3dcbf844376"
+            }
+          },
+          {
+            "id": "a88b9442-3f5b-4caf-9011-2d79e1840196",
+            "label": "Thomas Aquinas, Summa theologiae, I q.82 a.1",
+            "locator": "I q.82 a.1",
+            "claim_locator_prefixes": [
+              "I q.82 a.1 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "31871"
+                },
+                "to": {
+                  "anchor": "31879"
+                }
+              },
+              "text_sha256": "sha256:41549a5acbc4c96c4c45087f115428857e88ca411b9a585b3aab9642546cca7d"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-0a01e4b46b1bb59eef56cc4e1a230e2bf35a46f56fbce8d290fe4a3e8d9eebbe",
       "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
       "label": "http://scta.info/resource/TAca84-d1e77/cod-cnLxE4",
@@ -4666,6 +4901,43 @@
       }
     },
     {
+      "id": "fl-edition-117e3cf18ccf6c2c970baede19b3bd40151565542b5f2247b76c4129bee75675",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e149/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e149/cod-cnLxE4_TAca84-d1e149.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q20.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e149/cod-cnLxE4",
+          "git_blob_sha": "2019d69d437ccf275ebbe39bbfb781ff78b3cefc",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e149/cod-cnLxE4_TAca84-d1e149.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e149/cod-cnLxE4_TAca84-d1e149.xml"
+        },
+        "passages": [
+          {
+            "id": "39fad891-5dc6-4f16-ad99-bd909c8c6465",
+            "label": "Thomas Aquinas, Summa theologiae, I q.20 a.2",
+            "locator": "I q.20 a.2",
+            "claim_locator_prefixes": [
+              "I q.20 a.2 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e149-Dd1e451"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-11c5b7e10bb8bc5319d92af350d9d9f0c8ff4ebb1675cb0e17f39b7d071fef69",
       "work_id": "fl-work-0281ee66-52e8-5421-9bfa-277cbca8269e",
       "label": "urn:cts:greekLit:tlg0031.tlg007.perseus-grc2",
@@ -4875,6 +5147,65 @@
                 "last": 18
               },
               "text_sha256": "sha256:5b36d0aa84a27799fcc2e44b3cb515e872f7860e93b338fa3ebd1dc3e6baf699"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-1497df8c33d477235f9556b9ba5eaeffab60620e079ba1ad609df1710d284fee",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e118/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e118/cod-cnLxE4_TAca84-d1e118.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q14-a2-a4-a6.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e118/cod-cnLxE4",
+          "git_blob_sha": "313acd7bdc7586fb9c92f75dfc5441ab37f028ec",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e118/cod-cnLxE4_TAca84-d1e118.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e118/cod-cnLxE4_TAca84-d1e118.xml"
+        },
+        "passages": [
+          {
+            "id": "33460e88-9aa3-4101-ad90-bbccbec5d435",
+            "label": "Thomas Aquinas, Summa theologiae, I q.14 a.2",
+            "locator": "I q.14 a.2",
+            "claim_locator_prefixes": [
+              "I q.14 a.2 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e118-Dd1e445"
+            }
+          },
+          {
+            "id": "59124bf1-1aab-4b9a-a605-59dbd3a764d1",
+            "label": "Thomas Aquinas, Summa theologiae, I q.14 a.4",
+            "locator": "I q.14 a.4",
+            "claim_locator_prefixes": [
+              "I q.14 a.4 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e118-Dd1e886"
+            }
+          },
+          {
+            "id": "9f73fe7a-f0ed-48be-9ec4-81ec1505d9cb",
+            "label": "Thomas Aquinas, Summa theologiae, I q.14 a.6",
+            "locator": "I q.14 a.6",
+            "claim_locator_prefixes": [
+              "I q.14 a.6 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e118-Dd1e1329"
             }
           }
         ]
@@ -5210,6 +5541,43 @@
             ],
             "selectors": {
               "tei_xml_id": "TAca84-d1e1158-Dd1e347"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-1893fc5d66ae510727895988dfcf14f70d862d3a6ca941f67c9c51bca8092d42",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e113/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e113/cod-cnLxE4_TAca84-d1e113.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q13-a11.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e113/cod-cnLxE4",
+          "git_blob_sha": "11fb111a93f777750378aefebd8ed202169b7e86",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e113/cod-cnLxE4_TAca84-d1e113.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e113/cod-cnLxE4_TAca84-d1e113.xml"
+        },
+        "passages": [
+          {
+            "id": "ce134fa7-966b-46c8-abc9-d3300e1ba758",
+            "label": "Thomas Aquinas, Summa theologiae, I q.13 a.11",
+            "locator": "I q.13 a.11",
+            "claim_locator_prefixes": [
+              "I q.13 a.11 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e113-Dd1e3208"
             }
           }
         ]
@@ -6830,6 +7198,54 @@
       }
     },
     {
+      "id": "fl-edition-3cb678e7b950d304eac05d69e37e2680f2364e6474f91da9cec9452660403273",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e77/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e77/cod-cnLxE4_TAca84-d1e77.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q6-a1-a3.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e77/cod-cnLxE4",
+          "git_blob_sha": "34aa2bbd82b33cd50c67003d9c00d1dc9e4b36f4",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e77/cod-cnLxE4_TAca84-d1e77.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e77/cod-cnLxE4_TAca84-d1e77.xml"
+        },
+        "passages": [
+          {
+            "id": "23505562-417b-4d59-a545-753155cf11c8",
+            "label": "Thomas Aquinas, Summa theologiae, I q.6 a.3",
+            "locator": "I q.6 a.3",
+            "claim_locator_prefixes": [
+              "I q.6 a.3 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e77-Dd1e498"
+            }
+          },
+          {
+            "id": "9bed5e98-1f08-499d-9214-4b58903dbcf8",
+            "label": "Thomas Aquinas, Summa theologiae, I q.6 a.1",
+            "locator": "I q.6 a.1",
+            "claim_locator_prefixes": [
+              "I q.6 a.1 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e77-Dd1e141"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-3e80862105c64bf40309f8850a7fe1eb4c90a24b2617540c56594e08fa1e0a85",
       "work_id": "fl-work-d27e53fc-c4af-5160-83a4-924a2aae4d2e",
       "label": "An Enquiry concerning Human Understanding (1748), Hume Texts Online — hume-enquiry-iv",
@@ -7664,6 +8080,50 @@
       }
     },
     {
+      "id": "fl-edition-4a3f19e7759d2269d1c7fe8c7a0384bfee3eeab5f3d9b66200210b011dc34f65",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "Summa theologiae — aquinas-summa-theologiae-q85-a2-lat",
+      "language": "lat",
+      "license": "Latin text: Leonine edition; electronic transcription by Roberto Busa, reviewed by Enrique Alarcón. The page claims ©2019 Fundación Tomás de Aquino, all rights reserved for this electronic edition. Only metadata, hashes, locators and short incipits are committed.",
+      "source_url": "https://www.corpusthomisticum.org/sth1084.html",
+      "format": "html",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q85-a2-lat.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "encoding": "iso-8859-1",
+          "kind": "web_snapshot",
+          "language": "lat",
+          "license": "Latin text: Leonine edition; electronic transcription by Roberto Busa, reviewed by Enrique Alarcón. The page claims ©2019 Fundación Tomás de Aquino, all rights reserved for this electronic edition. Only metadata, hashes, locators and short incipits are committed.",
+          "retrieved_at": "2026-11-06T11:24:32Z",
+          "sha256": "sha256:4b2ce10c68ccca2aa93c2ed1d7a4dc5bc0fff877025dc232ee83bc1f0495f623",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://www.corpusthomisticum.org/sth1084.html"
+        },
+        "passages": [
+          {
+            "id": "c8835568-28f3-459e-a6fd-7e717e9debbb",
+            "label": "Thomas Aquinas, Summa theologiae, I q.85 a.2",
+            "locator": "I q.85 a.2",
+            "claim_locator_prefixes": [
+              "I q.85 a.2 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "32022"
+                },
+                "to": {
+                  "anchor": "32030"
+                }
+              },
+              "text_sha256": "sha256:5247b91f89a9ba80f0f4346e95e65336e722ba9ae839de00ea2a27092123e818"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-4a8af93f2860ae3f9e9ad511645cc0c03fee4267686c2a466af287a86159b284",
       "work_id": "fl-work-2bc55f4c-f7bf-58d5-8092-786c46e2a144",
       "label": "Necessary Being interactive survey (Necessary Concreta Quiz) — necessarybeing-a1-totality",
@@ -7701,6 +8161,54 @@
                 }
               },
               "text_sha256": "sha256:fbaa2201b12cb5cfbaf9ef097bd6e379ed5f312ed654679401482c94de815e6e"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-4c8ea4aadd80c32d71b85a1e4e1c0e444c011d6c890c466ef57e000104c3b992",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e180/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e180/cod-cnLxE4_TAca84-d1e180.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q26.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e180/cod-cnLxE4",
+          "git_blob_sha": "7d3f2eeb719db256de1657659dd3256ccf57d933",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e180/cod-cnLxE4_TAca84-d1e180.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e180/cod-cnLxE4_TAca84-d1e180.xml"
+        },
+        "passages": [
+          {
+            "id": "68394803-7eab-41d2-ab58-6175561a9c1d",
+            "label": "Thomas Aquinas, Summa theologiae, I q.26 a.2",
+            "locator": "I q.26 a.2",
+            "claim_locator_prefixes": [
+              "I q.26 a.2 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e180-Dd1e271"
+            }
+          },
+          {
+            "id": "dad3f3ea-b1ed-411d-86dc-579a877c1221",
+            "label": "Thomas Aquinas, Summa theologiae, I q.26 a.1",
+            "locator": "I q.26 a.1",
+            "claim_locator_prefixes": [
+              "I q.26 a.1 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e180-Dd1e148"
             }
           }
         ]
@@ -8985,6 +9493,52 @@
       }
     },
     {
+      "id": "fl-edition-69a04fa775fc7218006d4f12c4ce852c78637c4cbb4b37f0d505c641c3a2d8e1",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "Summa theologiae — aquinas-summa-theologiae-i-ii-q1-a2-lat",
+      "language": "lat",
+      "license": "Latin text: Leonine edition, Rome 1891, electronically transcribed by Roberto Busa and reviewed by Enrique Alarcón. Corpus Thomisticum reserves rights in the digital edition. Two independent fetches matched the page and selected text hashes. Only metadata, hashes, a locator and a short incipit are committed. A fixed 2025-08-17 Wayback capture gave stable bytes on two fetches and the same selected text.",
+      "source_url": "https://www.corpusthomisticum.org/sth2001.html",
+      "format": "html",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-i-ii-q1-a2-lat.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "encoding": "iso-8859-1",
+          "kind": "web_snapshot",
+          "language": "lat",
+          "license": "Latin text: Leonine edition, Rome 1891, electronically transcribed by Roberto Busa and reviewed by Enrique Alarcón. Corpus Thomisticum reserves rights in the digital edition. Two independent fetches matched the page and selected text hashes. Only metadata, hashes, a locator and a short incipit are committed. A fixed 2025-08-17 Wayback capture gave stable bytes on two fetches and the same selected text.",
+          "retrieved_at": "2026-11-26T11:36:43Z",
+          "sha256": "sha256:d0526c5194eba0ddd37f8aa0c73a4c883bca89a900b4df97be84efd6f1da09d9",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://www.corpusthomisticum.org/sth2001.html",
+          "wayback_sha256": "sha256:d0526c5194eba0ddd37f8aa0c73a4c883bca89a900b4df97be84efd6f1da09d9",
+          "wayback_url": "https://web.archive.org/web/20250817024107id_/https://www.corpusthomisticum.org/sth2001.html"
+        },
+        "passages": [
+          {
+            "id": "686bbfdb-942f-4cf3-a52f-3f1388158150",
+            "label": "Thomas Aquinas, Summa theologiae, I–II q.1 a.2",
+            "locator": "I–II q.1 a.2",
+            "claim_locator_prefixes": [
+              "I–II q.1 a.2 "
+            ],
+            "selectors": {
+              "html_selector": {
+                "from": {
+                  "anchor": "33414"
+                },
+                "to": {
+                  "anchor": "33422"
+                }
+              },
+              "text_sha256": "sha256:3c23a7d8d410d2978f9008997b44a716be10245d35610b12b02442ccda255b02"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-69d00e7114424e0f4190124057ce3c75e3e07b426a1877d9768847f3954087fa",
       "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
       "label": "The Summa Theologiae of St. Thomas Aquinas, Second and Revised Edition, 1920; New Advent online edition by Kevin Knight",
@@ -9486,6 +10040,43 @@
                 }
               },
               "text_sha256": "sha256:af60369cbe397d85a6434584f0d2032f69b4b38c6d53d7e9b38d845c02b3ae3c"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-71fe3178f9131b9c76744142c23211221928d622b829731b9b050f61eff5df27",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e118/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e118/cod-cnLxE4_TAca84-d1e118.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q14-a3.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e118/cod-cnLxE4",
+          "git_blob_sha": "313acd7bdc7586fb9c92f75dfc5441ab37f028ec",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e118/cod-cnLxE4_TAca84-d1e118.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e118/cod-cnLxE4_TAca84-d1e118.xml"
+        },
+        "passages": [
+          {
+            "id": "6674640b-522c-436f-9c3e-4c70c036f52d",
+            "label": "Thomas Aquinas, Summa theologiae, I q.14 a.3",
+            "locator": "I q.14 a.3",
+            "claim_locator_prefixes": [
+              "I q.14 a.3 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e118-Dd1e717"
             }
           }
         ]
@@ -10816,6 +11407,54 @@
             "selectors": {
               "raw_text": true,
               "text_sha256": "sha256:cc90c7620a11f229c632bac8deb355b7ce38d9783977c64f237fb0e37d5ca6b4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-873a9851211370be6205d4294bbb40120272da82dfa3c4a1dd04adf3ba6987e8",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e87/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e87/cod-cnLxE4_TAca84-d1e87.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q8.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e87/cod-cnLxE4",
+          "git_blob_sha": "97377e5cdffe1109ba3aff9b83a0ea20aa37ed09",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e87/cod-cnLxE4_TAca84-d1e87.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e87/cod-cnLxE4_TAca84-d1e87.xml"
+        },
+        "passages": [
+          {
+            "id": "251766df-172e-4747-adf5-678e857eb896",
+            "label": "Thomas Aquinas, Summa theologiae, I q.8 a.2",
+            "locator": "I q.8 a.2",
+            "claim_locator_prefixes": [
+              "I q.8 a.2 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e87-Dd1e361"
+            }
+          },
+          {
+            "id": "a87e8a24-2d87-48a2-8bc1-4c7471481ab1",
+            "label": "Thomas Aquinas, Summa theologiae, I q.8 a.1",
+            "locator": "I q.8 a.1",
+            "claim_locator_prefixes": [
+              "I q.8 a.1 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e87-Dd1e143"
             }
           }
         ]
@@ -13417,6 +14056,43 @@
       }
     },
     {
+      "id": "fl-edition-b37f1e99b24aa33142063a345fbc41fd409575324d214a63c85cd1ea4a18659d",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e128/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e128/cod-cnLxE4_TAca84-d1e128.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q16-a5.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e128/cod-cnLxE4",
+          "git_blob_sha": "a5be2779c0f2a7d11f2058b84077b77bf96aea24",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e128/cod-cnLxE4_TAca84-d1e128.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e128/cod-cnLxE4_TAca84-d1e128.xml"
+        },
+        "passages": [
+          {
+            "id": "d7ddc504-b9a2-464a-9c1f-c4cc44d8cd19",
+            "label": "Thomas Aquinas, Summa theologiae, I q.16 a.5",
+            "locator": "I q.16 a.5",
+            "claim_locator_prefixes": [
+              "I q.16 a.5 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e128-Dd1e990"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-b44cc562d78bde9dedfd70ce7743831a934d4aab85bae46171031989362eede7",
       "work_id": "fl-work-665bdac6-e83f-5b25-8b38-995165ccc42e",
       "label": "urn:cts:greekLit:tlg0059.tlg009.perseus-grc2",
@@ -14043,6 +14719,91 @@
                 }
               },
               "text_sha256": "sha256:aad1d18b58cbfd84f4c92f20eb38d2b9f736ef36d750da0efc5a8041f17accf6"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-b950126a3749dd085ae48094f4081c2ee96f3bb091b4f86f39ca8fb0a6ff2ca7",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e108/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e108/cod-cnLxE4_TAca84-d1e108.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q12-a4.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e108/cod-cnLxE4",
+          "git_blob_sha": "17a1f5c2c80d2328e40eb36fa4e47a27a18e54de",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e108/cod-cnLxE4_TAca84-d1e108.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e108/cod-cnLxE4_TAca84-d1e108.xml"
+        },
+        "passages": [
+          {
+            "id": "0f08e0c0-7c32-441b-aa8e-51fd9c9cff91",
+            "label": "Thomas Aquinas, Summa theologiae, I q.12 a.4",
+            "locator": "I q.12 a.4",
+            "claim_locator_prefixes": [
+              "I q.12 a.4 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e108-Dd1e980"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-b962581c2990471284ba7f605805bfc65017b52fdcb614192ff56a28c8723ef3",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e159/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e159/cod-cnLxE4_TAca84-d1e159.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q22.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e159/cod-cnLxE4",
+          "git_blob_sha": "b21901d0ec70a267f6f26284a9aedade861677b4",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e159/cod-cnLxE4_TAca84-d1e159.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e159/cod-cnLxE4_TAca84-d1e159.xml"
+        },
+        "passages": [
+          {
+            "id": "8fb929f0-753d-4803-8291-ff150c9b5eb1",
+            "label": "Thomas Aquinas, Summa theologiae, I q.22 a.1",
+            "locator": "I q.22 a.1",
+            "claim_locator_prefixes": [
+              "I q.22 a.1 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e159-Dd1e168"
+            }
+          },
+          {
+            "id": "e94841c3-42eb-4771-9f29-a2a58805928e",
+            "label": "Thomas Aquinas, Summa theologiae, I q.22 a.2",
+            "locator": "I q.22 a.2",
+            "claim_locator_prefixes": [
+              "I q.22 a.2 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e159-Dd1e407"
             }
           }
         ]
@@ -16967,6 +17728,54 @@
       }
     },
     {
+      "id": "fl-edition-d5ae56a091569113154d49218e9691bd6ad422b7061bc60a6624b1824b1c5b9b",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e108/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e108/cod-cnLxE4_TAca84-d1e108.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q12.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e108/cod-cnLxE4",
+          "git_blob_sha": "17a1f5c2c80d2328e40eb36fa4e47a27a18e54de",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e108/cod-cnLxE4_TAca84-d1e108.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e108/cod-cnLxE4_TAca84-d1e108.xml"
+        },
+        "passages": [
+          {
+            "id": "235d0d02-c37e-474c-8f1d-b42d59432fc2",
+            "label": "Thomas Aquinas, Summa theologiae, I q.12 a.1",
+            "locator": "I q.12 a.1",
+            "claim_locator_prefixes": [
+              "I q.12 a.1 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e108-Dd1e195"
+            }
+          },
+          {
+            "id": "55a1cba8-dc66-4ae0-8da4-3de1aeb5e748",
+            "label": "Thomas Aquinas, Summa theologiae, I q.12 a.7",
+            "locator": "I q.12 a.7",
+            "claim_locator_prefixes": [
+              "I q.12 a.7 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e108-Dd1e1749"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "fl-edition-d646a4ae5b567926f23229d2086648628f681123b14238d5d658969eb88213c0",
       "work_id": "fl-work-4ca270ba-8c26-5a84-a66f-c39efe48f1f4",
       "label": "Empiricism and the Philosophy of Mind — sellars-empirical-foundation",
@@ -18071,6 +18880,43 @@
                 }
               },
               "text_sha256": "sha256:a4842f8c57d71806fbe4576c9a0891f4e44d47ed1955c378150ee96ecc9bedb2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fl-edition-e62be9558da4480f77ebca6b6c1fd59f3cca1d0f3a599f9d5ae347321e8765fe",
+      "work_id": "fl-work-c77377cf-501b-56c6-be40-b518e9aad101",
+      "label": "http://scta.info/resource/TAca84-d1e139/cod-cnLxE4",
+      "language": "lat",
+      "license": "CC BY-NC-SA 4.0",
+      "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e139/cod-cnLxE4_TAca84-d1e139.xml",
+      "format": "tei",
+      "formal_logos": {
+        "manifest_path": "corpus/passages/aquinas-summa-theologiae-q18-a2.json",
+        "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+        "snapshot": {
+          "edition_urn": "http://scta.info/resource/TAca84-d1e139/cod-cnLxE4",
+          "git_blob_sha": "3e6ecad17bd2a29c5a14814d1efaf24d2ed52775",
+          "language": "lat",
+          "license": "CC BY-NC-SA 4.0",
+          "path": "TAca84-d1e139/cod-cnLxE4_TAca84-d1e139.xml",
+          "repository": "scta-texts/TAca84",
+          "revision": "f9065dc8ce7bc790b8c972e49ee19d661f028be6",
+          "source_id": "c77377cf-501b-56c6-be40-b518e9aad101",
+          "source_url": "https://raw.githubusercontent.com/scta-texts/TAca84/f9065dc8ce7bc790b8c972e49ee19d661f028be6/TAca84-d1e139/cod-cnLxE4_TAca84-d1e139.xml"
+        },
+        "passages": [
+          {
+            "id": "0363b2b8-1514-45e5-96d5-d56866ab0133",
+            "label": "Thomas Aquinas, Summa theologiae, I q.18 a.2",
+            "locator": "I q.18 a.2",
+            "claim_locator_prefixes": [
+              "I q.18 a.2 "
+            ],
+            "selectors": {
+              "tei_xml_id": "TAca84-d1e139-Dd1e391"
             }
           }
         ]
@@ -20372,6 +21218,61 @@
           }
         ]
       }
+    },
+    {
+      "id": "haldane-ross-ii-1912-ia-philosophicalwor015731mbp",
+      "work_id": "fl-work-8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+      "label": "Haldane and Ross (trans.), The Philosophical Works of Descartes II (Cambridge University Press, 1912): Objections and Replies; Internet Archive scan philosophicalwor015731mbp; Reply to Objections II, geometrical exposition (definitions, postulates, axioms) at HR II 52–59 = PDF pp. 58–65, axiom V on PDF p. 62",
+      "language": "eng",
+      "license": "Translation published 1912; public domain in the US. The Internet Archive item records no access restriction. Image scan with OCR text layer.",
+      "source_url": "https://archive.org/download/philosophicalwor015731mbp/philosophicalwor015731mbp.pdf",
+      "format": "pdf",
+      "sha256": "958da411432a4f84e035ad7b0fb698f95bc8a316077705343e62b8823f52ff43"
+    },
+    {
+      "id": "huneeus-theologica-9-2-2025-pp89-106",
+      "work_id": "huneeus-divine-simplicity-theory-of-action",
+      "label": "Huneeus, TheoLogica 9(2) (2025), 89–106, doi:10.14428/thl.v9i1.82053, publisher PDF (18 pages); published version of the 2024 online-first text cited at philarchive.org/archive/HUNDSA-4 (HTTP 403); its pagination may differ from the cited printed pp. 7–15",
+      "language": "eng",
+      "license": "Open access under CC BY-NC-ND 4.0 (stated on the publisher article page). Local research copy.",
+      "source_url": "https://ojs.uclouvain.be/index.php/theologica/article/download/82053/76373",
+      "format": "pdf",
+      "sha256": "641bb931ebb4a466a668dd4813647bb2f8d336719b24ae34df05a4a6abb83389"
+    },
+    {
+      "id": "iep-inf-epis-wayback-20261016021922",
+      "work_id": "fl-work-d148e888-733b-5c82-8557-f453930be43d",
+      "label": "IEP article page, bytes of the Wayback capture 20261016021922 (gzip content coding removed); the heading “Infinitism in Epistemology” extracts to the text hash pinned by truth-core",
+      "language": "eng",
+      "license": "Copyright Peter D. Klein, John Turri and Internet Encyclopedia of Philosophy. Local research copy; no redistribution permission asserted.",
+      "source_url": "https://web.archive.org/web/20261016021922id_/https://iep.utm.edu/inf-epis/",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "e8908546a6933859b5fc2e46db06887978393ae76d1761ea63888a7cadc17978"
+    },
+    {
+      "id": "la-wikisource-meditatio-ii-adam-tannery-oldid-87716",
+      "work_id": "fl-work-8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+      "label": "Latin Wikisource transcription of Meditatio II after Adam–Tannery VII, revision 87716 (2018-02-01), AT page numbers inline as [n]",
+      "locator": "Meditatio II, AT VII 23–34",
+      "language": "lat",
+      "license": "Latin text public domain; Wikisource page text under CC BY-SA 4.0. Local research copy.",
+      "source_url": "https://la.wikisource.org/w/index.php?title=Meditationes_de_prima_philosophia_(Adam_et_Tannery)/Meditatio_II&oldid=87716",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "11b44e4bb92a13e70991e9802b223437ea93e6c884800130622939cbeb475389"
+    },
+    {
+      "id": "la-wikisource-meditatio-iii-adam-tannery-oldid-87717",
+      "work_id": "fl-work-8ac0e273-75c8-4229-8e61-b3ad1507b9ff",
+      "label": "Latin Wikisource transcription of Meditatio III after Adam–Tannery VII, revision 87717 (2018-02-01), AT page numbers inline as [n]",
+      "locator": "Meditatio III, AT VII 34–52",
+      "language": "lat",
+      "license": "Latin text public domain; Wikisource page text under CC BY-SA 4.0. Local research copy.",
+      "source_url": "https://la.wikisource.org/w/index.php?title=Meditationes_de_prima_philosophia_(Adam_et_Tannery)/Meditatio_III&oldid=87717",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "33ed96692e1cf480d5228fa4b56145149df60873d031f0b58bde578ba8a423d5"
     },
     {
       "id": "newadvent-fathers-2009-130109",
@@ -27776,6 +28677,17 @@
       "sha256": "f70df7ba50081a069a310bbff209c160635c2f2f4fe01e6f9deee3a9bb055680"
     },
     {
+      "id": "pmc3676066-wayback-20250327163937",
+      "work_id": "fl-work-4fb153f8-fccc-4b86-a83f-8e5e78602834",
+      "label": "PMC full text of J Bacteriol 195:2530–2540 (doi:10.1128/JB.00259-13), bytes of the Wayback capture 20250327163937; RESULTS, DISCUSSION and MATERIALS AND METHODS headings extract to the text hashes pinned by truth-core",
+      "language": "eng",
+      "license": "Copyright 2013 American Society for Microbiology. Local research copy; no redistribution permission asserted.",
+      "source_url": "https://web.archive.org/web/20250327163937id_/https://pmc.ncbi.nlm.nih.gov/articles/PMC3676066/",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "38180033e9fb476d893aa822f7c308b28dbebaf938ed6bdedb90286b7fab850c"
+    },
+    {
       "id": "ramanathan-superflow-aps-accepted-2011",
       "work_id": "ramanathan-superflow-toroidal-condensate",
       "label": "Ramanathan et al., APS accepted manuscript, Phys. Rev. Lett. 106, 130401 (2011), Fig. 2 on PDF p. 3",
@@ -27814,6 +28726,18 @@
       "source_url": "https://users.ox.ac.uk/~orie0087/pdf_files/Papers%20from%20Philosophical%20Journals/Swinburne_2011-explanation.pdf",
       "format": "pdf",
       "sha256": "b6f5dbd608ff5b59a9d3d0f396613469d4033cacb4dac1a7d54ea0c757a03520"
+    },
+    {
+      "id": "veitch-principles-selections-gutenberg-4391-wayback-20260908085833",
+      "work_id": "fl-work-14f373d9-8abe-42b8-8180-25e8299cf3f9",
+      "label": "Veitch (trans.), Selections from the Principles of Philosophy, Project Gutenberg #4391 HTML; bytes of the Wayback capture 20260908085833 (Gutenberg was in maintenance on 2026-11-26); Part I complete, §§LII–LIII at p#id00136 onward",
+      "locator": "Part I",
+      "language": "eng",
+      "license": "Veitch translation public domain in the US; Project Gutenberg License for the ebook. Local research copy.",
+      "source_url": "https://web.archive.org/web/20260908085833id_/https://www.gutenberg.org/cache/epub/4391/pg4391-images.html",
+      "format": "html",
+      "encoding": "utf-8",
+      "sha256": "514f45d51c7735efdac06b355d1f762581877d216e432737a1dd402ca23316c5"
     },
     {
       "id": "viermann-field-simulator-arxiv-2202-10399-v2",
@@ -27890,17 +28814,17 @@
           "cited_at": [
             {
               "path": "docs/notes/maximum-definition-fork.md",
-              "line": 1186,
+              "line": 1119,
               "label": "Verhagen et al., Figs. 1–3 and Appendix A2B–C, Figs. A4–A5"
             },
             {
               "path": "docs/notes/maximum-definition-fork.md",
-              "line": 1195,
+              "line": 1128,
               "label": "Appendix A1, Fig. A2, and Fig. 3a–c"
             },
             {
               "path": "docs/notes/root-route-modal-load.md",
-              "line": 693,
+              "line": 637,
               "label": "Verhagen et al., Fig. 1 and Appendix A2, especially Fig. A4"
             }
           ]
@@ -27945,12 +28869,12 @@
           "cited_at": [
             {
               "path": "docs/notes/part-free-plurality.md",
-              "line": 439,
+              "line": 449,
               "label": "GW analysis, §§III–IV"
             },
             {
               "path": "docs/notes/part-free-plurality.md",
-              "line": 471,
+              "line": 481,
               "label": "Livingston analysis, §II and Fig. 2"
             }
           ]
@@ -27965,7 +28889,7 @@
           "cited_at": [
             {
               "path": "docs/notes/part-free-plurality.md",
-              "line": 423,
+              "line": 433,
               "label": "Multi-messenger collaboration, §§2–2.2 and Fig. 2"
             }
           ]
@@ -27980,17 +28904,17 @@
           "cited_at": [
             {
               "path": "docs/notes/part-free-plurality.md",
-              "line": 440,
+              "line": 450,
               "label": "Joint GW–gamma analysis, §§2, 5.1 and 6"
             },
             {
               "path": "docs/notes/part-free-plurality.md",
-              "line": 454,
+              "line": 464,
               "label": "Joint analysis, §3"
             },
             {
               "path": "docs/notes/root-route-modal-load.md",
-              "line": 679,
+              "line": 623,
               "label": "Measured association, §3"
             }
           ]
@@ -28005,8 +28929,29 @@
           "cited_at": [
             {
               "path": "docs/notes/part-free-plurality.md",
-              "line": 441,
+              "line": 451,
               "label": "Mooley et al., radio astrometry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arxiv:2202.10399",
+      "cited_urls": [
+        {
+          "url": "https://arxiv.org/pdf/2202.10399v2",
+          "work_ids": [
+            "viermann-quantum-field-simulator"
+          ],
+          "edition_ids": [
+            "viermann-field-simulator-arxiv-2202-10399-v2"
+          ],
+          "cited_at": [
+            {
+              "path": "docs/notes/spatial-translation-and-reason.md",
+              "line": 233,
+              "label": "Potassium experiment, Figs. 1–2"
             }
           ]
         }
@@ -28051,6 +28996,11 @@
             {
               "path": "docs/notes/unique-feedback-explanation-311.md",
               "line": 237
+            },
+            {
+              "path": "docs/notes/unique-feedback-explanation-311.md",
+              "line": 4257,
+              "label": "Gott and Li, Can the Universe Create Itself?"
             },
             {
               "path": "docs/principle-parity-challenges.md",
@@ -28212,8 +29162,23 @@
           "cited_at": [
             {
               "path": "docs/notes/epistemic-reasons-preconditions.md",
-              "line": 497,
+              "line": 474,
               "label": "Can the aim of belief ground epistemic normativity?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1007/s11153-007-9113-1",
+      "cited_urls": [
+        {
+          "url": "https://doi.org/10.1007/s11153-007-9113-1",
+          "cited_at": [
+            {
+              "path": "docs/notes/sustaining-vs-existential-inertia.md",
+              "line": 1546,
+              "label": "Beaudoin's publisher abstract"
             }
           ]
         }
@@ -28257,7 +29222,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 424,
+              "line": 401,
               "label": "Palmer et al., 2020"
             }
           ]
@@ -28590,13 +29555,34 @@
           "cited_at": [
             {
               "path": "docs/notes/unique-feedback-explanation-311.md",
-              "line": 4254,
+              "line": 4130,
               "label": "Han et al., 2024, Fig. 1, §V Fig. 5 and discussion on p. 064702-8"
             },
             {
               "path": "docs/notes/unique-feedback-explanation-311.md",
-              "line": 4256,
+              "line": 4132,
               "label": "2024, §§V–VI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doi:10.1103/physrevlett.106.130401",
+      "cited_urls": [
+        {
+          "url": "https://link.aps.org/accepted/10.1103/PhysRevLett.106.130401",
+          "work_ids": [
+            "ramanathan-superflow-toroidal-condensate"
+          ],
+          "edition_ids": [
+            "ramanathan-superflow-aps-accepted-2011"
+          ],
+          "cited_at": [
+            {
+              "path": "docs/notes/spatial-translation-and-reason.md",
+              "line": 233,
+              "label": "Sodium experiment, Fig. 2(b)"
             }
           ]
         }
@@ -28610,12 +29596,12 @@
           "cited_at": [
             {
               "path": "docs/notes/unique-feedback-explanation-311.md",
-              "line": 4252,
+              "line": 4128,
               "label": "Fernández-Nieves et al., 2007, pp. 157801-1–3, Figs. 1 and 3"
             },
             {
               "path": "docs/notes/unique-feedback-explanation-311.md",
-              "line": 4256,
+              "line": 4132,
               "label": "2007, pp. 157801-3–4"
             }
           ]
@@ -28891,7 +29877,7 @@
           "cited_at": [
             {
               "path": "docs/notes/modal-grounding-priority-950.md",
-              "line": 477,
+              "line": 468,
               "label": "Hellman, Mathematics without Numbers, publisher's abstract"
             }
           ]
@@ -28999,7 +29985,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 553,
+              "line": 459,
               "label": "Air-to-ground exchange at 070:55:52–070:57:32"
             }
           ]
@@ -29014,7 +30000,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1230,
+              "line": 1186,
               "label": "SCG II.24, arguments 1–3"
             }
           ]
@@ -29090,7 +30076,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1198,
+              "line": 1154,
               "label": "De veritate q.3 a.1 co., ad 5, 8, 11"
             }
           ]
@@ -29105,7 +30091,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1200,
+              "line": 1156,
               "label": "q.3 a.3 co., ad 3–9"
             }
           ]
@@ -29141,6 +30127,21 @@
               "path": "docs/notes/priority-independence-logic-support-investigation.md",
               "line": 242,
               "label": "Aristotle, Categories 12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://classics.mit.edu/Aristotle/metaphysics.12.xii.html",
+      "cited_urls": [
+        {
+          "url": "https://classics.mit.edu/Aristotle/metaphysics.12.xii.html",
+          "cited_at": [
+            {
+              "path": "docs/intellectual-appetite-source.md",
+              "line": 505,
+              "label": "Aristotle, Metaphysics XII.7 and XII.9, Ross translation"
             }
           ]
         }
@@ -29184,7 +30185,7 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2933,
+              "line": 2844,
               "label": "Metaphysics IX.6, 1048b18–35, and IX.8, 1050a21–b2"
             },
             {
@@ -29198,8 +30199,13 @@
               "label": "Ross translation"
             },
             {
+              "path": "docs/notes/unique-feedback-explanation-311.md",
+              "line": 4248,
+              "label": "Aristotle, Metaphysics IX.8, Ross translation"
+            },
+            {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 912,
+              "line": 868,
               "label": "Metaphysics Θ.2 (1046b4–15) and Θ.5 (1047b31–1048a24)"
             }
           ]
@@ -29437,7 +30443,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 424,
+              "line": 401,
               "label": "1839 paper, pp. 39–41 and conclusion"
             }
           ]
@@ -29472,7 +30478,7 @@
             },
             {
               "path": "docs/notes/explanatory-adequacy-750.md",
-              "line": 2573,
+              "line": 2282,
               "label": "Dialogues, IX.3 and IX.9"
             }
           ]
@@ -29523,7 +30529,7 @@
           "cited_at": [
             {
               "path": "docs/notes/root-route-modal-load.md",
-              "line": 679,
+              "line": 623,
               "label": "Progenitor study"
             }
           ]
@@ -29635,7 +30641,7 @@
           "cited_at": [
             {
               "path": "docs/notes/actuality-esse-research.md",
-              "line": 326,
+              "line": 314,
               "label": "Venice parallel, §12"
             }
           ]
@@ -29708,6 +30714,36 @@
       ]
     },
     {
+      "id": "https://en.wikisource.org/wiki/Page:Dialogues_Concerning_Natural_Religion_-_Hume_(1779).djvu/173",
+      "cited_urls": [
+        {
+          "url": "https://en.wikisource.org/wiki/Page:Dialogues_Concerning_Natural_Religion_-_Hume_(1779).djvu/173",
+          "cited_at": [
+            {
+              "path": "docs/notes/contractive-borrowed-power-1378.md",
+              "line": 600,
+              "label": "Hume, Dialogues Concerning Natural Religion, Part IX, printed p. 167"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.4",
+      "cited_urls": [
+        {
+          "url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.4",
+          "cited_at": [
+            {
+              "path": "docs/intellectual-appetite-source.md",
+              "line": 533,
+              "label": "Plotinus, Enneads V.4.1–2, MacKenna translation"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_4/Ennead_5.5",
       "cited_urls": [
         {
@@ -29737,6 +30773,21 @@
               "path": "docs/notes/contingency-receptivity-c2.md",
               "line": 1059,
               "label": "V.7.1–2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_5/Ennead_6.8",
+      "cited_urls": [
+        {
+          "url": "https://en.wikisource.org/wiki/Plotinus_(MacKenna)/Volume_5/Ennead_6.8",
+          "cited_at": [
+            {
+              "path": "docs/intellectual-appetite-source.md",
+              "line": 534,
+              "label": "Plotinus, Enneads VI.8, MacKenna translation"
             }
           ]
         }
@@ -29882,12 +30933,12 @@
           "cited_at": [
             {
               "path": "docs/notes/actuality-esse-research.md",
-              "line": 328,
+              "line": 316,
               "label": "Freddoso, §§2–4"
             },
             {
               "path": "docs/notes/actuality-esse-research.md",
-              "line": 344,
+              "line": 332,
               "label": "Freddoso's symmetry argument and its premise about conservation, §4 and notes 25–26"
             }
           ]
@@ -29908,7 +30959,7 @@
           "cited_at": [
             {
               "path": "docs/notes/actuality-esse-research.md",
-              "line": 281,
+              "line": 269,
               "label": "Disp. 26, §§9, 11–16"
             }
           ]
@@ -29923,7 +30974,7 @@
           "cited_at": [
             {
               "path": "docs/notes/part-free-plurality.md",
-              "line": 423,
+              "line": 433,
               "label": "GCN Circular 21505"
             }
           ]
@@ -30031,6 +31082,43 @@
       ]
     },
     {
+      "id": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d31.pdf",
+      "cited_urls": [
+        {
+          "url": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d31.pdf#page=5",
+          "work_ids": [
+            "fl-work-3dba6cf4-271a-4cd9-8a18-7ff830520b32"
+          ],
+          "edition_ids": [
+            "suarez-dm-xxxi-castellote-renemann-2020-09"
+          ],
+          "cited_at": [
+            {
+              "path": "docs/notes/de-ente-esse-source-1628.md",
+              "line": 1846,
+              "label": "XXXI.I.13, p. 5"
+            }
+          ]
+        },
+        {
+          "url": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d31.pdf#page=81",
+          "work_ids": [
+            "fl-work-3dba6cf4-271a-4cd9-8a18-7ff830520b32"
+          ],
+          "edition_ids": [
+            "suarez-dm-xxxi-castellote-renemann-2020-09"
+          ],
+          "cited_at": [
+            {
+              "path": "docs/notes/de-ente-esse-source-1628.md",
+              "line": 1846,
+              "label": "XXXI.XIII.17–18, p. 81"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "https://hrcak.srce.hr/en/101525",
       "cited_urls": [
         {
@@ -30094,7 +31182,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1736,
+              "line": 1692,
               "label": "English and Latin"
             }
           ]
@@ -30109,7 +31197,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1715,
+              "line": 1671,
               "label": "English and Latin"
             }
           ]
@@ -30187,7 +31275,7 @@
           "cited_at": [
             {
               "path": "docs/notes/root-esse-goodness-prd.md",
-              "line": 161,
+              "line": 142,
               "label": "De veritate q.21 a.1–2, especially a.1 ad 2 and a.2 body"
             }
           ]
@@ -30207,7 +31295,7 @@
             },
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1625,
+              "line": 1581,
               "label": "De veritate q.23 a.4 ad 8 and ad 12"
             }
           ]
@@ -30295,7 +31383,7 @@
           "cited_at": [
             {
               "path": "docs/notes/goodness-form-end-definitions.md",
-              "line": 567,
+              "line": 554,
               "label": "pp. 288–289 and 294–295"
             }
           ]
@@ -30421,7 +31509,7 @@
           "cited_at": [
             {
               "path": "docs/notes/epistemic-reasons-preconditions.md",
-              "line": 1078,
+              "line": 1056,
               "label": "Internal and external reasons"
             }
           ]
@@ -30507,7 +31595,7 @@
           "cited_at": [
             {
               "path": "docs/notes/goodness-form-end-definitions.md",
-              "line": 563,
+              "line": 550,
               "label": "pp. 156–162"
             }
           ]
@@ -30614,7 +31702,7 @@
           "cited_at": [
             {
               "path": "docs/notes/modal-grounding-priority-950.md",
-              "line": 475,
+              "line": 466,
               "label": "Kant, Only Possible Argument, First Section, Second Reflection §§1–4, AK 2:77–81, and Fourth Reflection §1, AK 2:87–89"
             }
           ]
@@ -30751,6 +31839,21 @@
               "path": "docs/notes/optimal-creation-choice.md",
               "line": 709,
               "label": "§§2–4, printed pp. 7–15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://philarchive.org/archive/OPPKCAv1",
+      "cited_urls": [
+        {
+          "url": "https://philarchive.org/archive/OPPKCAv1",
+          "cited_at": [
+            {
+              "path": "docs/notes/contractive-borrowed-power-1378.md",
+              "line": 588,
+              "label": "Oppy, “Koons’ Cosmological Argument,” §2"
             }
           ]
         }
@@ -30925,7 +32028,7 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 4483,
+              "line": 4107,
               "label": "SEP higher-order consciousness survey, §6"
             }
           ]
@@ -31254,7 +32357,7 @@
             },
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 3719,
+              "line": 3466,
               "label": "Emergent Properties"
             }
           ]
@@ -31329,7 +32432,7 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 4486,
+              "line": 4110,
               "label": "phenomenological self-consciousness entry, §1"
             }
           ]
@@ -31374,7 +32477,7 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 4070,
+              "line": 3756,
               "label": "SEP, Truthmakers, sections 2.2–2.3"
             }
           ]
@@ -31440,7 +32543,7 @@
           "cited_at": [
             {
               "path": "docs/notes/part-free-plurality.md",
-              "line": 491,
+              "line": 501,
               "label": "Lake et al., Figs. 5–7 and “Mode characterization”"
             }
           ]
@@ -31455,7 +32558,7 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2932,
+              "line": 2843,
               "label": "De anima II.4, 415a22–b7 and 416b9–29"
             }
           ]
@@ -31485,7 +32588,7 @@
           "cited_at": [
             {
               "path": "docs/notes/goodness-form-end-definitions.md",
-              "line": 623,
+              "line": 610,
               "label": "Inhibition of vascular endothelial growth factor-induced angiogenesis suppresses tumour growth in vivo"
             }
           ]
@@ -31605,7 +32708,7 @@
           "cited_at": [
             {
               "path": "docs/immaterial-intellect-reception.md",
-              "line": 1477,
+              "line": 1443,
               "label": "author/institution-hosted PDF"
             }
           ]
@@ -31650,7 +32753,7 @@
           "cited_at": [
             {
               "path": "docs/immaterial-intellect-reception.md",
-              "line": 1546,
+              "line": 1512,
               "label": "Mars Facts"
             }
           ]
@@ -31727,7 +32830,7 @@
           "cited_at": [
             {
               "path": "docs/notes/epistemic-reasons-preconditions.md",
-              "line": 707,
+              "line": 685,
               "label": "Value Theory"
             }
           ]
@@ -32002,12 +33105,12 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 553,
+              "line": 459,
               "label": "Flight Control Division report, III-22–23"
             },
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 566,
+              "line": 472,
               "label": "Flight Control Division report, Appendix B, p. B-12, §E.1–2"
             }
           ]
@@ -32037,7 +33140,7 @@
           "cited_at": [
             {
               "path": "docs/notes/modal-grounding-priority-950.md",
-              "line": 481,
+              "line": 472,
               "label": "Armstrong, A Combinatorial Theory of Possibility, ch. 4"
             }
           ]
@@ -32052,7 +33155,7 @@
           "cited_at": [
             {
               "path": "docs/notes/epistemic-reasons-preconditions.md",
-              "line": 1084,
+              "line": 1062,
               "label": "Internal reasons and the obscurity of blame"
             }
           ]
@@ -32068,6 +33171,11 @@
             {
               "path": "docs/notes/unique-feedback-explanation-311.md",
               "line": 284
+            },
+            {
+              "path": "docs/notes/unique-feedback-explanation-311.md",
+              "line": 4256,
+              "label": "Newman, §§3–5"
             },
             {
               "path": "docs/principle-parity-challenges.md",
@@ -32310,7 +33418,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1735,
+              "line": 1691,
               "label": "De potentia q.3 a.16 co., ad 11 and ad 13–15"
             }
           ]
@@ -32325,7 +33433,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1714,
+              "line": 1670,
               "label": "De potentia q.7 a.1 ad 1, 7–8"
             }
           ]
@@ -32377,7 +33485,7 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2942,
+              "line": 2853,
               "label": "SCG I.28 nn.1–4, 23773–23776"
             },
             {
@@ -32437,7 +33545,7 @@
             },
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2826,
+              "line": 2781,
               "label": "SCG I.97 n.3, 24394"
             }
           ]
@@ -32483,6 +33591,7 @@
             "fl-work-c77377cf-501b-56c6-be40-b518e9aad101"
           ],
           "edition_ids": [
+            "fl-edition-4a3f19e7759d2269d1c7fe8c7a0384bfee3eeab5f3d9b66200210b011dc34f65",
             "fl-edition-bb4215d0b410e14f9bf74fb92471c8d361db87e4ae9ad33381713180a0e681e4"
           ],
           "cited_at": [
@@ -32502,7 +33611,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 426,
+              "line": 403,
               "label": "Jamieson, September 3, paragraphs on Loch Treig and Glen Glaster"
             }
           ]
@@ -32517,7 +33626,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 426,
+              "line": 403,
               "label": "Darwin to Lyell"
             }
           ]
@@ -32532,7 +33641,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 426,
+              "line": 403,
               "label": "Darwin to Jamieson"
             }
           ]
@@ -32547,7 +33656,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 428,
+              "line": 405,
               "label": "September 15"
             }
           ]
@@ -32562,7 +33671,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 428,
+              "line": 405,
               "label": "October 20"
             }
           ]
@@ -32577,7 +33686,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 428,
+              "line": 405,
               "label": "October 14 and enclosure, especially its final paragraph before the signature and editorial n. 14"
             }
           ]
@@ -32655,7 +33764,7 @@
           "cited_at": [
             {
               "path": "docs/notes/modal-grounding-priority-950.md",
-              "line": 473,
+              "line": 464,
               "label": "II.xxx §4, p. 129"
             }
           ]
@@ -32670,7 +33779,7 @@
           "cited_at": [
             {
               "path": "docs/notes/modal-grounding-priority-950.md",
-              "line": 473,
+              "line": 464,
               "label": "Leibniz, New Essays IV.xi §14, pp. 225–226"
             }
           ]
@@ -32775,7 +33884,7 @@
           "cited_at": [
             {
               "path": "docs/notes/goodness-form-end-definitions.md",
-              "line": 647,
+              "line": 634,
               "label": "§3.3, pp. 598–602"
             }
           ]
@@ -33862,7 +34971,7 @@
             },
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1704,
+              "line": 1660,
               "label": "ST I q.3 a.2 co./ad 3, a.4 co. and a.6–7 co."
             }
           ]
@@ -33894,7 +35003,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1548,
+              "line": 1504,
               "label": "ST I q.3 a.6 co. and a.7 co."
             }
           ]
@@ -33915,12 +35024,12 @@
           "cited_at": [
             {
               "path": "docs/notes/actuality-esse-research.md",
-              "line": 52,
+              "line": 47,
               "label": "Public Dominican translation, reply 3"
             },
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2942,
+              "line": 2853,
               "label": "ST I q.4 a.2 co., ad 3"
             },
             {
@@ -33951,7 +35060,7 @@
             },
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1707,
+              "line": 1663,
               "label": "Q.4 a.2 co./ad 1–3"
             }
           ]
@@ -33977,12 +35086,12 @@
             },
             {
               "path": "docs/notes/root-esse-goodness-prd.md",
-              "line": 144,
+              "line": 125,
               "label": "ST I q.5 a.1 ad 1"
             },
             {
               "path": "docs/notes/root-esse-goodness-prd.md",
-              "line": 158,
+              "line": 139,
               "label": "ST I q.5 a.3, body and replies 2–4"
             }
           ]
@@ -34035,7 +35144,7 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2950,
+              "line": 2861,
               "label": "ST I q.6 a.3 co. and ad 1–2"
             },
             {
@@ -34045,12 +35154,12 @@
             },
             {
               "path": "docs/notes/root-esse-goodness-prd.md",
-              "line": 159,
+              "line": 140,
               "label": "ST I q.6 a.3, body and replies"
             },
             {
               "path": "docs/notes/root-esse-goodness-prd.md",
-              "line": 160,
+              "line": 141,
               "label": "ST I q.6 a.1–2"
             }
           ]
@@ -34195,7 +35304,7 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2842,
+              "line": 2797,
               "label": "ST I q.13 a.7 co., ad 3, ad 6"
             },
             {
@@ -34205,7 +35314,7 @@
             },
             {
               "path": "docs/notes/psr-self-application-756.md",
-              "line": 2119,
+              "line": 2073,
               "label": "Primary text"
             }
           ]
@@ -34262,7 +35371,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1597,
+              "line": 1553,
               "label": "ST I q.14 a.16 co./ad 1–2"
             }
           ]
@@ -34294,7 +35403,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 626,
+              "line": 532,
               "label": "ST I q.14 a.8"
             },
             {
@@ -34409,12 +35518,12 @@
             },
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2826,
+              "line": 2781,
               "label": "ST I q.18 a.1 co., ad 2; a.2 co., ad 2; a.3 co., ad 1–3"
             },
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2934,
+              "line": 2845,
               "label": "ST I q.18 a.2 co. and a.3 ad 1–3"
             },
             {
@@ -34440,12 +35549,12 @@
           "cited_at": [
             {
               "path": "docs/notes/divine-love-goodness-bridge.md",
-              "line": 34,
+              "line": 33,
               "label": "ST I q.19 a.1 co., ad 2"
             },
             {
               "path": "docs/notes/divine-love-goodness-bridge.md",
-              "line": 38,
+              "line": 37,
               "label": "ST I q.19 a.4 co., ad 3–4"
             },
             {
@@ -34485,7 +35594,7 @@
             },
             {
               "path": "docs/notes/psr-self-application-756.md",
-              "line": 2128,
+              "line": 2082,
               "label": "Primary text"
             },
             {
@@ -34522,7 +35631,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 626,
+              "line": 532,
               "label": "ST I q.19 a.4, third argument and reply 4"
             },
             {
@@ -34537,7 +35646,7 @@
             },
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1823,
+              "line": 1779,
               "label": "ST I q.19 a.4 co."
             }
           ]
@@ -34553,7 +35662,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-symmetry-742.md",
-              "line": 626,
+              "line": 532,
               "label": "a.5, answer and reply 1"
             }
           ]
@@ -34574,12 +35683,12 @@
           "cited_at": [
             {
               "path": "docs/notes/divine-love-goodness-bridge.md",
-              "line": 24,
+              "line": 23,
               "label": "ST I q.20 a.2 co. and ad 3–4"
             },
             {
               "path": "docs/notes/divine-love-goodness-bridge.md",
-              "line": 31,
+              "line": 30,
               "label": "ST I q.20 a.1 co., ad 1, ad 3"
             }
           ]
@@ -34621,7 +35730,7 @@
             },
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 925,
+              "line": 881,
               "label": "ST I q.25 a.1 co., ad 3–4 and a.5 ad 1"
             }
           ]
@@ -34638,12 +35747,12 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2842,
+              "line": 2797,
               "label": "ST I q.25 a.1 ad 2–3"
             },
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1569,
+              "line": 1525,
               "label": "ST I q.25 a.1 ad 3–4"
             }
           ]
@@ -34665,7 +35774,7 @@
             },
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1298,
+              "line": 1254,
               "label": "ST I q.25 a.2 ad 2"
             }
           ]
@@ -35047,7 +36156,7 @@
           "cited_at": [
             {
               "path": "docs/notes/causal-perfection-transfer.md",
-              "line": 2842,
+              "line": 2797,
               "label": "ST I q.45 a.3 co., ad 1–3"
             },
             {
@@ -35062,8 +36171,29 @@
             },
             {
               "path": "docs/notes/psr-self-application-756.md",
-              "line": 2107,
+              "line": 2061,
               "label": "Primary text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://www.newadvent.org/summa/1046.htm",
+      "cited_urls": [
+        {
+          "url": "https://www.newadvent.org/summa/1046.htm",
+          "work_ids": [
+            "fl-work-c77377cf-501b-56c6-be40-b518e9aad101"
+          ],
+          "edition_ids": [
+            "newadvent-summa-2009-1046"
+          ],
+          "cited_at": [
+            {
+              "path": "docs/notes/contractive-borrowed-power-1378.md",
+              "line": 571,
+              "label": "Aquinas, ST I, q.46 a.2 ad 7"
             }
           ]
         }
@@ -35099,7 +36229,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1824,
+              "line": 1780,
               "label": "q.47 a.1 co./ad 1"
             }
           ]
@@ -35188,7 +36318,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1534,
+              "line": 1490,
               "label": "ST I q.77 a.3 co./ad 1–4"
             }
           ]
@@ -35225,7 +36355,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1523,
+              "line": 1479,
               "label": "ST I q.79 a.10 ad 3"
             }
           ]
@@ -35241,7 +36371,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1524,
+              "line": 1480,
               "label": "a.11 co./ad 1–3"
             }
           ]
@@ -35449,7 +36579,7 @@
             },
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1886,
+              "line": 1842,
               "label": "ST I-II q.9 a.1 co. and ad 1–3"
             }
           ]
@@ -35470,7 +36600,7 @@
           "cited_at": [
             {
               "path": "docs/notes/will-versus-chance.md",
-              "line": 1897,
+              "line": 1853,
               "label": "ST I-II q.10 a.1 ad 2 and a.2"
             }
           ]
@@ -35775,7 +36905,7 @@
           "cited_at": [
             {
               "path": "docs/notes/epistemic-reasons-preconditions.md",
-              "line": 702,
+              "line": 680,
               "label": "Knowledge, Understanding and Epistemic Value"
             }
           ]
@@ -35790,7 +36920,7 @@
           "cited_at": [
             {
               "path": "docs/notes/modal-grounding-priority-950.md",
-              "line": 473,
+              "line": 464,
               "label": "Locke, Essay IV.xi §§13–14"
             }
           ]
@@ -35946,7 +37076,7 @@
           "cited_at": [
             {
               "path": "docs/notes/explanatory-adequacy-750.md",
-              "line": 2582,
+              "line": 2291,
               "label": "On the Ultimate Origin of Things, opening paragraphs and section 2"
             }
           ]
@@ -35990,6 +37120,27 @@
       ]
     },
     {
+      "id": "https://www3.nd.edu/~powers/ame.20231/thompson1798.pdf",
+      "cited_urls": [
+        {
+          "url": "https://www3.nd.edu/~powers/ame.20231/thompson1798.pdf",
+          "work_ids": [
+            "rumford-heat-friction-1798"
+          ],
+          "edition_ids": [
+            "rumford-1798-philosophical-transactions-88"
+          ],
+          "cited_at": [
+            {
+              "path": "docs/notes/productive-store-1378.md",
+              "line": 269,
+              "label": "Primary report, pp. 81–82, 91–93, 98–99"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "https://zoo.cs.yale.edu/classes/cs471/13s/13s-papers/millikan-biosemantics.pdf",
       "cited_urls": [
         {
@@ -35997,7 +37148,7 @@
           "cited_at": [
             {
               "path": "docs/notes/modal-grounding-priority-950.md",
-              "line": 485,
+              "line": 476,
               "label": "Millikan, “Biosemantics,” pp. 284–289, 292–294"
             }
           ]
@@ -36007,6 +37158,6 @@
   ],
   "formal_logos": {
     "repository": "moritzbrantner/formal-logos",
-    "revision": "9eef0b04b958c1c5a618b8307ef43343495591bf"
+    "revision": "190a6bd0c7a9db35851c73a0df8d4c09adb882ed"
   }
 }

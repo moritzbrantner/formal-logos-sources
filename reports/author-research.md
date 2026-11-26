@@ -2,15 +2,15 @@
 
 Counts describe registered catalogue references and curated plans, not complete bibliographies, reading coverage, acquired bytes or permission to redistribute. Jointly attributed works can occur under more than one person; profile totals are not additive.
 
-Attribution strings: **131 total**, **6 mapped to profiles**, **125 without a profile**. There are **5 curated profiles**, of which **5 are recorded deceased**; this view selects **5**. Unprofiled attributions have no life-status classification here.
+Attribution strings: **157 total**, **6 mapped to profiles**, **151 without a profile**. There are **5 curated profiles**, of which **5 are recorded deceased**; this view selects **5**. Unprofiled attributions have no life-status classification here.
 
-Catalogue source: [moritzbrantner/formal-logos at 9eef0b04b958c1c5a618b8307ef43343495591bf](https://github.com/moritzbrantner/formal-logos/tree/9eef0b04b958c1c5a618b8307ef43343495591bf).
+Catalogue source: [moritzbrantner/formal-logos at 190a6bd0c7a9db35851c73a0df8d4c09adb882ed](https://github.com/moritzbrantner/formal-logos/tree/190a6bd0c7a9db35851c73a0df8d4c09adb882ed).
 
 Profiles are ordered by registered passage count, then profile ID. Counts indicate existing corpus use, not philosophical importance or research completion.
 
 | Profile | Works | Witnesses | Passages | Retrieval candidates | Works without candidates |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Thomas Aquinas | 7 | 54 | 104 | 11 | 0 |
+| Thomas Aquinas | 8 | 685 | 127 | 12 | 0 |
 | Aristotle | 5 | 10 | 94 | 3 | 3 |
 | Immanuel Kant | 1 | 1 | 4 | 2 | 0 |
 | Gottfried Wilhelm Leibniz | 2 | 3 | 4 | 2 | 0 |
@@ -32,13 +32,14 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [Compendium theologiae](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aquinas-compendium-theologiae.json) | 1 | 1 | 1 |
-| [De ente et essentia](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aquinas-de-ente-et-essentia.json) | 2 | 2 | 1 |
-| [In octo libros Physicorum Aristotelis expositio](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aquinas-in-physicorum.json) | 3 | 6 | 1 |
-| [Quaestiones disputatae de potentia](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aquinas-de-potentia.json) | 2 | 3 | 2 |
-| [Sententia libri Metaphysicae (In duodecim libros Metaphysicorum Aristotelis expositio)](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aquinas-in-metaphysicam.json) | 5 | 6 | 1 |
-| [Summa contra gentiles](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aquinas-summa-contra-gentiles.json) | 10 | 16 | 1 |
-| [Summa theologiae](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aquinas-summa-theologiae.json) | 31 | 70 | 4 |
+| [Compendium theologiae](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aquinas-compendium-theologiae.json) | 1 | 1 | 1 |
+| [De ente et essentia](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aquinas-de-ente-et-essentia.json) | 2 | 2 | 1 |
+| [Expositio libri Boetii De ebdomadibus](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aquinas-in-de-hebdomadibus.json) | 1 | 0 | 1 |
+| [In octo libros Physicorum Aristotelis expositio](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aquinas-in-physicorum.json) | 3 | 6 | 1 |
+| [Quaestiones disputatae de potentia](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aquinas-de-potentia.json) | 2 | 3 | 2 |
+| [Sententia libri Metaphysicae (In duodecim libros Metaphysicorum Aristotelis expositio)](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aquinas-in-metaphysicam.json) | 5 | 6 | 1 |
+| [Summa contra gentiles](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aquinas-summa-contra-gentiles.json) | 10 | 16 | 1 |
+| [Summa theologiae](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aquinas-summa-theologiae.json) | 661 | 93 | 4 |
 
 ### Bibliography inventories
 
@@ -104,6 +105,24 @@ Rights evidence:
 - [A Brief Introduction to the Corpus Thomisticum](https://www.corpusthomisticum.org/wintroen.html) (checked 2026-11-19): The project introduction describes freely available research tools and carries a site-level all-rights-reserved notice. It does not supply an edition-specific reuse licence for these text pages.
 
 Next step: Map selected chapters using the existing Baur/Koch locator convention; record any alignment to differently numbered translations explicitly and establish edition-specific reuse terms before redistribution.
+
+#### [Expositio libri Boetii De ebdomadibus — Latin, lectiones 1–5](https://www.corpusthomisticum.org/cbh.html)
+
+Work: Expositio libri Boetii De ebdomadibus. Language: lat. Format: HTML. Access: open online.
+
+Coverage: The whole commentary on one page, lectiones 1–5. The page identifies the Turin 1954 text (“Textum Taurini 1954 editum”), digitized by Roberto Busa and reviewed/arranged by Enrique Alarcón. Lectio 2, including the account of participare, is the single paragraph at anchor 84829, before the Lectio 3 heading and anchor 84830. Acquired locally as edition corpusthomisticum-cbh-2026-11-26 (ISO-8859-1).
+
+Rights — not established: Corpus Thomisticum’s Latin digital edition at this resource. The page claims copyright for this edition and reserves rights; edition-specific reuse permission has not been established.
+
+Edition/access evidence:
+
+- [Expositio libri Boetii De ebdomadibus](https://www.corpusthomisticum.org/cbh.html) (checked 2026-11-26): The page identifies lectiones 1–5 and the Turin 1954 text. A direct GET returned HTTP 200 with charset ISO-8859-1.
+
+Rights evidence:
+
+- [Expositio libri Boetii De ebdomadibus — edition notice](https://www.corpusthomisticum.org/cbh.html) (checked 2026-11-26): The page footer states ©2019 Fundación Tomás de Aquino for this edition and reserves all rights. No open reuse licence was identified on the page.
+
+Next step: Formal Logos candidate 3f8c1f3f-fa29-49c1-a431-dcaf84db70f5 can pin lectio 2 as a web\_snapshot (encoding iso-8859-1, html\_selector from anchor 84829 to anchor 84830). Keep the Turin 1954 text distinct from the Leonine vol. 50 (1992) edition.
 
 #### [De potentia — Latin, question 3](https://www.corpusthomisticum.org/qdp3.html)
 
@@ -287,11 +306,11 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [Categories](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aristotle-categories.json) | 1 | 1 | 0 |
-| [Metaphysics](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aristotle-metaphysics.json) | 5 | 24 | 2 |
-| [Nicomachean Ethics](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aristotle-nicomachean-ethics.json) | 1 | 2 | 0 |
-| [Physics](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aristotle-physics.json) | 2 | 65 | 1 |
-| [Posterior Analytics](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/aristotle-posterior-analytics.json) | 1 | 2 | 0 |
+| [Categories](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aristotle-categories.json) | 1 | 1 | 0 |
+| [Metaphysics](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aristotle-metaphysics.json) | 5 | 24 | 2 |
+| [Nicomachean Ethics](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aristotle-nicomachean-ethics.json) | 1 | 2 | 0 |
+| [Physics](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aristotle-physics.json) | 2 | 65 | 1 |
+| [Posterior Analytics](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/aristotle-posterior-analytics.json) | 1 | 2 | 0 |
 
 ### Bibliography inventories
 
@@ -381,7 +400,7 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [Critique of Pure Reason](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/kant-critique-pure-reason.json) | 1 | 4 | 2 |
+| [Critique of Pure Reason](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/kant-critique-pure-reason.json) | 1 | 4 | 2 |
 
 ### Bibliography inventories
 
@@ -456,8 +475,8 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [A Collection of Papers, Which passed between the late Learned Mr. Leibniz, and Dr. Clarke, In the Years 1715 and 1716](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/leibniz-clarke-correspondence.json) | 2 | 2 | 1 |
-| [Monadology](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/leibniz-monadology.json) | 1 | 2 | 1 |
+| [A Collection of Papers, Which passed between the late Learned Mr. Leibniz, and Dr. Clarke, In the Years 1715 and 1716](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/leibniz-clarke-correspondence.json) | 2 | 2 | 1 |
+| [Monadology](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/leibniz-monadology.json) | 1 | 2 | 1 |
 
 ### Bibliography inventories
 
@@ -527,7 +546,7 @@ Life-status evidence:
 
 | Work and canonical source | Witnesses | Passages | Retrieval candidates |
 | --- | ---: | ---: | ---: |
-| [The Philosophy of Logical Atomism (1918), Lectures V–VI](https://github.com/moritzbrantner/formal-logos/blob/9eef0b04b958c1c5a618b8307ef43343495591bf/corpus/sources/russell-logical-atomism.json) | 1 | 2 | 2 |
+| [The Philosophy of Logical Atomism (1918), Lectures V–VI](https://github.com/moritzbrantner/formal-logos/blob/190a6bd0c7a9db35851c73a0df8d4c09adb882ed/corpus/sources/russell-logical-atomism.json) | 1 | 2 | 2 |
 
 ### Bibliography inventories
 
