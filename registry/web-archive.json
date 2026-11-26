@@ -70,7 +70,8 @@
       "sha256": "c85cd92bcac99a2463b8c1a0f54298db35e98372c1d2bb1d395a07cd36bd755a",
       "bytes": 1537,
       "wayback_timestamp": "20231205092409",
-      "live_status": 403
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
     },
     {
       "url": "https://achrafkassioui.com/library/Jonathan-Schaffer-Monism-The-Priority-of-the-Whole.pdf",
@@ -664,7 +665,8 @@
       "status": 200,
       "content_type": "text/html;charset=UTF-8",
       "sha256": "14bc3d43dd4b60ea20b1526ac8872d8c9ae0fd85e7613c77309550d0d28f7be3",
-      "bytes": 2644
+      "bytes": 2644,
+      "not_content": "Elsevier linkinghub redirect page, not the cited article"
     },
     {
       "url": "https://doi.org/10.1016/j.quascirev.2020.106548",
@@ -674,7 +676,8 @@
       "status": 200,
       "content_type": "text/html;charset=UTF-8",
       "sha256": "28fff59014f00e21c189e955018ae8d97887e951c2392b81197e39adf022698e",
-      "bytes": 2756
+      "bytes": 2756,
+      "not_content": "Elsevier linkinghub redirect page, not the cited article"
     },
     {
       "url": "https://doi.org/10.1017/CBO9781139149136.002",
@@ -788,7 +791,8 @@
       "sha256": "a1c39476d18cc18bf09f79414ec98ad9c9c62515f1307d0364d4688f5dc77b4a",
       "bytes": 1474,
       "wayback_timestamp": "20221031014349",
-      "live_status": 403
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
     },
     {
       "url": "https://doi.org/10.1093/brain/awx359",
@@ -800,7 +804,8 @@
       "sha256": "bd92767ffd104bde03d4c4f57e63239ccec31cbf2ebef71b040bd0954d5f4d4c",
       "bytes": 1593,
       "wayback_timestamp": "20241204135634",
-      "live_status": 403
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
     },
     {
       "url": "https://doi.org/10.1093/oso/9780192862976.003.0007",
@@ -812,7 +817,8 @@
       "sha256": "73f4aacf569605343f7103050c34460c3f4e666e38015e99bbdf54ec72cd6045",
       "bytes": 1483,
       "wayback_timestamp": "20240624055318",
-      "live_status": 403
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
     },
     {
       "url": "https://doi.org/10.1093/oso/9780192898852.003.0009",
@@ -836,7 +842,8 @@
       "sha256": "c70f65d4d4b521506676ef651059524046941a256889f8db70e237abde600461",
       "bytes": 1421,
       "wayback_timestamp": "20240604132332",
-      "live_status": 403
+      "live_status": 403,
+      "not_content": "Wayback capture of an Oxford Academic bot-check page (JavaScript challenge), not the cited work"
     },
     {
       "url": "https://doi.org/10.1103/PhysRevD.108.023506",

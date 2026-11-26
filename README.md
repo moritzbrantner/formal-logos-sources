@@ -314,7 +314,10 @@ recorded URLs again and records the new hash.
 An archived copy is **not a catalogue edition**: work identity, edition, rights and the
 cited passage still need human judgment, after which `add`/`add-html` can register the same
 bytes. The bytes are what the host or the Wayback Machine served at `retrieved_at`; a 200
-response can still be a login wall or abridged page. Copyrighted pages stay in the local
+response can still be a login wall or abridged page. A reviewer who finds such a stub adds
+`not_content` with the reason to its entry; it then does not count as a local copy in
+`citations`, a rerun skips it like a recorded failure (`--retry-failed` refetches it), and
+the mark survives a refetch that returns the same bytes. Copyrighted pages stay in the local
 store and are never committed. `citations` checks only that the object file exists; it does
 not re-hash it.
 

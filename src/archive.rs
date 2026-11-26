@@ -62,6 +62,10 @@ pub struct Entry {
     /// Why no bytes were archived.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub error: Option<String>,
+    /// Set by a reviewer when the stored bytes are not the cited content (a bot-check page,
+    /// a redirect stub): the reason. Such a copy does not count as a local copy.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub not_content: Option<String>,
 }
 
 impl Entry {
@@ -174,6 +178,11 @@ impl WebArchive {
             }
             if entry.live_error.as_deref().is_some_and(str::is_empty) {
                 return fail("live_error must not be empty");
+            }
+            if let Some(reason) = &entry.not_content
+                && (reason.trim().is_empty() || entry.via.is_none())
+            {
+                return fail("not_content needs a reason and an archived copy");
             }
             match entry.via {
                 Some(via) => {
@@ -306,6 +315,9 @@ pub fn local_copy(
         }
     }
     let entry = archive_key(&target.url).and_then(|key| archive.get(&key).cloned())?;
+    if entry.not_content.is_some() {
+        return None;
+    }
     let sha = entry.sha256.as_deref()?;
     object_path(store, sha).is_file().then(|| {
         serde_json::json!({"kind": "web_archive", "via": entry.via, "retrieved_at": entry.retrieved_at, "sha256": sha})
@@ -610,6 +622,7 @@ impl Session<'_> {
             live_status: None,
             live_error: None,
             error: None,
+            not_content: None,
         };
         let (via, response) = match self.live(url) {
             Ok(response) => (Via::Live, response),
@@ -714,6 +727,9 @@ pub fn select(
     for key in keys {
         match archive.get(&key) {
             _ if options.refresh => wanted.push(key),
+            Some(e) if e.not_content.is_some() && !options.retry_failed => {
+                selection.recorded_failures += 1;
+            }
             Some(e)
                 if e.sha256
                     .as_deref()
@@ -760,7 +776,14 @@ pub fn run(
     let (mut live, mut wayback, mut new_bytes, mut archived_bytes) = (0, 0, 0u64, 0u64);
     let mut failures = Vec::new();
     for url in &selection.urls {
-        let (entry, body) = session.archive(url);
+        let (mut entry, body) = session.archive(url);
+        // The same bytes fetched again are still the stub a reviewer marked.
+        if let Some(previous) = archive.get(url)
+            && previous.sha256.is_some()
+            && previous.sha256 == entry.sha256
+        {
+            entry.not_content.clone_from(&previous.not_content);
+        }
         if let (Some(body), Some(sha)) = (&body, &entry.sha256) {
             if store_object(store, sha, body)? {
                 new_bytes += body.len() as u64;
@@ -1047,11 +1070,17 @@ mod tests {
             live_status: None,
             live_error: None,
             error: None,
+            not_content: None,
         };
         let mut archive = WebArchive {
             entries: vec![entry.clone()],
             ..WebArchive::default()
         };
+        assert!(archive.validate().is_ok());
+        archive.entries = vec![Entry {
+            not_content: Some("publisher bot-check page".into()),
+            ..entry.clone()
+        }];
         assert!(archive.validate().is_ok());
         for broken in [
             Entry {
@@ -1076,6 +1105,10 @@ mod tests {
             },
             Entry {
                 live_status: Some(403),
+                ..entry.clone()
+            },
+            Entry {
+                not_content: Some(" ".into()),
                 ..entry.clone()
             },
         ] {
