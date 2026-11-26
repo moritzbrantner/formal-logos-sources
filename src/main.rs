@@ -1,3 +1,4 @@
+mod archive;
 mod citations;
 mod formal_logos;
 mod html;
@@ -122,8 +123,9 @@ const USAGE: &str = "usage:
   formal-logos-sources compare-witnesses [--catalog PATH] [--store DIR]
   formal-logos-sources refresh-citations --formal-logos DIR [--catalog PATH]
   formal-logos-sources list [--catalog PATH]
-  formal-logos-sources check [--catalog PATH] [--research FILE]
-  formal-logos-sources citations [--source DOI_OR_ARXIV_OR_URL_OR_CATALOG_ID] [--catalog PATH]
+  formal-logos-sources check [--catalog PATH] [--research FILE] [--web-archive FILE]
+  formal-logos-sources citations [--source DOI_OR_ARXIV_OR_URL_OR_CATALOG_ID] [--without-local-copy] [--catalog PATH] [--store DIR] [--web-archive FILE] [--source-cache DIR]
+  formal-logos-sources archive [--url URL] [--dry-run] [--refresh] [--retry-failed] [--limit N] [--interval-ms MS] [--backoff-ms MS] [--wayback BASE_URL] [--catalog PATH] [--store DIR] [--web-archive FILE] [--source-cache DIR]
   formal-logos-sources authors [--name NAME] [--catalog PATH]
   formal-logos-sources research [--author ID_OR_NAME] [--deceased] [--format json|markdown] [--research FILE] [--catalog PATH]
   formal-logos-sources import --formal-logos DIR [--revision COMMIT] [--work-groups FILE] [--catalog PATH]
@@ -432,7 +434,7 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
             )?)
         }
         "check" => {
-            let opts = Options::parse(args, &["--catalog", "--research"], &[])?;
+            let opts = Options::parse(args, &["--catalog", "--research", "--web-archive"], &[])?;
             opts.no_positional()?;
             let path = opts.path("--catalog", "registry/catalog.json");
             if !path.is_file() {
@@ -458,17 +460,162 @@ fn run_command(args: impl Iterator<Item = String>) -> Result<(), String> {
                     "validation": "offline author, inventory, retrieval and evidence references"
                 });
             }
+            let archive_path = opts.path("--web-archive", "registry/web-archive.json");
+            if archive_path.is_file() || opts.fields.contains_key("--web-archive") {
+                let archive = archive::read_archive(&archive_path)?;
+                result["web_archive"] = serde_json::json!({
+                    "entries": archive.entries.len(),
+                    "archived_live": archive.entries.iter().filter(|e| e.via == Some(archive::Via::Live)).count(),
+                    "archived_wayback": archive.entries.iter().filter(|e| e.via == Some(archive::Via::Wayback)).count(),
+                    "failed": archive.entries.iter().filter(|e| e.via.is_none()).count(),
+                    "validation": "offline record structure; archived bytes not checked"
+                });
+            }
             show(&result)
         }
         "citations" => {
-            let opts = Options::parse(args, &["--catalog", "--source"], &[])?;
+            let opts = Options::parse(
+                args,
+                &[
+                    "--catalog",
+                    "--source",
+                    "--store",
+                    "--web-archive",
+                    "--source-cache",
+                ],
+                &["--without-local-copy"],
+            )?;
             opts.no_positional()?;
             let catalog = registry::read_catalog(&opts.path("--catalog", "registry/catalog.json"))?;
-            let matches =
-                citations::lookup(&catalog, opts.fields.get("--source").map(String::as_str));
-            show(
-                &serde_json::json!({"formal_logos": catalog.formal_logos, "evidence": "citations in research documents", "citations": matches}),
-            )
+            let archive =
+                archive::read_archive(&opts.path("--web-archive", "registry/web-archive.json"))?;
+            let store = opts.path("--store", "local");
+            let cache = opts.path("--source-cache", "local/formal-logos-cache");
+            let mut counts = std::collections::BTreeMap::<String, usize>::new();
+            let mut rows = Vec::new();
+            for citation in
+                citations::lookup(&catalog, opts.fields.get("--source").map(String::as_str))
+            {
+                let mut row = serde_json::to_value(citation).map_err(|e| e.to_string())?;
+                let mut missing = false;
+                for (target, value) in citation
+                    .cited_urls
+                    .iter()
+                    .zip(row["cited_urls"].as_array_mut().into_iter().flatten())
+                {
+                    let copy =
+                        archive::local_copy(&catalog, &archive, &store, Some(&cache), target);
+                    let kind = copy
+                        .as_ref()
+                        .map_or("none", |c| c["kind"].as_str().unwrap_or("none"));
+                    *counts.entry(kind.to_owned()).or_default() += 1;
+                    missing |= copy.is_none();
+                    value["local_copy"] = copy.unwrap_or_default();
+                }
+                if missing || !opts.switches.contains("--without-local-copy") {
+                    rows.push(row);
+                }
+            }
+            show(&serde_json::json!({
+                "formal_logos": catalog.formal_logos,
+                "evidence": "citations in research documents; local_copy checks object presence only, not bytes",
+                "local_copies": counts,
+                "citations": rows
+            }))
+        }
+        "archive" => {
+            let opts = Options::parse(
+                args,
+                &[
+                    "--url",
+                    "--limit",
+                    "--interval-ms",
+                    "--backoff-ms",
+                    "--wayback",
+                    "--catalog",
+                    "--store",
+                    "--web-archive",
+                    "--source-cache",
+                ],
+                &["--dry-run", "--refresh", "--retry-failed"],
+            )?;
+            opts.no_positional()?;
+            let archive_path = opts.path("--web-archive", "registry/web-archive.json");
+            let store = opts.path("--store", "local");
+            let millis = |key: &str, default: u64| -> Result<std::time::Duration, String> {
+                opts.fields
+                    .get(key)
+                    .map_or(Ok(default), |v| {
+                        v.parse().map_err(|_| format!("{key} must be milliseconds"))
+                    })
+                    .map(std::time::Duration::from_millis)
+            };
+            let options = archive::RunOptions {
+                interval: millis("--interval-ms", 1500)?,
+                backoff: millis("--backoff-ms", 30_000)?,
+                wayback: opts
+                    .fields
+                    .get("--wayback")
+                    .cloned()
+                    .unwrap_or_else(|| archive::WAYBACK.into()),
+                refresh: opts.switches.contains("--refresh"),
+                retry_failed: opts.switches.contains("--retry-failed"),
+                limit: opts
+                    .fields
+                    .get("--limit")
+                    .map(|v| v.parse().map_err(|_| "--limit must be a number"))
+                    .transpose()?,
+            };
+            let (urls, excluded) = if let Some(url) = opts.fields.get("--url") {
+                (vec![url.clone()], Vec::new())
+            } else {
+                let catalog =
+                    registry::read_catalog(&opts.path("--catalog", "registry/catalog.json"))?;
+                archive::targets(
+                    &catalog,
+                    &archive::read_archive(&archive_path)?,
+                    &store,
+                    Some(&opts.path("--source-cache", "local/formal-logos-cache")),
+                )
+            };
+            let excluded: Vec<_> = excluded
+                .into_iter()
+                .map(|(url, reason)| serde_json::json!({"url": url, "reason": reason}))
+                .collect();
+            if opts.switches.contains("--dry-run") {
+                let selection = archive::select(
+                    &archive::read_archive(&archive_path)?,
+                    &store,
+                    &urls,
+                    &options,
+                )?;
+                return show(&serde_json::json!({
+                    "already_archived": selection.already_archived,
+                    "recorded_failures_skipped": selection.recorded_failures,
+                    "targets": selection.urls,
+                    "excluded": excluded
+                }));
+            }
+            let mut fetch = archive::Curl {
+                scratch: store.join("tmp"),
+            };
+            let mut summary = archive::run(
+                &archive_path,
+                &store,
+                urls,
+                &options,
+                &mut fetch,
+                &mut |entry| {
+                    let outcome = match (&entry.via, &entry.error) {
+                        (Some(via), _) => format!("{via:?} {} bytes", entry.bytes.unwrap_or(0)),
+                        (None, Some(error)) => format!("failed: {error}"),
+                        (None, None) => "failed".into(),
+                    };
+                    eprintln!("{} {}", entry.url, outcome);
+                },
+            )?;
+            summary["excluded"] = excluded.into();
+            show(&summary)
         }
         "research" => {
             let opts = Options::parse(

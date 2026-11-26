@@ -92,7 +92,7 @@ fn identifier(url: &Url) -> Option<String> {
     }
 }
 
-fn web_url(raw: &str) -> Option<Url> {
+pub(crate) fn web_url(raw: &str) -> Option<Url> {
     let url = Url::parse(raw).ok()?;
     (matches!(url.scheme(), "http" | "https")
         && url.has_host()

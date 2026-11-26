@@ -477,7 +477,7 @@ pub(crate) fn checked_object(store: &Path, sha: &str) -> Result<Vec<u8>, String>
     Ok(bytes)
 }
 
-fn atomic_write(path: &Path, bytes: &[u8], no_clobber: bool) -> Result<(), String> {
+pub(crate) fn atomic_write(path: &Path, bytes: &[u8], no_clobber: bool) -> Result<(), String> {
     let parent = path.parent().ok_or("target has no parent")?;
     fs::create_dir_all(parent).map_err(|e| e.to_string())?;
     let mut tmp = tempfile::NamedTempFile::new_in(parent).map_err(|e| e.to_string())?;

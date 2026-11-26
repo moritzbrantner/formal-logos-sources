@@ -8,3 +8,4 @@ registry/.catalog.lock
 downloads/
 extracted/
 *.pdf
+registry/.web-archive.lock

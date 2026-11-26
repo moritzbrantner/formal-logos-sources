@@ -76,7 +76,8 @@ selectors. Remote Git/SHA-256 hashes remain **reference metadata** inside `forma
 an imported edition has no local `sha256`. Its immutable ID covers the reference metadata.
 Changed reference metadata produces a new referenced edition on refresh.
 
-`check` validates catalogue structure and internal references offline. `verify` checks
+`check` validates catalogue structure and internal references offline, and the structure of
+`registry/web-archive.json` when present (see [archived copies](#archived-copies-of-cited-web-pages)). `verify` checks
 only acquired local files (PDF and HTML). Importing a witness does not mark it acquired, read, freshly
 verified, or philosophically established. Canonical evidence and source-kind rules remain
 in Formal Logos; this implementation adds no evidence kind or dependency to that project.
@@ -274,6 +275,48 @@ edition whose `source_url` equals the pinned snapshot's, and reports the pinned 
 the pinned witness; a mismatch is reported, not repaired, and says nothing about which text
 is right. `refresh-citations` reads only committed research documents at the recorded
 revision, so locally added editions can resolve cited URLs without a full re-import.
+
+## Archived copies of cited web pages
+
+Research notes cite many web pages that have no catalogued work or edition. `archive`
+keeps a local copy of each, so the cited text survives when a site changes or disappears.
+It is the only command that contacts a host, and it runs only when invoked; `check` and CI
+read the committed metadata offline.
+
+```sh
+# What would be fetched: cited URLs (fragments removed) with no local copy of any kind.
+cargo run --locked -- archive --dry-run
+# Fetch them; reruns skip URLs whose archived object is present.
+cargo run --locked -- archive
+cargo run --locked -- archive --url https://example.org/paper.pdf
+# Per cited URL: an acquired edition, a cached pinned witness, an archived copy, or none.
+cargo run --locked -- citations --without-local-copy
+```
+
+Each URL is requested once, sequentially, with the generic User-Agent
+`formal-logos-sources-archiver/1`, following redirects and decoding content encodings
+(through the `curl` executable; responses over 256 MiB are refused). Requests to one host
+are at least 1.5 s apart (3 s for arXiv, 5 s for the Wayback Machine); a 429 or 503 is
+retried once after its `Retry-After` (at most 120 s) or `--backoff-ms`; after two 403
+responses a host gets no further live requests in that run. When the live request fails
+or returns 4xx/5xx, the latest Wayback Machine capture with status 200 is located through
+its CDX index and fetched unmodified (`/web/<timestamp>id_/<url>`).
+
+The bytes go to the ignored content-addressed store (`local/objects/sha256/`). The
+metadata goes to [`registry/web-archive.json`](registry/web-archive.json), one entry per
+URL: `retrieved_at` (UTC), `via` (`live` or `wayback`), `final_url`, `status`,
+`content_type`, `sha256`, `bytes`, and for Wayback copies the capture
+`wayback_timestamp` with the live failure (`live_status` or `live_error`). An attempt that
+archived nothing records its `error`, and is retried only with `--retry-failed`;
+`--refresh` refetches everything selected. A fresh clone without the bytes fetches the
+recorded URLs again and records the new hash.
+
+An archived copy is **not a catalogue edition**: work identity, edition, rights and the
+cited passage still need human judgment, after which `add`/`add-html` can register the same
+bytes. The bytes are what the host or the Wayback Machine served at `retrieved_at`; a 200
+response can still be a login wall or abridged page. Copyrighted pages stay in the local
+store and are never committed. `citations` checks only that the object file exists; it does
+not re-hash it.
 
 ## Checks
 
