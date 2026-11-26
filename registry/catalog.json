@@ -254,6 +254,10 @@
       "name": "Dicastery for Promoting Christian Unity and Commission on Faith and Order of the World Council of Churches"
     },
     {
+      "id": "fl-author-6304c4ea5141f294ee1136d1b742f6f178da8b7e894fefc1223c8c9ce9a4a8d4",
+      "name": "David J. Chalmers"
+    },
+    {
       "id": "fl-author-65201e8c50aeed5b09821fac4939e86fc008df972eb931e9f79d7a4a826e3534",
       "name": "Alex O'Connor"
     },
@@ -462,6 +466,10 @@
       "name": "Rosalie Iemhoff"
     },
     {
+      "id": "fl-author-bbe7476e60462d95cc13327d54e75ad1a19de605b46973b3183c3c61fac305e6",
+      "name": "Richard Swinburne"
+    },
+    {
       "id": "fl-author-be1af2504a5402b9f3e580b5fdd60061c3a3240672e4fa57bf4a223c5898159c",
       "name": "Álvaro Parra-López"
     },
@@ -532,6 +540,10 @@
     {
       "id": "fl-author-e283a528a7d6379d1d3615a9b82fa67df45c3d2e005270de83b02a273167b867",
       "name": "Alvin Plantinga"
+    },
+    {
+      "id": "fl-author-e4fe977168f44f9d63a3b22fd0c3f95b902896cb16b1ff5a3ec33b4d4d705ac1",
+      "name": "Paul Boghossian"
     },
     {
       "id": "fl-author-e6aa5109edf0b03f3b64ca49cbcd47e5f0fcf227b82fd8712f002168d7d24fd9",
@@ -615,6 +627,20 @@
     }
   ],
   "works": [
+    {
+      "id": "boghossian-what-is-inference",
+      "title": "What is inference?",
+      "author_ids": [
+        "fl-author-e4fe977168f44f9d63a3b22fd0c3f95b902896cb16b1ff5a3ec33b4d4d705ac1"
+      ]
+    },
+    {
+      "id": "chalmers-idealism-mind-body-problem",
+      "title": "Idealism and the Mind-Body Problem",
+      "author_ids": [
+        "fl-author-6304c4ea5141f294ee1136d1b742f6f178da8b7e894fefc1223c8c9ce9a4a8d4"
+      ]
+    },
     {
       "id": "fl-work-004fd39d-a45d-5624-b927-053cb0fd0fc9",
       "title": "De ente et essentia",
@@ -3595,6 +3621,13 @@
       ]
     },
     {
+      "id": "oppy-leftow-god-necessity",
+      "title": "Leftow on God and Necessity",
+      "author_ids": [
+        "fl-author-5b0b379d452618925755af45cb97be09a2d635341a824f8f3dcc676d3ffea304"
+      ]
+    },
+    {
       "id": "ramanathan-superflow-toroidal-condensate",
       "title": "Superflow in a Toroidal Bose-Einstein Condensate: An Atom Circuit with a Tunable Weak Link",
       "author_ids": [
@@ -3617,6 +3650,13 @@
       ]
     },
     {
+      "id": "swinburne-god-simplest-explanation",
+      "title": "God as the Simplest Explanation of the Universe",
+      "author_ids": [
+        "fl-author-bbe7476e60462d95cc13327d54e75ad1a19de605b46973b3183c3c61fac305e6"
+      ]
+    },
+    {
       "id": "viermann-quantum-field-simulator",
       "title": "Quantum field simulator for dynamics in curved spacetime",
       "author_ids": [
@@ -3636,6 +3676,26 @@
     }
   ],
   "editions": [
+    {
+      "id": "boghossian-inference-philstud-169-2014",
+      "work_id": "boghossian-what-is-inference",
+      "label": "Boghossian, Philosophical Studies 169 (2014), 1–18, doi:10.1007/s11098-012-9903-x, author-hosted publisher PDF; pp. 3–5, 11–18 on the same PDF pages",
+      "language": "eng",
+      "license": "Local research copy of the published article hosted on the author’s site. No redistribution permission asserted.",
+      "source_url": "https://paulboghossian.com/pb/files/WhatIsInference.pdf",
+      "format": "pdf",
+      "sha256": "e924c2c908c4f745412a54ece04902201cf650a5fd77d76dceb9363a5affa716"
+    },
+    {
+      "id": "chalmers-idealism-author-preprint-2017",
+      "work_id": "chalmers-idealism-mind-body-problem",
+      "label": "Chalmers, author preprint (PDF of 25 July 2017) forthcoming in W. Seager (ed.), The Routledge Companion to Panpsychism; manuscript pp. 22–25 on the same PDF pages",
+      "language": "eng",
+      "license": "Local research copy of the author preprint. No redistribution permission asserted.",
+      "source_url": "https://consc.net/papers/idealism.pdf",
+      "format": "pdf",
+      "sha256": "4739ebb92b6f77fedc45626437716b433cade07b15c4018690ba5cc218139951"
+    },
     {
       "id": "fl-edition-00f6acb3d13d1ae80b402060ad1931f8c2bda6deff9450b33e5a71408bb440d2",
       "work_id": "fl-work-1faa8fff-7207-5cee-b6db-a01e90ae700d",
@@ -27675,6 +27735,16 @@
       "sha256": "ca2b18c2c4394e4c78f0f2cfad441453c72213ec52c5158d7b6aa427ff041506"
     },
     {
+      "id": "oppy-leftow-ejpr-6-3-2014",
+      "work_id": "oppy-leftow-god-necessity",
+      "label": "Oppy, European Journal for Philosophy of Religion 6/3 (Autumn 2014), pp. 5–16, journal-hosted PDF; pp. 6–7 on PDF pp. 2–3",
+      "language": "eng",
+      "license": "Local research copy of the journal-hosted article PDF. No redistribution permission asserted.",
+      "source_url": "https://www.philosophy-of-religion.eu/menuscript/index.php/ejpr/article/download/159/119/248",
+      "format": "pdf",
+      "sha256": "f70df7ba50081a069a310bbff209c160635c2f2f4fe01e6f9deee3a9bb055680"
+    },
+    {
       "id": "ramanathan-superflow-aps-accepted-2011",
       "work_id": "ramanathan-superflow-toroidal-condensate",
       "label": "Ramanathan et al., APS accepted manuscript, Phys. Rev. Lett. 106, 130401 (2011), Fig. 2 on PDF p. 3",
@@ -27703,6 +27773,16 @@
       "source_url": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d31.pdf",
       "format": "pdf",
       "sha256": "1df6c70b32cdf1098f300e8dd86d5adbebed21e96e22110217b24fcfc44bfdd9"
+    },
+    {
+      "id": "swinburne-simplest-explanation-author-manuscript",
+      "work_id": "swinburne-god-simplest-explanation",
+      "label": "Swinburne, author-hosted manuscript (PDF of February 2012) noting publication in RIP Supplement 68 (2011) and EJPR 2(1) (2010), 1–24; manuscript pp. 9–10, 18–20 on the same PDF pages",
+      "language": "eng",
+      "license": "Local research copy of the author-hosted manuscript. No redistribution permission asserted.",
+      "source_url": "https://users.ox.ac.uk/~orie0087/pdf_files/Papers%20from%20Philosophical%20Journals/Swinburne_2011-explanation.pdf",
+      "format": "pdf",
+      "sha256": "b6f5dbd608ff5b59a9d3d0f396613469d4033cacb4dac1a7d54ea0c757a03520"
     },
     {
       "id": "viermann-field-simulator-arxiv-2202-10399-v2",
@@ -29235,6 +29315,12 @@
       "cited_urls": [
         {
           "url": "https://consc.net/papers/idealism.pdf",
+          "work_ids": [
+            "chalmers-idealism-mind-body-problem"
+          ],
+          "edition_ids": [
+            "chalmers-idealism-author-preprint-2017"
+          ],
           "cited_at": [
             {
               "path": "docs/notes/mind-physicalism-fork-419.md",
@@ -30509,6 +30595,12 @@
       "cited_urls": [
         {
           "url": "https://paulboghossian.com/pb/files/WhatIsInference.pdf",
+          "work_ids": [
+            "boghossian-what-is-inference"
+          ],
+          "edition_ids": [
+            "boghossian-inference-philstud-169-2014"
+          ],
           "cited_at": [
             {
               "path": "docs/notes/epistemic-underminer-boundaries.md",
@@ -31661,6 +31753,12 @@
       "cited_urls": [
         {
           "url": "https://users.ox.ac.uk/~orie0087/pdf_files/Papers%20from%20Philosophical%20Journals/Swinburne_2011-explanation.pdf",
+          "work_ids": [
+            "swinburne-god-simplest-explanation"
+          ],
+          "edition_ids": [
+            "swinburne-simplest-explanation-author-manuscript"
+          ],
           "cited_at": [
             {
               "path": "docs/notes/mind-physicalism-fork-419.md",
@@ -35596,6 +35694,12 @@
       "cited_urls": [
         {
           "url": "https://www.philosophy-of-religion.eu/menuscript/index.php/ejpr/article/download/159/119/248",
+          "work_ids": [
+            "oppy-leftow-god-necessity"
+          ],
+          "edition_ids": [
+            "oppy-leftow-ejpr-6-3-2014"
+          ],
           "cited_at": [
             {
               "path": "docs/principle-parity-challenges.md",
