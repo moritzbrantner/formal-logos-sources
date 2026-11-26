@@ -72,11 +72,17 @@ pub struct Edition {
     pub id: String,
     pub work_id: String,
     pub label: String,
+    /// Conventional citation locator covered by a local edition, e.g. `I q.19`.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub locator: Option<String>,
     pub language: String,
     pub license: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub source_url: Option<String>,
     pub format: String,
+    /// Character encoding of a local HTML page, needed to extract passages.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub encoding: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub sha256: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -115,8 +121,8 @@ impl Catalog {
         self.authors.sort_by(|a, b| a.id.cmp(&b.id));
         self.works.sort_by(|a, b| a.id.cmp(&b.id));
         self.editions.sort_by(|a, b| a.id.cmp(&b.id));
+        // Author order is a byline and is preserved; the importer orders its own works.
         for work in &mut self.works {
-            work.author_ids.sort();
             work.formal_logos_sources.sort_by(|a, b| a.id.cmp(&b.id));
         }
         for edition in &mut self.editions {
@@ -230,16 +236,33 @@ impl Catalog {
                     edition.id, edition.format
                 ));
             }
+            if let Some(locator) = &edition.locator {
+                nonempty("edition locator", locator)?;
+            }
             match (&edition.sha256, &edition.formal_logos) {
                 (Some(sha), None) => {
-                    if edition.format != "pdf" || !valid_hex(sha, 64) {
+                    let encoding_ok = match edition.format.as_str() {
+                        "pdf" => edition.encoding.is_none(),
+                        "html" => edition
+                            .encoding
+                            .as_deref()
+                            .is_some_and(|e| nonempty("encoding", e).is_ok()),
+                        _ => false,
+                    };
+                    if !encoding_ok || !valid_hex(sha, 64) {
                         return Err(format!(
-                            "edition {} requires a PDF and valid sha256",
+                            "edition {} requires a PDF, or HTML with its encoding, and a valid sha256",
                             edition.id
                         ));
                     }
                 }
                 (None, Some(reference)) => {
+                    if edition.encoding.is_some() || edition.locator.is_some() {
+                        return Err(format!(
+                            "referenced edition {} keeps locators and encoding in its upstream metadata",
+                            edition.id
+                        ));
+                    }
                     if source_works.get(&reference.source_id).copied() != Some(&edition.work_id) {
                         return Err(format!(
                             "edition {} references a source outside its work: {}",
@@ -445,7 +468,7 @@ pub fn object_path(store: &Path, sha: &str) -> PathBuf {
         .join(sha)
 }
 
-fn checked_object(store: &Path, sha: &str) -> Result<Vec<u8>, String> {
+pub(crate) fn checked_object(store: &Path, sha: &str) -> Result<Vec<u8>, String> {
     let path = object_path(store, sha);
     let bytes = fs::read(&path).map_err(|e| format!("{}: {e}", path.display()))?;
     if hash(&bytes) != sha {
@@ -487,56 +510,115 @@ pub fn add(
     if !pdf.starts_with(b"%PDF-") {
         return Err("input is not a PDF".into());
     }
-    let sha = hash(pdf);
-    let edition = Edition {
+    let mut added = add_local(
+        catalog_path,
+        store,
+        vec![LocalEdition {
+            edition: local_edition(&fields, "pdf", None, None, pdf),
+            work_title: Some(fields.title),
+            bytes: pdf,
+        }],
+    )?;
+    Ok(added.remove(0).0)
+}
+
+/// Metadata for one acquired local file. The SHA-256 is computed from `bytes`.
+pub fn local_edition(
+    fields: &Add<'_>,
+    format: &str,
+    encoding: Option<&str>,
+    locator: Option<&str>,
+    bytes: &[u8],
+) -> Edition {
+    Edition {
         id: fields.edition_id.to_owned(),
         work_id: fields.work_id.to_owned(),
         label: fields.label.to_owned(),
+        locator: locator.map(str::to_owned),
         language: fields.language.to_owned(),
         license: fields.license.to_owned(),
         source_url: fields.source_url.map(str::to_owned),
-        format: "pdf".into(),
-        sha256: Some(sha.clone()),
+        format: format.to_owned(),
+        encoding: encoding.map(str::to_owned),
+        sha256: Some(hash(bytes)),
         formal_logos: None,
-    };
-    let work = Work {
-        id: fields.work_id.to_owned(),
-        title: fields.title.to_owned(),
-        author_ids: Vec::new(),
-        formal_logos_sources: Vec::new(),
-    };
+    }
+}
+
+pub struct LocalEdition<'a> {
+    pub edition: Edition,
+    /// Create the work with this title if it is absent; `None` requires an existing work.
+    pub work_title: Option<&'a str>,
+    pub bytes: &'a [u8],
+}
+
+/// Register local editions and store their bytes in one catalogue transaction.
+/// Returns each edition and whether it was newly added (`false`: already identical).
+pub fn add_local(
+    catalog_path: &Path,
+    store: &Path,
+    items: Vec<LocalEdition<'_>>,
+) -> Result<Vec<(Edition, bool)>, String> {
     update_catalog(catalog_path, |catalog| {
-        if let Some(existing) = catalog.works.iter().find(|item| item.id == work.id) {
-            if existing.title != work.title {
-                return Err(format!("work {} already has different metadata", work.id));
-            }
-        } else {
-            catalog.works.push(work);
-        }
-        if let Some(existing) = catalog.editions.iter().find(|item| item.id == edition.id) {
-            if existing != &edition {
+        let mut results = Vec::new();
+        for item in &items {
+            let edition = &item.edition;
+            if edition.sha256.as_deref() != Some(hash(item.bytes).as_str()) {
                 return Err(format!(
-                    "edition {} is immutable; use a new edition id",
+                    "edition {} does not describe its bytes",
                     edition.id
                 ));
             }
-        } else {
-            catalog.editions.push(edition.clone());
+            match (
+                catalog.works.iter().find(|w| w.id == edition.work_id),
+                item.work_title,
+            ) {
+                (Some(existing), Some(title)) if existing.title != title => {
+                    return Err(format!(
+                        "work {} already has different metadata",
+                        edition.work_id
+                    ));
+                }
+                (Some(_), _) => {}
+                (None, Some(title)) => catalog.works.push(Work {
+                    id: edition.work_id.clone(),
+                    title: title.to_owned(),
+                    author_ids: Vec::new(),
+                    formal_logos_sources: Vec::new(),
+                }),
+                (None, None) => return Err(format!("unknown work id: {}", edition.work_id)),
+            }
+            let added = match catalog.editions.iter().find(|e| e.id == edition.id) {
+                Some(existing) if existing != edition => {
+                    return Err(format!(
+                        "edition {} is immutable; use a new edition id",
+                        edition.id
+                    ));
+                }
+                Some(_) => false,
+                None => {
+                    catalog.editions.push(edition.clone());
+                    true
+                }
+            };
+            results.push((edition.clone(), added));
         }
         catalog.validate()?;
-
-        let object = object_path(store, &sha);
-        if object.exists() {
-            checked_object(store, &sha)?;
-        } else if let Err(error) = atomic_write(&object, pdf, true) {
-            // Another process may have stored the identical bytes; never overwrite an object.
+        for item in &items {
+            let sha = item.edition.sha256.as_deref().unwrap_or_default();
+            let object = object_path(store, sha);
             if object.exists() {
-                checked_object(store, &sha)?;
-            } else {
-                return Err(error);
+                checked_object(store, sha)?;
+            } else if let Err(error) = atomic_write(&object, item.bytes, true) {
+                // Another process may have stored the identical bytes; never overwrite an object.
+                if object.exists() {
+                    checked_object(store, sha)?;
+                } else {
+                    return Err(error);
+                }
             }
         }
-        Ok(edition)
+        Ok(results)
     })
 }
 
@@ -553,7 +635,7 @@ pub fn load_edition(
         .ok_or_else(|| format!("unknown edition id: {id}"))?;
     let sha = edition.sha256.as_deref().ok_or_else(|| {
         format!(
-            "edition {id} is a metadata-only Formal Logos reference; no local PDF has been acquired"
+            "edition {id} is a metadata-only Formal Logos reference; no local file has been acquired"
         )
     })?;
     let bytes = checked_object(store, sha)?;
@@ -617,6 +699,8 @@ mod tests {
                 license: "Synthetic metadata".into(),
                 source_url: Some("https://example.org/summa.xml".into()),
                 format: "tei".into(),
+                locator: None,
+                encoding: None,
                 sha256: None,
                 formal_logos: Some(EditionReference {
                     manifest_path: "corpus/passages/summa-q19.json".into(),
@@ -681,6 +765,69 @@ mod tests {
         assert_eq!(updated.works, catalog.works);
         assert_eq!(updated.authors, catalog.authors);
         assert_eq!(updated.editions.len(), 2);
+    }
+
+    #[test]
+    fn local_additions_preserve_existing_author_order() {
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("registry/catalog.json");
+        update_catalog(&path, |catalog| {
+            for id in ["second", "first"] {
+                catalog.authors.push(Author {
+                    id: id.into(),
+                    name: id.into(),
+                });
+            }
+            catalog.works.push(Work {
+                id: "paper".into(),
+                title: "Paper".into(),
+                author_ids: vec!["second".into(), "first".into()],
+                formal_logos_sources: Vec::new(),
+            });
+            Ok(())
+        })
+        .unwrap();
+        add(
+            &path,
+            &dir.path().join("local"),
+            b"%PDF-fixture",
+            fields("x"),
+        )
+        .unwrap();
+        let catalog = read_catalog(&path).unwrap();
+        let paper = catalog.works.iter().find(|w| w.id == "paper").unwrap();
+        assert_eq!(paper.author_ids, ["second", "first"]);
+    }
+
+    #[test]
+    fn html_editions_need_an_encoding_and_pdfs_must_not_have_one() {
+        let mut catalog = Catalog::default();
+        catalog.works.push(Work {
+            id: "work".into(),
+            title: "Work".into(),
+            author_ids: Vec::new(),
+            formal_logos_sources: Vec::new(),
+        });
+        let html = local_edition(
+            &fields("page"),
+            "html",
+            Some("utf-8"),
+            Some("I q.1"),
+            b"<p>",
+        );
+        let html = Edition {
+            work_id: "work".into(),
+            ..html
+        };
+        catalog.editions.push(html.clone());
+        catalog.validate().unwrap();
+        catalog.editions[0].encoding = None;
+        assert!(catalog.validate().unwrap_err().contains("encoding"));
+        catalog.editions[0] = Edition {
+            format: "pdf".into(),
+            ..html
+        };
+        assert!(catalog.validate().unwrap_err().contains("encoding"));
     }
 
     #[test]

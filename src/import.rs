@@ -318,6 +318,8 @@ fn build_records(
                 .and_then(Value::as_str)
                 .map(str::to_owned),
             format: format.to_owned(),
+            locator: None,
+            encoding: None,
             sha256: None,
             formal_logos: Some(reference),
         };

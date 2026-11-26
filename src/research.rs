@@ -826,7 +826,7 @@ mod tests {
             catalog.editions.push(Edition {
                 id: format!("edition-{id}"), work_id: id.into(), label: "Synthetic witness".into(),
                 language: "eng".into(), license: "Synthetic fixture".into(), source_url: None,
-                format: "html".into(), sha256: None,
+                format: "html".into(), sha256: None, locator: None, encoding: None,
                 formal_logos: Some(EditionReference {
                     manifest_path: format!("corpus/passages/{id}.json"), source_id: format!("source-{id}"),
                     snapshot: json!({"kind":"web_snapshot","source_id":format!("source-{id}"),"source_url":"https://example.org/text"}),
