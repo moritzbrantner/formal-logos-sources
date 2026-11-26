@@ -20198,6 +20198,16 @@
       "source_url": "https://www3.nd.edu/~powers/ame.20231/thompson1798.pdf",
       "format": "pdf",
       "sha256": "88669d514d79fdd88532aeb4d859a818b28211b55a62d41c40b84eace76c1d60"
+    },
+    {
+      "id": "suarez-dm-xxxi-castellote-renemann-2020-09",
+      "work_id": "fl-work-3dba6cf4-271a-4cd9-8a18-7ff830520b32",
+      "label": "Disputatio XXXI, Castellote–Renemann digital Latin edition (September 2020)",
+      "language": "lat",
+      "license": "Early modern Latin work; no redistribution license established for this digital edition. Local research copy.",
+      "source_url": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d31.pdf",
+      "format": "pdf",
+      "sha256": "1df6c70b32cdf1098f300e8dd86d5adbebed21e96e22110217b24fcfc44bfdd9"
     }
   ],
   "research_citations": [
