@@ -38,12 +38,24 @@
       "name": "Michael Scott"
     },
     {
+      "id": "fl-author-098d1f5b9a9be5cba373ee6480ab6e55c3c18dd9d4a8e6e1569c44a9b03f3372",
+      "name": "Maurus Hans"
+    },
+    {
       "id": "fl-author-0cb8c965ffcfe4e28bb8ddb8e5d7a85cd96d61bfdeed5f0543830ec96b28ae02",
       "name": "Jennifer Hart Weed"
     },
     {
       "id": "fl-author-11c0a5a91e6ac13a2e80d53b8211b1fad85796f69bcc2ad8eb60aadc7546dd34",
       "name": "Catholic Church (promulgated by John Paul II, 1983; Book VI revised 2021)"
+    },
+    {
+      "id": "fl-author-124e5907ec1564936e0852e5929c2389bcd4d43af3cb24debee382cc8d57a5bb",
+      "name": "Marius Sparn"
+    },
+    {
+      "id": "fl-author-13181ab699f5ab2cee2181697c08b0ebc5dc7ffb52d8eafc830e88e43eb3ed90",
+      "name": "Natalia Sánchez-Kuntz"
     },
     {
       "id": "fl-author-141f822b345a240e7d2540ad84e9e2b709ca391639ecb5a961806ba5cc177d6a",
@@ -60,6 +72,14 @@
     {
       "id": "fl-author-170ec9003650cd7642f592374f3259ed86b95a8262d8301bff5734dd1a1ce71e",
       "name": "J. M. E. McTaggart"
+    },
+    {
+      "id": "fl-author-180a217e9380ab54c538505abc020fa99feee7a91cb324191b1ff81fb1b0b2fa",
+      "name": "S. R. Muniz"
+    },
+    {
+      "id": "fl-author-1a431184e2e31aaa6cb099402785cb223bf24f9e9ca9d9f07799f24f03489568",
+      "name": "K. C. Wright"
     },
     {
       "id": "fl-author-1c1bed7fffc6294e11347dbe5705d4275faad6fd35a4b4dd87a4a34063987ac1",
@@ -88,6 +108,10 @@
     {
       "id": "fl-author-2bde69a6334c5a949b49bd0528a20f1932662ee5e7a9b4bc54e1181b7a5acf4b",
       "name": "Sharon Street"
+    },
+    {
+      "id": "fl-author-2d101a218dcc80380af9bf53ec21d22dabf2b21510223456b41ca83b26051f1e",
+      "name": "C. J. Lobb"
     },
     {
       "id": "fl-author-2d59b7d251387a622ad43e9462b9c5840084fcf362e8e86096d9022cc0dcc20e",
@@ -134,6 +158,10 @@
       "name": "Shieva Kleinschmidt"
     },
     {
+      "id": "fl-author-355a7ff9ed29afeb6e6a164c606008aef605e4e7c32d8d6dda0dff613ac9c425",
+      "name": "Markus K. Oberthaler"
+    },
+    {
       "id": "fl-author-37147bfd0ec7ee1bdc3f83fb7dd88fef9407fb04f7fe1c43c80323ef7e8679ff",
       "name": "Clement of Rome"
     },
@@ -152,6 +180,10 @@
     {
       "id": "fl-author-3dfeef4920665a7df69d6b9e629cff7f7824796965107cbab257e7b53971d0fc",
       "name": "Richmond Campbell"
+    },
+    {
+      "id": "fl-author-3ec6226d0aae329459a13f24555f4403569d4a056df655c3a11d084e080883d4",
+      "name": "W. T. Hill, III"
     },
     {
       "id": "fl-author-437120bba4e773ce50dcdd21e117ca0213831a83d033958aedfa5c8ba3b8ffc2",
@@ -286,8 +318,24 @@
       "name": "Christoph Benzmüller and Bruno Woltzenlogel Paleo"
     },
     {
+      "id": "fl-author-7d54edfd6b65c7fdd87d435e0f3ed261dc470f52ec0318e0de606474ee708b03",
+      "name": "K. Helmerson"
+    },
+    {
+      "id": "fl-author-7feb5441dd91e03aa60422b320da8dd17eea1166bbd77a969abc92d4dd89c549",
+      "name": "Nikolas Liebster"
+    },
+    {
       "id": "fl-author-818b5cc5f21d3e6e4e6071c06294528d44595022218446d8b79304d2b766327a",
       "name": "Paul"
+    },
+    {
+      "id": "fl-author-860c988d06ef8ef248f66327008f0384f2dc45cb65d4e5c3f511fbbe265e8e87",
+      "name": "M. Zelan"
+    },
+    {
+      "id": "fl-author-86d0aeb66fcac1134241cb57abea4d7fd5acd008e7d2a1c9a23958d4e6847255",
+      "name": "A. Ramanathan"
     },
     {
       "id": "fl-author-8838946b8f6a1ddbaaa052ff891ddf2e99cb32c31ade5a078419ef8a031478d8",
@@ -362,6 +410,14 @@
       "name": "Max Born"
     },
     {
+      "id": "fl-author-a3bd7d69cc71c56eac0a137fcc679d5cea33c708b3f7ff77c53223dc04fb8f3c",
+      "name": "Tobias Haas"
+    },
+    {
+      "id": "fl-author-a4b08cf237311f95b39154206eba002ed52ecfa19786ce985699155880248204",
+      "name": "G. K. Campbell"
+    },
+    {
       "id": "fl-author-a800f5a4b91ce3f31571f7ac0d995b923d2bd6394d5a055dfa1509acd75e0d5d",
       "name": "Robert C. Koons"
     },
@@ -406,6 +462,10 @@
       "name": "Rosalie Iemhoff"
     },
     {
+      "id": "fl-author-be1af2504a5402b9f3e580b5fdd60061c3a3240672e4fa57bf4a223c5898159c",
+      "name": "Álvaro Parra-López"
+    },
+    {
       "id": "fl-author-c0760c1a02db1cfeabf54de59f65cb592d7b41d82ae13d7f1f429bd74da45090",
       "name": "Alexius Meinong"
     },
@@ -446,6 +506,10 @@
       "name": "Zachary D. Blount and colleagues"
     },
     {
+      "id": "fl-author-d58f59a3d01f93446683b0aef601b79697587f37b371070d590d8f4f1cd58c4e",
+      "name": "Helmut Strobel"
+    },
+    {
       "id": "fl-author-d69d9a6d82af8788f6bfcdcd76321f63adf5b03748f43f972ef9efb729369343",
       "name": "Michael Dummett"
     },
@@ -468,6 +532,10 @@
     {
       "id": "fl-author-e283a528a7d6379d1d3615a9b82fa67df45c3d2e005270de83b02a273167b867",
       "name": "Alvin Plantinga"
+    },
+    {
+      "id": "fl-author-e6aa5109edf0b03f3b64ca49cbcd47e5f0fcf227b82fd8712f002168d7d24fd9",
+      "name": "Stefan Floerchinger"
     },
     {
       "id": "fl-author-e6da9218c2c029f171ec67dfb999d2489513396dda70eff2807d3336001f7cb3",
@@ -498,6 +566,10 @@
       "name": "Gerardus Johannes Emanuel Rutten"
     },
     {
+      "id": "fl-author-ec327615a470fc5fe32798db11a66aa070c3ef087aadde38794a3336dcb43bae",
+      "name": "Elinor Kath"
+    },
+    {
       "id": "fl-author-ed030f6eed01514e68d8ec67367d4d2d2a1fe896712093b099cdf2e3e6a76eee",
       "name": "Second Vatican Council (1965)"
     },
@@ -510,8 +582,20 @@
       "name": "First Vatican Council (1870)"
     },
     {
+      "id": "fl-author-f4aacac1841097917d60819fbcac0ae29b9c089b9ac9dd7fbbc30e886aa11c91",
+      "name": "Mireia Tolosa-Simeón"
+    },
+    {
+      "id": "fl-author-f5a874fe79938f91e839bbf6d0d05048a74a9d0cbaed52b9d670146dbab73091",
+      "name": "Celia Viermann"
+    },
+    {
       "id": "fl-author-f68dc5a15842eb628fff4059e9f94bf3cc60f69c572d6691ad84723ec44bf584",
       "name": "Gideon Rosen"
+    },
+    {
+      "id": "fl-author-fa1b696d5bb2af8bcbda2eea121417fba683c824d6d1a11e3e2f484990966aa9",
+      "name": "W. D. Phillips"
     },
     {
       "id": "fl-author-fb66e0b7ead2c11ba0693c33f47d9f110afe28be8e96db13eb1df4c5a1ffe3ee",
@@ -3511,10 +3595,43 @@
       ]
     },
     {
+      "id": "ramanathan-superflow-toroidal-condensate",
+      "title": "Superflow in a Toroidal Bose-Einstein Condensate: An Atom Circuit with a Tunable Weak Link",
+      "author_ids": [
+        "fl-author-86d0aeb66fcac1134241cb57abea4d7fd5acd008e7d2a1c9a23958d4e6847255",
+        "fl-author-1a431184e2e31aaa6cb099402785cb223bf24f9e9ca9d9f07799f24f03489568",
+        "fl-author-180a217e9380ab54c538505abc020fa99feee7a91cb324191b1ff81fb1b0b2fa",
+        "fl-author-860c988d06ef8ef248f66327008f0384f2dc45cb65d4e5c3f511fbbe265e8e87",
+        "fl-author-3ec6226d0aae329459a13f24555f4403569d4a056df655c3a11d084e080883d4",
+        "fl-author-2d101a218dcc80380af9bf53ec21d22dabf2b21510223456b41ca83b26051f1e",
+        "fl-author-7d54edfd6b65c7fdd87d435e0f3ed261dc470f52ec0318e0de606474ee708b03",
+        "fl-author-fa1b696d5bb2af8bcbda2eea121417fba683c824d6d1a11e3e2f484990966aa9",
+        "fl-author-a4b08cf237311f95b39154206eba002ed52ecfa19786ce985699155880248204"
+      ]
+    },
+    {
       "id": "rumford-heat-friction-1798",
       "title": "An Inquiry concerning the Source of the Heat which is excited by Friction",
       "author_ids": [
         "benjamin-count-of-rumford"
+      ]
+    },
+    {
+      "id": "viermann-quantum-field-simulator",
+      "title": "Quantum field simulator for dynamics in curved spacetime",
+      "author_ids": [
+        "fl-author-f5a874fe79938f91e839bbf6d0d05048a74a9d0cbaed52b9d670146dbab73091",
+        "fl-author-124e5907ec1564936e0852e5929c2389bcd4d43af3cb24debee382cc8d57a5bb",
+        "fl-author-7feb5441dd91e03aa60422b320da8dd17eea1166bbd77a969abc92d4dd89c549",
+        "fl-author-098d1f5b9a9be5cba373ee6480ab6e55c3c18dd9d4a8e6e1569c44a9b03f3372",
+        "fl-author-ec327615a470fc5fe32798db11a66aa070c3ef087aadde38794a3336dcb43bae",
+        "fl-author-be1af2504a5402b9f3e580b5fdd60061c3a3240672e4fa57bf4a223c5898159c",
+        "fl-author-f4aacac1841097917d60819fbcac0ae29b9c089b9ac9dd7fbbc30e886aa11c91",
+        "fl-author-13181ab699f5ab2cee2181697c08b0ebc5dc7ffb52d8eafc830e88e43eb3ed90",
+        "fl-author-a3bd7d69cc71c56eac0a137fcc679d5cea33c708b3f7ff77c53223dc04fb8f3c",
+        "fl-author-d58f59a3d01f93446683b0aef601b79697587f37b371070d590d8f4f1cd58c4e",
+        "fl-author-e6aa5109edf0b03f3b64ca49cbcd47e5f0fcf227b82fd8712f002168d7d24fd9",
+        "fl-author-355a7ff9ed29afeb6e6a164c606008aef605e4e7c32d8d6dda0dff613ac9c425"
       ]
     }
   ],
@@ -20190,6 +20307,16 @@
       }
     },
     {
+      "id": "ramanathan-superflow-aps-accepted-2011",
+      "work_id": "ramanathan-superflow-toroidal-condensate",
+      "label": "Ramanathan et al., APS accepted manuscript, Phys. Rev. Lett. 106, 130401 (2011), Fig. 2 on PDF p. 3",
+      "language": "eng",
+      "license": "Local research copy of the APS accepted manuscript. No redistribution permission asserted.",
+      "source_url": "https://link.aps.org/accepted/10.1103/PhysRevLett.106.130401",
+      "format": "pdf",
+      "sha256": "652338115129ef9d6ad58685be3aba641f32f10047694767f9d5b89b47465647"
+    },
+    {
       "id": "rumford-1798-philosophical-transactions-88",
       "work_id": "rumford-heat-friction-1798",
       "label": "Philosophical Transactions 88 (1798), pp. 80–102 and plates; Royal Society scan hosted by University of Notre Dame",
@@ -20208,6 +20335,16 @@
       "source_url": "https://homepage.ruhr-uni-bochum.de/Michael.Renemann/suarez/d31.pdf",
       "format": "pdf",
       "sha256": "1df6c70b32cdf1098f300e8dd86d5adbebed21e96e22110217b24fcfc44bfdd9"
+    },
+    {
+      "id": "viermann-field-simulator-arxiv-2202-10399-v2",
+      "work_id": "viermann-quantum-field-simulator",
+      "label": "Viermann et al., arXiv:2202.10399v2 (22 February 2022), Figs. 1–2 on PDF pp. 2–3",
+      "language": "eng",
+      "license": "Local research copy of the author preprint. No redistribution permission asserted.",
+      "source_url": "https://arxiv.org/pdf/2202.10399v2",
+      "format": "pdf",
+      "sha256": "ee3af601c2eb980fd22a7a85075817c6f8780675d3e32ff1d738b28cb8795285"
     }
   ],
   "research_citations": [
