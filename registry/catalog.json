@@ -2,6 +2,10 @@
   "schema_version": 2,
   "authors": [
     {
+      "id": "benjamin-count-of-rumford",
+      "name": "Benjamin Count of Rumford"
+    },
+    {
       "id": "fl-author-006873dfd89c62cf4bd361267fd0bf3f4f8d90ea689941df0059086f965ff3d5",
       "name": "Plutarch"
     },
@@ -3504,6 +3508,13 @@
           "catalog_url": "https://centerforgermanphilosophy.uchicago.edu/wp-content/uploads/2024/05/PI-243-308-422-427-Anscombe-Monolingual-Edition.pdf",
           "citation_system": "Part I section number; Anscombe third edition printed pages"
         }
+      ]
+    },
+    {
+      "id": "rumford-heat-friction-1798",
+      "title": "An Inquiry concerning the Source of the Heat which is excited by Friction",
+      "author_ids": [
+        "benjamin-count-of-rumford"
       ]
     }
   ],
@@ -20177,6 +20188,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "rumford-1798-philosophical-transactions-88",
+      "work_id": "rumford-heat-friction-1798",
+      "label": "Philosophical Transactions 88 (1798), pp. 80–102 and plates; Royal Society scan hosted by University of Notre Dame",
+      "language": "eng",
+      "license": "Historical work published in 1798. Local research copy of the scan; redistribution permission for this digital edition has not been assessed.",
+      "source_url": "https://www3.nd.edu/~powers/ame.20231/thompson1798.pdf",
+      "format": "pdf",
+      "sha256": "88669d514d79fdd88532aeb4d859a818b28211b55a62d41c40b84eace76c1d60"
     }
   ],
   "research_citations": [
